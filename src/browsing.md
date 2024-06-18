@@ -223,11 +223,9 @@ they can be found in a submenu of the context menu.
 | Manage Note Types  | Open the [Notetypes](editing.md#adding-a-note-type) dialog.                                                                                                                                                                                                                                                                                                |
 | Delete            | Delete all selected notes and their cards. It is not possible to remove individual cards, as individual cards are controlled by the [templates](templates/intro.md).                                                                                                                                                                                       |
 
-### Cards
+### Картки
 
-The following actions operate on the currently selected cards. They are also available through
-a context menu when a selected row is rightclicked in Cards mode. In Notes mode,
-they can be found in a submenu of the context menu.
+Наступні дії виконуються з поточними вибраними картками. Вони також доступні через контекстне меню, якщо вибраний рядок клацнути правою кнопкою миші в режимі карток. У режимі нотаток їх можна знайти в підменю контекстного меню.
 
 <!-- prettier-ignore -->
 

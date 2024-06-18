@@ -12,37 +12,24 @@ shortcuts to specific menu items. Please see
 <https://support.apple.com/en-au/guide/mac-help/mchlp2271/mac>
 for more information.
 
-## Debug Console
+## Консоль налагодження
 
-Sometimes you may be asked to use the debug console to change a setting
-or check something. Unless asked to enter text in the "debug console",
-you will probably not need this. Advanced users may like to read more
-about it in the [add-on writing guide](https://addon-docs.ankiweb.net/debugging.html#debug-console).
+Іноді вас можуть попросити скористатися консоллю налагодження, щоб змінити налаштування або щось перевірити. Якщо вас не попросять ввести текст у «консолі налагодження», це вам, ймовірно, не знадобиться. Досвідчені користувачі, можливо, захочуть прочитати більше про це в [посібнику з написання надбудов](https://addon-docs.ankiweb.net/debugging.html#debug-console).
 
-When asked to enter text into the "debug console", please start Anki,
-and in the main window, press
+Коли буде запропоновано ввести текст у «консоль налагодження», запустіть Anki та натисніть у головному вікні
 
 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>;</kbd>
 
-(the control key, shift key, and semi-colon key at the same time)
+(одночасно клавіша Ctrl, клавіша Shift і крапка з комою)
 
-On a Mac, press
+На Mac натисніть
 
 <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>;</kbd>
 
-(the command key, shift key, and semi-colon key at the same time)
+(клавіша Command, клавіша Shift і клавіша крапки з комою одночасно)
 
-On some non-English keyboards, you may need to press <kbd>:</kbd> or <kbd>+</kbd> instead
-of <kbd>;</kbd>.
+На деяких неанглійських клавіатурах вам може знадобитися натиснути <kbd>:</kbd> або <kbd>+</kbd> замість <kbd>;</kbd>.
 
-In the window that has popped up, please paste the text you were asked
-to paste in the top section. When you’ve done so, please press
-Ctrl+Return (Command+Return on a Mac), and some text should appear in
-the bottom section. If you’ve been asked to paste the resulting output,
-please copy it from the bottom area, and paste it back to the support
-person.
+У вікні, що з’явилося, вставте текст, який вам було запропоновано вставити у верхній частині. Коли ви це зробите, натисніть Ctrl+Return (Command+Return на Mac), і в нижній частині має з’явитися текст. Якщо вас попросили вставити отриманий результат, скопіюйте його з нижньої області та вставте назад особі служби підтримки.
 
-If you press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Return</kbd> instead of just <kbd>Ctrl</kbd>+<kbd>Return</kbd>, Anki will
-try to print the result rather than doing what you asked it to. If you
-are getting unexpected errors, please make sure you’re not holding down
-the <kbd>Shift</kbd> key.
+Якщо натиснути <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Return</kbd> замість просто <kbd>Ctrl</kbd>+<kbd>Return</kbd>, Anki спробує надрукувати результат, а не виконуватиме те, що ви попросили. Якщо ви отримуєте неочікувані помилки, будь ласка, переконайтеся, що ви не утримуєте клавішу <kbd>Shift</kbd>.

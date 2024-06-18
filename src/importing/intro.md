@@ -1,5 +1,5 @@
-# Importing
+# Імпорт
 
-Anki can import text files, packaged Anki decks created by the export
-feature, Mnemosyne 2.0 .db files, and SuperMemo .xml files. To import a
-file, click the File menu and then "Import".
+Anki може імпортувати текстові файли, упаковані колоди Anki, створені шляхом експорту
+за допомогою функцій Mnemosyne 2.0, .db files, SuperMemo.xml. Щоб імпортувати
+файл, натисніть меню «Файл», а потім «Імпортувати».

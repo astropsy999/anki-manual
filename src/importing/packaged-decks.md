@@ -1,77 +1,56 @@
-# Packaged Decks
+# Упаковані колоди
 
 <!-- toc -->
 
-Anki packages (.apkg files) enable you to import decks, notes, notetypes, and cards from
-other users. They are commonly shared on [AnkiWeb](https://ankiweb.net/shared/decks).
+Пакунки Anki (файли .apkg) дозволяють імпортувати колоди, нотатки, типи нотаток і карти з
+інших користувачів. Ними зазвичай діляться на [AnkiWeb](https://ankiweb.net/shared/decks).
 
-## Scheduling
+## Створення розкладу
 
-Anki packages may also contain scheduling information, which is useful if you want to
-transfer decks between devices or profiles. However, when importing
-a deck shared by someone else, you typically do not want to adopt their card intervals
-or review history.
+Пакунки Anki також можуть містити інформацію про розклад, яка є корисною, якщо користувач
+бажає передавати колоди між пристроями чи профілями. Однак, імпортуючи колоду, якою користується
+хтось інший, ви зазвичай не бажаєте імпортувати інтервали показу карт або історію переглядів.
 
-If you encounter imported cards with unexpectedly large intevals, the deck author may
-accidentally have included their scheduling information. You can use the
-[Set Due Date feature](../browsing.md#cards) to reset the imported cards. On Anki
-23.10 and later, you can remove any scheduling information during the import process
-by leaving the "Import any learning progress" option unselected. This will also remove
-any "leech" or "marked" tags from the imported cards.
+Якщо ви зіткнетеся з тим, що імпортовані картки мають неочікувано великі інтервали, або можливо, що автор
+колоди випадково додав інформацію про розклад. Ви можете скористатися функцією [Установити дату виконання](../browsing.md#картки), щоб скинути розклад для імпортованих карток. У Anki 23.10 і новіших версіях ви можете видалити будь-яку інформацію про планування під час процесу імпорту, залишивши невибраним параметр «Імпортувати будь-який прогрес навчання». Це також видалить будь-які теги «п’явки» або «марковані» з імпортованих карток.
 
-## Updating
+## Оновлення
 
-When you import an .apkg file, Anki will identify any notes in it that are
-already in your collection due to a previous import. If the notes in the file
-are newer than your local copy, the notes will be updated with the contents of
-the file by default.
+Коли ви імпортуєте файл .apkg, Anki ідентифікує всі нотатки, які вже є у вашій колекції через попередній імпорт.
+Якщо нотатки у файлі новіші за вашу локальну копію, їх буде оновлено вмістом файлу за замовчуванням.
 
-This updating process is generally not possible if the notetype is changed (e.g if either
-you or the deck author do things like add an extra field to the notetype).
-You will still be able to import any missing notes from the file, but
-notes you have imported previously will not be updated if the deck author
-has made changes.
+Такий процес оновлення, як правило, неможливий, якщо тип нотатки змінено (наприклад, якщо ви або автор колоди додали додаткове поле до типу нотатки). Ви все ще зможете імпортувати будь-які відсутні нотатки з файлу, але нотатки, які ви імпортували раніше, не будуть оновлені.
 
-### Anki 23.10 and Later
+### Anki 23.10 і новіші версії
 
-Anki 23.10 introduced more flexibility: You can choose to unconditionally
-update notes and notetypes, always overwriting your modifications,
-or, on the other hand, never update existing objects.
+Anki 23.10 представив більше гнучкості: ви можете вибрати безумовне оновлення нотаток і типів нотаток,
+завжди перезаписуючи свої зміни, або, з іншого боку, ніколи не оновлювати існуючі об’єкти.
 
-Also, if both you and the deck author modified the same notetype, you can now decide to
-_merge_ the two versions. This will preserve all templates and fields contained in
-either one, but will require a full sync, and may mark other existing notes as modified.
+Крім того, якщо і ви, і автор колоди змінили той самий тип нотаток, тепер ви можете вирішити _об’єднати_ дві версії.
+Це збереже всі шаблони та поля, що містяться в одному з них, але потребуватиме повної синхронізації та може позначити інші наявні нотатки як змінені.
 
-#### Note to Deck Authors
+#### Примітка для авторів колод
 
-Merging relies on template and field ids, which were introduced in Anki 2.1.67.
-If a template or field lacks an id, because it has been created with an earlier
-release, Anki attempts to find an equivalent by comparing names.
+Об’єднання ґрунтується на ідентифікаторах шаблонів і полів, які були введені в Anki 2.1.67. Якщо в шаблоні чи полі відсутній ідентифікатор,
+оскільки вони були створені в попередніх версіях, Anki намагається знайти еквівалент, порівнюючи імена.
 
-See this [this add-on](https://ankiweb.net/shared/info/2063785767) for why it is
-advantageous to share notetypes with field and template ids, and how to add them to
-existing ones.
+Перегляньте цей [цей додаток](https://ankiweb.net/shared/info/2063785767), щоб дізнатися, чому корисно ділитися типами нотаток з ідентифікаторами полів і шаблонів і як додати їх до існуючих.
 
-### Workaround for Anki 2.1.66 and Earlier
+### Обхідний шлях для Anki 2.1.66 і раніших версій
 
-If you know the deck author has made changes and you wish to gain access to
-them, changing the notetype back is possible, but rather difficult. You'll need
-to do the following:
+Якщо ви знаєте, що автор колоди вніс зміни, і хочете отримати до них доступ, змінити тип нотатки можливо, але досить складно. Вам потрібно буде зробити наступне:
 
-- Create a new profile, and import the .apkg file into it.
-- Locate one of the notes that failed to update in the Browse screen and select it.
-- Use the Fields & Cards buttons to check the field names and card template names,
-  and note them down.
-- Use the [debug console](https://docs.ankiweb.net/misc.html#debug-console) to determine the notetype id.
-  It will be the number on the last line.
+- Створіть новий профіль та імпортуйте в нього файл .apkg.
+- Знайдіть одну з нотаток, яку не вдалося оновити, на екрані перегляду та оберіть її.
+- Використовуйте кнопки «Поля та картки», щоб перевірити назви полів і шаблонів карток і запишіть їх.
+- Використовуйте [консоль налагодження](../misc.md#консоль-налагодження), щоб визначити ідентифікатор типу нотатки. Це буде число в останньому рядку.
 
 ```
 nt = bcard().note().note_type()
 print("notetype", nt["name"], "has id", nt["id"])
 ```
 
-- Return to your normal profile, locate the same card, and select it. Run the following
-  in the debug console, replacing `xxx` with the ID you got above:
+- Поверніться до свого звичайного профілю, знайдіть ту саму картку та виберіть її. Виконайте наступне в консолі налагодження, замінивши `xxx` ідентифікатором, який ви отримали вище:
 
 ```
 nt = bcard().note().note_type()
@@ -80,9 +59,6 @@ nt = mw.col.models.get(xxx)
 print("desired:", nt["name"], "has id", nt["id"])
 ```
 
-- If it prints two different notetype names, you will need to use the Change Notetype
-  action to change the notetype of your existing notes to the desired one.
+- Якщо він друкує дві різні назви нотаток, вам потрібно буде використати дію «Змінити тип нотаток», щоб змінити тип вашої наявної нотатки на потрібний.
 
-- You then need to use the Fields and Cards buttons to check the field and template
-  names match the one in your test profile. They must match exactly - there should be no
-  more or less, and the spelling should be identical.
+- Потім вам потрібно буде скористатися кнопками «Поля» та «Картки», щоб перевірити, чи назви полів і шаблонів відповідають іменам у вашому тестовому профілі. Вони повинні точно збігатися - не повинні бути більшими або меншими, а написання повинно бути ідентичним.
