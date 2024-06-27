@@ -1,84 +1,83 @@
-# Text Files
+# Текстові файли
 
 <!-- toc -->
 
-Any **plain text** file that contains fields separated by commas,
-semicolons or tabs can be imported into Anki, provided some conditions
-are met.
+Будь-який **звичайний текстовий** файл, який містить поля, розділені комами, крапками з комою або символами табуляції,
+можна імпортувати в Anki за виконання деяких умов.
 
-- The files must be plain text (myfile.txt). Other formats like
-  myfile.xls, myfile.rtf, myfile.doc must be saved as a plain text
-  file first.
+- Файли мають бути простим текстом (myfile.txt). Інші формати,
+  наприклад myfile.xls, myfile.rtf, myfile.doc,
+  потрібно спочатку зберегти як звичайний текстовий файл.
 
-- The files must be in UTF-8 format (see below).
+- Файли мають бути у форматі UTF-8 (див. нижче).
 
-- The first line also defines the separating character – if Anki finds
-  a ';' on the first line it will use that, if it finds a comma it’ll
-  use that, etc.
+- Перший рядок визначає роздільний символ – якщо Anki знаходить
+  «;» у першому рядку використає це, якщо знайде кому -
+  використає її, тощо.
 
-- Anki determines the number of fields in the file by looking at the first
-  (non-commented) line. If some of the later records in the file contain fewer
-  fields, Anki will treat the missing fields as if they were blank. If some of your
-  records contain extra fields, the extra content will not be imported.
+- Anki визначає кількість полів у файлі, дивлячись на перший
+  (без коментарів) рядок. Якщо деякі з пізніших записів у файлі містять менше
+  полів, Anki розглядатиме відсутні поля як порожні. Якщо деякі з записів містять
+  додаткові поля, додатковий вміст не буде імпортовано.
 
-Fields in your text file can be mapped to any field in your notes,
-including the tags field. You can choose which field in the text file
-corresponds to which field in the note when you import.
+Поля у текстовому файлі можна зіставити з будь-яким полем у нотатках,
+включаючи поле тегів. Ви можете вибрати, яке поле в текстовому файлі
+відповідає полю в нотатці під час імпорту.
 
-When you import a text file, you can choose what deck to put the cards
-in. Keep in mind that if you have the deck override option set for one
-or more of your templates, the cards will go to that deck rather than
-the one you’ve selected.
+Коли ви імпортуєте текстовий файл, ви можете вибрати, у яку колоду помістити карти.
+Майте на увазі, що якщо для одного або кількох шаблонів встановлено параметр
+заміни колоди, карти потраплять до цієї колоди, а не до тієї,
+яку ви обрали.
 
-This is an example of a valid file with three fields:
+Це приклад дійсного файлу з трьома полями:
 
-    apple;banana;grape
-    some text;other text;yet more text
+    яблуко; банан; виноград
+    деякий текст; інший текст; ще більше тексту
 
-There are two ways to include newlines or the field separator in fields.
+Існує два способи додати в поля символи нового рядка або роздільника полів.
 
-**Escape the characters by placing the contents of the field in
-quotation marks**:
+**Виключіть символи, помістивши вміст поля
+в лапки**:
 
-    hello;"this is
-    a two line answer"
-    two;this is a one line field
-    "this includes a ; (semicolon)";another field
+    привіт;"це
+    відповідь у два рядки"
+    два; це однорядкове поле
+    "це включає;(крапка з комою)"; інше поле
 
-Because quotes are used to mark where a field begins and ends, if you
-wish to include them inside your field, you need to replace a single
-doublequote with two doublequotes to "escape" them from the regular
-handling, like so:
+Оскільки лапки використовуються для позначення початку та кінця поля,
+якщо ви бажаєте включити їх у своє поле, вам потрібно замінити одну
+подвійну лапку двома подвійними лапками, щоб «виключити» їх із
+звичайної обробки, наприклад:
 
-    field one;"field two with ""escaped quotes"" inside it"
+    поле одне;"поле друге з ""екранованими лапками"" всередині"
 
-When you use a spreadsheet program like Libreoffice to create the CSV
-file for you, it will automatically take care of escaping double quotes.
+Коли ви використовуєте програму для роботи з електронними таблицями, як-от Libreoffice, для створення файлу CSV,
+вона автоматично подбає про екранування подвійних лапок.
 
-**Use HTML new lines**:
+**Використовуйте нові рядки HTML**:
 
-    hello; this is<br>a two line answer
-    two; this is a one line one
+    привіт; це<br>відповідь у два рядки
+    два; це один рядок
 
-You need to turn on the "allow HTML in fields" checkbox in the import
-dialog for HTML newlines to work.
+Вам потрібно ввімкнути прапорець «Дозволити HTML у полях» у діалоговому вікні імпорту,
+щоб нові рядки HTML працювали.
 
-Escaped multi-lines will not work correctly if you are using cloze
-deletions that span multiple lines. In this case, please use HTML
-newlines instead.
+Екранування кількох рядків не працюватимуть належним чином, якщо ви використовуєте закриті
+видалення, які охоплюють кілька рядків. У цьому випадку використовуйте натомість
+символи нового рядка HTML.
 
-You can also include tags in another field and select it as a tags field
-in the import dialog:
+Ви також можете додати теги до іншого поля та вибрати його як поле тегів у
+діалоговому вікні імпорту:
 
-    first field;second field;tags
+    перше поле;друге поле;теги
 
-This is an example of a valid file where the first line is ignored (\#):
+Це приклад дійсного файлу, де перший рядок ігнорується (\#):
 
-    # this is a comment and is ignored
+    # це коментар і він ігнорується
     foo bar;bar baz;baz quux
-    field1;field2;field3
+    поле1;поле2;поле3
 
-## Spreadsheets and UTF-8
+## Електронні таблиці та UTF-8
 
 If you have non-Latin characters in your file (such as accents, Japanese
 and so on), Anki expects files to be saved in a 'UTF-8 encoding'. The
