@@ -91,18 +91,14 @@
 
 ## HTML
 
-Anki can treat text imported from text files as HTML (the language used
-for web pages). This means that text with bold, italics and other
-formatting can be exported to a text file and imported again. If you
-want to include HTML formatting, you can check the "allow HTML in
-fields" checkbox when importing. You may wish to turn this off if you’re
-trying to import cards whose content contains angle brackets or other
-HTML syntax.
+Anki може розглядати текст, імпортований із текстових файлів, як HTML (мова, що використовується для веб-сторінок).
+Це означає, що текст із жирним шрифтом, курсивом та іншим форматуванням можна експортувати в текстовий файл і імпортувати знову.
+Якщо бажаєте включити форматування HTML, можете встановити прапорець «дозволити HTML у полях» під час імпорту.
+Ви також можете вимкнути цю функцію, якщо намагаєтеся імпортувати картки, вміст яких містить кутові дужки або інший синтаксис HTML.
 
-If you wish to use HTML for formatting your file but also wish to
-include angle brackets or ampersands, you may use the following replacements:
+Якщо бажаєте використовувати HTML для форматування файлу, і також включити кутові дужки або амперсанди, можете використати такі заміни:
 
-| Character | Replacement |
+| Символ    | Заміна      |
 | --------- | ----------- |
 | &lt;      | `&lt;`      |
 | &gt;      | `&gt;`      |
