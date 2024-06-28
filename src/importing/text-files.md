@@ -79,18 +79,15 @@
 
 ## Електронні таблиці та UTF-8
 
-If you have non-Latin characters in your file (such as accents, Japanese
-and so on), Anki expects files to be saved in a 'UTF-8 encoding'. The
-easiest way to do this is to use the free LibreOffice spreadsheet
-program instead of Excel to edit your file, as it supports UTF-8 easily,
-and also exports multi-line content properly, unlike Excel. If you wish
-to keep using Excel, please see [this forum post](https://docs.google.com/document/d/12YE_FS6A9ANLTESJNtPP116ti4nNmCBghyoJBRtno_k/edit?usp=sharing)
-for more information.
+Якщо у вашому файлі є нелатинські символи (наприклад, наголоси, японські символи тощо), Anki очікує, що файли будуть
+збережені в «кодуванні UTF-8». Найпростіший спосіб зробити це — використовувати безкоштовну програму для роботи з
+електронними таблицями LibreOffice замість Excel для редагування файлу, оскільки вона підтримує UTF-8, а також
+правильно експортує багаторядковий вміст, на відміну від Excel. Якщо ви хочете й надалі використовувати Excel, перегляньте
+[цю публікацію на форумі](https://docs.google.com/document/d/12YE_FS6A9ANLTESJNtPP116ti4nNmCBghyoJBRtno_k/edit?usp=sharing) для отримання додаткової інформації.
 
-To save your spreadsheet to a file Anki can read with LibreOffice, go to
-File&gt;Save As, and then select CSV for the type of file. After
-accepting the default options, LibreOffice will save the file and you
-can then import the saved file into Anki.
+Щоб зберегти електронну таблицю у файлі, який Anki може читати за допомогою LibreOffice, перейдіть у меню File&gt;Save as,
+а потім виберіть CSV як тип файлу. Після прийняття параметрів за замовчуванням LibreOffice збереже файл,
+і ви зможете імпортувати його в Anki.
 
 ## HTML
 
