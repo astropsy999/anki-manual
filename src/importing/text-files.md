@@ -175,31 +175,30 @@ Anki не підтримує це з двох причин: пошук вико�
 Щоб дізнатися, як обробляються дублікати у файлах .apkg, перегляньте
 розділ [Упаковані колоди](../exporting.md#упаковані-колоди).
 
-## File Headers
+## Заголовки файлів
 
-Anki 2.1.54+ supports certain headers that can be included in the text file to
-make importing more powerful or convenient. They consist of `#key:value` pairs
-and must be listed in separate lines at the top of the file, though the [tags line](#adding-tags)
-may precede them. Since header lines start with the comment character `#`, earlier
-Anki clients will just ignore them.
+Anki 2.1.54+ підтримує певні заголовки, які можна включити в текстовий файл, щоб зробити імпорт
+потужнішим або зручнішим. Вони складаються з пар `#key:value` і мають бути вказані в окремих рядках
+у верхній частині файлу, хоча [рядок тегів](#adding-tags) може передувати їм. Оскільки рядки
+заголовка починаються з символу коментаря `#`, попередні клієнти Anki просто ігноруватимуть їх.
 
-You must enable the new importing option in the preferences screen to use this on
-2.1.54. On 2.1.55, the new importing path is the default.
+Ви повинні ввімкнути нову опцію імпорту на екрані налаштувань, щоб використовувати її на 2.1.54.
+У 2.1.55 новий шлях імпорту є типовим.
 
-| Key               | Allowed Values                                                                             | Behaviour                                                                                                       |
+| Ключ              | Дозволені значення                                                                             | Поведінка                                                                                                       |
 | ----------------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
-| `separator`       | `Comma`, `Semicolon`, `Tab`, `Space`, `Pipe`, `Colon`, or the according literal characters | Determines the field separator.                                                                                 |
-| `html`            | `true`, `false`                                                                            | Determines whether the file is treated as HTML.                                                                 |
-| `tags`            | List of tags, separated by spaces                                                          | Same as [the old syntax](#adding-tags).                                                                         |
-| `columns`         | List of names, separated by the previously set separator                                   | Determines the number of columns and shows their given names when importing.                                    |
-| `notetype`        | Notetype name or id                                                                        | Presets the notetype, if it exists.                                                                             |
-| `deck`            | Deck name or id                                                                            | Presets the deck, if it exists.                                                                                 |
-| `notetype column` | `1`, `2`, `3`, ...                                                                         | Determines which column contains the notetype name or id of each note, see [Notetype Column](#notetype-column). |
-| `deck column`     | `1`, `2`, `3`, ...                                                                         | Determines which column contains the deck name or id of each note, see [Deck Column](#deck-column).             |
-| `tags column`     | `1`, `2`, `3`, ...                                                                         | Determines which column contains the tags of each note.                                                         |
-| `guid column`     | `1`, `2`, `3`, ...                                                                         | Determines which column contains the GUID of each note, see [GUID Column](#guid-column).                        |
+| `separator`       | `Comma`, `Semicolon`, `Tab`, `Space`, `Pipe`, `Colon`, or the according literal characters | Визначає роздільник полів.                                                                                 |
+| `html`            | `true`, `false`                                                                            | Визначає, чи розглядається файл як HTML.                                                                 |
+| `tags`            | Список тегів, розділених пробілами                                                         | Те саме, що [старий синтаксис](#adding-tags).                                                                         |
+| `columns`         | Список імен, розділених попередньо встановленим роздільником                                   | Визначає кількість стовпців і показує їхні назви під час імпорту.                                    |
+| `notetype`        | Назва або ідентифікатор типу нотатки                                                                        | Попередньо встановлює тип нотатки, якщо він існує.                                                                             |
+| `deck`            | Назва або ідентифікатор колоди                                                                            | Попередньо налаштовує колоду, якщо вона існує.                                                                                 |
+| `notetype column` | `1`, `2`, `3`, ...                                                                         | Визначає, який стовпець містить назву типу нотатки або ідентифікатор кожної нотатки, див. [Стовпець типу нотатки](#notetype-column). |
+| `deck column`     | `1`, `2`, `3`, ...                                                                         | Визначає, який стовпець містить назву колоди або ідентифікатор кожної нотатки, див. [Стовпець колоди](#deck-column).             |
+| `tags column`     | `1`, `2`, `3`, ...                                                                         | Визначає, який стовпець містить теги кожної нотатки.                                                         |
+| `guid column`     | `1`, `2`, `3`, ...                                                                         | Визначає, який стовпець містить GUID кожної нотатки, див. [Стовпець GUID](#guid-column).                        |
 
-Some headers have further implications.
+Деякі заголовки мають додаткові значення.
 
 ### Notetype Column
 
