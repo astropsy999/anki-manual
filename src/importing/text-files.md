@@ -104,38 +104,37 @@ Anki може розглядати текст, імпортований із т�
 | &gt;      | `&gt;`      |
 | &amp;     | `&amp;`     |
 
-## Importing Media
+## Імпорт медіа
 
-If you want to include audio and pictures from a text file import, copy
-the files into the [collection.media folder](../files.md). **Do not put
-subdirectories in the media folder, or some features will not work.**
+Якщо ви хочете додати аудіо та зображення з імпортованого текстового файлу,
+скопіюйте файли в папку [collection.media](../files.md).
+**Не розміщуйте підкаталоги в папці медіа, інакше деякі функції не працюватимуть.**
 
-After you’ve copied the files, change one of the fields in your text
-file as follows.
+Після того, як ви скопіювали файли, змініть одне з полів у текстовому файлі,
+як описано нижче.
 
     <img src="myimage.jpg">
 
-or
+чи
 
     [sound:myaudio.mp3]
 
-Alternatively, you can use the [find and replace](../browsing.md) feature
-in the browse screen to update all the fields at once. If each field
-contains text like "myaudio", and you wish to make it play a sound,
-you’d search for (.\*) and replace it with "\[sound:\\1.mp3\]", with the
-'regular expressions' option enabled.
+Крім того, ви можете скористатися функцією [знайти та замінити](../browsing.md) на екрані
+перегляду, щоб оновити всі поля одночасно. Якщо кожне поле містить текст, як-от «myaudio»,
+і ви бажаєте, щоб воно відтворювало звук, знайдіть (.\*) і замініть його на «\[sound:\\1.mp3\]»,
+із увімкненим параметром регулярні вирази.
 
-When importing a text file with these references, you must make sure to
-enable the "Allow HTML" option.
+Імпортуючи текстовий файл із цими посиланнями, переконайтеся,
+що ввімкнуто параметр «Дозволити HTML».
 
-You might be tempted to do this in a template, like:
+У вас може виникнути спокуса зробити це в шаблоні, наприклад:
 
     <img src="{{field name}}">
 
-Anki doesn’t support this for two reasons: searching for used media is
-expensive, as each card has to be rendered, and such functionality isn’t
-obvious to shared deck users. Please use the find & replace technique
-instead.
+Anki не підтримує це з двох причин: пошук використаних носіїв є дорогим,
+оскільки кожну картку потрібно відобразити, і така функціональність неочевидна
+для користувачів спільної колоди.
+Натомість використовуйте техніку пошуку та заміни.
 
 ## Bulk Media
 
