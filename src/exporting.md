@@ -22,7 +22,7 @@ add-on to make this easier.)
 In order for formatting to be preserved when you import text back in,
 the text is exported with all the HTML formatting embedded in it.
 
-## Packaged Decks
+## Упаковані колоди
 
 A 'packaged deck' consists of cards, notes, note types, and any sounds or
 images bundled up into a file ending with .apkg or .colpkg. You can use

@@ -153,31 +153,27 @@ Anki не підтримує це з двох причин: пошук вико�
 
     tags:tag1 tag2
 
-## Duplicates and Updating
+## Дублікати та оновлення
 
-When importing text files, Anki uses the first field to determine if a
-note is unique. By default, if the file you are importing has a first
-field that matches one of the existing notes in your collection and that
-existing note is the same type as the type you’re importing, the
-existing note’s other fields will be updated based on content of the
-imported file. A drop-down box in the import screen allows you to change
-this behaviour, to either ignore duplicates completely, or import them
-as new notes instead of updating existing ones.
+Під час імпорту текстових файлів Anki використовує перше поле, щоб визначити,
+чи є нотатка унікальною. За замовчуванням, якщо файл, який ви імпортуєте, має перше поле,
+яке відповідає одній із наявних нотаток у вашій колекції, і ця наявна нотатка має той самий тип,
+що й тип, який ви імпортуєте, інші поля наявної нотатки оновлюватимуться відповідно до вмісту
+імпортованого файлу. Розкривне меню на екрані імпорту дозволяє змінити цю поведінку, або повністю
+ігнорувати дублікати, або імпортувати їх як нові нотатки замість оновлення існуючих.
 
-The 'match scope' setting controls how duplicates are identified. When
-'notetype' is selected, Anki will identify a duplicate if another note
-with the same notetype has the same first field. When set to 'notetype and deck',
-a duplicate will only be flagged if the existing note also happens to be
-in the deck you are importing into.
+Налаштування «області відповідності» контролює спосіб визначення дублікатів. Якщо вибрано
+«notetype», Anki визначить дублікат, якщо інша нотатка з таким же типом має те саме
+перше поле. Якщо встановлено значення «notetype and deck», дублікат буде позначено, лише якщо
+наявна нотатка також є в колоді, до якої ви імпортуєте.
 
-If you have updating turned on and older versions of the notes you’re
-importing are already in your collection, they will be updated in place
-(in their current decks) rather than being moved to the deck you have
-set in the import dialog. If notes are updated in place, the existing
-scheduling information on all their cards will be preserved.
+Якщо у вас увімкнено оновлення та старіші версії нотаток, які ви імпортуєте, уже є у вашій колекції,
+їх буде оновлено на місці (у їхніх поточних колодах), а не буде переміщено до колоди, яку ви встановили
+в діалоговому вікні імпорту. Якщо нотатки оновлено на місці, наявна інформація про розклади на всіх
+їхніх картках буде збережена.
 
-For info on how duplicates are handled in .apkg files, please see the
-[Deck Packages](../exporting.md#packaged-decks) section.
+Щоб дізнатися, як обробляються дублікати у файлах .apkg, перегляньте
+розділ [Упаковані колоди](../exporting.md#упаковані-колоди).
 
 ## File Headers
 
