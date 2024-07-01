@@ -30,42 +30,37 @@ the text is exported with all the HTML formatting embedded in it.
 
 Є два різних типи упакованих колод.
 
-### Collection (.colpkg)
+### Колекція (.colpkg)
 
-When you export all decks with scheduling included, this is called a
-'collection package'. Anki will copy your entire collection into a file
-ending in .colpkg, and place it on your desktop. A collection package is
-used to back up your collection, or copy it to another device.
+Коли ви експортуєте всі колоди з включеним розкладом, це називається «пакет колекції».
+Anki скопіює всю вашу колекцію у файл із розширенням .colpkg і розмістить його на робочому столі.
+Пакет колекції використовується для резервного копіювання вашої колекції або її копіювання на
+інший пристрій.
 
-Collection packages created with previous versions of Anki were called
-collection.apkg.
+Пакети колекцій, створені за допомогою попередніх версій Anki,
+називалися collection.apkg.
 
-When this file is later imported, Anki will delete all the current cards
-in the collection, and replace the collection with the items in the
-file. This is useful for copying your collection back and forth between
-devices.
+Коли цей файл буде пізніше імпортовано, Anki видалить усі поточні картки в колекції
+та замінить колекцію елементами у файлі. Це корисно для копіювання вашої колекції
+між пристроями.
 
-Existing media in your collection is not deleted when you import a
-collection package. To delete unused media, use Tools&gt;Check Media.
+Існуючі медіафайли у вашій колекції не видаляються під час імпорту пакета колекції.
+Щоб видалити невикористані носії, скористайтеся інструментом&gt;Перевірити носії.
 
-If you choose Anki 2.1.50+ Collection Package format, imports and exports
-will be faster, and media files will be compressed, but the resulting
-.colpkg file will not be readable by older Anki clients.
+Якщо ви виберете формат Anki 2.1.50+ Collection Package, імпорт і експорт будуть швидшими,
+а мультимедійні файли будуть стиснуті, але отриманий файл .colpkg не зможуть прочитати
+старіші клієнти Anki.
 
-### Deck (.apkg)
+### Колода (.apkg)
 
-Deck packages contain a single deck (and any child decks it may have).
-They have a filename ending with .apkg, but a filename other than
-collection.apkg. When you import a deck package, Anki will add the
-contents into your collection, rather than overwriting your collection.
+Упаковані колоди містять одну колоду (і будь-які дочірні колоди, які вона може мати).
+У них ім’я файлу закінчується на .apkg, але ім’я файлу відрізняється від collection.apkg.
+Коли ви імпортуєте колоду, Anki додасть вміст у вашу колекцію, а не перезапише її.
 
-If some notes in the deck package have previously been imported, Anki
-will keep the version with the most recent modification time. So if you
-download an updated deck, the edits that have been made in the updated
-version will be made in your collection as well, but if you re-import an
-unchanged deck after making edits in your collection, the changes in
-your collection will be kept.
+Якщо деякі нотатки в пакеті колоди були раніше імпортовані, Anki збереже версію з часом останньої зміни.
+Отже, якщо ви завантажуєте оновлену колоду, зміни, внесені в оновлену версію, також буде внесено у вашу колекцію,
+але якщо ви повторно імпортуєте незмінену колоду після внесення змін у свою колекцію,
+зміни у вашій колекції збережуться.
 
-If you choose not to include scheduling information, Anki will assume
-that you are sharing the deck with other people, and will remove marked
-and leech tags so that they will have a clean copy of it.
+Якщо ви вирішите не включати інформацію про розклад, Anki вважатиме, що ви ділитеся колодою з іншими людьми,
+і видалить позначені та вилучені теги, щоб вони мали її чисту копію.
