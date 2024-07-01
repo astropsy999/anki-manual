@@ -24,12 +24,11 @@ the text is exported with all the HTML formatting embedded in it.
 
 ## Упаковані колоди
 
-A 'packaged deck' consists of cards, notes, note types, and any sounds or
-images bundled up into a file ending with .apkg or .colpkg. You can use
-packaged decks to transfer cards between people, or for backing up parts
-of your collection.
+«Упакована колода» складається з карток, нотаток, типів нотаток і будь-яких звуків і зображень,
+об’єднаних у файл із розширенням .apkg або .colpkg. Ви можете використовувати упаковані колоди
+для передачі карт між людьми або для резервного копіювання частин вашої колекції.
 
-There are two different kinds of packaged decks.
+Є два різних типи упакованих колод.
 
 ### Collection (.colpkg)
 
