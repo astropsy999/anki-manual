@@ -200,17 +200,16 @@ Anki 2.1.54+ підтримує певні заголовки, які можна
 
 Деякі заголовки мають додаткові значення.
 
-### Notetype Column
+### Стовпець Notetype
 
-Usually, all notes from a file will be mapped to a single notetype, and you may
-choose which column should be mapped to which field of that notetype.
+Зазвичай усі нотатки з файлу буде зіставлено з одним типом нотаток, і ви можете вибрати,
+який стовпець має бути зіставлено з полем цього типу нотаток.
 
-That changes, if there is a column with notetype names or ids. This allows to
-import notes with different notetypes, and their fields will be mapped implicitly:
-The first regular column is used for the first field of any note regardless of
-its notetype, the second regular column for the second field, and so on.
-A 'regular column' here being a column that does not contain special information
-like decks, tags, notetypes or GUIDs.
+Це змінюється, якщо є стовпець із назвами чи ідентифікаторами типів нотаток. Це дає змогу
+імпортувати нотатки з різними типами, і їхні поля будуть зіставлені неявно: перший звичайний стовпець
+використовується для першого поля будь-якої нотатки незалежно від її типу, другий звичайний стовпець –
+для другого поля тощо. «Звичайний стовпець» тут означає стовпець, який не містить спеціальної інформації,
+наприклад колод, тегів, типів нотаток або GUID.
 
 ### Deck Column
 
