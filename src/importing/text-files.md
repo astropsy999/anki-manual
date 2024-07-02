@@ -211,12 +211,11 @@ Anki 2.1.54+ підтримує певні заголовки, які можна
 для другого поля тощо. «Звичайний стовпець» тут означає стовпець, який не містить спеціальної інформації,
 наприклад колод, тегів, типів нотаток або GUID.
 
-### Deck Column
+### Колонка колоди
 
-Usually, any new cards created as a result of importing a text file will be placed
-in a single deck of your choice. If the file contains a deck column, however, new
-cards of a note will be placed in its specified deck instead. If the deck does not
-exist, a deck with the given name will be created.
+Зазвичай будь-які нові карти, створені в результаті імпортування за допомогою текстового файлу, будуть
+розміщені в одній колоді за вашим вибором. Проте, якщо файл містить колонку колоди, нові карти нотатки
+будуть розміщені в вказаній колоді. Якщо колоди не існує, буде створено колоду з вказаною назвою.
 
 ### GUID Column
 
