@@ -217,20 +217,17 @@ Anki 2.1.54+ підтримує певні заголовки, які можна
 розміщені в одній колоді за вашим вибором. Проте, якщо файл містить колонку колоди, нові карти нотатки
 будуть розміщені в вказаній колоді. Якщо колоди не існує, буде створено колоду з вказаною назвою.
 
-### GUID Column
+### Стовпець GUID
 
-GUID stands for _Globally Unique Identifier_. When you create notes in Anki, Anki
-assigns each note a unique ID, which can be used for duplicate checking. If you
-export your notes with the GUID included, you can make changes to the notes, and
-as long as you do not modify the GUID field, you'll be able to import the notes back
-in to update the existing notes.
+GUID означає _Globally Unique Identifier_. Коли ви створюєте нотатки в Anki, Anki призначає кожній нотатці
+унікальний ідентифікатор, який можна використовувати для перевірки дублікатів. Якщо ви експортуєте свої нотатки
+з включеним GUID, можете вносити зміни в нотатки, і якщо поле GUID не змінено, то ви зможете імпортувати нотатки назад,
+щоб оновити наявні.
 
-Please note that the GUID is intended to be created by Anki. If you are creating
-your own IDs, such as MYNOTE0001, then it's recommended that you place the IDs
-in the first field, instead of assigning them to Anki's internal GUID. When importing,
-Anki is able to use either the first field or the GUID for duplicate checking, so you do not
-need to make IDs a GUID in order to be able to update your notes.
+Зауважте, що GUID призначено для створення самим Anki. Якщо ви створюєте власні ідентифікатори, наприклад MYNOTE0001,
+тоді рекомендується розміщувати їх в першому полі, а не призначати внутрішньому GUID Anki. Під час імпорту Anki може
+використовувати або перше поле, або GUID для перевірки дублікатів, тому вам не потрібно створювати ідентифікатори GUID,
+щоб мати можливість оновлювати свої нотатки.
 
-One other thing to note is that the 'duplicate' option will not work for rows that have a
-non-empty GUID. If a GUID is provided, and already exists in the collection, a duplicate will
-not be created.
+Ще одна річ, на яку слід звернути увагу, полягає в тому, що параметр «дублікат» не працюватиме для рядків, які мають
+непорожній GUID. Якщо GUID надано та вже існує в колекції, дублікат не буде створено.
