@@ -1,24 +1,22 @@
-# Managing Files and Your Collection
+# Керування файлами та Вашою колекцією
 
 <!-- toc -->
 
-## Checking Your Collection
+## Перевірка Вашої колекції
 
-It is a good idea to occasionally check your collection file for
-problems. You can do this via the Tools&gt;Check Database menu item.
-Checking the database ensures the file has not been corrupted, rebuilds some
-internal structures, and optimizes the file.
+Гарною ідеєю буде час від часу перевіряти файл колекції на наявність проблем.
+Це можна зробити за допомогою пункту меню Інструменти&gt;Перевірити базу даних.
+Перевірка бази даних гарантує, що файл не пошкоджено, перебудовує деякі внутрішні
+структури та оптимізує файл.
 
-When you check the database, your tag list is also rebuilt. When you
-delete individual decks or cards, Anki does not update the list of used
-tags, as it's inefficient to do so. If you want to clear old tags out
-from the list that are no longer in use, checking your database is the
-way to do it.
+Коли ви перевіряєте базу даних, ваш список тегів також перебудовується.
+Коли ви видаляєте окремі колоди чи карти, Anki не оновлює список використаних тегів,
+оскільки це неефективно. Якщо ви хочете очистити зі списку старі теги, які більше не
+використовуються, перевірте свою базу даних.
 
-Please note that Anki will automatically optimize your collection once
-every 2 weeks. This optimization ensures the collection performs well,
-but it does not check for errors or rebuild the tag list when
-automatically optimizing.
+Зверніть увагу, що Anki автоматично оптимізує вашу колекцію кожні 2 тижні.
+Ця оптимізація забезпечує хорошу роботу колекції, але вона не перевіряє наявність помилок
+і не перебудовує список тегів під час автоматичної оптимізації.
 
 ## File Locations
 
