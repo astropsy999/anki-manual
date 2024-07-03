@@ -18,41 +18,38 @@
 Ця оптимізація забезпечує хорошу роботу колекції, але вона не перевіряє наявність помилок
 і не перебудовує список тегів під час автоматичної оптимізації.
 
-## File Locations
+## Розташування файлів
 
-On **Windows**, the latest Anki versions store your Anki files in your
-appdata folder. You can access it by opening the file manager, and
-typing `%APPDATA%\Anki2` in the location field. Older versions of Anki
-stored your Anki files in a folder called `Anki` in your `Documents`
-folder.
+У **Windows** останні версії Anki зберігають ваші файли Anki у папці appdata.
+Ви можете отримати доступ до неї, відкривши файловий менеджер і ввівши `%APPDATA%\Anki2`
+у полі розташування. Старіші версії Anki зберігали файли Anki в папці під назвою `Anki`
+у папці `Documents`.
 
-On **Mac** computers, recent Anki versions store all their files in the
-`~/Library/Application Support/Anki2` folder. The Library folder is
-hidden by default, but can be revealed in Finder by holding down the
-option key while clicking on the Go menu. If you're on an older Anki
-version, your Anki files will be in your `Documents/Anki` folder.
+На комп’ютерах **Mac** останні версії Anki зберігають усі файли в папці
+`~/Library/Application Support/Anki2`. Папка Library прихована за замовчуванням,
+але її можна відкрити у Finder, утримуючи натиснутою клавішу option під час натискання меню Go.
+Якщо ви використовуєте старішу версію Anki, файли Anki будуть у папці `Documents/Anki`.
 
-On **Linux**, recent Anki versions store your data in
-`~/.local/share/Anki2`, or `$XDG_DATA_HOME/Anki2` if you have set a
-custom data path. Older versions of Anki stored your files in
-`~/Documents/Anki` or `~/Anki`.
+У **Linux** останні версії Anki зберігають дані в `~/.local/share/Anki2` або
+`$XDG_DATA_HOME/Anki2`, якщо ви встановили спеціальний шлях до даних. Старіші версії Anki
+зберігали файли в `~/Documents/Anki` або `~/Anki`.
 
-Within the Anki folder, the program-level and profile-level preferences
-are stored in a file called prefs.db.
+У папці Anki параметри на рівні програми та профілю зберігаються
+у файлі під назвою prefs.db.
 
-There is also a separate folder for each profile. The folder contains:
+Також для кожного профілю є окрема папка. Папка містить:
 
-- Your notes, decks, cards and so on in a file called collection.anki2
+- Ваші нотатки, колоди, карти тощо у файлі під назвою collection.anki2
 
-- Your audio and images in a collection.media folder
+- Ваші аудіо та зображення в папці collection.media
 
-- A backups folder
+- Папка резервних копій
 
-- Some system files
+- Деякі системні файли
 
-You should never copy or move your collection while Anki is open. Doing
-so could cause your collection to become corrupt. Please do not move or
-modify the other files in the folder either.
+Ви ніколи не повинні копіювати або переміщувати свою колекцію, коли Anki відкрито.
+Це може призвести до пошкодження вашої колекції. Також не переміщуйте та не змінюйте
+інші файли в папці.
 
 ## Startup Options
 
