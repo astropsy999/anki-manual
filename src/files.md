@@ -51,58 +51,54 @@
 Це може призвести до пошкодження вашої колекції. Також не переміщуйте та не змінюйте
 інші файли в папці.
 
-## Startup Options
+## Параметри запуску
 
-If you have made a destructive change on one computer and have an
-undamaged copy on another computer, you may wish to start Anki without
-syncing in order to use the full sync option without first downloading
-the changes. Similarly, if you are experiencing problems with Anki, you
-might want to (or might be instructed to) disable add-ons temporarily to
-see if one might be causing the problem. You can do both of these things
-by holding down the <kbd>Shift</kbd> key while starting Anki.
+Якщо ви внесли деструктивні зміни на одному комп’ютері та маєте непошкоджену копію
+на іншому комп’ютері, ви можете запустити Anki без синхронізації, щоб скористатися
+опцією повної синхронізації без попереднього завантаження змін. Подібним чином, якщо
+у вас виникли проблеми з Anki, ви можете тимчасово вимкнути додаткові компоненти
+(або отримати вказівку про це), щоб перевірити, чи вони спричиняють проблему. Ви можете
+зробити обидві ці дії, утримуючи клавішу <kbd>Shift</kbd> під час запуску Anki.
 
-It is possible to specify a custom folder location during startup. This
-is an advanced feature that is primarily intended to be used with
-portable installations, and we recommend you use the default location in
-most circumstances.
+Під час запуску можна вказати власну папку. Це розширена функція, яка в першу чергу
+призначена для використання з портативними інсталяціями, і ми рекомендуємо використовувати
+розташування за замовчуванням у більшості випадків.
 
-The syntax to specify an alternate folder is as follows:
+Синтаксис для визначення альтернативної папки такий:
 
     anki -b /path/to/anki/folder
 
-- If you have multiple profiles, you can pass -p &lt;name&gt; to load
-  a specific profile.
-- If you pass -p some-fake-name, Anki will show the profile screen on startup.
-  If no profile is provided, the last-used profile is loaded.
+- Якщо у вас кілька профілів, ви можете передати -p &lt;name&gt; завантажити
+  конкретний профіль.
+- Якщо ви передасте -p some-fake-name, Anki відобразить екран профілю під час запуску.
+  Якщо профіль не надано, завантажується останній використаний профіль.
 
-- To change the interface language, use -l &lt;iso 639-1 language
-  code&gt;, such as "-l ja" for Japanese.
+- Щоб змінити мову інтерфейсу, використовуйте -l &lt;iso 639-1 мова
+  код&gt;, наприклад "-l ja" для японської мови.
 
-If you always want to use a custom folder location, you can modify your
-shortcut to Anki. On Windows, right-click on the shortcut, choose
-Properties, select the Shortcut tab, and add "-b
-\\path\\to\\data\\folder" after the path to the program, which should
-leave you with something like
+Якщо ви завжди хочете використовувати власне розташування папки, ви можете змінити
+свій ярлик для Anki. У Windows клацніть правою кнопкою миші ярлик, виберіть «Властивості»,
+виберіть вкладку «Ярлик» і додайте «-b \\шлях\\до\\папки даних\\» після шляху до програми,
+що має виглядати як щось на зразок
 
     "C:\Program Files\Anki\anki.exe" -b "C:\AnkiDataFolder"
 
-You can also use this technique with the -l option to easily use Anki in
-different languages.
+Ви також можете використовувати цю техніку з опцією -l, щоб легко використовувати
+Anki різними мовами.
 
-On Windows, you should use a backslash (\\) not a forward slash (/).
+У Windows слід використовувати зворотній слеш (\\), а не слеш (/).
 
-On a Mac there is no easy way to alter the behaviour when clicking on
-the Anki icon, but it is possible to start Anki with a custom base
-folder from a terminal:
+На Mac немає простого способу змінити поведінку під час натискання піктограми Anki,
+але можна запустити Anki за допомогою спеціальної базової папки з терміналу:
 
     open /Applications/Anki.app --args -b ~/myankifolder
 
-Alternatively, you can define the environment variable "ANKI_BASE".
-On Windows, you can define the environment variable with:
+Крім того, ви можете визначити змінну середовища "ANKI_BASE".
+У Windows ви можете визначити змінну середовища за допомогою:
 
     set "ANKI_BASE=C:/path/to/AnkiDataFolder"
 
-On Linux and macOS, you can use:
+У Linux і macOS можна використовувати:
 
     export ANKI_BASE="/path/to/AnkiDataFolder"
 
