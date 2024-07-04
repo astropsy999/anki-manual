@@ -157,35 +157,31 @@ Anki різними мовами.
 
 ## Недоступний жорсткий диск
 
-Якщо Anki не може писати у файли в [папці Anki](#file-locations), під час запуску з’явиться
+Якщо Anki не може писати у файли в [папці Anki](#розташування-файлів), під час запуску з’явиться
 повідомлення про те, що Anki не може писати на жорсткий диск, і Anki закриється. Якщо ви не
-впевнені, як виправити дозволи, зверніться до когось поруч із вами, хто знає комп’ютери та
+впевнені, як виправити дозволи, зверніться до когось поруч, хто знає комп’ютери та
 може вам допомогти.
 
-## Permissions of Temp Folder
+## Дозволи для тимчасової папки
 
-Anki uses the system's temporary folder to store temporary data. If the
-permissions of this folder have been changed from the default settings
-by a rogue app or buggy antivirus app, Anki will not function properly.
+Anki використовує тимчасову папку системи для зберігання тимчасових даних. Якщо дозволи цієї папки
+були змінені з налаштувань за замовчуванням шахрайською програмою або антивірусною програмою з помилками,
+Anki не працюватиме належним чином.
 
-If you're on a Windows 7 machine, the general steps to fix the problem
-are listed below. As this is somewhat complicated, please ask someone
-knowledgeable about Windows if you are not sure.
+Якщо ви користуєтеся комп’ютером з Windows 7, нижче наведено загальні кроки для вирішення проблеми.
+Оскільки це дещо складно, запитайте когось, хто знає Windows, якщо не впевнені.
 
-1. Click on the start bar, and type in %temp% (including the percents),
-   then hit <kbd>Enter</kbd>.
 
-2. Go up one folder, and locate the temp folder. Right click on it, and
-   choose Properties.
+1. Клацніть на початковій панелі та введіть %temp% (включаючи %), потім натисніть <kbd>Enter</kbd>.
 
-3. In the security tab, click on Advanced.
+2. Підніміться на одну папку вгору та знайдіть папку temp. Клацніть її правою кнопкою миші та виберіть «Властивості».
 
-4. Click on the Owner tab. If you're not listed as the owner, click the
-   button to take ownership.
+3. На вкладці безпеки натисніть Додатково.
 
-5. On the permissions tab, ensure that you have full control. On a
-   default W7 install the control will actually be inherited from
-   c:\\users\\your-username.
+4. Натисніть вкладку Власник. Якщо ви не вказано як власник, натисніть кнопку, щоб прийняти право власності.
+
+5. На вкладці дозволів переконайтеся, що ви маєте повний контроль. Під час інсталяції W7 за замовчуванням елемент
+   керування буде фактично успадковано з c:\\users\\your-username.
 
 ## Corrupt Collections
 
