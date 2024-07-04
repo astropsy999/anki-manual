@@ -48,26 +48,27 @@ Each time your collection is closed (when closing Anki, switching
 profiles, or doing a full sync download), Anki creates a backup. By default
 it will store up to 30 backups; you can adjust this in the [preferences](preferences.md).
 
-## Manual colpkg backups
+## Резервне копіювання colpkg вручну
 
-### Restoring
+### Відновлення
 
-You can restore from a manual backup by using File>Import.
+Ви можете відновити з резервної копії вручну, використовуючи «Файл»>«Імпорт».
 
-### Creating
+### Створення
 
-In Anki 2.1.50+, you can use File>Create Backup to trigger an immediate backup. This
-functions like regular automatic backups, and does not include media files.
+У Anki 2.1.50+ ви можете скористатися командою «Файл»>«Створити резервну копію», щоб запустити негайне
+резервне копіювання. Це функціонує як звичайне автоматичне резервне копіювання та не включає
+мультимедійні файли.
 
-To create a backup that includes your sounds and images:
+Щоб створити резервну копію яка включає звуки та зображення:
 
-- Select Export from the File menu.
-- Ensure "Anki collection package (.colpkg)" is selected.
-- Enable the "include media" option.
+- Виберіть «Експортувати» у меню «Файл».
+- Переконайтеся, що вибрано «Пакунок колекції Anki (.colpkg)».
+- Увімкніть опцію «включити медіа-файли».
 
-This will create a .colpkg file that contains all of your cards and any sounds/images they
-use. We recommend you store the file somewhere safe, like a different device, or a cloud-based
-file storage service like Dropbox or Google Drive.
+Це створить файл .colpkg, який містить усі ваші картки та будь-які звуки/зображення, які вони використовують.
+Радимо зберігати файл у безпечному місці, наприклад на іншому пристрої або в хмарній службі зберігання файлів,
+як-от Dropbox або Google Drive.
 
 ## AnkiWeb
 
