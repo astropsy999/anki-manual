@@ -155,13 +155,12 @@ Anki різними мовами.
 
 Перегляньте [цей розділ](./backups.md).
 
-## Inaccessible Harddisk
+## Недоступний жорсткий диск
 
-If Anki can't write to files in the [Anki folder](#file-locations), a message
-will be displayed on startup saying that Anki can't write to the
-harddisk, and Anki will close. If you're unsure how to fix the
-permissions, please contact someone near you who is knowledgeable about
-computers and can help you out.
+Якщо Anki не може писати у файли в [папці Anki](#file-locations), під час запуску з’явиться
+повідомлення про те, що Anki не може писати на жорсткий диск, і Anki закриється. Якщо ви не
+впевнені, як виправити дозволи, зверніться до когось поруч із вами, хто знає комп’ютери та
+може вам допомогти.
 
 ## Permissions of Temp Folder
 
