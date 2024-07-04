@@ -183,85 +183,77 @@ Anki не працюватиме належним чином.
 5. На вкладці дозволів переконайтеся, що ви маєте повний контроль. Під час інсталяції W7 за замовчуванням елемент
    керування буде фактично успадковано з c:\\users\\your-username.
 
-## Corrupt Collections
+## Пошкоджені колекції
 
-Anki uses a file format that is robust against program and computer
-crashes, but it's still possible for your collection to become corrupt
-if the files are modified while Anki is open, stored on a network drive,
-or corrupted by a bug.
+Anki використовує формат файлу, стійкий до збоїв програми та комп’ютера, але ваша колекція все одно може
+бути пошкоджена, якщо файли змінено, коли Anki відкрито, зберігаються на мережевому диску або пошкоджені
+через помилку.
 
-When you run Tools&gt;Check Database, you will receive a message if Anki
-detects the file has been corrupted. **The best way to recover from this
-is to restore from the most recent [automatic backup](#backups)**, but
-if your backup is too old, then you can attempt to repair the corruption
-instead.
+Коли ви запустите Інструменти&gt;Перевірити базу даних, ви отримаєте повідомлення, якщо Anki виявить,
+що файл пошкоджено. **Найкращий спосіб відновити це — відновити з останньої [автоматичної резервної копії](#резервні-копії)**,
+але якщо ваша резервна копія надто стара, ви можете спробувати виправити пошкодження.
 
-On Linux, make sure sqlite3 is installed. On a Mac, it should be
-installed already. On Windows, download
+У Linux переконайтеся, що встановлено sqlite3. На Mac його вже має бути встановлено.
+У Windows завантажте
 <http://www.sqlite.org/sqlite-3_6_23.zip>.
 
-Next, create a backup of your collection.anki2 file, in case something
-goes wrong with the steps below.
+Далі створіть резервну копію файлу collection.anki2 на випадок, якщо під час виконання
+наведених нижче кроків щось піде не так.
 
 ### Linux/macOS
 
-Open a terminal, change to the folder your collection is located in, and
-type:
+Відкрийте термінал, перейдіть до папки, у якій знаходиться ваша колекція,
+і введіть:
 
     sqlite3 collection.anki2 .dump > dump.txt
 
-Open the resulting dump.txt file in a text editor, and look at the final
-line. If it reads "rollback;", change it to "commit;"
+Відкрийте отриманий файл dump.txt у текстовому редакторі та подивіться на останній рядок.
+Якщо він читається як "rollback;", змініть його на "commit;"
 
-Then run the following in a terminal:
+Потім запустіть наступне в терміналі:
 
     cat dump.txt | sqlite3 temp.file
 
-Make sure you use temp.file - do not put collection.anki2 on the right,
-or you will blank out the file. When you're done, proceed to the final
-step.
+Переконайтеся, що ви використовуєте temp.file - не ставте collection.anki2 праворуч,
+інакше файл буде порожнім. Коли закінчите, перейдіть до останнього кроку.
 
 ### Windows
 
-Copy the `sqlite3.exe` program and your deck to your desktop. Then go to
-**Start&gt;Run** and type in `cmd.exe`.
+Скопіюйте програму `sqlite3.exe` і свою колоду на робочий стіл. Потім перейдіть
+до **Пуск&gt;Виконати** та введіть `cmd.exe`.
 
-If you're on a recent Windows, the command prompt may not start on your
-desktop. If you don't see desktop displayed in the command prompt, type
-something like the following, replacing 'administrator' with your login
-name.
+Якщо ви використовуєте поновлену версію Windows, командний рядок може не запускатись
+на одразу із паки Desktop. Якщо ви не бачите Desktop в командному рядку, введіть щось
+на зразок наступного, замінивши Administrator своїм логіном.
 
     cd C:\Users\Administrator\Desktop
 
-Then type:
+Потім введіть:
 
     sqlite3 collection.anki2 .dump > dump.txt
 
-Open the resulting dump.txt file in a text editor, and look at the final
-line. If it reads "rollback;", change it to "commit;"
+Відкрийте отриманий файл dump.txt у текстовому редакторі та подивіться на останній рядок.
+Якщо він читається "rollback;", змініть його на "commit;"
 
-Then run the following in a terminal:
+Потім запустіть наступне в терміналі:
 
     type dump.txt | sqlite3 temp.file
 
-Make sure you use temp.file - do not put collection.anki2 on the right,
-or you will blank out the file. When you're done, proceed to the final
-step.
+Переконайтеся, що ви використовуєте temp.file - не ставте collection.anki2 праворуч, інакше
+файл буде порожнім. Коли закінчите, перейдіть до останнього кроку.
 
-### Final Step
+### Останній крок
 
-Check that you didn't get an error message, and that temp.file is not
-empty. The procedure optimizes the collection in the process, so it's
-normal for the new file to be somewhat smaller than the old one.
+Переконайтеся, що ви не отримали повідомлення про помилку та що temp.file не порожній.
+Процедура оптимізує збірку у процесі, тому це нормально, коли новий файл буде дещо меншим
+за старий.
 
-When you've confirmed the file is not empty:
+Коли ви підтвердите, що файл не порожній:
 
-- rename the original collection.anki2 file to something else
+- перейменуйте вихідний файл collection.anki2 на щось інше
 
-- rename temp.file to collection.anki2
+- перейменуйте temp.file на collection.anki2
 
-- move collection.anki2 back into your collection folder, overwriting
-  the old version
+- перемістіть collection.anki2 назад у папку вашої колекції, перезаписавши стару версію
 
-- start Anki and go to Tools&gt;Check Database to make sure the
-  collection has been successfully restored.
+- запустіть Anki та перейдіть до Інструменти&gt;Перевірити базу даних, щоб переконатися, що колекцію успішно відновлено.
