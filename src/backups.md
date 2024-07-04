@@ -1,17 +1,16 @@
-# Backups
+# Резервні копії
 
 <!-- toc -->
 
-## Automatic backups
+## Автоматичне резервне копіювання
 
-Anki will create automatic backups of your card data. These include the text
-on your cards and your scheduling information, but do not include sounds or
-image files.
+Anki створить автоматичні резервні копії даних ваших карток. До них входить текст
+на картках та інформація про розклад, але не входять звуки чи файли зображень.
 
-Automatic backups can be useful to recover from mistakes, but you should not
-rely solely on them. Because they are stored on your local device, they will not
-protect you if your device breaks or is stolen. We recommend you combine them with
-[manual backups](#manual-colpkg-backups).
+Автоматичне резервне копіювання може бути корисним для відновлення після помилок,
+але не варто покладатися виключно на нього. Оскільки дані зберігаються на вашому
+локальному пристрої, це не захистить вас, якщо ваш пристрій зламається або його вкрадуть.
+Радимо поєднати це із [ручним резервним копіюванням](#manual-colpkg-backups).
 
 ### Restoring
 
