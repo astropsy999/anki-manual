@@ -71,10 +71,9 @@ Anki вимикає автоматичну синхронізацію та ре�
 
 ## AnkiWeb
 
-[Synchronising](./syncing.md) your collection with AnkiWeb provides some level of protection
-against your device being lost or stolen. If you need to restore your collection from AnkiWeb,
-you can force a one-way sync in the preferences screen, or sync from a new device, and then choose
-"Download".
+[Синхронізація](./syncing.md) ваша колекція з AnkiWeb забезпечує певний рівень захисту від втрати чи викрадення
+вашого пристрою. Якщо вам потрібно відновити свою колекцію з AnkiWeb, ви можете примусово виконати односторонню
+синхронізацію на екрані налаштувань або синхронізувати з нового пристрою, а потім вибрати «Завантажити».
 
 ## Deletion log
 
