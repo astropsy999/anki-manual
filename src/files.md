@@ -125,33 +125,31 @@ Anki різними мовами.
 вибором, рекомендується регулярно використовувати Інструменти&gt;Перевірити базу даних для виявлення
 пошкоджень.
 
-## Running from a Flash Drive
+## Запуск з флешки
 
-On Windows, Anki can be installed on a USB / flash drive and run as a
-portable application. The following example assumes your USB drive is
-drive G.
+У Windows Anki можна встановити на USB / флешку та запускати як портативний додаток.
+У наступному прикладі припускається, що ваш USB-накопичувач є диском G.
 
-- Copy the \\Program Files\\Anki folder to the flash drive, so you
-  have a folder like G:\\Anki.
+- Скопіюйте папку \\Program Files\\Anki на флешку, щоб
+ мати папку типу G:\\Anki.
 
-- Create a text file called G:\\anki.bat with the following text:
+- Створіть текстовий файл під назвою G:\\anki.bat із таким текстом:
 
   g:\anki\anki.exe -b g:\ankidata
 
-If you would like to prevent the black command prompt window from
-remaining open, you can instead use:
+Якщо ви не хочете, щоб чорне вікно командного рядка залишалося відкритим,
+ви можете натомість скористатися:
 
     start /b g:\anki\anki.exe -b g:\ankidata
 
-- Double-clicking on anki.bat should start Anki with the user data
-  stored in G:\\ankidata.
+- Подвійне клацання на anki.bat повинно запустити Anki з даними користувача,
+  що зберігаються в G:\\ankidata.
 
-The full path including drive letter is required - if you try using
-`\anki\anki.exe` instead you will find syncing stops working.
+Необхідно вказати повний шлях, включно з літерою диска. Якщо замість цього
+ви спробуєте використати `\anki\anki.exe`, синхронізація перестане працювати.
 
-Media syncing with AnkiWeb may not work if your flash drive is formatted
-as FAT32. Please format the drive as NTFS to ensure media syncs
-correctly.
+Синхронізація медіа з AnkiWeb може не працювати, якщо флешку відформатовано як FAT32.
+Відформатуйте диск як NTFS, щоб забезпечити правильну синхронізацію медіа.
 
 ## Backups
 
