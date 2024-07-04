@@ -120,10 +120,10 @@ Anki різними мовами.
 
 ## Мережеві файлові системи
 
-We strongly recommend you have Anki store your files on a local hard
-disk, as network filesystems can lead to database corruption. If a
-network filesystem is your only option, regular use of Tools&gt;Check
-Database to detect corruption is recommended.
+Ми настійно рекомендуємо, щоб Anki зберігала ваші файли на локальному жорсткому диску, оскільки мережеві
+файлові системи можуть призвести до пошкодження бази даних. Якщо мережева файлова система є вашим єдиним
+вибором, рекомендується регулярно використовувати Інструменти&gt;Перевірити базу даних для виявлення
+пошкоджень.
 
 ## Running from a Flash Drive
 
