@@ -102,26 +102,23 @@ Anki різними мовами.
 
     export ANKI_BASE="/path/to/AnkiDataFolder"
 
-## DropBox and File Syncing
+## DropBox і синхронізація файлів
 
-We do not recommend you sync your Anki folder directly with a
-third-party synchronization service, as it can lead to database
-corruption when files are synced while in use.
+Ми не рекомендуємо синхронізувати папку Anki безпосередньо за допомогою сторонньою служби
+синхронізації, оскільки це може призвести до пошкодження бази даних, коли файли синхронізуються
+під час використання.
 
-If you just want to synchronize your media, you can link external
-folders into services like DropBox. Please see [DropboxWiki: Sync
-Folders Outside Dropbox (archive.org)][dropboxwiki-sync-other]
-for more info.
+Якщо ви просто хочете синхронізувати медіафайли, ви можете підключити зовнішні папки до таких служб,
+як DropBox. Перегляньте [DropboxWiki: Синхронізація папок поза Dropbox (archive.org)][dropboxwiki-sync-other]
+для отримання додаткової інформації.
 
 [dropboxwiki-sync-other]: http://web.archive.org/web/20180919153730/http://www.dropboxwiki.com/tips-and-tricks/sync-other-folders
 
-If you wish to keep your collection in sync as well, it is strongly
-recommended that you create a script that copies your files from your
-synced folder to a local folder, launches Anki, and then copies the
-files back when Anki is closed. This will ensure that the files are
-never synchronized while they are open.
+Якщо ви бажаєте синхронізувати також свою колекцію, настійно рекомендуємо створити скрипт, який
+копіює файли з вашої синхронізованої папки до локальної папки, запускає Anki, а потім копіює файли
+назад, коли Anki закрито. Це гарантує, що файли ніколи не синхронізуються, коли вони відкриті.
 
-## Network Filesystems
+## Мережеві файлові системи
 
 We strongly recommend you have Anki store your files on a local hard
 disk, as network filesystems can lead to database corruption. If a
