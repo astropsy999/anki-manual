@@ -1,56 +1,45 @@
-# Card Templates
+# Шаблони карток
 
-Card templates tell Anki which fields should appear on the front and back of your card,
-and control which cards will be generated when certain fields have text in them.
-By adjusting your card templates, you can alter the design and styling of many of your
-cards at once.
+Шаблони карток вказують Anki, які поля мають з’являтися на лицьовій і зворотній сторонах вашої картки,
+і контролюють, які картки створюватимуться, коли певні поля містять текст. Налаштувавши шаблони карток,
+ви можете змінити дизайн і стиль багатьох своїх карток одночасно.
 
-Card templates are covered in some of the intro videos:
+Шаблони карток описані в деяких вступних відео:
 
-- [Switching Card Order](http://www.youtube.com/watch?v=DnbKwHEQ1mA&yt:cc=on)
+- [Порядок перемикання карток](http://www.youtube.com/watch?v=DnbKwHEQ1mA&yt:cc=on)
 
-- [Styling Cards](http://www.youtube.com/watch?v=F1j1Zx0mXME&yt:cc=on)
+- [Стилізація карток](http://www.youtube.com/watch?v=F1j1Zx0mXME&yt:cc=on)
 
-- [Typing in the Answer](http://www.youtube.com/watch?v=5tYObQ3ocrw&yt:cc=on)
+- [Введення відповіді](http://www.youtube.com/watch?v=5tYObQ3ocrw&yt:cc=on)
 
-## The Templates Screen
+## Екран шаблонів
 
-You can modify card templates by clicking the "Cards..." button inside the
-editing screen.
+Ви можете змінити шаблони карток, натиснувши кнопку «Картки...»
+на екрані редагування.
 
-For older Anki versions, on the top left is the front template, on the bottom left is the back
-template, and in between them is the card styling section. For Anki versions
-2.1.28+ the front, back, and styling are no longer shown at the same time.
-You can switch between them with <kbd>Ctrl</kbd>+<kbd>1</kbd>, <kbd>Ctrl</kbd>+<kbd>2</kbd>, and <kbd>Ctrl</kbd>+<kbd>3</kbd>.
+Для старих версій Anki у верхньому лівому куті знаходиться передній шаблон, унизу ліворуч — задній шаблон,
+а між ними — розділ стилю картки. Для Anki версії 2.1.28+ передня, задня та стиль більше не відображаються
+одночасно. Ви можете переключатися між ними за допомогою <kbd>Ctrl</kbd>+<kbd>1</kbd>, <kbd>Ctrl</kbd>+<kbd>2</kbd>
+і <kbd>Ctrl</kbd >+<kbd>3</kbd>.
 
-In Anki, templates are written in HTML, which is the language that web
-pages are written in. The styling section is CSS, which is the language
-used for styling web pages.
+В Anki шаблони написані мовою HTML, якою написані веб-сторінки. Розділ стилів – це мова CSS,
+яка використовується для оформлення веб-сторінок.
 
-On the right is a preview of the front and back of the currently
-selected card. If you opened the window while adding notes, the preview
-will be based on the text you had typed into the Add Notes window. If
-you opened the window while editing a note, the preview will be based on
-the content of that note. If you opened the window from Tools → Manage
-Note Types, Anki will display each field’s name in parentheses in place
-of content.
+Праворуч є попередній перегляд передньої та задньої сторін вибраної картки. Якщо ви відкрили вікно
+під час додавання нотаток, попередній перегляд базуватиметься на тексті, який ви ввели у вікні «Додати нотатки».
+Якщо ви відкрили вікно під час редагування нотатки, попередній перегляд базуватиметься на вмісті цієї нотатки.
+Якщо ви відкрили вікно з меню Інструменти → Керувати типами нотаток, Anki відображатиме назву кожного поля в
+дужках замість вмісту.
 
-At the top right of the window is an Options button that gives you
-options to rename or reorder the cards, as well as the following two
-options:
+У верхньому правому куті вікна є кнопка «Параметри», за допомогою якої можна перейменувати або змінити порядок
+карток, а також два наступних варіанти:
 
-- The 'Deck Override' option allows you to change the deck that cards
-  generated from the current card type will be placed into. By
-  default, cards are placed into the deck you provide in the Add Notes
-  window. If you set a deck here, that card type will be placed into
-  the deck you specified, instead of the deck listed in the Add Notes
-  window. This can be useful if you want to separate cards into
-  different decks (for instance, when studying a language, to put
-  production cards in one deck and recognition cards in another). You
-  can check which deck the cards are currently going to by choosing
-  Deck Override again.
+- Параметр «Перевизначення колоди» дозволяє вам змінити колоду, у яку будуть розміщені карти, згенеровані з поточного
+типу карт. За замовчуванням карти розміщуються в колоді, яку ви обираєте у вікні «Додати нотатки. Якщо ви встановите
+колоду тут, цей тип карти буде розміщено в колоді, яку ви вказали, замість колоди, зазначеної у вікні «Додати нотатки».
+Це може бути корисно, якщо ви хочете розділити карти на різні колоди (наприклад, під час вивчення мови помістити картки
+виробництва в одну колоду, а картки розпізнавання в іншу). Ви можете перевірити, до якої колоди зараз йдуть карти, знову
+вибравши Перевизначити колоду.
 
-- The 'Browser Appearance' option allows you to set different (perhaps
-  simplified) templates for display in the Question and Answer columns
-  of the browser; see [browser appearance](styling.md#browser-appearance) for more
-  information.
+- Параметр «Вигляд браузера» дозволяє встановлювати різні (можливо, спрощені) шаблони для відображення в стовпцях
+запитань і відповідей браузера; див. [вигляд браузера](styling.md#browser-appearance) для отримання додаткової інформації.
