@@ -89,50 +89,41 @@ img#star {
 
 Anki 2.1.50+ підтримує зміну розміру зображення в редакторі.
 
-## Field Styling
+## Стилізація полів
 
-The default styling applies to the whole card. You can also make certain
-fields or part of the card use a different font, color, and so on. This
-is particularly important when studying foreign languages, as Anki will
-sometimes be unable to correctly display characters unless an
-appropriate font has been chosen.
+Стиль за замовчуванням застосовується до всієї картки. Ви також можете зробити певні поля чи частину
+картки іншим шрифтом, кольором тощо. Це особливо важливо під час вивчення іноземних мов, оскільки
+Anki іноді не зможе правильно відобразити символи, якщо не вибрано відповідний шрифт.
 
-Say you have an “Expression” field, and you want to give it the OSX Thai
-font “Ayuthaya”. Imagine your template already reads:
+Скажімо, у вас є поле «Вираз» і ви хочете надати йому тайський шрифт OSX «Ayuthaya». Уявіть, що ваш шаблон:
 
     What is {{Expression}}?
 
     {{Notes}}
 
-What we need to do is wrap the text we want to style in some HTML. We
-will put the following in front of the text:
+Що нам потрібно зробити, це обернути текст, який потрібно стилізувати, у HTML. Перед текстом ми поставимо наступне:
 
     <div class=mystyle1>
 
-And the following behind it:
+А за цим:
 
     </div>
 
-By wrapping the text like the above, we tell Anki to style the wrapped
-text with a custom style called “mystyle1”, which we will create later.
+За допомогою обтікання тексту, як описано вище, ми наказуємо Anki стилізувати обернутий текст за допомогою спеціального стилю під назвою «mystyle1», який ми створимо пізніше.
 
-Thus if we wanted the entire “What is …​?” expression to use the Thai
-font, we would use:
+Таким чином, якщо потрібно повністю стилізувати `«What is …​?» Expression` для використання тайського шрифту, потрібно скористатися:
 
     <div class=mystyle1>What is {{Expression}}?</div>
 
     {{Notes}}
 
-And if we wanted only the expression field itself to use the Thai font,
-we’d use:
+А якщо потрібно, щоб лише саме поле виразу використовувало тайський шрифт:
 
     What is <div class=mystyle1>{{Expression}}</div>?
 
     {{Notes}}
 
-After we’ve edited the template, we now need to move to the Styling
-section between the templates. Before editing it, it should look
-something like:
+Після редагування шаблону нам потрібно перейти до розділу «Стилі» в шаблоні. Перед редагуванням, він повинен виглядати приблизно так:
 
 ```css
 .card {
@@ -144,7 +135,7 @@ something like:
 }
 ```
 
-Add your new style to the bottom, so it looks like:
+Додайте свій новий стиль нижче, щоб він виглядав так:
 
 ```css
 .card {
@@ -160,9 +151,7 @@ Add your new style to the bottom, so it looks like:
 }
 ```
 
-You can include any styling you want in the style. If you wanted to
-increase the font size too, you’d change the mystyle1 section to look
-like:
+Ви можете включити в `mystyle1` будь-яку стилізацію. Якщо хочете збільшити розмір шрифту, ви повинні змінити `mystyle1` таким чином:
 
 ```css
 .mystyle1 {
@@ -171,9 +160,7 @@ like:
 }
 ```
 
-It’s also possible to bundle custom fonts with your deck, so you don’t
-need to install them on your computer or mobile device. Please see the
-[installing fonts](#installing-fonts) section for more info.
+До вашої колоди також можна додати власні шрифти, тож вам не потрібно встановлювати їх на комп’ютері чи мобільному пристрої. Для отримання додаткової інформації перегляньте розділ [встановлення шрифтів](#installing-fonts).
 
 ## Audio Replay Buttons
 
