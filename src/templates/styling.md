@@ -1,52 +1,46 @@
-# Styling & HTML
+# Стилізація та HTML
 
 <!-- toc -->
 
-## Card Styling
+## Стилізація карток
 
-You can watch [a video about styling cards](http://www.youtube.com/watch?v=F1j1Zx0mXME&yt:cc=on) on YouTube.
-The video shows Anki 2.0’s interface, but the concepts are largely the
-same.
+Ви можете переглянути [відео про оформлення карток](http://www.youtube.com/watch?v=F1j1Zx0mXME&yt:cc=on)
+на YouTube. На відео показано інтерфейс Anki 2.0, але концепції в основному ті самі.
 
-The styling section of the Cards screen can be accessed by clicking the
-"Styling" button next to the "Back Template" button. In that section,
-you can change the background color of the card, the default font, the
-text alignment, and so on.
+До розділу стилів на екрані карток можна отримати доступ, натиснувши кнопку «Стилі» поруч із кнопкою
+«Назад до шаблону». У цьому розділі ви можете змінити колір фону картки, шрифт за замовчуванням,
+вирівнювання тексту тощо.
 
-The standard options available to you are:
+Доступні стандартні варіанти:
 
 **font-family**\
-The name of the font to use on the card. If your font has spaces in it
-like "MS Unicode", then you need to surround the font name in double
-quotes as in this sentence. It is also possible to use multiple fonts on
-one card; for information on that, please see below.
+Назва шрифту для використання на картці. Якщо у вашому шрифті є пробіли, як-от «MS Unicode»,
+то вам потрібно взяти назву шрифту в подвійні лапки, як у цьому реченні. Також можна використовувати
+декілька шрифтів на одній картці; інформацію про це дивіться нижче.
 
 **font-size**\
-The size of the font in pixels. When changing it, make sure you leave px
-at the end.
+Розмір шрифту в пікселях. Змінюючи його, переконайтеся,
+що ви залишили px у кінці.
 
 **text-align**\
-Whether the text should be aligned in the center, left, or right.
+Чи слід вирівнювати текст по центру, ліворуч чи праворуч.
 
 **color**\
-The color of the text. Simple color names like 'blue', 'lightyellow',
-and so on will work, or you can use HTML color codes to select arbitrary
-colors. Please see [this webpage](https://htmlcolorcodes.com/) for more
-information.
+Колір тексту. Прості назви кольорів, як-от blue, lightyellow, тощо, підійдуть,
+або ви можете використовувати коди кольорів HTML для вибору довільних кольорів. Перегляньте
+[цю веб-сторінку](https://htmlcolorcodes.com/) для отримання додаткової інформації.
 
 **background-color**\
-The color of the card background.
+Колір фону картки.
 
-Any CSS can be placed in the styling section – advanced users may wish
-to do things like add a background image or gradient, for example. If
-you’re wondering how to get some particular formatting, please search
-the web for information about how to do it in CSS, as there is a great
-deal of documentation available.
+Будь-який CSS можна розмістити в розділі стилів – досвідчені користувачі можуть забажати,
+наприклад, додати фонове зображення або градієнт. Якщо вам цікаво, як отримати певне форматування,
+знайдіть в Інтернеті інформацію про те, як це зробити в CSS, оскільки доступна велика кількість
+документації.
 
-The styling is shared between all cards, which means that when you make
-an adjustment it will affect all cards for that note type. It is also
-possible to specify card-specific styling, however. The following
-example will use a yellow background on all cards except the first one:
+Стиль спільний для всіх карток, що означає, що коли ви робите коригування, це вплине на всі картки
+для цього типу нотаток. Однак також можна вказати стиль для кожної картки. У наступному прикладі буде
+використано жовтий фон на всіх картках, крім першої:
 
 ```css
 .card {
@@ -57,10 +51,10 @@ example will use a yellow background on all cards except the first one:
 }
 ```
 
-## Image Resizing
+## Зміна розміру зображення
 
-Anki shrinks images to fit the screen by default. You can change this by adding
-the following to the bottom of your styling section (outside of the default
+Anki за замовчуванням зменшує зображення відповідно до розміру екрана. Ви можете змінити це,
+додавши наступне до нижньої частини розділу стилів (за межами стандартного
 `.card { ... }`):
 
 ```css
@@ -70,11 +64,8 @@ img {
 }
 ```
 
-AnkiDroid sometimes has [trouble scaling images to fit the
-screen](https://github.com/ankidroid/Anki-Android/issues/3612). Setting maximum
-image dimensions using css should fix this, but seems to be ignored as of
-AnkiDroid 2.9. A fix is to append `!important` to each style directive, for
-example:
+У AnkiDroid іноді виникають [проблеми з масштабуванням зображень відповідно до розміру екрана](https://github.com/ankidroid/Anki-Android/issues/3612). Встановлення максимальних розмірів зображення за допомогою css повинно виправити це,
+але, здається, воно ігнорується з AnkiDroid 2.9. Виправлення полягає в додаванні `!important` до кожної директиви стилю, наприклад:
 
 ```css
 img {
@@ -83,9 +74,8 @@ img {
 }
 ```
 
-If you try to change the style for images and find that the star that
-appears on marked cards is affected (for instance, it becomes way too
-large), you can target it with the following:
+Якщо ви спробуєте змінити стиль для зображень і виявите, що зірочка, яка з’являється на позначених картках,
+змінюється (наприклад, вона стає занадто великою), ви можете налаштувати її за допомогою наступного:
 
 ```css
 img#star {
@@ -93,11 +83,11 @@ img#star {
 }
 ```
 
-You can explore the styling of cards interactively by using Chrome:
+Ви можете досліджувати стиль карток в інтерактивному режимі за допомогою Chrome:
 
 <https://addon-docs.ankiweb.net/porting2.0.html#webview-changes>
 
-Anki 2.1.50+ supports image resizing within the editor natively.
+Anki 2.1.50+ підтримує зміну розміру зображення в редакторі.
 
 ## Field Styling
 
@@ -242,7 +232,7 @@ Covering all of HTML’s features is outside the scope of this manual, but
 there are plenty of good introductory guides to HTML available on the
 web if you’d like to learn more.
 
-## Browser Appearance
+## Зовнішній вигляд браузера
 
 If your card templates are complex, it may be difficult to read the
 question and answer columns (called "Front" and "Back") in the [card list](../browsing.md#cardnote-table). The "browser appearance" option allows you to define a
