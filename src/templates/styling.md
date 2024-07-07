@@ -186,10 +186,10 @@ Anki іноді не зможе правильно відобразити сим
 }
 ```
 
-## Text Direction
+## Напрямок тексту
 
-If you use a language that is written right-to-left, such as Arabic or Hebrew,
-you can add the CSS `direction` property to the .card section for correct display during review:
+Якщо ви використовуєте мову, яка пишеться справа наліво, наприклад арабську чи іврит,
+ви можете додати властивість CSS `direction` до розділу .card для правильного відображення під час перегляду:
 
 ```css
 .card {
@@ -197,13 +197,13 @@ you can add the CSS `direction` property to the .card section for correct displa
 }
 ```
 
-This will change the direction of the entire card. You can change the direction
-of only certain fields by wrapping their references in some HTML:
+Це змінить напрямок усієї картки. Ви можете змінити напрямок
+лише певних полів, загорнувши їх посилання в деякий HTML:
 
     <div dir="rtl">{{Front}}</div>
 
-To change the direction of fields in the editor, please see
-the [editing](../editing.md#customizing-fields) section.
+Щоб змінити напрямок полів у редакторі, див
+розділ [редагування](../editing.md#customizing-fields).
 
 ## Other HTML
 
