@@ -202,21 +202,17 @@ Anki іноді не зможе правильно відобразити сим
 
     <div dir="rtl">{{Front}}</div>
 
-Щоб змінити напрямок полів у редакторі, див
+Щоб змінити напрямок полів у редакторі, див.
 розділ [редагування](../editing.md#customizing-fields).
 
-## Other HTML
+## Інший HTML
 
-Your templates can contain arbitrary HTML, which means that all the
-layout possibilities used on internet web pages can also be used on your
-cards. Things like tables, lists, images, links to external pages and so
-on are all supported. With tables for example, you could change the
-layout so that the front and back of a card appear on the left and right
-instead of the top and bottom.
+Ваші шаблони можуть містити довільний HTML, що означає, що всі можливості компонування, які використовуються на веб-сторінках Інтернету, також можна використовувати на
+картках. Підтримуються такі речі, як таблиці, списки, зображення, посилання на зовнішні сторінки тощо. Наприклад, за допомогою таблиць ви можете змінити макет таким чином, щоб передня і зворотна сторони картки відображалися ліворуч і праворуч, а не зверху і знизу.
 
-Covering all of HTML’s features is outside the scope of this manual, but
-there are plenty of good introductory guides to HTML available on the
-web if you’d like to learn more.
+Розгляд усіх функцій HTML виходить за рамки цього посібника, але
+є багато хороших вступних посібників з HTML, доступних в
+Інтернет, якщо захочете дізнатися більше.
 
 ## Зовнішній вигляд браузера
 
