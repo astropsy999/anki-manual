@@ -218,11 +218,9 @@ Anki іноді не зможе правильно відобразити сим
 
 Якщо ваші шаблони карток складні, вам може бути важко прочитати стовпці запитань і відповідей (так звані «Передня» та «Задня») у [списку карток](../browsing.md#cardnote-table). Параметр «вигляд у веб-браузері» дозволяє визначити спеціальний шаблон, який буде використовуватися лише у веб-браузері, тож ви можете включити лише важливі поля та змінити порядок, якщо хочете. Синтаксис такий же, як і в стандартних шаблонах карток.
 
-## Platform-Specific CSS
+## Спеціальний CSS для платформи
 
-Anki defines some special CSS classes that allow you to define different
-styling for different platforms. The example below shows how to vary the
-font depending on where you’re reviewing:
+Anki визначає деякі спеціальні класи CSS, які дозволяють визначати різні стилі для різних платформ. У наведеному нижче прикладі показано, як змінити шрифт залежно від того, де ви переглядаєте:
 
 ```css
 /* Windows */
@@ -256,15 +254,15 @@ font depending on where you’re reviewing:
 }
 ```
 
-And in the template:
+Та в шаблоні:
 
 ```html
 <div class="example">{{Field}}</div>
 ```
 
-You can also use properties like .gecko, .opera, and .ie to select
-particular browsers when using AnkiWeb. Please see
-<http://rafael.adm.br/css_browser_selector/> for a full list of options.
+Для вибору також можна використовувати такі властивості, як .gecko, .opera та .ie
+певні браузери під час використання AnkiWeb. Будь ласка, подивіться
+<http://rafael.adm.br/css_browser_selector/> з повним списком параметрів.
 
 ## Installing Fonts
 
