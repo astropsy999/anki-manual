@@ -216,11 +216,7 @@ Anki іноді не зможе правильно відобразити сим
 
 ## Зовнішній вигляд браузера
 
-If your card templates are complex, it may be difficult to read the
-question and answer columns (called "Front" and "Back") in the [card list](../browsing.md#cardnote-table). The "browser appearance" option allows you to define a
-custom template to be used only in the browser, so you can include only
-the important fields and change the order if you desire. The syntax is
-the same as in standard card templates.
+Якщо ваші шаблони карток складні, вам може бути важко прочитати стовпці запитань і відповідей (так звані «Передня» та «Задня») у [списку карток](../browsing.md#cardnote-table). Параметр «вигляд у веб-браузері» дозволяє визначити спеціальний шаблон, який буде використовуватися лише у веб-браузері, тож ви можете включити лише важливі поля та змінити порядок, якщо хочете. Синтаксис такий же, як і в стандартних шаблонах карток.
 
 ## Platform-Specific CSS
 
