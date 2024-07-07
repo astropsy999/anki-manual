@@ -162,16 +162,15 @@ Anki іноді не зможе правильно відобразити сим
 
 До вашої колоди також можна додати власні шрифти, тож вам не потрібно встановлювати їх на комп’ютері чи мобільному пристрої. Для отримання додаткової інформації перегляньте розділ [встановлення шрифтів](#installing-fonts).
 
-## Audio Replay Buttons
+## Кнопки відтворення звуку
 
-When audio or text to speech is included on your cards, Anki will show
-buttons you can click on to replay the audio.
+Якщо аудіо або текст включено у мовлення на ваші картки, Anki покаже кнопки, на які можна натиснути, щоб відтворити аудіо.
 
-If you prefer not to see the buttons, you can hide them in the
-preferences screen.
+Якщо ви не бажаєте бачити кнопки, ви можете сховати їх
+на екрані налаштувань.
 
-You can customize their appearance in your card styling, for example, to
-make them smaller and colored, you could use the following:
+Ви можете налаштувати їх зовнішній вигляд у стилі вашої картки, наприклад
+щоб зробити їх меншими та кольоровими, ви можете використати наступне:
 
 ```css
 .replay-button svg {
