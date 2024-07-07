@@ -264,38 +264,25 @@ Anki визначає деякі спеціальні класи CSS, які д�
 певні браузери під час використання AnkiWeb. Будь ласка, подивіться
 <http://rafael.adm.br/css_browser_selector/> з повним списком параметрів.
 
-## Installing Fonts
+## Встановлення шрифтів
 
-If you’re using Anki on a work or school computer where you don’t have
-permission to install new fonts, or you’re using Anki on a mobile
-device, it’s possible to add fonts directly to Anki.
+Якщо ви використовуєте Anki на робочому чи навчальному комп’ютері, де у вас немає дозволу на встановлення нових шрифтів, або використовуєте Anki на мобільному пристрої, можна додавати шрифти безпосередньо в Anki.
 
-To add a font to Anki, it must be in the TrueType format. TrueType fonts
-have a filename ending in .ttf, such as "Arial.ttf". Once you’ve located
-a TrueType font, we’ll need to add it to the media folder:
+Щоб додати шрифт до Anki, він має бути у форматі TrueType. Назва файлу шрифтів TrueType закінчується на .ttf, наприклад "Arial.ttf". Коли ви знайдете шрифт TrueType, потрібно буде додати його до папки медіа:
 
-1. Rename the file, adding an underscore at the start, so it becomes
-   like "\_arial.ttf". Adding an underscore will tell Anki that this
-   file will be used on a template, and should not be deleted when
-   checking for unused media.
+1. Перейменуйте файл, додавши підкреслення на початку, щоб він став схожим на "\_arial.ttf". Додавання підкреслення повідомить Anki, що цей файл буде використано в шаблоні, і його не слід видаляти під час перевірки невикористаних носіїв.
 
-2. In your computer’s file browser, go to your [Anki Folder](../files.md),
-   and then a folder called "User 1" (or your profile name if you’ve
-   renamed/added profiles).
+2. У файловому менеджері вашого комп’ютера перейдіть до [папки Anki](../files.md), а потім папки під назвою «Користувач 1» (або ім’я вашого профілю, якщо ви перейменували/додали профілі).
 
-3. Inside the folder, you should see a folder called collection.media.
-   Drag the renamed file to that folder.
+3. Усередині папки ви повинні побачити папку під назвою collection.media. Перетягніть перейменований файл до цієї папки.
 
-After that, we need to update the template:
+Після цього нам потрібно оновити шаблон:
 
-1. Click **Add** at the top of the main screen, and then select the
-   note type you want to change with the top left button.
+1. Натисніть **Додати** у верхній частині головного екрана, а потім виберіть тип нотатки, який потрібно змінити, за допомогою верхньої лівої кнопки.
 
-2. Click **Cards**.
+2. Натисніть **Картки**.
 
-3. In the styling section, add the following text to the bottom (after
-   the last "}" character), replacing "\_arial.ttf" with the name of
-   the file you copied into your media folder:
+3. У розділі стилів додайте наступний текст унизу (після останнього символу «}»), замінивши «\_arial.ttf» на назву файлу, який ви скопіювали у свою медіа-папку:
 
 ```css
 @font-face {
@@ -304,17 +291,11 @@ After that, we need to update the template:
 }
 ```
 
-Only change the "arial" part, not the "myfont" part.
+Змінюйте лише частину "arial", а не частину "myfont".
 
-After that, you can either change the font for the entire card, or for
-individual fields. To change the font for the entire card, simply locate
-the font-family: line in the .card section and change the font to
-"myfont". To change the font for only certain fields, please see the
-[Field Styling](#field-styling) instructions above.
+Після цього ви можете змінити шрифт для всієї картки або для окремих полів. Щоб змінити шрифт для всієї картки, просто знайдіть рядок font-family: у розділі .card і змініть шрифт на «myfont». Щоб змінити шрифт лише для певних полів, перегляньте інструкції [Стилізація полів](#стилізація-полів) вище.
 
-Please make sure the filenames match exactly. If the file is called
-arial.TTF and you write arial.ttf in your card templates, it will not
-work.
+Переконайтеся, що назви файлів точно збігаються. Якщо файл називається arial.TTF і ви напишете arial.ttf у своїх шаблонах карток, він не працюватиме.
 
 ## Night Mode
 
