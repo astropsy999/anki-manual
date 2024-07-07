@@ -318,16 +318,11 @@ Anki визначає деякі спеціальні класи CSS, які д�
 }
 ```
 
-## Fading and Scrolling
+## Затухання та прокручування
 
-Anki will automatically scroll to the answer by default. It looks for an
-HTML element with id=answer, and scrolls to that. You can place the id
-on a different element to adjust the scrolling position, or remove the
-id=answer to turn off scrolling.
+Anki автоматично прокрутить до відповіді за замовчуванням. Він шукає елемент HTML з id=answer і прокручує його. Ви можете розмістити ідентифікатор на іншому елементі, щоб налаштувати положення прокручування, або видалити id=answer, щоб вимкнути прокручування.
 
-The question side of a card fades in by default. If you wish to adjust
-this delay, you can place the following at the top of your front card
-template:
+Сторона запитання на картці з’являється за замовчуванням. Якщо ви бажаєте налаштувати затримку, ви можете розмістити наступне у верхній частині шаблону передньої картки:
 
 ```html
 <script>
@@ -336,7 +331,7 @@ template:
 </script>
 ```
 
-100 (milliseconds) is the default; set to 0 to disable fading.
+100 (мілісекунд) за замовчуванням; встановіть значення 0, щоб вимкнути затухання.
 
 ## Javascript
 
