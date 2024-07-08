@@ -320,7 +320,7 @@ Anki визначає деякі спеціальні класи CSS, які д�
 
 ## Затухання та прокручування
 
-Anki автоматично прокрутить до відповіді за замовчуванням. Він шукає елемент HTML з id=answer і прокручує його. Ви можете розмістити ідентифікатор на іншому елементі, щоб налаштувати положення прокручування, або видалити id=answer, щоб вимкнути прокручування.
+Anki автоматично прокрутить до відповіді за замовчуванням. Він шукає елемент HTML з id=answer і прокручує до нього. Ви можете розмістити ідентифікатор на іншому елементі, щоб налаштувати положення прокручування, або видалити id=answer, щоб вимкнути прокручування.
 
 Сторона запитання на картці з’являється за замовчуванням. Якщо ви бажаєте налаштувати затримку, ви можете розмістити наступне у верхній частині шаблону передньої картки:
 
@@ -335,28 +335,16 @@ Anki автоматично прокрутить до відповіді за з
 
 ## Javascript
 
-As Anki cards are treated like webpages, it is possible to embed some
-Javascript on your cards via the card template. For a good reference
-please read [this post](https://forums.ankiweb.net/t/card-templates-user-input-101-buttons-keyboard-shortcuts-etc-guide/13756)
-in the forums.
+Оскільки картки Anki розглядаються як веб-сторінки, у них можна вставити Javascript за допомогою шаблону картки. Для хорошої довідки прочитайте [цю публікацію](https://forums.ankiweb.net/t/card-templates-user-input-101-buttons-keyboard-shortcuts-etc-guide/13756) на форумі.
 
-Because Javascript is an advanced feature and so many things can go
-wrong, **Javascript functionality is provided without any support or
-warranty**. We can not provide any assistance with writing Javascript,
-and can not guarantee any code you have written will continue to work
-without modification in future Anki updates. If you are not comfortable
-addressing any issues you encounter on your own, then please avoid using
+Оскільки Javascript — це розширена функція, і багато речей можна використовувати
+неправильно, **функції Javascript надаються без будь-якої підтримки або
+гарантії**. Ми не можемо надати жодної допомоги з написанням Javascript,
+і не можемо гарантувати, що написаний вами код продовжуватиме працювати
+без змін у майбутніх оновленнях Anki. Якщо вам не зручно
+вирішення будь-яких проблем самостійно, уникайте використання
 Javascript.
 
-Each Anki client may implement card display differently, so you will
-need to test the behaviour across platforms. A number of clients are
-implemented by keeping a long running webpage and dynamically updating
-parts of it as cards are reviewed, so your Javascript will need to
-update sections of the document using things like
-document.getElementById() rather than doing things like
-document.write().
+Кожен клієнт Anki може реалізувати відображення карток по-різному, тому вам потрібно буде перевірити поведінку на різних платформах. Кілька клієнтів реалізовано шляхом збереження тривалої веб-сторінки та динамічного оновлення її частин у міру перегляду карток, тому вашому Javascript потрібно буде оновлювати розділи документа за допомогою таких речей, як document.getElementById(), а не document.write().
 
-Functions like window.alert may not be available. Anki will write
-javascript errors to the terminal, so you'll need to [view the console](https://addon-docs.ankiweb.net/console-output.html#console-output) to
-see them. To debug issues with JavaScript, you can use Chrome's
-[inspector](https://addon-docs.ankiweb.net/debugging.html#webviews).
+Такі функції, як window.alert, можуть бути недоступні. Anki записуватиме помилки javascript у термінал, тому вам потрібно буде [переглянути консоль](https://addon-docs.ankiweb.net/console-output.html#console-output), щоб побачити їх. Щоб усунути проблеми з JavaScript, ви можете скористатися Chrome [інспектором](https://addon-docs.ankiweb.net/debugging.html#webviews).
