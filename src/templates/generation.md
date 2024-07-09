@@ -1,50 +1,27 @@
-# Card Generation
+# Генерація карток
 
 <!-- toc -->
 
-## Reverse Cards
+## Зворотня карта
 
-You can watch [a video about reversing cards](http://www.youtube.com/watch?v=DnbKwHEQ1mA&yt:cc=on) on YouTube.
+Ви можете переглянути [відео про реверсування карток](http://www.youtube.com/watch?v=DnbKwHEQ1mA&yt:cc=on) на YouTube.
 
-If you want to create cards that go in both directions (e.g., both
-“ookii”→“big” and “big”→“ookii”), you have several options. The simplest
-is to select the “Basic (and reversed card)” built-in note type. This
-will generate two cards, one in each direction.
+Якщо ви хочете створити картки, які йдуть в обох напрямках (наприклад, обидва
+«ookii»→«big» і «big»→«ookii»), у вас є кілька варіантів. Найпростішим є вибір типу вбудованої нотатки «Основна (і перевернута картка)». Це створить дві картки, по одній у кожному напрямку.
 
-If you want to generate reverse cards for only some of your material
-(perhaps you only want to take the time to study reverses for the most
-important material, or some of your cards don’t make sense reversed),
-you can select the “Basic (optional reversed card)” note type. This note
-type generates a forward-only card when you fill in only the first two
-fields; if you additionally enter something in the “Add Reverse” field
-(like a 'y'), Anki will generate a reverse card as well. The contents of
-this field will never be displayed on a card.
+Якщо ви хочете створити зворотні картки лише для деяких матеріалів (можливо, ви хочете витратити час лише на вивчення реверсів для найважливішого матеріалу, або деякі з ваших карток не має сенсу перевертати), ви можете вибрати «Основний (додаткова перевернута картка)” тип нотатки. Цей тип генерує лише передню картку, коли ви заповнюєте перші два поля; якщо ви додатково введете щось у полі «Додати реверс» (наприклад, «y»), Anki також згенерує зворотню картку. Вміст цього поля ніколи не відображатиметься на картці.
 
-## Card Generation & Deletion
+## Створення та видалення карток
 
-Anki will not create cards with empty front sides. Thus if “My Field”
-was empty, and one card’s front template included only that field, the
-card would not be created.
+Anki не створюватиме картки з порожніми лицьовими сторонами. Таким чином, якщо «Моє поле» буде порожнім, а шаблон першої картки міститиме лише це поле, картку не буде створено.
 
-When you edit a previously added note, Anki will automatically create
-extra cards if they were previously blank but no longer are. If your
-edits have made some cards blank when they previously were not, however,
-Anki will not delete them immediately, as that could lead to accidental
-data loss. To remove the empty cards, go to Tools → Empty Cards in the
-main window. You will be shown a list of empty cards and be given the
-option to delete them.
+Коли ви редагуєте раніше додану нотатку, Anki автоматично створить додаткові картки, якщо вони раніше були порожніми, але тепер такими не є. Однак якщо ваші зміни зробили деякі картки порожніми, але раніше вони не були, Anki не видалить їх негайно, оскільки це може призвести до випадкової втрати даних. Щоб видалити порожні картки, перейдіть до Інструменти → Очистити картки у головному вікні. Вам буде показано список порожніх карток і ви зможете видалити їх.
 
-Because of the way that card generation works, it is not possible to
-manually delete individual cards, as they would just end up being recreated
-the next time the note was edited. Instead, you should make the
-relevant conditional replacement fields empty and then use the Empty
-Cards option.
+Через те, як працює генерація карток, неможливо вручну видалити окремі картки, оскільки вони просто відтворяться під час наступного редагування нотатки. Натомість ви повинні зробити відповідні поля умовно порожніми, а потім використати параметр Порожні Картки.
 
-Anki does not consider special fields or non-field text for the purposes
-of card generation. Thus if your front template looked like the
-following, no card would be generated if Country was empty:
+Anki не враховує спеціальні поля чи текст, що не є полем, для створення карток. Таким чином, якщо ваш передній шаблон виглядатиме так, картка не буде створена, якщо "Країна" буде порожньою:
 
-    Where is {{Country}} on the map?
+    Де знаходиться {{Країна}} на мапі?
 
 ## Selective Card Generation
 
