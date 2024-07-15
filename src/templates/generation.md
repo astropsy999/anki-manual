@@ -108,30 +108,29 @@ Anki не враховує спеціальні поля чи текст, що �
 
 Це забезпечить створення картки, лише якщо Field 2 і Field 1 непорожні.
 
-## Limitations in Older Anki Versions
+## Обмеження в старіших версіях Anki
 
-The following limitations do not apply to Anki 2.1.28+ and AnkiMobile 2.0.64+.
+Наступні обмеження не застосовуються до Anki 2.1.28+ і AnkiMobile 2.0.64+.
 
-Older Anki versions cannot use negated conditionals for card generation.
-For example, on Anki 2.1.28, the following would add a card if a field
-called AddIfEmpty is empty, and Front is non-empty:
+Старіші версії Anki не можуть використовувати заперечені умови для створення карток.
+Наприклад, в Anki 2.1.28 наступне додає картку, якщо поле AddIfEmpty порожнє,
+а Front непорожнє:
 
     {{^AddIfEmpty}}
         {{Front}}
     {{/AddIfEmpty}}
 
-On earlier Anki versions, the negated conditional is ignored, and card
-generation will depend only on Front being non-empty.
+У попередніх версіях Anki заперечена умова ігнорується, а генерація карток залежатиме лише від того, що Front не порожній.
 
-Mixing **AND** and **OR** conditions can also cause problems on older versions.
-For example, the following ("add the card if A **OR** B **OR** C is non-empty")
-is fine:
+Змішування умов **AND** та **OR** також може спричинити проблеми в старіших версіях.
+Наприклад, таке ("додайте картку, якщо A **OR** B **OR** C не порожнє")
+підходить:
 
     {{A}}
     {{B}}
     {{C}}
 
-And the following ("add the card if A **AND** B **AND** C are non-empty") is fine:
+І наступне ("додайте картку, якщо A **AND** B **AND** C не порожні") підходить:
 
     {{#A}}
         {{#B}}
@@ -141,7 +140,7 @@ And the following ("add the card if A **AND** B **AND** C are non-empty") is fin
         {{/B}}
     {{/A}}
 
-But the following ("add the card if A **OR** (B **AND** C) are non-empty") will not work properly:
+Але наступне ("додайте картку, якщо A **OR** (B *AND** C) непорожні") не працюватиме належним чином:
 
     {{A}}
     {{#B}}
