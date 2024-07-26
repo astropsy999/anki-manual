@@ -1,30 +1,25 @@
-## Display Issues on Linux
+## Проблеми з відображенням у Linux
 
 ### Qt5
 
-Hardware acceleration defaults to off. Enabling it in the preferences screen and
-restarting Anki may make Anki’s interface more responsive, but some users may
-experience missing menubars, blank windows or crashes when it is enabled.
-(Blank windows may also be caused by [this problem](./blank-window.md).)
+Апаратне прискорення за замовчуванням вимкнено. Увімкнення його на екрані налаштувань та
+перезапуск ANKI може зробити інтерфейс Anki більш чуйним, але деякі користувачі можуть зіткнутися з відсутністю панелей меню, порожніми вікнами або збоями, коли його ввімкнено.
+(Порожні вікна також можуть бути спричинені [цією проблемою](./blank-window.md).)
 
-You can adjust the display driver in Anki's Preferences screen. We
-recommend you try both settings, and see which one works best for you.
+Ви можете налаштувати драйвер дисплея на екрані налаштувань Anki. Ми рекомендуємо спробувати обидва параметри та визначити, який з них найкраще підходить.
 
-If you're unable to open Anki, you can adjust the driver in a terminal, by
-writing either `auto` or `software` into `~/.local/share/Anki2/gldriver`. Please
-note that if you’re using nouveau, it is known to be buggy, and it only supports
-software mode.
+Якщо ви не можете відкрити Anki, спробуйте відрегулювати драйвер у терміналі, написавши або `auto` чи `software` into `~/.local/share/Anki2/gldriver`. Будь ласка
+зауважте якщо ви використовуєте nouveau, він відомо багований, і підтримує лише
+програмний режим.
 
 ### Qt6
 
-Hardware acceleration defaults to on. If you experience blank screens
-or display issues, you can try enabling software rendering using the terminal:
+Апаратне прискорення встановлене за замовчуванням. Якщо ви стикаєтесь із порожнім екраном або маєте проблеми з відображенням, можете спробувати ввімкнути програмний рендеринг за допомогою терміналу:
 
 ```
 echo software > ~/.local/share/Anki2/gldriver6
 ```
 
-If you wish to switch back to the default, change `software` to `auto`, or
-remove that file.
+Якщо бажаєте повернутися до типових налаштувань, змініть `software` на `auto` або видаліть цей файл.
 
-In Anki 23.10+, you can also change the graphics driver from preferences screen.
+В Anki 23.10+, ви також можете змінити графічний драйвер з екрана налаштувань.
