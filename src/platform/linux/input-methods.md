@@ -1,8 +1,5 @@
-# Input Methods on Linux
+# Методи введення в Linux
 
 ## Fcitx
 
-The standard Anki build includes fcitx support, but it may not work on
-all distributions. If you are unable to use fcitx, you may want to run
-Anki from [Python wheels](https://betas.ankiweb.net/#via-pypipip)
-instead.
+Стандартна збірка Anki включає підтримку fcitx, але вона може не працювати в усіх дистрибутивах. Якщо ви не можете скористатися fcitx, спробуйте запустити Anki з [Python wheels](https://betas.ankiweb.net/#via-pypipip).

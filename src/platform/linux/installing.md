@@ -1,27 +1,22 @@
-# Installing & Upgrading Anki on Linux
+# Встановлення та оновлення ANKI на Linux
 
 <!-- toc -->
 
-## Requirements
+## Вимоги
 
-The packaged version requires a recent 64 bit Intel/AMD Linux with glibc, and common
-libraries like libwayland-client and systemd. If you are on a different
-architecture (e.g ARM/AArch64), or a barebones Linux distro, you will not be able to use the
-packaged version, but you may be able to use the [Python wheels](https://betas.ankiweb.net/#via-pypipip)
-instead.
+Для пакетної версії потрібна остання 64-розрядна версія Intel/AMD Linux із glibc і загальні бібліотеки, такі як libwayland-client і systemd. Якщо ви використовуєте іншу архітектуру (наприклад, ARM/AArch64) або базовий дистрибутив Linux, ви не зможете скористатися пакетною версією, але зможете скористатися [Python wheels](https://betas.ankiweb.net/#via-pypipip).
 
-Debian and derivatives, such as Ubuntu and [Chromebooks with Linux enabled](https://support.google.com/chromebook/answer/9145439?), please use the following before
-installing:
+Для Debian і похідних, таких як Ubuntu і [Chromebook з увімкненою ОС Linux](https://support.google.com/chromebook/answer/9145439?), будь ласка, скористайтеся наведеним нижче перед інсталяцією:
 
 ```shell
 sudo apt install libxcb-xinerama0 libxcb-cursor0 libnss3
 ```
 
-If Anki fails to start after installing, you may be [missing other libraries](./missing-libraries.md).
+Якщо Anki не запускається після встановлення, можливо, у вас [відсутні інші бібліотеки](./missing-libraries.md).
 
-If you're on Ubuntu 24.04 and Anki won't start, please see [this thread](https://forums.ankiweb.net/t/issues-running-on-ubuntu-24-04/40974).
+Якщо ви використовуєте Ubuntu 24.04 і Anki не запускається, перегляньте [цю тему] (https://forums.ankiweb.net/t/issues-running-on-ubuntu-24-04/40974).
 
-Anki's build system only supports glibc, so musl-based distros are not currently supported.
+Система збірки Anki підтримує лише glibc, тому дистрибутиви на основі musl наразі не підтримуються.
 
 ## Installing
 
