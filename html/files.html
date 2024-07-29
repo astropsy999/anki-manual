@@ -1,0 +1,457 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Managing Files - Anki Manual</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="css/misc.css">
+        <link rel="stylesheet" href="css/kbd.css">
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="intro.html">Introduction</a></li><li class="chapter-item "><a href="background.html"><strong aria-hidden="true">1.</strong> Background</a></li><li class="chapter-item "><a href="platform/intro.html"><strong aria-hidden="true">2.</strong> Platform Notes</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/intro.html"><strong aria-hidden="true">2.1.</strong> Windows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/installing.html"><strong aria-hidden="true">2.1.1.</strong> Install & Upgrade</a></li><li class="chapter-item "><a href="platform/windows/installation-issues.html"><strong aria-hidden="true">2.1.2.</strong> Installation Issues</a></li><li class="chapter-item "><a href="platform/windows/startup-issues.html"><strong aria-hidden="true">2.1.3.</strong> Startup Issues</a></li><li class="chapter-item "><a href="platform/windows/display-issues.html"><strong aria-hidden="true">2.1.4.</strong> Display Issues</a></li><li class="chapter-item "><a href="platform/windows/copy-and-paste.html"><strong aria-hidden="true">2.1.5.</strong> Copy and Paste Issues</a></li><li class="chapter-item "><a href="platform/windows/text-size.html"><strong aria-hidden="true">2.1.6.</strong> Text Size</a></li><li class="chapter-item "><a href="platform/windows/permission-problems.html"><strong aria-hidden="true">2.1.7.</strong> Permission Problems</a></li></ol></li><li class="chapter-item "><a href="platform/mac/intro.html"><strong aria-hidden="true">2.2.</strong> macOS</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/mac/installing.html"><strong aria-hidden="true">2.2.1.</strong> Install & Upgrade</a></li><li class="chapter-item "><a href="platform/mac/display-issues.html"><strong aria-hidden="true">2.2.2.</strong> Display Issues</a></li></ol></li><li class="chapter-item "><a href="platform/linux/intro.html"><strong aria-hidden="true">2.3.</strong> Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/linux/installing.html"><strong aria-hidden="true">2.3.1.</strong> Install & Upgrade</a></li><li class="chapter-item "><a href="platform/linux/missing-libraries.html"><strong aria-hidden="true">2.3.2.</strong> Missing Libraries</a></li><li class="chapter-item "><a href="platform/linux/display-issues.html"><strong aria-hidden="true">2.3.3.</strong> Display Issues</a></li><li class="chapter-item "><a href="platform/linux/blank-window.html"><strong aria-hidden="true">2.3.4.</strong> Blank Main Window</a></li><li class="chapter-item "><a href="platform/linux/distro-packages.html"><strong aria-hidden="true">2.3.5.</strong> Linux Distro Packages</a></li><li class="chapter-item "><a href="platform/linux/gtk-theme.html"><strong aria-hidden="true">2.3.6.</strong> Incorrect GTK Theme</a></li><li class="chapter-item "><a href="platform/linux/wayland.html"><strong aria-hidden="true">2.3.7.</strong> Wayland</a></li><li class="chapter-item "><a href="platform/linux/input-methods.html"><strong aria-hidden="true">2.3.8.</strong> Input Methods</a></li></ol></li></ol></li><li class="chapter-item "><a href="getting-started.html"><strong aria-hidden="true">3.</strong> Getting Started</a></li><li class="chapter-item "><a href="getting-help.html"><strong aria-hidden="true">4.</strong> Getting Help</a></li><li class="chapter-item "><a href="studying.html"><strong aria-hidden="true">5.</strong> Studying</a></li><li class="chapter-item "><a href="editing.html"><strong aria-hidden="true">6.</strong> Adding/Editing</a></li><li class="chapter-item "><a href="templates/intro.html"><strong aria-hidden="true">7.</strong> Card Templates</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="templates/fields.html"><strong aria-hidden="true">7.1.</strong> Field Replacements</a></li><li class="chapter-item "><a href="templates/generation.html"><strong aria-hidden="true">7.2.</strong> Card Generation</a></li><li class="chapter-item "><a href="templates/styling.html"><strong aria-hidden="true">7.3.</strong> Styling & HTML</a></li><li class="chapter-item "><a href="templates/errors.html"><strong aria-hidden="true">7.4.</strong> Checks and Errors</a></li></ol></li><li class="chapter-item "><a href="preferences.html"><strong aria-hidden="true">8.</strong> Preferences</a></li><li class="chapter-item "><a href="deck-options.html"><strong aria-hidden="true">9.</strong> Deck Options</a></li><li class="chapter-item "><a href="syncing.html"><strong aria-hidden="true">10.</strong> Syncing with AnkiWeb</a></li><li class="chapter-item "><a href="profiles.html"><strong aria-hidden="true">11.</strong> Profiles</a></li><li class="chapter-item "><a href="browsing.html"><strong aria-hidden="true">12.</strong> Browsing</a></li><li class="chapter-item "><a href="filtered-decks.html"><strong aria-hidden="true">13.</strong> Filtered Decks</a></li><li class="chapter-item "><a href="searching.html"><strong aria-hidden="true">14.</strong> Searching</a></li><li class="chapter-item "><a href="importing/intro.html"><strong aria-hidden="true">15.</strong> Importing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="importing/text-files.html"><strong aria-hidden="true">15.1.</strong> Text Files</a></li><li class="chapter-item "><a href="importing/packaged-decks.html"><strong aria-hidden="true">15.2.</strong> Packaged Decks</a></li></ol></li><li class="chapter-item "><a href="exporting.html"><strong aria-hidden="true">16.</strong> Exporting</a></li><li class="chapter-item "><a href="backups.html"><strong aria-hidden="true">17.</strong> Backups</a></li><li class="chapter-item expanded "><a href="files.html" class="active"><strong aria-hidden="true">18.</strong> Managing Files</a></li><li class="chapter-item "><a href="stats.html"><strong aria-hidden="true">19.</strong> Statistics</a></li><li class="chapter-item "><a href="media.html"><strong aria-hidden="true">20.</strong> Media</a></li><li class="chapter-item "><a href="math.html"><strong aria-hidden="true">21.</strong> Math & Symbols</a></li><li class="chapter-item "><a href="leeches.html"><strong aria-hidden="true">22.</strong> Leeches</a></li><li class="chapter-item "><a href="addons.html"><strong aria-hidden="true">23.</strong> Add-ons</a></li><li class="chapter-item "><a href="troubleshooting.html"><strong aria-hidden="true">24.</strong> Troubleshooting</a></li><li class="chapter-item "><a href="sync-server.html"><strong aria-hidden="true">25.</strong> Sync Server</a></li><li class="chapter-item "><a href="misc.html"><strong aria-hidden="true">26.</strong> Miscellaneous</a></li><li class="chapter-item affix "><a href="contrib.html">Contributing</a></li><li class="chapter-item affix "><a href="faqs.html">FAQs</a></li><li class="chapter-item affix "><a href="resources.html">Resources</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Anki Manual</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/ankitects/anki-manual/" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="Керування-файлами-та-Вашою-колекцією"><a class="header" href="#Керування-файлами-та-Вашою-колекцією">Керування файлами та Вашою колекцією</a></h1>
+<!-- toc -->
+<h2 id="Перевірка-Вашої-колекції"><a class="header" href="#Перевірка-Вашої-колекції">Перевірка Вашої колекції</a></h2>
+<p>Гарною ідеєю буде час від часу перевіряти файл колекції на наявність проблем.
+Це можна зробити за допомогою пункту меню Інструменти&gt;Перевірити базу даних.
+Перевірка бази даних гарантує, що файл не пошкоджено, перебудовує деякі внутрішні
+структури та оптимізує файл.</p>
+<p>Коли ви перевіряєте базу даних, ваш список тегів також перебудовується.
+Коли ви видаляєте окремі колоди чи карти, Anki не оновлює список використаних тегів,
+оскільки це неефективно. Якщо ви хочете очистити зі списку старі теги, які більше не
+використовуються, перевірте свою базу даних.</p>
+<p>Зверніть увагу, що Anki автоматично оптимізує вашу колекцію кожні 2 тижні.
+Ця оптимізація забезпечує хорошу роботу колекції, але вона не перевіряє наявність помилок
+і не перебудовує список тегів під час автоматичної оптимізації.</p>
+<h2 id="Розташування-файлів"><a class="header" href="#Розташування-файлів">Розташування файлів</a></h2>
+<p>У <strong>Windows</strong> останні версії Anki зберігають ваші файли Anki у папці appdata.
+Ви можете отримати доступ до неї, відкривши файловий менеджер і ввівши <code>%APPDATA%\Anki2</code>
+у полі розташування. Старіші версії Anki зберігали файли Anki в папці під назвою <code>Anki</code>
+у папці <code>Documents</code>.</p>
+<p>На комп’ютерах <strong>Mac</strong> останні версії Anki зберігають усі файли в папці
+<code>~/Library/Application Support/Anki2</code>. Папка Library прихована за замовчуванням,
+але її можна відкрити у Finder, утримуючи натиснутою клавішу option під час натискання меню Go.
+Якщо ви використовуєте старішу версію Anki, файли Anki будуть у папці <code>Documents/Anki</code>.</p>
+<p>У <strong>Linux</strong> останні версії Anki зберігають дані в <code>~/.local/share/Anki2</code> або
+<code>$XDG_DATA_HOME/Anki2</code>, якщо ви встановили спеціальний шлях до даних. Старіші версії Anki
+зберігали файли в <code>~/Documents/Anki</code> або <code>~/Anki</code>.</p>
+<p>У папці Anki параметри на рівні програми та профілю зберігаються
+у файлі під назвою prefs.db.</p>
+<p>Також для кожного профілю є окрема папка. Папка містить:</p>
+<ul>
+<li>
+<p>Ваші нотатки, колоди, карти тощо у файлі під назвою collection.anki2</p>
+</li>
+<li>
+<p>Ваші аудіо та зображення в папці collection.media</p>
+</li>
+<li>
+<p>Папка резервних копій</p>
+</li>
+<li>
+<p>Деякі системні файли</p>
+</li>
+</ul>
+<p>Ви ніколи не повинні копіювати або переміщувати свою колекцію, коли Anki відкрито.
+Це може призвести до пошкодження вашої колекції. Також не переміщуйте та не змінюйте
+інші файли в папці.</p>
+<h2 id="Параметри-запуску"><a class="header" href="#Параметри-запуску">Параметри запуску</a></h2>
+<p>Якщо ви внесли деструктивні зміни на одному комп’ютері та маєте непошкоджену копію
+на іншому комп’ютері, ви можете запустити Anki без синхронізації, щоб скористатися
+опцією повної синхронізації без попереднього завантаження змін. Подібним чином, якщо
+у вас виникли проблеми з Anki, ви можете тимчасово вимкнути додаткові компоненти
+(або отримати вказівку про це), щоб перевірити, чи вони спричиняють проблему. Ви можете
+зробити обидві ці дії, утримуючи клавішу <kbd>Shift</kbd> під час запуску Anki.</p>
+<p>Під час запуску можна вказати власну папку. Це розширена функція, яка в першу чергу
+призначена для використання з портативними інсталяціями, і ми рекомендуємо використовувати
+розташування за замовчуванням у більшості випадків.</p>
+<p>Синтаксис для визначення альтернативної папки такий:</p>
+<pre><code>anki -b /path/to/anki/folder
+</code></pre>
+<ul>
+<li>
+<p>Якщо у вас кілька профілів, ви можете передати -p &lt;name&gt; завантажити
+конкретний профіль.</p>
+</li>
+<li>
+<p>Якщо ви передасте -p some-fake-name, Anki відобразить екран профілю під час запуску.
+Якщо профіль не надано, завантажується останній використаний профіль.</p>
+</li>
+<li>
+<p>Щоб змінити мову інтерфейсу, використовуйте -l &lt;iso 639-1 мова
+код&gt;, наприклад "-l ja" для японської мови.</p>
+</li>
+</ul>
+<p>Якщо ви завжди хочете використовувати власне розташування папки, ви можете змінити
+свій ярлик для Anki. У Windows клацніть правою кнопкою миші ярлик, виберіть «Властивості»,
+виберіть вкладку «Ярлик» і додайте «-b \шлях\до\папки даних\» після шляху до програми,
+що має виглядати як щось на зразок</p>
+<pre><code>"C:\Program Files\Anki\anki.exe" -b "C:\AnkiDataFolder"
+</code></pre>
+<p>Ви також можете використовувати цю техніку з опцією -l, щоб легко використовувати
+Anki різними мовами.</p>
+<p>У Windows слід використовувати зворотній слеш (\), а не слеш (/).</p>
+<p>На Mac немає простого способу змінити поведінку під час натискання піктограми Anki,
+але можна запустити Anki за допомогою спеціальної базової папки з терміналу:</p>
+<pre><code>open /Applications/Anki.app --args -b ~/myankifolder
+</code></pre>
+<p>Крім того, ви можете визначити змінну середовища "ANKI_BASE".
+У Windows ви можете визначити змінну середовища за допомогою:</p>
+<pre><code>set "ANKI_BASE=C:/path/to/AnkiDataFolder"
+</code></pre>
+<p>У Linux і macOS можна використовувати:</p>
+<pre><code>export ANKI_BASE="/path/to/AnkiDataFolder"
+</code></pre>
+<h2 id="dropbox-і-синхронізація-файлів"><a class="header" href="#dropbox-і-синхронізація-файлів">DropBox і синхронізація файлів</a></h2>
+<p>Ми не рекомендуємо синхронізувати папку Anki безпосередньо за допомогою сторонньою служби
+синхронізації, оскільки це може призвести до пошкодження бази даних, коли файли синхронізуються
+під час використання.</p>
+<p>Якщо ви просто хочете синхронізувати медіафайли, ви можете підключити зовнішні папки до таких служб,
+як DropBox. Перегляньте <a href="http://web.archive.org/web/20180919153730/http://www.dropboxwiki.com/tips-and-tricks/sync-other-folders">DropboxWiki: Синхронізація папок поза Dropbox (archive.org)</a>
+для отримання додаткової інформації.</p>
+<p>Якщо ви бажаєте синхронізувати також свою колекцію, настійно рекомендуємо створити скрипт, який
+копіює файли з вашої синхронізованої папки до локальної папки, запускає Anki, а потім копіює файли
+назад, коли Anki закрито. Це гарантує, що файли ніколи не синхронізуються, коли вони відкриті.</p>
+<h2 id="Мережеві-файлові-системи"><a class="header" href="#Мережеві-файлові-системи">Мережеві файлові системи</a></h2>
+<p>Ми настійно рекомендуємо, щоб Anki зберігала ваші файли на локальному жорсткому диску, оскільки мережеві
+файлові системи можуть призвести до пошкодження бази даних. Якщо мережева файлова система є вашим єдиним
+вибором, рекомендується регулярно використовувати Інструменти&gt;Перевірити базу даних для виявлення
+пошкоджень.</p>
+<h2 id="Запуск-з-флешки"><a class="header" href="#Запуск-з-флешки">Запуск з флешки</a></h2>
+<p>У Windows Anki можна встановити на USB / флешку та запускати як портативний додаток.
+У наступному прикладі припускається, що ваш USB-накопичувач є диском G.</p>
+<ul>
+<li>
+<p>Скопіюйте папку \Program Files\Anki на флешку, щоб
+мати папку типу G:\Anki.</p>
+</li>
+<li>
+<p>Створіть текстовий файл під назвою G:\anki.bat із таким текстом:</p>
+<p>g:\anki\anki.exe -b g:\ankidata</p>
+</li>
+</ul>
+<p>Якщо ви не хочете, щоб чорне вікно командного рядка залишалося відкритим,
+ви можете натомість скористатися:</p>
+<pre><code>start /b g:\anki\anki.exe -b g:\ankidata
+</code></pre>
+<ul>
+<li>Подвійне клацання на anki.bat повинно запустити Anki з даними користувача,
+що зберігаються в G:\ankidata.</li>
+</ul>
+<p>Необхідно вказати повний шлях, включно з літерою диска. Якщо замість цього
+ви спробуєте використати <code>\anki\anki.exe</code>, синхронізація перестане працювати.</p>
+<p>Синхронізація медіа з AnkiWeb може не працювати, якщо флешку відформатовано як FAT32.
+Відформатуйте диск як NTFS, щоб забезпечити правильну синхронізацію медіа.</p>
+<h2 id="Резервні-копії"><a class="header" href="#Резервні-копії">Резервні копії</a></h2>
+<p>Перегляньте <a href="./backups.html">цей розділ</a>.</p>
+<h2 id="Недоступний-жорсткий-диск"><a class="header" href="#Недоступний-жорсткий-диск">Недоступний жорсткий диск</a></h2>
+<p>Якщо Anki не може писати у файли в <a href="#%D1%80%D0%BE%D0%B7%D1%82%D0%B0%D1%88%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D1%84%D0%B0%D0%B9%D0%BB%D1%96%D0%B2">папці Anki</a>, під час запуску з’явиться
+повідомлення про те, що Anki не може писати на жорсткий диск, і Anki закриється. Якщо ви не
+впевнені, як виправити дозволи, зверніться до когось поруч, хто знає комп’ютери та
+може вам допомогти.</p>
+<h2 id="Дозволи-для-тимчасової-папки"><a class="header" href="#Дозволи-для-тимчасової-папки">Дозволи для тимчасової папки</a></h2>
+<p>Anki використовує тимчасову папку системи для зберігання тимчасових даних. Якщо дозволи цієї папки
+були змінені з налаштувань за замовчуванням шахрайською програмою або антивірусною програмою з помилками,
+Anki не працюватиме належним чином.</p>
+<p>Якщо ви користуєтеся комп’ютером з Windows 7, нижче наведено загальні кроки для вирішення проблеми.
+Оскільки це дещо складно, запитайте когось, хто знає Windows, якщо не впевнені.</p>
+<ol>
+<li>
+<p>Клацніть на початковій панелі та введіть %temp% (включаючи %), потім натисніть <kbd>Enter</kbd>.</p>
+</li>
+<li>
+<p>Підніміться на одну папку вгору та знайдіть папку temp. Клацніть її правою кнопкою миші та виберіть «Властивості».</p>
+</li>
+<li>
+<p>На вкладці безпеки натисніть Додатково.</p>
+</li>
+<li>
+<p>Натисніть вкладку Власник. Якщо ви не вказано як власник, натисніть кнопку, щоб прийняти право власності.</p>
+</li>
+<li>
+<p>На вкладці дозволів переконайтеся, що ви маєте повний контроль. Під час інсталяції W7 за замовчуванням елемент
+керування буде фактично успадковано з c:\users\your-username.</p>
+</li>
+</ol>
+<h2 id="Пошкоджені-колекції"><a class="header" href="#Пошкоджені-колекції">Пошкоджені колекції</a></h2>
+<p>Anki використовує формат файлу, стійкий до збоїв програми та комп’ютера, але ваша колекція все одно може
+бути пошкоджена, якщо файли змінено, коли Anki відкрито, зберігаються на мережевому диску або пошкоджені
+через помилку.</p>
+<p>Коли ви запустите Інструменти&gt;Перевірити базу даних, ви отримаєте повідомлення, якщо Anki виявить,
+що файл пошкоджено. <strong>Найкращий спосіб відновити це — відновити з останньої <a href="#%D1%80%D0%B5%D0%B7%D0%B5%D1%80%D0%B2%D0%BD%D1%96-%D0%BA%D0%BE%D0%BF%D1%96%D1%97">автоматичної резервної копії</a></strong>,
+але якщо ваша резервна копія надто стара, ви можете спробувати виправити пошкодження.</p>
+<p>У Linux переконайтеся, що встановлено sqlite3. На Mac його вже має бути встановлено.
+У Windows завантажте
+<a href="http://www.sqlite.org/sqlite-3_6_23.zip">http://www.sqlite.org/sqlite-3_6_23.zip</a>.</p>
+<p>Далі створіть резервну копію файлу collection.anki2 на випадок, якщо під час виконання
+наведених нижче кроків щось піде не так.</p>
+<h3 id="linuxmacos"><a class="header" href="#linuxmacos">Linux/macOS</a></h3>
+<p>Відкрийте термінал, перейдіть до папки, у якій знаходиться ваша колекція,
+і введіть:</p>
+<pre><code>sqlite3 collection.anki2 .dump &gt; dump.txt
+</code></pre>
+<p>Відкрийте отриманий файл dump.txt у текстовому редакторі та подивіться на останній рядок.
+Якщо він читається як "rollback;", змініть його на "commit;"</p>
+<p>Потім запустіть наступне в терміналі:</p>
+<pre><code>cat dump.txt | sqlite3 temp.file
+</code></pre>
+<p>Переконайтеся, що ви використовуєте temp.file - не ставте collection.anki2 праворуч,
+інакше файл буде порожнім. Коли закінчите, перейдіть до останнього кроку.</p>
+<h3 id="windows"><a class="header" href="#windows">Windows</a></h3>
+<p>Скопіюйте програму <code>sqlite3.exe</code> і свою колоду на робочий стіл. Потім перейдіть
+до <strong>Пуск&gt;Виконати</strong> та введіть <code>cmd.exe</code>.</p>
+<p>Якщо ви використовуєте поновлену версію Windows, командний рядок може не запускатись
+на одразу із паки Desktop. Якщо ви не бачите Desktop в командному рядку, введіть щось
+на зразок наступного, замінивши Administrator своїм логіном.</p>
+<pre><code>cd C:\Users\Administrator\Desktop
+</code></pre>
+<p>Потім введіть:</p>
+<pre><code>sqlite3 collection.anki2 .dump &gt; dump.txt
+</code></pre>
+<p>Відкрийте отриманий файл dump.txt у текстовому редакторі та подивіться на останній рядок.
+Якщо він читається "rollback;", змініть його на "commit;"</p>
+<p>Потім запустіть наступне в терміналі:</p>
+<pre><code>type dump.txt | sqlite3 temp.file
+</code></pre>
+<p>Переконайтеся, що ви використовуєте temp.file - не ставте collection.anki2 праворуч, інакше
+файл буде порожнім. Коли закінчите, перейдіть до останнього кроку.</p>
+<h3 id="Останній-крок"><a class="header" href="#Останній-крок">Останній крок</a></h3>
+<p>Переконайтеся, що ви не отримали повідомлення про помилку та що temp.file не порожній.
+Процедура оптимізує збірку у процесі, тому це нормально, коли новий файл буде дещо меншим
+за старий.</p>
+<p>Коли ви підтвердите, що файл не порожній:</p>
+<ul>
+<li>
+<p>перейменуйте вихідний файл collection.anki2 на щось інше</p>
+</li>
+<li>
+<p>перейменуйте temp.file на collection.anki2</p>
+</li>
+<li>
+<p>перемістіть collection.anki2 назад у папку вашої колекції, перезаписавши стару версію</p>
+</li>
+<li>
+<p>запустіть Anki та перейдіть до Інструменти&gt;Перевірити базу даних, щоб переконатися, що колекцію успішно відновлено.</p>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="backups.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="stats.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="backups.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="stats.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
