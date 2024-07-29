@@ -1,9 +1,9 @@
 [book]
 authors = ["Ankitects Pty Ltd and contributors"]
-language = "en"
+language = "ua"
 multilingual = false
 src = "src"
-title = "Anki Manual"
+title = "Посібник Anki"
 
 [build]
 create-missing = true
@@ -13,8 +13,8 @@ command = "mdbook-toc"
 renderer = ["html"]
 
 [output.html]
-git-repository-url = "https://github.com/ankitects/anki-manual/"
-cname = "docs.ankiweb.net"
+git-repository-url = "https://github.com/astropsy999/anki-manual"
+cname = "astropsy999.github.io/anki-manual/"
 additional-css = ["css/misc.css", "css/kbd.css"]
 
 [output.linkcheck]
