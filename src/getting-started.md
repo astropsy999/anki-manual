@@ -1,334 +1,211 @@
-# Getting Started
+# Починаємо
 
 <!-- toc -->
 
-## Installing & Upgrading
+## Встановлення та оновлення
 
-Please see the instructions for your computer:
+Будь ласка, перегляньте інструкції для вашого комп’ютера:
 
 - [Windows](./platform/windows/installing.md)
 - [Mac](./platform/mac/installing.md)
 - [Linux](./platform/linux/installing.md)
 
-## Videos
+## Відеоролики
 
-For a quick way to dive into Anki, please have a look at these intro
-videos. Some were made with a previous Anki version, but the concepts
-are the same.
+Щоб швидко зануритися в Anki, перегляньте ці вступні відео матеріали. Деякі були зроблені з попередньою версією Anki, але концепції
+однакові.
 
-- [Shared Decks and Review Basics](http://www.youtube.com/watch?v=QS2G-k2hQyg&yt:cc=on)
+- [Спільні колоди та основи перегляду](http://www.youtube.com/watch?v=QS2G-k2hQyg&yt:cc=on)
 
-- [Syncing](https://www.youtube.com/watch?v=YkiM4DPzSVc&list=PLGgmaKOIHykFoomqkBJAyGiDQ2kyiuTao&yt:cc=on)
+- [Синхронізація](https://www.youtube.com/watch?v=YkiM4DPzSVc&list=PLGgmaKOIHykFoomqkBJAyGiDQ2kyiuTao&yt:cc=on)
 
-- [Switching Card Order](http://www.youtube.com/watch?v=DnbKwHEQ1mA&yt:cc=on)
+- [Порядок зміни карток](http://www.youtube.com/watch?v=DnbKwHEQ1mA&yt:cc=on)
 
-- [Styling Cards](http://www.youtube.com/watch?v=F1j1Zx0mXME&yt:cc=on)
+- [Стилізація карток](http://www.youtube.com/watch?v=F1j1Zx0mXME&yt:cc=on)
 
-- [Typing in the Answer](http://www.youtube.com/watch?v=5tYObQ3ocrw&yt:cc=on)
+- [Введення відповіді](http://www.youtube.com/watch?v=5tYObQ3ocrw&yt:cc=on)
 
-If YouTube is unavailable in your country, you can [download the videos](https://apps.ankiweb.net/downloads/archive/screencasts/2.0/)
-instead.
+Якщо YouTube недоступний у ващій країні, можете [завантажити відео](https://apps.ankiweb.net/downloads/archive/screencasts/2.0/).
 
-## Key Concepts
+## Ключові поняття
 
-### Cards
+### Картки
 
-A question and answer pair is called a 'card'. This is based on a paper
-flashcard with a question on one side and the answer on the back. In
-Anki a card doesn’t actually look like a physical card, and when you
-show the answer the question remains visible by default. For example, if
-you’re studying basic chemistry, you might see a question like:
+Пара запитання та відповідь називається "карткою". То є аналогом звичайної
+флешкарти з запитанням з одного боку та відповіддю на звороті. У
+Anki картка звичайно не виглядає як фізична картка, і коли ви розглядаєте
+відповідь питання залишається видимим за замовчуванням. Наприклад,
+вивчаючи основи хімії, ви можете побачити таке питання:
 
-    Q: Chemical symbol for oxygen?
+    Q: Хімічний символ кисню?
 
-After thinking about it, and deciding the answer is O, you click the
-show answer button, and Anki shows you:
+Подумавши і вирішити, що відповідь - O, ви натискаєте
+кнопку показати відповідь та Anki показує:
 
-    Q: Chemical symbol for oxygen?
+    Q: Хімічний символ кисню?
     A: O
 
-After confirming that you are correct, you can tell Anki how well you
-remembered, and Anki will choose a next time to show you again.
+Після підтвердження правильності ви можете вказати Anki, наскільки добре
+запам’ятали відповідь, і наступного разу Anki вибере, чи показувати вам знову це питання.
 
-#### Types of Cards
+#### Типи карток
 
-- **New:** A new card is one that you have downloaded or entered in, but have never studied before.
+- **Нова:** Нова картка – це та, яку ви завантажили або додали, але ніколи раніше не вивчали.
 
-- **Learning:** Cards that were seen for the first time recently, and are still being learnt.
+- **Вивчається:** Картки, які ви нещодавно побачили вперше і які ви вивчаєте.
 
-- **Review:** Cards that were previously learnt, and now need to be reviewed so you don’t forget them.
-  There are two types of review cards:
-    - **Young:** A young card is one that has an interval of less than 21 days, but is
-   not in learning.
-    - **Mature:** A mature card is one that has an interval of 21 days or greater.
+- **Перегляд:** Картки, які були вивчені раніше та які тепер потрібно переглянути, щоб краще їх запам‘ятати.
+  Існує два типи оглядових карток:
+    - **Молода:** Молода картка - це та, яка має інтервал менше 21 дня, але не перебуває в навчанні.
+    - **Зріла:** Зріла картка – яка має інтервал 21 день або більше.
 
-- **Relearn:** A relearning card is a card that you have failed in review mode, thus
-  returning it to learning mode to be relearned.
+- **Для перевивчення:** Картка для повторного навчання – це картка, яку ви змогли пройти в режимі перегляду, таким чином повертаючи її в режим навчання для повторного вивчення.
 
-### Decks
+### Колоди
 
-A 'deck' is a group of cards. You can place cards in different decks to
-study parts of your card collection instead of studying everything at
-once. Each deck can have different settings, such as how many new cards
-to show each day, or how long to wait until cards are shown again.
+"Колода" - це набір карток. Ви можете розміщувати картки в різних колодах, щоб вивчати свої колекції частинами замість всього і одразу. Кожна колода може бути налаштована по-різному, наприклад, що до кількості показу нових карт щодня або скільки часу потрібно чекати перед показом нових карток.
 
-Decks can contain other decks, which allows you to organize decks into a
-tree. Anki uses “::” to show different levels. A deck called
-“Chinese::Hanzi” refers to a “Hanzi” deck, which is part of a “Chinese”
-deck. If you select “Hanzi” then only the Hanzi cards will be shown; if
-you select “Chinese” then all Chinese cards, including Hanzi cards, will
-be shown.
+Колоди можуть містити інші колоди, що дозволяє організовувати їх у дерева. Anki використовує “::” щоб показувати різні рівні. Колода під назвою «Chinese::Hanzi» відноситься до колоди «Hanzi», яка є частиною колоди «Chinese». Якщо обрати «Hanzi», то відображатимуться лише картки Hanzi; якщо оберете «Chinese», то буде показано всі «Chinese» картки, включаючи картки Hanzi.
 
-To place decks into a tree, you can either name them with “::” between
-each level, or drag and drop them from the deck list. Decks that have
-been nested under another deck (that is, that have at least one “::” in
-their names) are often called 'subdecks', and top-level decks are
-sometimes called 'superdecks' or 'parent decks'.
+Щоб розмістити колоди в дереві, ви можете розділити їх символом «::» між кожним рівнем або перетягнути зі списку колод одну в іншу. Колоди, які були вкладені в іншу колоду (тобто мають принаймні один «::» у своїх назвах), часто називають «підколодами», а колоди верхнього рівня іноді називають «суперколодами» або «батьківськими колодами».
 
-Anki starts with a deck called “default”; any cards which have somehow
-become separated from other decks will go here. Anki will hide the
-default deck if it contains no cards and you have added other decks.
-Alternatively, you may rename this deck and use it for other cards.
+Anki починає показ з колоди із назвою “стандартна”; будь-які картки, які якимось чином відокремилися від інших колод, потраплять сюди. Anki приховає стандартну колоду, якщо вона не містить карток і ви вже додали інші колоди. Крім того, ви можете перейменувати цю колоду та використовувати її для інших карток.
 
-Decks are displayed in the deck list alphabetically. This can result in
-a surprising order if your decks contain numbers - for example, "My Deck 10"
-will come before "My Deck 9", as 1 comes before 9. If you wish to number your
-decks, you can add a "0" in front of single-digit numbers, e.g. "Deck 01",
-"Deck 02" .. "Deck 10".
+Колоди відображаються в списку колод в алфавітному порядку. Це може призвести до несподіваного порядку, якщо ваші колоди містять числа – наприклад, «Моя колода 10» буде передувати «Моя колода 9», оскільки 1 стоїть перед 9. Якщо бажаєте дійсно пронумерувати колоди, можете додати «0» перед однозначними числами, напр. "Колода 01",
+«Колода 02» .. «Колода 10».
 
-Decks are best used to hold broad categories of cards, rather than
-specific topics such as “food verbs” or “lesson 1”. For more info on
-this, please see the [using decks appropriately](editing.md#using-decks-appropriately) section.
+Колоди найкраще використовувати для зберігання значних категорій карток, а не для конкретних тем, наприклад таких як «дієслова їжа» або «урок 1». Щоб дізнатися більше про це, перегляньте розділ [належне використання колод](editing.md#using-decks-appropriately).
 
-For information on how decks affect the order cards are displayed in,
-please see the [display order](studying.md#display-order) section.
+Щоб дізнатися про те, як колоди впливають на порядок відображення карток, перегляньте розділ [порядок відображення](studying.md#display-order).
 
-### Notes & Fields
+### Нотатки та поля
 
-When making flashcards, it’s often desirable to make more than one card
-that relates to some information. For example, if you’re learning
-French, and you learn that the word “bonjour” means “hello”, you may
-wish to create one card that shows you “bonjour” and asks you to
-remember “hello”, and another card that shows you “hello” and asks you
-to remember “bonjour”. One card is testing your ability to recognize the
-foreign word, and the other card is testing your ability to produce it.
+Під час створення карток часто бажано зробити більше однієї картки, яка стосується певної інформації. Наприклад, якщо ви вивчаєте французьку мову та дізналися, що слово «bonjour» означає «привіт», ви можете створити одну картку, яка показуватиме «bonjour» і просить згадати «привіт», а іншу картку таку, що показує «привіт» і просить згадати «bonjour». Тобто одна картка перевіряє вашу здатність розпізнавати
+іноземне слово, а інша - здатність його згадати.
 
-When using paper flashcards, your only option in this case is to write
-out the information twice, once for each card. Some computer flashcard
-programs make life easier by providing a feature to flip the front and
-back sides. This is an improvement over the paper situation, but there
-are two major downsides:
+Якщо використовувати паперові картки, єдиний варіант у цьому випадку – записати інформацію двічі, по одному разу для кожної картки. Деякі програми для комп’ютерних карток полегшують життя, надаючи функцію перевертання передньої та зворотної сторін. Це покращення порівняно з паперовою ситуацією, але є два головних недоліки:
 
-- Because such programs don’t track your performance of recognition
-  and production separately, cards will tend not to be shown to you at
-  the optimum time, meaning you forget more than you’d like, or you
-  study more than is necessary.
+- Оскільки такі програми не відстежують вашу ефективність розпізнавання та продуктивність окремо, картки, як правило, не показуватимуться вам у оптимальний час, тобто ви забудете або вивчите більше, ніж необхідно.
 
-- Reversing the question and answer only works when you want exactly
-  the same content on each side. This means it’s not possible to
-  display extra info on the back of each card for example.
+- Гортання запитання й відповіді працює лише коли вам потрібен абсолютно однаковий вміст на кожній стороні. Це означає, що, наприклад, неможливо відобразити додаткову інформацію на звороті кожної картки.
 
-Anki solves these problems by allowing you to split the content of your
-cards up into separate pieces of information. You can then tell Anki
-which pieces of information you want on each card, and Anki will take
-care of creating the cards for you and updating them if you make any
-edits in the future.
+Anki вирішує ці проблеми, дозволяючи вам розділити вміст карток на окремі частини інформації. Таким чином ви можете повідомити Anki, яку інформацію хочете мати на кожній картці, і Anki подбає про створення карток та їх оновлення, якщо забажаєте внести будь-які зміни в майбутньому.
 
-Imagine we want to study French vocabulary, and we want to include the
-page number on the back of each card. We want our cards to look like
-this:
+Уявіть, що ми хочемо вивчити французьку лексику і включити номер сторінки на звороті кожної картки. Ми хочемо, щоб наші картки виглядали так:
 
     Q: Bonjour
-    A: Hello
-       Page #12
+    A: Привіт
+       Сторінка #12
 
-And:
+Та:
 
-    Q: Hello
+    Q: Привіт
     A: Bonjour
-       Page #12
+       Сторінка #12
 
-In this example, we have three pieces of related information: a French
-word, an English meaning, and a page number. If we put them together,
-they’d look like this:
+У цьому прикладі ми маємо три частини пов’язаної інформації: французьке слово, українське значення та номер сторінки. Якщо зібрати їх разом, вони виглядатимуть ось так:
 
-    French: Bonjour
-    English: Hello
-    Page: 12
+    Французька: Bonjour
+    Українська: Привіт
+    Сторінка: 12
 
-In Anki, this related information is called a 'note', and each piece of
-information is called a 'field'. So we can say that this type of note
-has three fields: French, English, and Page.
+В Anki ця пов’язана інформація називається «нотаткою», і кожна частина
+інформація називається «полем». Отже, можна сказати, що цей тип нотатки
+має три поля: французька, українська та сторінка.
 
-To add and edit fields, click the “Fields…​” button while adding or
-editing notes. For more information on fields, please see the
-[Customizing Fields](editing.md#customizing-fields) section.
+Щоб додати та редагувати поля, натисніть кнопку «Поля…​» під час додавання або редагування нотаток. Для отримання додаткової інформації про поля дивіться
+розділ [Налаштування полів](editing.md#customizing-fields).
 
-### Card Types
+### Тип картки
 
-In order for Anki to create cards based on our notes, we need to give it
-a blueprint that says which fields should be displayed on the front or
-back of each card. This blueprint is called a 'card type'. Each type of
-note can have one or more card types; when you add a note, Anki will
-create one card for each card type.
+Для того, щоб Anki створювала картки на основі ваших нотаток, потрібно дати їй план, який визначає, які поля мають відображатися на передній чи задній частині кожної картки. Цей план називається "типом картки". Кожен тип нотаток може мати один або декілька типів карток; коли ви додаєте нотатку, Anki створить одну картку для кожного типу.
 
-Each card type has two 'templates', one for the question and one for the
-answer. In the above French example, we wanted the recognition card to
-look like this:
+Кожний тип карток має два «шаблони»: один для запитання та один для відповіді. У наведеному вище французькому прикладі ми хотіли, щоб розпізнавальна картка виглядала так:
 
     Q: Bonjour
-    A: Hello
-       Page #12
+    A: Привіт
+       Сторінка #12
 
-To do this, we can set the question and answer templates to:
+Для цього ми можемо налаштувати шаблони запитання та відповіді:
 
     Q: {{French}}
-    A: {{English}}<br>
-       Page #{{Page}}
+    A: {{Ukrainian}}<br>
+       Сторінка #{{Page}}
 
-By surrounding a field name in double curly brackets, we tell Anki to
-replace that section with the actual information in the field. Anything
-not surrounded by curly brackets remains the same on each card. (For
-instance, we don’t have to type “Page \#” into the Page field when
-adding material – it’s added automatically to every card.) &lt;br&gt; is
-a special code that tells Anki to move to the next line; more details
-are available in the [templates](templates/intro.md) section.
+Беручи назву поля в подвійні фігурні дужки, ми вказуємо Anki замінити цей розділ фактичною інформацією в полі. Усе, що не поміщено у фігурні дужки, залишається незмінним на кожній картці. (Наприклад, під час додавання матеріалу нам не потрібно вводити «Сторінка \#» у поле «Сторінка» – це автоматично додається до кожної картки.) &lt;br&gt; це
+це спеціальний код, який каже Anki перейти на наступний рядок; детальніше про це в розділі [Шаблони карток](templates/intro.md).
 
-The production card templates work in a similar way:
+Шаблони робочих карток працюють подібним чином:
 
-    Q: {{English}}
+    Q: {{Ukrainian}}
     A: {{French}}<br>
-       Page #{{Page}}
+       Сторінка #{{Page}}
 
-Once a card type has been created, every time you add a new note, a card
-will be created based on that card type. Card types make it easy to keep
-the formatting of your cards consistent and can greatly reduce the
-amount of effort involved in adding information. They also mean Anki can
-ensure related cards don’t appear too close to each other, and they
-allow you to fix a typing mistake or factual error once and have all the
-related cards updated at once.
+Після створення типу картки щоразу, коли ви додаєте нову нотатку, картка створюватиметься на основі цього типу картки. Типи карток полегшують форматування ваших карток і можуть значно зменшити кількість зусиль, пов’язаних із додаванням інформації. Вони також означають, що Anki може гарантувати, що пов’язані картки не будуть надто схожими одна на одну, і дозволяють один раз виправити помилку друку або фактичну помилку та оновити всі пов’язані картки одночасно.
 
-To add and edit card types, click the “Cards…​” button while adding or
-editing notes. For more information on card types, please see the [Cards and Templates](templates/intro.md) section.
+Щоб додавати та редагувати типи карток, натисніть кнопку «Картки…​» під час додавання або редагування нотаток. Додаткову інформацію про типи карток див. у розділі [Шаблони карток](templates/intro.md).
 
-### Note Types
+### Типи нотаток
 
-Anki allows you to create different types of notes for different
-material. Each type of note has its own set of fields and card types.
-It’s a good idea to create a separate note type for each broad topic
-you’re studying. In the above French example, we might create a note
-type called “French” for that. If we wanted to learn capital cities, we
-could create a separate note type for that as well, with fields such as
-“Country” and “Capital City”.
+Anki дозволяє створювати різні типи нотаток для різного матеріалу. Кожен тип нотаток має власний набір полів і типів карток.
+Доцільно створити окремий тип нотаток для кожної широкої теми, яку ви вивчаєте. У наведеному вище французькому прикладі ми можемо створити для цього тип нотатки під назвою «Французька». Якби ми хотіли вивчити столиці, ми могли б створити окремий тип нотаток для цього також із такими полями, як «Країна» та «Столиця».
 
-When Anki checks for duplicates, it only compares other notes of the
-same type. Thus if you add a capital city called “Orange” using the
-capital city note type, you won’t see a duplicate message when it comes
-time to learn how to say “orange” in French.
+Коли Anki перевіряє наявність дублікатів, вона лише порівнює інші нотатки
+того самого типу. Таким чином, якщо ви додасте столицю під назвою «Orange» за допомогою типу нотатки столиця, ви не побачите повідомлення про дублікат, коли прийде час вивчити «orange» французькою.
 
-When you create a new collection, Anki automatically adds some standard
-note types to it. These note types are provided to make Anki easier for
-new users, but in the long run it’s recommended you define your own note
-types for the content you are learning. The standard note types are as
-follows:
+Коли ви створюєте нову колекцію, Anki автоматично додає до неї деякі стандартні типи нотаток. Ці типи нотаток надано, щоб полегшити Anki для нових користувачів, але в довгостроковій перспективі рекомендується визначити власні типи нотаток для вмісту, який ви вивчаєте. Нижче наведено стандартні типи нотаток:
 
-- **Basic**\
-  Has Front and Back fields, and will create one card. Text you enter in
-  Front will appear on the front of the card, and text you enter in Back
-  will appear on the back of the card.
+- **Основна**\
+  Має переднє та заднє поля та створює одну картку. Текст, який ви введете на передній панелі, з’явиться на лицьовій стороні картки, а текст, який введете на задній панелі - на звороті картки.
 
-- **Basic (and reversed card)**\
-  Like Basic, but creates two cards for the text you enter: one from
-  front→back and one from back→front.
+- **Основна (і зворотна картка)**\
+  Подібна до Основної, але створює дві картки для тексту: одну спереду→ззаду, а іншу ззаду→спереду.
 
-- **Basic (optional reversed card)**\
-  This is a front→back card, and optionally a back→front card. To do this,
-  it has a third field called “Add Reverse.” If you enter any text into
-  that field, a reverse card will be created. More information about this
-  is available in the [Cards and Templates](templates/intro.md) section.
+- **Основна (додаткова перевернута картка)**\
+  Це передня→задня картка та, за бажанням, задня→передня картка. Для цього у нього є третє поле під назвою «Додати реверс». Якщо ви введете будь-який текст у це поле, буде створено зворотну картку. Додаткова інформація про це доступна в розділі [Шаблони карток](templates/intro.md).
 
-- **Basic (type in the answer)**\
-  This is essentially Basic, with an extra text box on the front where you
-  can type your answer in, after flipping to the back your input would be
-  checked and compared with the answer. More information is available in the
-  [Checking Your Answer](templates/fields.md#checking-your-answer) section.
+- **Основна (введіть відповідь)**\
+  Це, по суті, Основна, з додатковим текстовим полем на передній частині, де ви можете ввести свою відповідь, після перегортання ваші введені дані перевірятимуться та порівнюватимуться з відповіддю. Більше інформації доступно в розділі [Перевірка вашої відповіді](templates/fields.md#checking-your-answer).
 
-- **Cloze**\
-  A note type which makes it easy to select text and turn it into a cloze
-  deletion (e.g., “Man landed on the moon in \[…​\]” → “Man landed on the
-  moon in 1969”). More information is available in the [cloze deletion](editing.md#cloze-deletion) section.
+- **Прихована**\
+  Тип нотатки, який полегшує виділення тексту та перетворення його на перепустку (наприклад, «Людина висадилася на Місяць у \[…​\]» → «Людина висадилася на Місяць у 1969 році»). Більше інформації доступно в розділі [Заповнення перепусток](editing.md#cloze-deletion).
 
-- **Image Occlusion**\
-  Like the cloze notetype, but it works with images instead of text,
-  which is especially useful when studying material that heavily relies on images,
-  such as anatomy, geography, and more. For details, please see the [Image Occlusion](editing.md#image-occlusion)
-  section of the manual. 
+- **Приховані зображення**\
+  Подібно до Прихованого типу нотатки, але для зображень, що особливо корисно під час вивчення матеріалу, який значною мірою покладається на зображення,
+  таких як анатомія, географія тощо. Додаткову інформацію дивіться у розділі [Приховування зображень](editing.md#image-occlusion) посібника.
 
-To add your own note types and modify existing ones, you can use Tools →
-Manage Note Types from the main Anki window.
+Щоб додати власні типи нотаток і змінити наявні, ви можете скористатися Інструментами →
+Керування типами нотаток із головного вікна Anki.
 
-Notes and note types are common to your whole collection rather than
-limited to an individual deck. This means you can use many different
-types of notes in a particular deck, or have different cards generated
-from a particular note in different decks. When you add notes using the
-Add window, you can select what note type to use and what deck to use,
-and these choices are completely independent of each other. You can also
-change the note type of some notes [after you’ve already created them](browsing.md).
+Нотатки та типи нотаток є спільними для всієї вашої колекції, а не
+обмежено окремою колодою. Це означає, що ви можете використовувати багато різних типів нотаток у певній колоді або створювати різні карти з нотаток певного типу в різних колодах. Коли ви додаєте нотатки за допомогою вікна «Додати», ви можете вибрати тип нотаток і колоду, і ці варіанти абсолютно незалежні один від одного. Ви також можете змінити тип нотаток для деяких нотаток [після того, як ви їх уже створили](browsing.md).
 
-### Collection
+### Колекція
 
-Your 'collection' is all the material stored in Anki – your cards,
-notes, decks, note types, deck options, and so on.
+Ваша «колекція» — це весь матеріал, що зберігається в Anki — ваші карти, нотатки, колоди, типи нотаток, варіанти колод тощо.
 
-## Shared Decks
+## Спільні колоди
 
-You can watch [a video about Shared Decks and Review
-Basics](http://www.youtube.com/watch?v=QS2G-k2hQyg&yt:cc=on) on YouTube.
+Ви можете переглянути [відео про спільні колоди та огляд Основи](http://www.youtube.com/watch?v=QS2G-k2hQyg&yt:cc=on) на YouTube.
 
-The easiest way to get started with Anki is to download a deck of cards
-someone has shared:
+Найпростіший спосіб почати роботу з Anki – це завантажити колоду карток, якою хтось вже поділився:
 
-1. Click the “Get Shared” button at the bottom of the deck list.
+1. Натисніть кнопку «Поділитися» внизу списку колод.
 
-2. When you’ve found a deck you’re interested in, click the “Download”
-   button to download a deck package.
+2. Коли ви знайшли колоду, яка вас цікавить, натисніть кнопку «Завантажити», щоб       завантажити пакет колод.
 
-3. Double-click on the downloaded package to load it into Anki, or
-   File→Import it.
+3. Двічі клацніть завантажений пакет, щоб завантажити його в Anki, або Файл→Імпортувати.
 
-Please note that it’s not currently possible to add shared decks
-directly to your AnkiWeb account. You need to import them with the
-desktop program, then synchronize to upload them to AnkiWeb.
+Зверніть увагу, що наразі неможливо додати спільні колоди безпосередньо до вашого облікового запису AnkiWeb. Вам потрібно імпортувати їх за допомогою десктопної версії програми, а потім синхронізувати, щоб завантажити на AnkiWeb.
 
-Creating your own deck is the most effective way to learn a complex
-subject. Subjects like languages and the sciences can’t be understood
-simply by memorizing facts — they require explanation and context to
-learn effectively. Furthermore, inputting the information yourself
-forces you to decide what the key points are, leading to a better
-understanding.
+Створення власної колоди – найефективніший спосіб вивчення складного предмету.Такі предмети, як мови та науки, неможливо зрозуміти, просто запам’ятовуючи факти — вони вимагають пояснень і контексту для ефективного навчання. Крім того, самостійне введення інформації змушує вас визначитися з ключовими моментами, що веде до кращого розуміння.
 
-If you are a language learner, you may be tempted to download a long
-list of words and their translations, but this won’t teach you a
-language any more than memorizing scientific equations will teach you
-astrophysics. To learn properly, you need textbooks, teachers, or
-exposure to real-world sentences.
+Якщо вивчаєте мову, у вас може виникнути спокуса завантажити довгий список слів та їхніх перекладів, але це не навчить вас мові так само, як запам’ятовування наукових рівнянь навчить вас астрофізиці. Щоб правильно вчитися, вам потрібні підручники, вчителі або знайомство з реченнями які використовуються в реальному житті.
 
-    Do not learn if you do not understand.
+    Не вчіться, якщо не розумієте.
     --SuperMemo
 
-Most shared decks are created by people who are learning material
-outside of Anki – from textbooks, classes, TV, etc. They select the
-interesting points from what they learn and put them into Anki. They
-make no effort to add background information or explanations to the
-cards, because they already understand the material. So when someone
-else downloads their deck and tries to use it, they’ll find it very
-difficult as the background information and explanations are missing.
+Більшість спільних колод створено людьми, які вивчають матеріал за межами Anki – з підручників, уроків, телебачення тощо. Вони вибирають найцікавіщі моменти з того, про що дізналися, і додають їх до Anki. Вони не докладають зусиль, щоб додати до карток довідкову інформацію чи пояснення, тому що вже розуміють матеріал. Отже, коли ви завантажуєте чужу колоду та намагаєтеся нею скористатися, майте на увазі, що це буде дуже важко, оскільки часто відсутня довідкова інформація та пояснення.
 
-That is not to say shared decks are useless – simply that for complex
-subjects, they should be used as a 'supplement' to external material,
-not as a 'replacement' for it. If you’re studying textbook ABC and
-someone has shared a deck of ideas from ABC, that’s a great way to save
-some time. And for simple subjects that are basically a list of facts,
-such as capital city names or pub quiz trivia, you probably don’t need
-external material. But if you attempt to study complex subjects without
-external material, you will probably meet with disappointing results.
+Це не означає, що спільні колоди марні – просто для складних тем їх слід використовувати як «доповнення» до зовнішнього матеріалу, а не як «заміну» для нього. Якщо ви вивчаєте підручник ABC і хтось поділився колодою ідей з ABC, це чудовий спосіб заощадити
+деякий час. А для простих тем, які в основному є переліком фактів, як-от назви столиць чи дрібниць для паб-вікторин, вам, ймовірно, не потрібно зовнішній матеріал. Але якщо ви спробуєте вивчати складні предмети без зовнішнього матеріалу, ви, ймовірно, отримаєте невтішні результати.
