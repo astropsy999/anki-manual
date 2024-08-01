@@ -1,48 +1,34 @@
-# Background
+# Загальні відомості
 
 <!-- toc -->
 
-Anki is a program which makes remembering things easy. Because it is a
-lot more efficient than traditional study methods, you can either
-greatly decrease your time spent studying, or greatly increase the
-amount you learn.
+Anki — це програма, яка полегшує запам’ятовування. Оскільки це набагато ефективніше, ніж традиційні методи навчання, ви можете або значно скоротити час, який витрачаєте на навчання, або значно збільшити кількість знань.
 
-Anyone who needs to remember things in their daily life can benefit from
-Anki. Since it is content-agnostic and supports images, audio, videos
-and scientific markup (via LaTeX), the possibilities are endless. For
-example:
+Будь-хто, кому потрібно пам’ятати речі у своєму повсякденному житті, може отримати користь від Anki. Оскільки вона не залежить від вмісту та підтримує зображення, аудіо, відео та наукову розмітку (через LaTeX), можливості безмежні. Наприклад:
 
-- learning a language
+- вивчення мови
 
-- studying for medical and law exams
+- підготовка до медичних та юридичних іспитів
 
-- memorizing people’s names and faces
+- запам'ятовування імен та обличчя людей
 
-- brushing up on geography
+- освіжити знання з географії
 
-- mastering long poems
+- засвоєння довгих віршів
 
-- even practising guitar chords!
+- навіть практика гітарних акордів!
 
-There are two simple concepts behind Anki: **active recall testing** and
-**spaced repetition**. They are not known to most learners, despite having
-been written about in the scientific literature for many years.
-Understanding how they work will make you a more effective learner.
+За Anki стоять дві прості концепції: **активне тестування запам'ятовування** та
+**інтервальне повторення**. Вони не відомі більшості учнів, незважаючи на те, що про них багато років писали в науковій літературі. Розуміння того, як вони працюють, зробить вас більш ефективним у навчанні.
 
-## Active Recall Testing
+## Активне тестування запам'ятовування
 
-_Active recall testing_ means being asked a question and trying to
-remember the answer. This is in contrast to _passive study_, where we
-read, watch, or listen to something without pausing to consider if we
-know the answer. Research has shown that active recall testing is far
-more effective at building strong memories than passive study. There are
-two reasons for this:
+_Активне тестування на запам'ятовування_ означає, що побачивши запитання вам потрібно запам'ятати відповідь. Це відрізняється від _пасивного навчання_, коли ми читаємо, дивимося або слухаємо щось, не зупиняючись, щоб обдумати, або знаємо відповідь. Дослідження показали, що активне тестування запам'ятовування набагато
+ефективніше для формування міцних спогадів, ніж пасивне навчання. На це є дві причини:
 
-- The act of recalling something _strengthens_ the memory, increasing
-  the chances we’ll be able to remember it again.
+- Пригадування чогось _зміцнює_ пам’ять, збільшуючи ймовірність, що ми зможемо згадати це знову.
 
-- When we're unable to answer a question, it tells us we need to
-  return to the material to review or relearn it.
+- Коли ми не можемо відповісти на запитання, це означає, що потрібно повернутися і знову пригадати матеріал або вивчити його заново.
 
 You have probably encountered active recall testing in your school years
 without even realizing it. When good teachers give you a series of
@@ -51,92 +37,44 @@ progress-check tests, they are not doing it simply to see if you
 understood the material or not. By testing you, they are increasing the
 chances you will be able to remember the material in the future.
 
-A good way to integrate active recall testing into your own studies is
-to use _flashcards_. With traditional paper flashcards, you write a
-question on one side of a card, and the answer on the other side. By not
-turning the card over until you've thought about the answer, you can
-learn things more effectively than passive observation allows.
+Гарний спосіб інтегрувати активне тестування запам’ятовування у ваші власні методіки навчання – використовувати _флеш-картки_. За допомогою традиційних паперових карток ви пишете запитання на одній стороні картки, а відповідь на іншій. Не перегортаючи картку, доки не подумаєте над відповіддю, ви зможете запам’ятати це ефективніше, ніж дозволяє пасивне спостереження.
 
-## Use It or Lose It
+## Використовуйте або втратите
 
-Our brains are efficient machines, and they rapidly discard information
-that doesn't seem useful. Chances are that you don't remember what you
-had for dinner on Monday two weeks ago, because this information is not
-usually useful. If you went to a fantastic restaurant that day and spent
-the last two weeks telling people about how great it was, however,
-you're likely to still remember in vivid detail.
+Наш мозок — це ефективна машина, яка швидко відкидає інформацію, яка здається некорисною. Швидше за все, ви не пам’ятаєте, що їли на вечерю в понеділок два тижні тому, оскільки ця інформація зазвичай не є корисною. Однак якщо ви того дня відвідали фантастичний ресторан і протягом останніх двох тижнів розповідали людям про те, який він чудовий,
+ви, швидше за все, пам'ятаєте все в яскравих деталях.
 
-The brain's "use it or lose it" policy applies to everything we learn.
-If you spend an afternoon memorizing some science terms, and then don't
-think about that material for two weeks, you'll probably have forgotten
-most of it. In fact, studies show we forget about 75% of material learnt
-within a 48 hour period. This can seem pretty depressing when you need
-to learn a lot of information!
+Політика мозку «використовуй або втратиш» стосується будь чого, що ми вивчаємо.
+Якщо ви витратите півдня на запам’ятовування деяких наукових термінів, а потім не згадуєте про нього протягом двох тижнів, ви, скоріш за все, забудете
+більшу частину. Дослідження показують, що ми фактично забуваємо близько 75% вивченого матеріалу протягом 48 годин. Це може задаватися досить гнітючим, коли вам потрібно
+запам’ятати багато інформації!
 
-The solution is simple, however: _review_. By reviewing newly-learnt
-information, we can greatly reduce forgetting.
+Однак рішення просте: _перегляньте_. Шляхом повторення нововивченої
+інформації, ми можемо значно зменшити швидкість забування.
 
-The only problem is that traditionally, reviewing has not been very practical. If
-you are using paper flashcards, it's easy to flick through all of them
-if you only have 30 of them to review, but as the number grows to 300 or
-3000, it quickly becomes unwieldy.
+Єдина проблема в тому, що традиційне рецензування не є надто практичним. Якщо ви користуєтесь паперовими картками, їх легко гортати якщо у вас є наприклад лише 30 із них для перегляду, але коли кількість зростає до 300 або 3000, це швидко стає громіздким.
 
-## Spaced Repetition
+## Інтервальне повторення
 
-The _spacing effect_ was reported by a German psychologist Hermann Ebbinghaus in 1885. He
-observed that we tend to remember things more effectively, if we spread
-reviews out over time, instead of studying multiple times in one
-session. Since the 1930s, there have been a number of proposals for
-utilizing the spacing effect to improve learning, in what has come to be
-called _spaced repetition_.
+Про _інтервальний ефект_ у 1885 році повідомив німецький психолог Герман Еббінгауз у 1885 році. Він зауважив, що ми, як правило, запам'ятовуємо речі ефективніше, коли повторюємо
+перегляди з часом, замість вивчання кілька разів за одне заняття. Починаючи з 1930-х років, існувала низка пропозицій щодо використання інтервального ефекту для покращення навчання, цей процес отримав назву «інтервальне повторення».
 
-One example was in 1972, when a German scientist called Sebastian Leitner
-popularized a method of spaced repetition with paper flashcards. By
-separating the paper cards into a series of boxes, and moving the
-cards to a different box on each successful or unsuccessful review, it
-was possible to see at a glance a rough estimate of how well a card was
-known and when it should be reviewed again. This was a great improvement
-over a single box of cards, and it has been widely adopted by
-computerized flashcard software. It is a rather rough approach however,
-as it cannot give you an exact date on which you should review something
-again, and it does not cope very well with material of varying
-difficulty.
+Один із прикладів трапився у 1972 році, коли німецький вчений на ім’я Себастьян Ляйтнер популяризував метод інтервального повторення за допомогою паперових карток. Він розділив паперові картки на декілько коробок і перекладав картки в різні коробки в залежності від успішності чи невдалості перегляду, завдяки цьому вдавалося одразу бачити чи картка вже добре відома або її слід переглянути знову. Такий крок став великим покращенням
+у порівнянні з однією коробкою карток, і почав широко використовуватись у комп’ютеризованому програмному забезпеченні для карток. Однак все одно це був дуже грубий підхід, оскільки він не може визначити точну дату повторного перегляду і не дуже добре справляється з матеріалом різної складності.
 
-The biggest developments in the last 30 years have come from the authors
-of SuperMemo, a commercial flashcard program that implements spaced
-repetition. SuperMemo pioneered the concept of a system that keeps track
-of the ideal time to review material and optimizes itself based on the
-performance of the user.
+Найуспішніші розробки за останні 30 років відбулися завдяки авторам комерційної програми для карток SuperMemo, яка реалізує алгоритм інтервального повторення. SuperMemo започаткувала концепцію системи, яка визначає ідеальний час для перегляду матеріалу та самооптимізується на основі продуктивності користувача.
 
-In SuperMemo's spaced repetition system, every time you answer a
-question, you tell the program how well you were able to remember it —
-whether you forgot completely, made a small mistake, remembered with
-trouble, remembered easily, etc. The program uses this feedback to
-decide the optimal time to show you the question again. Since a memory
-gets stronger each time you successfully recall it, the time between
-reviews gets bigger and bigger — so you may see a question for the first
-time, then 3 days later, 15 days later, 45 days later, and so on.
+У системі інтервального повторення SuperMemo щоразу, відповідаючи нa
+запитання, ви звітуєте про те, наскільки добре запам’ятали матеріал  —
+або забули взагалі, зробили невеличку помилку, згадали тяжко, запам'ятали швидко, тощо. Програма використовує цей відгук, щоб визначити оптимальний час для повторного показу запитання. Оскільки пам’ять стає міцнішою із кожним вдалим згадуванням, час між переглядами стає все більшим і більшим — тому ви можете побачити запитання вперше, а наступні рази вже через 3 дні, через 15, 45 днів і так далі.
 
-This was a revolution in learning, as it meant material could be learnt
-and retained with the absolute minimum amount of effort necessary.
-SuperMemo's slogan sums it up: with spaced repetition, you can: "forget
-about forgetting".
+Це була революція в навчанні, оскільки матеріал можна було вивчити та зберегти з абсолютно мінімальними зусиллями. Гасло SuperMemo підсумовує: за допомогою інтервального повторення можете: «забути про забуття».
 
-## Why Anki?
+## Чому Аnki?
 
-While there is no denying the huge impact SuperMemo has had on the
-field, it is not without its problems. The program is often criticized
-for being buggy and difficult to navigate. It only runs on Windows
-computers. It is proprietary software, meaning that end-users cannot extend it
-or access the raw data. And while very old versions have been made available
-for free, they are quite limited for modern use.
+Хоча не можна заперечувати величезний вплив SuperMemo, вона досі не позбавлена проблем. Програму часто критикують за помилковість і складність навігації. Вона працює лише на Windows комп'ютерах. Це пропрієтарне програмне забезпечення, тобто кінцеві користувачі не можуть ділитись ним чи отримати доступ до необроблених даних. І хоча дуже старі версії були доступні безкоштовно, вони досить обмежені для використання.
 
-Anki addresses these issues. There are free clients for Anki available
-on many platforms, so struggling students and teachers with budgetary
-constraints are not left out. Anki is open source, with an already
-flourishing library of add-ons contributed by end-users. It is
-multi-platform, running on Windows, macOS, Linux/FreeBSD, and some
-mobile devices. And it is considerably easier to use than SuperMemo.
+Anki вирішує ці проблеми. Є безкоштовні клієнти для Anki, доступні на багатьох платформах, тому студенти та викладачі, які мають фінансові проблеми, не залишаються осторонь. Anki має відкритий вихідний код, і уже процвітаючу бібліотеку доповнень, наданих кінцевими користувачами. Вона є мультиплатформенною, працює на Windows, macOS, Linux/FreeBSD,
+на мобільних пристроях. Користуватися нею значно легше, ніж SuperMemo.
 
-Anki's spaced repetition system is based on an older version of the
-SuperMemo algorithm called [SM-2](https://faqs.ankiweb.net/what-spaced-repetition-algorithm). Recently, a new algorithm called [FSRS](https://docs.ankiweb.net/deck-options.html?highlight=FSRS#fsrs) has been integrated as an alternative to the legacy SM-2 algorithm.
+Система інтервального повторення Anki базується на старішій версії алгоритму SuperMemo під назвою [SM-2](https://faqs.ankiweb.net/what-spaced-repetition-algorithm). Нещодавно зʼявився і новий алгоритм під назвою [FSRS](https://docs.ankiweb.net/deck-options.html?highlight=FSRS#fsrs) його інтегровано як альтернативу застарілому алгоритму SM-2.
