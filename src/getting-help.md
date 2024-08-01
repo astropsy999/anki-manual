@@ -1,67 +1,58 @@
-# Getting help
+# Допомога
 
-## Asking good questions
+## Задавайте хороші запитання
 
-With the exception of AnkiMobile, Anki and its support is provided free of
-charge, by people who generously volunteer their time. Please bear this in mind
-when posting - if you are rude and demanding, or have made no effort to solve
-the problem on your own, people are less likely to want to help you.
+За винятком AnkiMobile, Anki підтримка надається безкоштовно людьми, які щедро приділяють свій час. Будь ласка, майте це на увазі під час публікації: якщо ви грубі та вимогливі або не докладаєте зусиль, щоб вирішити проблему самостійно, люди, швидше за все, не захочуть вам допомогти.
 
-Please start by trying to resolve the issue on your own:
+Почніть із спроби вирішити проблему самостійно:
 
-- Read the [getting started](./getting-started.md) section
-  of the manual, and check out the intro videos.
-- If you've encountered a bug, please follow [these steps](./troubleshooting.md).
-- Use the search button on this page to search frequently asked questions.
-- Use the search button in the manual.
-- Use the search button on the forums.
-- Google the issue.
+- Прочитайте розділ [Почнемо](./getting-started.md) посібника та перегляньте вступні відео.
+- Якщо ви зіткнулися з помилкою, виконайте [ці кроки](./troubleshooting.md).
+- Скористайтеся кнопкою пошуку на цій сторінці для пошуку поширених запитань.
+- Скористайтеся кнопкою пошуку в посібнику.
+- Скористайтеся кнопкою пошуку на форумах.
+- Загугліть проблему.
 
-If you have tried the above and are still stuck, it's time to ask for help.
-When writing a post, please explain the problem you are having clearly, and in detail.
+Якщо ви спробували наведене вище, але невдало, настав час попросити допомоги.
+Під час написання допису чітко та детально поясніть проблему, яка у вас виникла.
 
-Please avoid vague questions like:
+Будь ласка, уникайте нечітких запитань, як-от:
 
-> "My Anki doesn't work, what should I do?"
+> "Мій Anki не працює, що мені робити?"
 
-Instead, please provide as much detail as you can. For example:
+Натомість надайте якомога більше деталей. Наприклад:
 
-> "When I double-click on the Anki icon, an error message pops up. I tried
-> searching for the error on Google, but couldn't find anything useful. I have
-> copied and pasted the error message to the bottom of my post. I followed the
-> steps on the 'When problems occur' page, but the error message does not go
-> away. What should I do?"
+> «Коли я двічі клацаю піктограму Anki, з’являється повідомлення про помилку. Я спробував
+> шукати помилку в Google, але не знайшов нічого корисного. Я
+> скопіював повідомлення про помилку внизу свого допису. Я слідкував за
+> діями на сторінці «Якщо виникають проблеми», але повідомлення про помилку не зникає
+> геть. Що я повинен зробити?"
 
-This is a much better question. It tells us:
+Це питання набагато краще. Це говорить нам про те:
 
-- What you have tried.
-- What steps you are taking when the problem happens.
-- What problems/errors you are getting when things go wrong.
+- Що ви вже спробували.
+- Які кроки призводять до проблеми.
+- Які повідомлення/помилки ви отримуєте, коли щось йде не так.
 
-Knowing these things makes it much easier to answer your question.
+Знаючи ці речі, буде набагато легше відповісти на ваше запитання.
 
-The user forums use a different login to AnkiWeb, so please create an
-account there if it's your first time.
+На форумах користувачів використовується інший логін для входу в AnkiWeb, тому створіть там обліковий запис, якщо потрапите туди вперше.
 
-## Anki Desktop (the computer version) and AnkiWeb
+## Anki Desktop (комп’ютерна версія) і AnkiWeb
 
-After reading the above section, please post on the
-[user forums](https://forums.ankiweb.net) for assistance.
+Прочитавши наведений вище розділ, напишіть нам за допомогою
+[форума користувачів](https://forums.ankiweb.net).
 
-The user forums use a different login to AnkiWeb, so please create an
-account there if it's your first time.
+## AnkiDroid (пристрої Android)
 
-## AnkiDroid (Android devices)
-
-Please see [AnkiDroid's support page](https://docs.ankidroid.org/help.html).
+Перегляньте [сторінку підтримки AnkiDroid](https://docs.ankidroid.org/help.html).
 
 ## AnkiMobile (iPhone/iPad)
 
-Please see [AnkiMobile's support page](https://docs.ankimobile.net/support.html).
+Перегляньте [сторінку підтримки AnkiMobile](https://docs.ankimobile.net/support.html).
 
-## Private questions
+## Приватні питання
 
-For security reports and business enquiries, you can post a private ticket
-[here](https://anki.tenderapp.com/discussions/private). If you have a question
-about Anki, AnkiWeb or AnkiDroid, please use the [user forums](https://forums.ankiweb.net)
-instead.
+Для звітів про безпеку та ділових запитів ви можете опублікувати приватний тікет
+[тут](https://anki.tenderapp.com/discussions/private). Якщо у вас є питання
+про Anki, AnkiWeb або AnkiDroid, використовуйте натомість [форум користувачів](https://forums.ankiweb.net).
