@@ -1,61 +1,56 @@
-# Windows display issues
+# Проблеми з відображенням у Windows
 
 <!-- toc -->
 
-On Windows, there are three ways of content being displayed on screen. The
-default is _software_, which is slower, but the most compatible. There are two
-other options that are faster: _OpenGL_ and _ANGLE_. They are faster, but they
-may not work, or may cause display issues such as missing menubars, blank
-windows, and so on. Which one works best will depend on your computer.
+У Windows є три способи відображення вмісту на екрані. За замовчуванням _software_, є повільнішим, але найбільш сумісним. Є два інших варіанти: _OpenGL_ і _ANGLE_. Вони швидші, але
+можуть не працювати або спричинити проблеми з відображенням, наприклад відсутність смужок меню, пусте зображення вікна тощо. Який з них працює найкраще, залежить від вашого комп'ютера.
 
-If and how you can change this display method depends on which Anki version you
-are using, more precisely on the version of the used Qt toolkit.
+Яким чином ви можете змінити метод відображення, залежить від версії Anki що
+використовується, точніше від версії використовуваного набору інструментів Qt.
 
 ## Qt5
 
-This toolkit is used by all Anki versions prior to 2.1.50.
-Here, the display driver can be adjusted via the Tools>Preferences menu. Make sure
-you restart Anki after adjusting it.
+Цей інструментарій використовується всіма версіями Anki до 2.1.50.
+Тут драйвер дисплея можна налаштувати за допомогою меню Інструменти>Параметри. Переконайтесь
+що перезапускаєте Anki після налаштування.
 
-If you’re unable to get to Anki’s preferences screen, and restarting Anki a few
-times does not help, you may need to manually adjust the graphics driver. You
-can do this by starting cmd.exe and typing the following:
+Якщо ви не можете перейти до екрана налаштувань, і перезапуск Anki навіть кілька разів не допомагає, можливо, вам доведеться вручну налаштувати графічний драйвер. Це
+можна зробити, запустивши cmd.exe і ввівши наступне:
 
-```bat
+``` bat
 echo auto > %APPDATA%\Anki2\gldriver
 ```
 
-It will not print anything. You can then start Anki again.
+Це нічого не друкуватиме. Потім спробуйте знову запустити Anki.
 
-The default is `software`; the other two drivers you can try are `angle` and `auto`.
+Типовим драйвером є `software`; інші два драйвери, які можна спробувати, це `angle` і `auto`.
 
 ## Qt6
 
-Anki 2.1.50+ is available with the more recent Qt6 toolkit. The new toolkit
-defaults to having graphics acceleration enabled. If you run into display issues,
-you can try switching to software mode via cmd:
+Anki 2.1.50+ доступний із новішим набором інструментів Qt6. Новий інструментарій
+за умовчанням має увімкненим прискоренням графіки. Якщо виникли проблеми з відображенням, можете спробувати перейти в програмний режим через cmd:
 
 ```bat
 echo software > %APPDATA%\Anki2\gldriver6
 ```
 
-Or you can do it via PowerShell:
+Або можете скористатися PowerShell:
 
 ```powershell
 echo software > $env:APPDATA\Anki2\gldriver6
 ```
 
-It will not print anything. You can then start Anki again.
+Знову нічого не друкуватиме. Потім спробуйте знову запустити Anki.
 
-To revert to the default behaviour, change `software` to `auto`, or delete that file.
+Щоб повернутися до стандартної поведінки, змініть `software` на `auto` або видаліть цей файл.
 
-In Anki 23.10+, you can also change the graphics driver from preferences screen.
+В Anki 23.10+ також можливо змінити графічний драйвер на екрані налаштувань.
 
-## Full screen
+## Повноекранний режим
 
-Anki 2.1.50+ comes with a full screen mode, but due to various issues, it had to
-be disabled while `OpenGL` is used. Turning on software rendering as described
-above will allow the full screen option to be used, though please bear in mind
-that rendering performance may suffer.
+Anki 2.1.50+ постачається з повноекранним режимом, але через різні проблеми це повинно
+бути вимкненим, коли використовується `OpenGL`. Увімкнення програмного рендерингу, як описано
+вище дозволить використовувати опцію повноекранного режиму, хоча майте на увазі
+що продуктивність візуалізації може погіршитися.
 
-In Anki 23.10+, full screen mode is supported with the default Direct3D driver.
+В Anki 23.10+ повноекранний режим підтримується стандартним драйвером Direct3D.

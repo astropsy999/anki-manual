@@ -1,11 +1,12 @@
 # Windows
 
-## Installing & Upgrading Anki on Windows
+## Встановлення та оновлення Anki на Windows
 
-For instructions on how to install or upgrade Anki on Windows, please see:
-- [Install & Upgrade](installing.md)
+Інструкції щодо встановлення чи оновлення Anki для Windows дивіться:
 
-## Problems
+- [Встановлення та оновлення](installing.md)
 
-If you encounter any issues when installing or starting Anki, please see the
-subsections in the table of contents.
+## Проблеми
+
+Якщо у вас виникли проблеми під час встановлення чи запуску Anki, дивіться
+підрозділи у змісті.

@@ -1,92 +1,85 @@
-# Windows startup issues
+# Проблеми із запуском у Windows
 
 <!-- toc -->
 
-## No error, but app does not appear
+## Помилки немає, але програма не відображається
 
-Recently there have been some reports of Anki failing to appear, without
-any error message showing up. If you run into this situation, you can either:
+Нещодавно з'явилося кілька повідомлень про те, що Anki не з'являється без
+будь-яких повідомлень про помилки. Якщо зіткнулися з подібною ситуацією:
 
-- Some users reported that the problems stopped after they disconnected multiple/external displays.
-- Install the [latest Anki version](https://apps.ankiweb.net/) (try both qt6 and qt5)
-- Or you can try [adjusting your decimal separator](https://forums.ankiweb.net/t/windows-update-broke-anki/1822/75) if it is not a period.
-- Or you can try the old 2.1.35-alternate build of Anki.
+- Деякі користувачі повідомили, що проблеми припинилися після відключення кількох/зовнішніх дисплеїв.
+- Установіть [останню версію Anki](https://apps.ankiweb.net/) (спробуйте як qt6, так і qt5)
+– Спробуйте [налаштувати десятковий роздільник](https://forums.ankiweb.net/t/windows-update-broke-anki/1822/75), якщо це не крапка.
+- Або можете спробувати стару альтернативну збірку Anki 2.1.35.
 
-## Windows updates
+## Оновлення Windows
 
-When starting Anki, you may receive a message like the following:
+Під час запуску Anki ви можете отримати такі повідомлення:
 
-- _Error loading Python DLL_
-- _The program can't start because api-ms-win.... is missing_
-- _Failed to execute script runanki_
-- _Failed to execute script pyi_rth_multiprocessing_
-- _Failed to execute script pyi_rth_win32comgenpy_
+- _Помилка завантаження Python DLL_
+- _Програма не може запуститися, оскільки api-ms-win.... відсутній_
+- _Не вдалося виконати скрипт runanki_
+- _Не вдалося виконати скрипт pyi_rth_multiprocessing_
+- _Не вдалося виконати скрипт pyi_rth_win32comgenpy_
 
-These errors are usually because your computer is missing a Windows update
-or Windows library.
+Ці помилки зазвичай виникають тому, що на комп'ютері відсутнє оновлення Windows
+або бібліотека Windows.
 
-Please open Windows update, and ensure your system has all updates installed.
-If any needed to be installed, please restart your device after installing.
+Відкрийте оновлення Windows і переконайтеся, що у вашій системі встановлено всі оновлення.
+Якщо потрібно інсталювати якісь, будь ласка, перезавантажте пристрій після встановлення.
 
 ## Windows 7/8
 
-On Windows 7/8, you may need to manually install extra updates. Please try:
+У Windows 7/8 може знадобитися вручну встановити додаткові оновлення. Будь ласка, спробуйте це:
 
 - <https://www.microsoft.com/en-us/download/details.aspx?id=48234>
 - <https://aka.ms/vs/15/release/vc_redist.x64.exe>
 - <http://www.catalog.update.microsoft.com/Search.aspx?q=kb4474419>
 - <http://www.catalog.update.microsoft.com/Search.aspx?q=kb4490628>
 
-## Video driver issues
+## Проблеми з відеодрайвером
 
-Please see [display issues](./display-issues.md).
+Перегляньте [проблеми з дисплеєм](./display-issues.md).
 
-## Multiple displays
+## Кілька дисплеїв
 
-If you get a _LoadLibrary failed with error 126_, this may be caused by the
-toolkit Anki is built on having trouble with [multiple displays](https://forums.ankiweb.net/t/error-126-on-open-anki-desktop/13967).
+Якщо ви отримуєте помилку _LoadLibrary failed with error 126_, це може бути викликано інструментарієм Anki із-за проблем з [кількома дисплеями](https://forums.ankiweb.net/t/error-126-on-open-anki-desktop/13967).
 
-## Antivirus/firewall software
+## Антивірусне програмне забезпечення/брандмауер
 
-Third-party software on your machine may prevent Anki from loading. You can
-try adding an exception to Anki, or temporarily disabling your antivirus/firewall
-to see if it helps.
+Програмне забезпечення сторонніх розробників на вашому комп'ютері може перешкоджати завантаженню Anki. Можете спробувати додати виключення для Anki або тимчасово вимкнути антивірус/брандмауер щоб переконатися, чи це допомагає.
 
-## Admin access
+## Доступ адміністратора
 
-Some users have reported that Anki did not run for them until they right-clicked
-on the Anki icon and chose "Run as administrator". Anki stores all of its data in
-your user folder, and should not need administrator privileges, but it's something
-you can try if you've exhausted other options.
+Деякі користувачі повідомили, що Anki не хотіла запускатись, доки вони не клацнули правою кнопкою миші на піктограмі Anki та не вибрали «Запуск від імені адміністратора». Зазвичай Anki зберігає всі власні дані у папку користувача, і не потребує права адміністратора, але все одно
+ви можете спробувати це, якщо інші варіанти вичерпано.
 
-## Multiple Anki installations present after updating
+## Кілька інсталяцій Anki присутні після оновлення
 
-If the update process leaves you with multiple Anki installs (such as within
-`C:\Program Files\Anki` and `C:\Program Files (x86)\Anki`), they may be left in a
-non-working state, and Anki may refuse to start without showing an error message.
+Якщо процес оновлення залишає кілька інсталяцій Anki (наприклад, у
+`C:\Program Files\Anki` і `C:\Program Files (x86)\Anki`), це може призвести до
+неробочого стану, і Anki може відмовитися запускатися, не показуючи повідомлення про помилку.
 
-Try uninstalling all copies - you may be able to do so with the Windows `Apps & features` settings menu, or by running `uninstall.exe` in each Anki program
-folder. Afterward, install Anki again.
+Спробуйте видалити всі копії – можливо, ви зможете зробити це за допомогою меню налаштувань «Програми та функції» Windows або запустивши «uninstall.exe» у кожній папці Anki. Після цього знову встановіть Anki.
 
-## Debugging
+## Налагодження
 
-Starting Anki from a terminal may reveal a bit more information about some
-errors. After installing the latest Anki version and ensuring all Windows
-updates are installed, instead of running Anki directly, use Start>Run
-and type cmd.exe. When a console window appears, type
+Запуск Anki з терміналу може відкрити трохи більше інформації про деякі
+помилки. Після встановлення останньої версії Anki та всіх пакетів оновлення Windows, замість того, щоб запускати Anki безпосередньо, використовуйте Пуск>Виконати
+і введіть cmd.exe. Коли з’явиться вікно консолі, введіть
 
-```bat
+``` bat
 cd \program files\anki & anki-console
 ```
 
-Presumably Anki will fail to open like before, but it may reveal something about
-what is causing the problem.
+Імовірно, Anki не все одно не зможе відкритися, але можливо дізнатися
+що викликає проблему.
 
-## If all else fails
+## Якщо нічого не допомагає
 
-If you are unable to start Anki after trying the above workarounds, you have
-two remaining options:
+Якщо ви не можете запустити Anki після спроби наведених вище обхідних шляхів, у вас
+залишилося два варіанти:
 
-- You can try [running from Python](https://faqs.ankiweb.net/running-from-python.html).
-- You can try an older Anki version built with an older toolkit, such as
-  2.1.35-alternate, and 2.1.15.
+- Спробувати [запустити з Python](https://faqs.ankiweb.net/running-from-python.html).
+- Спробувати старішу версію Anki, створену за допомогою старішого набору інструментів, наприклад
+  2.1.35-alternate, та 2.1.15.

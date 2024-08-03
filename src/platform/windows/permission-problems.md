@@ -1,33 +1,33 @@
-# Windows permission problems
+# Проблеми з дозволом Windows
 
 <!-- toc -->
 
-## Permission Problems
+## Проблеми з дозволом
 
-If you receive "access denied" messages, some of Anki's files may be set to read only mode, meaning Anki is not able to write to them.
+Якщо ви отримуєте повідомлення "доступ заборонено", деякі файли Anki можуть бути налаштовані на режим лише читання, тобто Anki не може зробити в них запис.
 
-To fix the problem, you can do the following:
+Для вирішення проблеми, можна зробити наступне:
 
-- in the search area of the start bar, type cmd.exe and hit enter
-- in the window that opens, type the following and hit enter to see your username:
+- в області пошуку на панелі запуску введіть cmd.exe і натисніть enter
+- у вікні, що відкриється, введіть наступне та натисніть Enter, щоб побачити своє ім’я користувача:
 
-whoami
+`whoami`
 
-- type the following, hitting enter after each line, and replacing ____ (and keeping the :F part) with your username from the previous command
+- введіть наступне, натискаючи Enter після кожного рядка та замінюючи ____ (і зберігаючи частину `:F`) своїм іменем користувача яке маєте у результаті попередньої команди
 
 cd %APPDATA%
 
 icacls Anki2 /grant ____:F /t
 
-That command should fix the permissions on Anki's data folder, and you should now be able to start the program.
+Ця команда повинна виправити дозволи на папку даних Anki, і тепер зможете запустити програму.
 
-## Antivirus/Firewall/Anti-Malware
+## Антивірус/брандмауер/захист від шкідливих програм
 
-Some users have experienced "permission denied" or "readonly" errors that were caused by security software installed on their machine. You may need to add an exception for Anki, or try temporarily disabling the software to rule it out as the cause. Some users have reported that simply turning off their software did not fix the problem, and they either had to add an exception for Anki or uninstall the software.
+Деякі користувачі стикалися з помилками «відмовлено в дозволі» або «лише для читання», які були спричинені програмним забезпечення безпеки, встановленим на їхній машині. Можливо, вам доведеться додати виняток для Anki або спробувати тимчасово вимкнути програмне забезпечення, щоб виключити його як причину. Деякі користувачі повідомляли, що просте вимкнення програмного забезпечення не вирішило проблему, і довелося або додати виняток для Anki, або видалити програмне забезпечення.
 
-## Debugging Permission Problems
+## Проблеми з дозволом налагодження
 
-If problems persist after you've ruled out Antivirus and related programs, have performed the steps above to fix permissions, and don't use OneDrive, please run the following commands in cmd.exe, pressing enter after each one.
+Якщо після того, як ви виключили антивірус і пов'язані програми, виконали наведені вище кроки і не використовуєте OneDrive, але проблеми не зникають. Виконайте наведені нижче команди в cmd.exe, натискаючи клавішу enter після кожної.
 
 whoami
 
@@ -35,4 +35,4 @@ cd %APPDATA%
 
 icacls Anki2 /t
 
-Then please copy & paste or screenshot what you see, and post it to us in a support ticket.
+Тоді, будь ласка, скопіюйте та вставте або зробіть скриншот того, що ви бачите, і опублікуйте це у заявці для служби підтримки.

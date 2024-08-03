@@ -1,76 +1,74 @@
-# Installing & Upgrading Anki on Windows
+# Встановлення та оновлення Anki на Windows
 
 <!-- toc -->
 
-## Requirements
+## Вимоги
 
-Recent Anki releases require a computer running the 64 bit version of Windows
-10 or 11.
+Для останніх випусків Anki потрібен комп'ютер із 64-розрядною версією Windows 10 або 11.
 
-- The last Anki release that supported Windows 7 and 8.1 was Anki 2.1.49.
-- The last Anki release that supported 32 bit Windows was [Anki 2.1.35-alternate](https://github.com/ankitects/anki/releases/tag/2.1.35).
+- Останнім випуском Anki, який підтримував Windows 7 і 8.1, був Anki 2.1.49.
+- Останнім випуском Anki, який підтримував 32-бітну Windows, був [Anki 2.1.35-alternate](https://github.com/ankitects/anki/releases/tag/2.1.35).
 
-If you're on an old machine, you can obtain old releases from the [releases page](https://github.com/ankitects/anki/releases).
+Якщо ви використовуєте стару систему, можете отримати старі випуски зі [сторінки релізів](https://github.com/ankitects/anki/releases).
 
-## Installing
+## Встановлення
 
-To install Anki:
+Щоб встановити Anki:
 
-1. Download Anki from <https://apps.ankiweb.net>. See the next section
-   for how to choose between -qt5 and -qt6.
-2. Save the installer to your desktop or downloads folder.
-3. Double-click on the installer to run it. If you see an error
-   message, please see the [installation issues page](installation-issues.md).
-4. Once Anki is installed, double-click on the new star icon on your
-   desktop to start Anki.
+1. Завантажте Anki з <https://apps.ankiweb.net>. Дивіться наступний розділ
+   як вибрати між -qt5 і -qt6.
+2. Збережіть інсталятор на робочому столі або в папці завантажень.
+3. Двічі клацніть інсталятор, щоб запустити його. Якщо бачите повідомлення про
+   помилку, перегляньте [сторінку проблем із встановленням](installation-issues.md).
+4. Після встановлення Anki двічі клацніть новий значок зірочки на
+   робочому столі для запуску Anki.
 
-## Qt5 vs. Qt6
+## Qt5 чи Qt6
 
-Recent Anki versions come in separate Qt5 and Qt6 variants. The Qt6 version is
-recommended for most users.
+Останні версії Anki випускаються в окремих варіантах Qt5 і Qt6. Версія Qt6 є
+рекомендовано для більшості користувачів.
 
-Advantages of the Qt6 version:
+Переваги версії Qt6:
 
-- Various bugfixes, including things like better support for less common languages.
-- Very large images load faster than the Qt5 version.
-- Security updates. Support for the Qt5 library was discontinued in Nov 2020,
-  meaning that any security flaws discovered since then will remain unfixed.
-- Some users experience freezes when using [a custom shortcut key to switch input languages](https://github.com/ankitects/anki/issues/1105)
-  in Qt5.
+- Виправлення різних помилок, зокрема покращена підтримка менш поширених мов.
+— Дуже великі зображення завантажуються швидше, ніж у версії Qt5.
+- Оновлення безпеки. Підтримку бібліотеки Qt5 було припинено в листопаді 2020 р.
+  це означає, що будь-які недоліки безпеки, виявлені з того часу, залишаться невиправленими.
+- Деякі користувачі зависають під час використання [спеціальної клавіші швидкого доступу для перемикання мов введення](https://github.com/ankitects/anki/issues/1105)
+  в Qt5.
 
-Disadvantages of the Qt6 version:
+Недоліки версії Qt6:
 
-- Some add-ons currently only work with the Qt5 version.
+- Деякі додатки наразі працюють лише з версією Qt5.
 
-## Upgrading
+## Оновлення
 
-If upgrading from Anki 2.1.6+, there is no need to uninstall the previous
-version first. All you need to do is close Anki if it is open, and then follow
-the installation steps above. Your cards will be preserved when you upgrade.
+У разі оновлення з Anki 2.1.6+ не потрібно одразу видаляти попередню версію. Все, що вам потрібно зробити, це закрити Anki, якщо він відкритий, а потім зробити
+описані вище кроки щодо встановлення. Під час оновлення всі картки буде збережено.
 
-If upgrading from an Anki version before 2.1.6, or switching from the standard
-to the alternate version or vice versa, we recommend uninstalling the old
-version first, which will remove Anki's program data, but not delete your card
-data.
+У разі оновлення з версії Anki до 2.1.6 або переходу зі стандартної
+до альтернативної версії чи навпаки, ми радимо спочатку видалити стару версію,
+що призведе до видалення даних програми Anki, але не збереже дані карток.
 
-If you wish to downgrade to a previous version, please make sure you
-[downgrade first](http://changes.ankiweb.net).
+Якщо ви хочете повернутися до попередньої версії, спочатку переконайтеся як
+[перейти до попередньої версії](http://changes.ankiweb.net).
 
-## Add-on Compatibility
+## Сумісність доповнень
 
-Some add-ons may not always work with the latest Anki release. If you upgrade to
-the latest Anki version and find an add-on you cannot live without stops working,
-you can download older Anki versions from the [releases page](https://github.com/ankitects/anki/releases).
+Деякі доповнення можуть не завжди працювати з останньою версією Anki. Якщо, оновившись до
+найновішої версії, маєте проблеми з роботою доповнень, спробуйте завантажити старіші версії Anki зі [сторінки випусків](https://github.com/ankitects/anki/releases).
 
-## Problems
+## Проблеми
 
-If you encounter any issues when installing or starting Anki, please see the
-following pages:
-- [Installation Issues](installation-issues.md)
-- [Startup Issues](startup-issues.md)
-- [Display Issues](display-issues.md)
-- [Permission Problems](permission-problems.md)
+Якщо виникли проблеми під час встановлення чи запуску Anki, дивіться
+наступні сторінки:
 
-If you encounter any interface issues when using Anki, please see the following pages:
-- [Copy and Paste Issues](copy-and-paste.md)
-- [Text Size Issues](text-size.md)
+- [Проблеми встановлення](installation-issues.md)
+- [Проблеми при запуску](startup-issues.md)
+- [Проблеми відображення](display-issues.md)
+- [Проблеми з дозволами](permission-problems.md)
+
+Якщо у вас виникають проблеми з інтерфейсом під час використання Anki, перегляньте наступні сторінки:
+
+- [Проблеми копіювання та вставлення](copy-and-paste.md)
+- [Проблеми з розміром тексту](text-size.md)

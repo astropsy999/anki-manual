@@ -1,21 +1,19 @@
-# Text Size
+# Розмір тексту
 
-If you find the text is the wrong size, there are two environmental
-variables you can try:
+Якщо ви виявили, що текст невірного розміру, існує дві
+змінні середи, які можна підкорегувати:
 
-- ANKI_NOHIGHDPI=1 will turn off some of Qt’s high dpi support
+- ANKI_NOHIGHDPI=1 вимкне деяку підтримку високої роздільної здатності Qt
 
-- ANKI_WEBSCALE=1 will alter the scale of Anki’s web views (like the
-  deck list, study screen, etc), while leaving interface elements like
-  the menu bar alone. Replace 1 with the desired scale, such as 1.5 or
-  0.75.
+- ANKI_WEBSCALE=1 змінить масштаб веб-переглядів Anki (наприклад,
+  список колод, екран навчання тощо), залишаючи лише елементи інтерфейсу, як-от рядок меню. Замініть 1 потрібним значенням масштабу, наприклад 1,5 або
+  0,75.
 
-On Windows you can add these to a batch file to make it easier to start
-Anki. For example, create a file called startanki.bat on your desktop
-with the following text:
+У Windows ви можете додати їх до .bat файлу, щоб полегшити запуск
+Anki. Наприклад, створіть на робочому столі файл startanki.bat
+з таким текстом:
 
     set ANKI_WEBSCALE=0.75
     start "Anki" "C:\Program Files\Anki\anki"
 
-After saving, you can double click on the file to start Anki with that
-setting.
+Після збереження, щоб зробити налаштування Anki треба двічі клацнути файл.
