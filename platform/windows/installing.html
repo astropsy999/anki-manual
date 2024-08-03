@@ -178,70 +178,66 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="installing--upgrading-anki-on-windows"><a class="header" href="#installing--upgrading-anki-on-windows">Installing &amp; Upgrading Anki on Windows</a></h1>
+                        <h1 id="Встановлення-та-оновлення-anki-на-windows"><a class="header" href="#Встановлення-та-оновлення-anki-на-windows">Встановлення та оновлення Anki на Windows</a></h1>
 <!-- toc -->
-<h2 id="requirements"><a class="header" href="#requirements">Requirements</a></h2>
-<p>Recent Anki releases require a computer running the 64 bit version of Windows
-10 or 11.</p>
+<h2 id="Вимоги"><a class="header" href="#Вимоги">Вимоги</a></h2>
+<p>Для останніх випусків Anki потрібен комп'ютер із 64-розрядною версією Windows 10 або 11.</p>
 <ul>
-<li>The last Anki release that supported Windows 7 and 8.1 was Anki 2.1.49.</li>
-<li>The last Anki release that supported 32 bit Windows was <a href="https://github.com/ankitects/anki/releases/tag/2.1.35">Anki 2.1.35-alternate</a>.</li>
+<li>Останнім випуском Anki, який підтримував Windows 7 і 8.1, був Anki 2.1.49.</li>
+<li>Останнім випуском Anki, який підтримував 32-бітну Windows, був <a href="https://github.com/ankitects/anki/releases/tag/2.1.35">Anki 2.1.35-alternate</a>.</li>
 </ul>
-<p>If you're on an old machine, you can obtain old releases from the <a href="https://github.com/ankitects/anki/releases">releases page</a>.</p>
-<h2 id="installing"><a class="header" href="#installing">Installing</a></h2>
-<p>To install Anki:</p>
+<p>Якщо ви використовуєте стару систему, можете отримати старі випуски зі <a href="https://github.com/ankitects/anki/releases">сторінки релізів</a>.</p>
+<h2 id="Встановлення"><a class="header" href="#Встановлення">Встановлення</a></h2>
+<p>Щоб встановити Anki:</p>
 <ol>
-<li>Download Anki from <a href="https://apps.ankiweb.net">https://apps.ankiweb.net</a>. See the next section
-for how to choose between -qt5 and -qt6.</li>
-<li>Save the installer to your desktop or downloads folder.</li>
-<li>Double-click on the installer to run it. If you see an error
-message, please see the <a href="installation-issues.html">installation issues page</a>.</li>
-<li>Once Anki is installed, double-click on the new star icon on your
-desktop to start Anki.</li>
+<li>Завантажте Anki з <a href="https://apps.ankiweb.net">https://apps.ankiweb.net</a>. Дивіться наступний розділ
+як вибрати між -qt5 і -qt6.</li>
+<li>Збережіть інсталятор на робочому столі або в папці завантажень.</li>
+<li>Двічі клацніть інсталятор, щоб запустити його. Якщо бачите повідомлення про
+помилку, перегляньте <a href="installation-issues.html">сторінку проблем із встановленням</a>.</li>
+<li>Після встановлення Anki двічі клацніть новий значок зірочки на
+робочому столі для запуску Anki.</li>
 </ol>
-<h2 id="qt5-vs-qt6"><a class="header" href="#qt5-vs-qt6">Qt5 vs. Qt6</a></h2>
-<p>Recent Anki versions come in separate Qt5 and Qt6 variants. The Qt6 version is
-recommended for most users.</p>
-<p>Advantages of the Qt6 version:</p>
+<h2 id="qt5-чи-qt6"><a class="header" href="#qt5-чи-qt6">Qt5 чи Qt6</a></h2>
+<p>Останні версії Anki випускаються в окремих варіантах Qt5 і Qt6. Версія Qt6 є
+рекомендовано для більшості користувачів.</p>
+<p>Переваги версії Qt6:</p>
 <ul>
-<li>Various bugfixes, including things like better support for less common languages.</li>
-<li>Very large images load faster than the Qt5 version.</li>
-<li>Security updates. Support for the Qt5 library was discontinued in Nov 2020,
-meaning that any security flaws discovered since then will remain unfixed.</li>
-<li>Some users experience freezes when using <a href="https://github.com/ankitects/anki/issues/1105">a custom shortcut key to switch input languages</a>
-in Qt5.</li>
+<li>Виправлення різних помилок, зокрема покращена підтримка менш поширених мов.
+— Дуже великі зображення завантажуються швидше, ніж у версії Qt5.</li>
+<li>Оновлення безпеки. Підтримку бібліотеки Qt5 було припинено в листопаді 2020 р.
+це означає, що будь-які недоліки безпеки, виявлені з того часу, залишаться невиправленими.</li>
+<li>Деякі користувачі зависають під час використання <a href="https://github.com/ankitects/anki/issues/1105">спеціальної клавіші швидкого доступу для перемикання мов введення</a>
+в Qt5.</li>
 </ul>
-<p>Disadvantages of the Qt6 version:</p>
+<p>Недоліки версії Qt6:</p>
 <ul>
-<li>Some add-ons currently only work with the Qt5 version.</li>
+<li>Деякі додатки наразі працюють лише з версією Qt5.</li>
 </ul>
-<h2 id="upgrading"><a class="header" href="#upgrading">Upgrading</a></h2>
-<p>If upgrading from Anki 2.1.6+, there is no need to uninstall the previous
-version first. All you need to do is close Anki if it is open, and then follow
-the installation steps above. Your cards will be preserved when you upgrade.</p>
-<p>If upgrading from an Anki version before 2.1.6, or switching from the standard
-to the alternate version or vice versa, we recommend uninstalling the old
-version first, which will remove Anki's program data, but not delete your card
-data.</p>
-<p>If you wish to downgrade to a previous version, please make sure you
-<a href="http://changes.ankiweb.net">downgrade first</a>.</p>
-<h2 id="add-on-compatibility"><a class="header" href="#add-on-compatibility">Add-on Compatibility</a></h2>
-<p>Some add-ons may not always work with the latest Anki release. If you upgrade to
-the latest Anki version and find an add-on you cannot live without stops working,
-you can download older Anki versions from the <a href="https://github.com/ankitects/anki/releases">releases page</a>.</p>
-<h2 id="problems"><a class="header" href="#problems">Problems</a></h2>
-<p>If you encounter any issues when installing or starting Anki, please see the
-following pages:</p>
+<h2 id="Оновлення"><a class="header" href="#Оновлення">Оновлення</a></h2>
+<p>У разі оновлення з Anki 2.1.6+ не потрібно одразу видаляти попередню версію. Все, що вам потрібно зробити, це закрити Anki, якщо він відкритий, а потім зробити
+описані вище кроки щодо встановлення. Під час оновлення всі картки буде збережено.</p>
+<p>У разі оновлення з версії Anki до 2.1.6 або переходу зі стандартної
+до альтернативної версії чи навпаки, ми радимо спочатку видалити стару версію,
+що призведе до видалення даних програми Anki, але не збереже дані карток.</p>
+<p>Якщо ви хочете повернутися до попередньої версії, спочатку переконайтеся як
+<a href="http://changes.ankiweb.net">перейти до попередньої версії</a>.</p>
+<h2 id="Сумісність-доповнень"><a class="header" href="#Сумісність-доповнень">Сумісність доповнень</a></h2>
+<p>Деякі доповнення можуть не завжди працювати з останньою версією Anki. Якщо, оновившись до
+найновішої версії, маєте проблеми з роботою доповнень, спробуйте завантажити старіші версії Anki зі <a href="https://github.com/ankitects/anki/releases">сторінки випусків</a>.</p>
+<h2 id="Проблеми"><a class="header" href="#Проблеми">Проблеми</a></h2>
+<p>Якщо виникли проблеми під час встановлення чи запуску Anki, дивіться
+наступні сторінки:</p>
 <ul>
-<li><a href="installation-issues.html">Installation Issues</a></li>
-<li><a href="startup-issues.html">Startup Issues</a></li>
-<li><a href="display-issues.html">Display Issues</a></li>
-<li><a href="permission-problems.html">Permission Problems</a></li>
+<li><a href="installation-issues.html">Проблеми встановлення</a></li>
+<li><a href="startup-issues.html">Проблеми при запуску</a></li>
+<li><a href="display-issues.html">Проблеми відображення</a></li>
+<li><a href="permission-problems.html">Проблеми з дозволами</a></li>
 </ul>
-<p>If you encounter any interface issues when using Anki, please see the following pages:</p>
+<p>Якщо у вас виникають проблеми з інтерфейсом під час використання Anki, перегляньте наступні сторінки:</p>
 <ul>
-<li><a href="copy-and-paste.html">Copy and Paste Issues</a></li>
-<li><a href="text-size.html">Text Size Issues</a></li>
+<li><a href="copy-and-paste.html">Проблеми копіювання та вставлення</a></li>
+<li><a href="text-size.html">Проблеми з розміром тексту</a></li>
 </ul>
 
                     </main>
