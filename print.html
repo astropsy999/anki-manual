@@ -568,14 +568,14 @@ remove that file.</p>
 <h2 id="monitors-with-different-resolutions"><a class="header" href="#monitors-with-different-resolutions">Monitors with different resolutions</a></h2>
 <p>Please see <a href="https://forums.ankiweb.net/t/mac-known-issues-wording-suggestion/7331">this forum post</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="linux"><a class="header" href="#linux">Linux</a></h1>
-<h2 id="installing--upgrading-anki-on-linux"><a class="header" href="#installing--upgrading-anki-on-linux">Installing &amp; Upgrading Anki on Linux</a></h2>
-<p>For instructions on how to install or upgrade Anki on Linux, please see:</p>
+<h2 id="Встановлення-та-оновлення-anki-на-linux"><a class="header" href="#Встановлення-та-оновлення-anki-на-linux">Встановлення та оновлення Anki на Linux</a></h2>
+<p>Інструкції щодо встановлення чи оновлення Anki на Linux дивіться</p>
 <ul>
-<li><a href="platform/linux/installing.html">Install &amp; Upgrade</a></li>
+<li><a href="platform/linux/installing.html">Встановити та оновити</a></li>
 </ul>
-<h2 id="problems-2"><a class="header" href="#problems-2">Problems</a></h2>
-<p>If you encounter any issues when installing or starting Anki, please see the subsections in the table of contents.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="Встановлення-та-оновлення-anki-на-linux"><a class="header" href="#Встановлення-та-оновлення-anki-на-linux">Встановлення та оновлення ANKI на Linux</a></h1>
+<h2 id="Проблеми-2"><a class="header" href="#Проблеми-2">Проблеми</a></h2>
+<p>Якщо під час інсталяції або запуску Anki у вас виникли проблеми, перегляньте підрозділи змісту.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Встановлення-та-оновлення-anki-на-linux-1"><a class="header" href="#Встановлення-та-оновлення-anki-на-linux-1">Встановлення та оновлення ANKI на Linux</a></h1>
 <!-- toc -->
 <h2 id="Вимоги-1"><a class="header" href="#Вимоги-1">Вимоги</a></h2>
 <p>Для пакетної версії потрібна остання 64-розрядна версія Intel/AMD Linux із glibc і загальні бібліотеки, такі як libwayland-client і systemd. Якщо ви використовуєте іншу архітектуру (наприклад, ARM/AArch64) або базовий дистрибутив Linux, ви не зможете скористатися пакетною версією, але зможете скористатися <a href="https://betas.ankiweb.net/#via-pypipip">Python wheels</a>.</p>
@@ -583,75 +583,71 @@ remove that file.</p>
 <pre><code class="language-shell">sudo apt install libxcb-xinerama0 libxcb-cursor0 libnss3
 </code></pre>
 <p>Якщо Anki не запускається після встановлення, можливо, у вас <a href="platform/linux/./missing-libraries.html">відсутні інші бібліотеки</a>.</p>
-<p>Якщо ви використовуєте Ubuntu 24.04 і Anki не запускається, перегляньте [цю тему] (https://forums.ankiweb.net/t/issues-running-on-ubuntu-24-04/40974).</p>
+<p>Якщо ви використовуєте Ubuntu 24.04 і Anki не запускається, перегляньте <a href="https://forums.ankiweb.net/t/issues-running-on-ubuntu-24-04/40974">цю тему</a>.</p>
 <p>Система збірки Anki підтримує лише glibc, тому дистрибутиви на основі musl наразі не підтримуються.</p>
-<h2 id="installing-1"><a class="header" href="#installing-1">Installing</a></h2>
-<p>To install Anki:</p>
+<h2 id="Встановлення-1"><a class="header" href="#Встановлення-1">Встановлення</a></h2>
+<p>Щоб встановити Anki:</p>
 <ol>
-<li>Download Anki from <a href="https://apps.ankiweb.net">https://apps.ankiweb.net</a> to your Downloads folder. See the next section
-for how to choose between -qt5 and -qt6.</li>
-<li>If zstd is not already installed on your system, you'll need to install it (e.g <code>sudo apt install zstd</code>).</li>
-<li>Open a terminal and run the following commands, replacing the filename as appropriate.</li>
+<li>Завантажте Anki з <a href="https://apps.ankiweb.net">https://apps.ankiweb.net</a> у папку завантажень. Дивіться наступний розділ як вибрати між -qt5 і -qt6.</li>
+<li>Якщо zstd ще не інстальовано у вашій системі, потрібно буде встановити його (наприклад так, <code>sudo apt install zstd</code>).</li>
+<li>Відкрийте термінал і виконайте наведені нижче команди, замінивши відповідне ім’я файлу.</li>
 </ol>
 <pre><code class="language-shell">tar xaf Downloads/anki-2XXX-linux-qt6.tar.zst
 cd anki-2XXX-linux-qt6
 sudo ./install.sh
 </code></pre>
-<p>On some Linux systems, you may need to use <code>tar xaf --use-compress-program=unzstd</code>.</p>
-<ol start="4">
-<li>You can then start Anki by typing 'anki' and hitting enter. If you encounter
-any issues, please see the links on the left.</li>
-</ol>
-<h2 id="qt5-vs-qt6-1"><a class="header" href="#qt5-vs-qt6-1">Qt5 vs. Qt6</a></h2>
-<p>Recent Anki versions come in separate Qt5 and Qt6 variants. The Qt6 version
-is recommended for most users.</p>
-<p>Advantages of the Qt6 version:</p>
+<p>У деяких системах Linux вам може знадобитися скористатися <code>tar xaf --use-compress-program=unzstd</code>.
+4. Тепер можете запустити Anki, ввівши 'anki' і натиснувши Enter. Якщо ви зіткнетеся з будь-якою проблемою, перегляньте посилання зліва.</p>
+<h2 id="qt5-проти-qt6"><a class="header" href="#qt5-проти-qt6">Qt5 проти Qt6</a></h2>
+<p>Останні версії Anki випускаються в окремих варіантах Qt5 і Qt6. Версія Qt6 рекомендовано для більшості користувачів.</p>
+<p>Переваги версії Qt6:</p>
+<p>— Сумісність із останніми версіями glibc (виправлення <a href="platform/linux/./blank-window.html">порожніх екранів на останніх дистрибутивах</a>).</p>
+<p>— Краща підтримка HiDPI.</p>
+<p>— Покращена підтримка Wayland.</p>
 <ul>
-<li>Compatibility with recent glibc versions (fixes <a href="platform/linux/./blank-window.html">blank screens on recent distros</a>).</li>
-<li>Better HiDPI support.</li>
-<li>Better Wayland support.</li>
-<li>Various bugfixes, including things like better support for less common languages.</li>
-<li>Security updates. Support for the Qt5 library was discontinued in Nov 2020,
-meaning that any security flaws discovered since then will remain unfixed.</li>
+<li>
+<p>Різні виправлення помилок, зокрема покращена підтримка менш поширених мов.</p>
+</li>
+<li>
+<p>Оновлення безпеки. Підтримку бібліотеки Qt5 було припинено в листопаді 2020 р.
+це означає, що будь-які недоліки безпеки, виявлені з того часу, залишаться невиправленими.</p>
+</li>
 </ul>
-<p>Disadvantages of the Qt6 version include:</p>
+<p>До недоліків версії Qt6 можна віднести:</p>
 <ul>
-<li>Some add-ons currently only work with the Qt5 version.</li>
+<li>Деякі додатки наразі працюють лише з версією Qt5.</li>
 </ul>
-<h2 id="upgrading-1"><a class="header" href="#upgrading-1">Upgrading</a></h2>
-<p>If you were running Anki from a .deb/.rpm/etc in the past, please make
-sure to remove the system version before installing the package
-provided here.</p>
-<p>If you're upgrading from a previous package, simply repeat the
-installation steps to upgrade to the latest version. Your user data
-will be preserved.</p>
-<p>If you wish to downgrade to a previous version, please make sure you
-<a href="http://changes.ankiweb.net">downgrade first</a>.</p>
-<h2 id="add-on-compatibility-1"><a class="header" href="#add-on-compatibility-1">Add-on Compatibility</a></h2>
-<p>Some add-ons may not always work with the latest Anki release. If you upgrade to
-the latest Anki version and find an add-on you cannot live without stops working,
-you can download older Anki versions from the <a href="https://github.com/ankitects/anki/releases">releases page</a>.</p>
-<h2 id="problems-3"><a class="header" href="#problems-3">Problems</a></h2>
-<p>If you encounter any issues when installing or starting Anki, please see the
-following pages:</p>
+<h2 id="Оновлення-1"><a class="header" href="#Оновлення-1">Оновлення</a></h2>
+<p>Якщо ви раніше запускали Anki з .deb/.rpm/etc, обов'язково цю видаліть версію перед встановленням пакета,
+що надається тут.</p>
+<p>Якщо ви оновлюєте попередній пакет, просто повторіть
+кроки встановлення для оновлення до останньої версії. Ваші дані користувача
+буде збережено.</p>
+<p>Якщо ви хочете повернутися до попередньої версії, переконайтеся, що
+<a href="http://changes.ankiweb.net">спочатку перейшли до попередньої версії</a>.</p>
+<h2 id="Сумісність-додатків"><a class="header" href="#Сумісність-додатків">Сумісність додатків</a></h2>
+<p>Деякі додатки можуть не завжди працювати з останньою версією Anki. Якщо ви оновились
+до найновішої версіі Anki та зустріли додаток, яка не сумісний з нею,
+можете завантажити старіші версії Anki <a href="https://github.com/ankitects/anki/releases">звідси</a>.</p>
+<h2 id="Проблеми-3"><a class="header" href="#Проблеми-3">Проблеми</a></h2>
+<p>Якщо у вас виникли проблеми під час встановлення чи запуску Anki, дивіться
+наступні сторінки:</p>
 <ul>
-<li><a href="platform/linux/missing-libraries.html">Missing Libraries</a></li>
-<li><a href="platform/linux/display-issues.html">Display Issues</a></li>
-<li><a href="platform/linux/blank-window.html">Blank Main Window</a></li>
-<li><a href="platform/linux/distro-packages.html">Linux Distro Packages</a></li>
-<li><a href="platform/linux/gtk-theme.html">Incorrect GTK Theme</a></li>
+<li><a href="platform/linux/missing-libraries.html">Відсутні бібліотеки</a></li>
+<li><a href="platform/linux/display-issues.html">Проблеми відображення</a></li>
+<li><a href="platform/linux/blank-window.html">Порожнє головне вікно</a></li>
+<li><a href="platform/linux/distro-packages.html">Пакунки дистрибутивів Linux</a></li>
+<li><a href="platform/linux/gtk-theme.html">Неправильна тема GTK</a></li>
 <li><a href="platform/linux/wayland.html">Wayland</a></li>
-<li><a href="platform/linux/input-methods.html">Input Methods</a></li>
+<li><a href="platform/linux/input-methods.html">Методи введення</a></li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="missing-libraries"><a class="header" href="#missing-libraries">Missing Libraries</a></h1>
-<p>If Anki fails to start, please run it from a terminal with <code>anki</code>. If it says a
-library is missing, please install it and try again.</p>
-<p>If it complains about no platform being available, please start Anki with the
-following command line, which should reveal a missing library:</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Відсутні-бібліотеки"><a class="header" href="#Відсутні-бібліотеки">Відсутні бібліотеки</a></h1>
+<p>Якщо Anki не запускається, запустіть її з терміналу за допомогою <code>anki</code>. Якщо написано, що якась бібліотека відсутня, установіть її та повторіть спробу.</p>
+<p>Якщо він скаржиться на відсутність платформи, запустіть Anki за допомогою
+наступного командного рядку, це має виявити відсутню бібліотеку:</p>
 <pre><code class="language-shell">QT_DEBUG_PLUGINS=1 anki
 </code></pre>
-<p>After installing the library with apt-get or similar, repeat the process. You
-may need to do this a few times before all required libraries are installed.</p>
+<p>Після встановлення бібліотеки за допомогою apt-get або подібного, повторіть процес. Вам  може знадобитися зробити це кілька разів, перш ніж усі необхідні бібліотеки будуть встановлені.</p>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="Проблеми-з-відображенням-у-linux"><a class="header" href="#Проблеми-з-відображенням-у-linux">Проблеми з відображенням у Linux</a></h2>
 <h3 id="qt5-1"><a class="header" href="#qt5-1">Qt5</a></h3>
 <p>Апаратне прискорення за замовчуванням вимкнено. Увімкнення його на екрані налаштувань та
@@ -663,19 +659,21 @@ may need to do this a few times before all required libraries are installed.</p>
 програмний режим.</p>
 <h3 id="qt6-1"><a class="header" href="#qt6-1">Qt6</a></h3>
 <p>Апаратне прискорення встановлене за замовчуванням. Якщо ви стикаєтесь із порожнім екраном або маєте проблеми з відображенням, можете спробувати ввімкнути програмний рендеринг за допомогою терміналу:</p>
-<pre><code>echo software &gt; ~/.local/share/Anki2/gldriver6
+<pre><code class="language-bat">echo software &gt; ~/.local/share/Anki2/gldriver6
 </code></pre>
 <p>Якщо бажаєте повернутися до типових налаштувань, змініть <code>software</code> на <code>auto</code> або видаліть цей файл.</p>
 <p>В Anki 23.10+, ви також можете змінити графічний драйвер з екрана налаштувань.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="Порожнє-головне-вікно"><a class="header" href="#Порожнє-головне-вікно">Порожнє головне вікно</a></h1>
-<p>Деякі дистрибути Linux нещодавно оновили GLIBC. Останні версії порушують веб -інструментарій, на якому будується Anki, внаслідок чого головне вікно Анкі з’являється порожнім.</p>
+<p>Деякі дистрибутиви Linux нещодавно оновили GLIBC. Останні версії порушують веб -інструментарій, на якому будується Anki, внаслідок чого головне вікно Anki з’являється порожнім.</p>
 <p>Існує два способи обійти це:</p>
 <ol>
-<li>Встановіть останню версію QT6 ANKI, яка використовує оновлений інструментарій:</li>
-</ol>
-<p><a href="https://apps.ankiweb.net">https://apps.ankiweb.net</a></p>
-<ol start="2">
-<li>Використовуйте один з обхідних шляхів, розміщених тут:</li>
+<li>
+<p>Встановіть останню версію QT6 ANKI, яка використовує оновлений інструментарій:
+<a href="https://apps.ankiweb.net">https://apps.ankiweb.net</a></p>
+</li>
+<li>
+<p>Використовуйте один з обхідних шляхів, розміщених тут:</p>
+</li>
 </ol>
 <ul>
 <li><a href="https://forums.ankiweb.net/t/another-blank-main-window-solution-for-linux/32835">https://forums.ankiweb.net/t/another-blank-main-window-solution-for-linux/32835</a></li>
@@ -692,20 +690,17 @@ may need to do this a few times before all required libraries are installed.</p>
 <p>Усі збірки Anki доступні на <a href="https://apps.ankiweb.net">https://apps.ankiweb.net</a>. Це збірки, в яких більшість необхідних бібліотек вже включено, і їх було перевірено на роботу з цими версіями бібліотек. Якщо у вас виникли проблеми з версією вашого дистрибутива, перше, що вам слід спробувати, це перейти на останню пакетну версію, яку ми надаємо.</p>
 <p>Ви можете продовжувати використовувати версію Anki власного дистрибутива, якщо бажаєте, але коли ви зіткнетеся з будь-якими проблемами, потрібно буде повідомити про них спеціалістам із підтримки пакетів вашого дистрибутива.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="anki-не-підбирає-тему-gtk-у-gnomelinux"><a class="header" href="#anki-не-підбирає-тему-gtk-у-gnomelinux">Anki не підбирає тему GTK у Gnome/Linux</a></h1>
-<p>Ви можете вирішити цю проблему, явно вказавши Аnki, що таке тема GTK. Виконайте наступні команди в терміналі:</p>
+<p>Ви можете вирішити цю проблему, явно вказавши Anki, що таке тема GTK. Виконайте наступні команди в терміналі:</p>
 <pre><code class="language-shell">theme=$(gsettings get org.gnome.desktop.interface gtk-theme)
 echo "gtk-theme-name=$theme" &gt;&gt; ~/.gtkrc-2.0
 echo "export GTK2_RC_FILES=$HOME/.gtkrc-2.0" &gt;&gt; ~/.profile
 </code></pre>
 <p>Потім вийдіть із системи та знову увійдіть, і Anki має вибрати тему GTK.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="wayland"><a class="header" href="#wayland">Wayland</a></h1>
-<p>From Anki 2.1.48, you can force Anki to use Wayland by defining ANKI_WAYLAND=1
-before starting Anki. Wayland may give you better rendering across multiple
-displays, but it is currently off by default, due to the following issues:</p>
+<p>Починаючи з Anki 2.1.48, ви можете змусити Anki використовувати Wayland, визначивши ANKI_WAYLAND=1 перед запуском . Wayland може надати вам кращу візуалізацію , але наразі його вимкнено за замовчуванням через такі проблеми:</p>
+<p>— У деяких дистрибутивах вікна відображаються без рамок.</p>
 <ul>
-<li>On some distros, windows are rendered without borders.</li>
-<li>Bringing windows to the front is not possible, so for example, clicking on Add
-to reveal an existing Add Cards window will not work.</li>
+<li>Вивести вікна на передній план неможливо, тому, наприклад, клацання «Додати», щоб відкрити наявне вікно «Додати картки», не працюватиме.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="Методи-введення-в-linux"><a class="header" href="#Методи-введення-в-linux">Методи введення в Linux</a></h1>
 <h2 id="fcitx"><a class="header" href="#fcitx">Fcitx</a></h2>
@@ -3221,7 +3216,7 @@ showing a longer time than <code>Good</code>.</p>
 shows that repeating a card multiple times in a single day after you've
 remembered it does not significantly help with memory, so your time is
 better spent on other cards or a shorter study session</p>
-<h4 id="add-on-compatibility-2"><a class="header" href="#add-on-compatibility-2">Add-On Compatibility</a></h4>
+<h4 id="add-on-compatibility-1"><a class="header" href="#add-on-compatibility-1">Add-On Compatibility</a></h4>
 <p>Some add-ons can cause conflicts with FSRS. As a general rule of thumb,
 if an add-on affects a card's intervals, it shouldn't be used with FSRS.
 A list of commonly used add-ons and their FSRS compatibility can be found in <a href="https://github.com/open-spaced-repetition/fsrs4anki#add-on-compatibility">Add-on Compatibility</a>.</p>
@@ -4521,7 +4516,7 @@ foo bar;bar baz;baz quux
 хтось інший, ви зазвичай не бажаєте імпортувати інтервали показу карт або історію переглядів.</p>
 <p>Якщо ви зіткнетеся з тим, що імпортовані картки мають неочікувано великі інтервали, або можливо, що автор
 колоди випадково додав інформацію про розклад. Ви можете скористатися функцією <a href="importing/../browsing.html#%D0%BA%D0%B0%D1%80%D1%82%D0%BA%D0%B8">Установити дату виконання</a>, щоб скинути розклад для імпортованих карток. У Anki 23.10 і новіших версіях ви можете видалити будь-яку інформацію про планування під час процесу імпорту, залишивши невибраним параметр «Імпортувати будь-який прогрес навчання». Це також видалить будь-які теги «п’явки» або «марковані» з імпортованих карток.</p>
-<h2 id="Оновлення-1"><a class="header" href="#Оновлення-1">Оновлення</a></h2>
+<h2 id="Оновлення-2"><a class="header" href="#Оновлення-2">Оновлення</a></h2>
 <p>Коли ви імпортуєте файл .apkg, Anki ідентифікує всі нотатки, які вже є у вашій колекції через попередній імпорт.
 Якщо нотатки у файлі новіші за вашу локальну копію, їх буде оновлено вмістом файлу за замовчуванням.</p>
 <p>Такий процес оновлення, як правило, неможливий, якщо тип нотатки змінено (наприклад, якщо ви або автор колоди додали додаткове поле до типу нотатки). Ви все ще зможете імпортувати будь-які відсутні нотатки з файлу, але нотатки, які ви імпортували раніше, не будуть оновлені.</p>

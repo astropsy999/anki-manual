@@ -179,7 +179,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="anki-не-підбирає-тему-gtk-у-gnomelinux"><a class="header" href="#anki-не-підбирає-тему-gtk-у-gnomelinux">Anki не підбирає тему GTK у Gnome/Linux</a></h1>
-<p>Ви можете вирішити цю проблему, явно вказавши Аnki, що таке тема GTK. Виконайте наступні команди в терміналі:</p>
+<p>Ви можете вирішити цю проблему, явно вказавши Anki, що таке тема GTK. Виконайте наступні команди в терміналі:</p>
 <pre><code class="language-shell">theme=$(gsettings get org.gnome.desktop.interface gtk-theme)
 echo "gtk-theme-name=$theme" &gt;&gt; ~/.gtkrc-2.0
 echo "export GTK2_RC_FILES=$HOME/.gtkrc-2.0" &gt;&gt; ~/.profile
