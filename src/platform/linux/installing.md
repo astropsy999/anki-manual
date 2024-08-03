@@ -14,18 +14,17 @@ sudo apt install libxcb-xinerama0 libxcb-cursor0 libnss3
 
 Якщо Anki не запускається після встановлення, можливо, у вас [відсутні інші бібліотеки](./missing-libraries.md).
 
-Якщо ви використовуєте Ubuntu 24.04 і Anki не запускається, перегляньте [цю тему] (https://forums.ankiweb.net/t/issues-running-on-ubuntu-24-04/40974).
+Якщо ви використовуєте Ubuntu 24.04 і Anki не запускається, перегляньте [цю тему](https://forums.ankiweb.net/t/issues-running-on-ubuntu-24-04/40974).
 
 Система збірки Anki підтримує лише glibc, тому дистрибутиви на основі musl наразі не підтримуються.
 
-## Installing
+## Встановлення
 
-To install Anki:
+Щоб встановити Anki:
 
-1. Download Anki from <https://apps.ankiweb.net> to your Downloads folder. See the next section
-   for how to choose between -qt5 and -qt6.
-2. If zstd is not already installed on your system, you'll need to install it (e.g `sudo apt install zstd`).
-3. Open a terminal and run the following commands, replacing the filename as appropriate.
+1. Завантажте Anki з <https://apps.ankiweb.net> у папку завантажень. Дивіться наступний розділ як вибрати між -qt5 і -qt6.
+2. Якщо zstd ще не інстальовано у вашій системі, потрібно буде встановити його (наприклад так, `sudo apt install zstd`).
+3. Відкрийте термінал і виконайте наведені нижче команди, замінивши відповідне ім’я файлу.
 
 ```shell
 tar xaf Downloads/anki-2XXX-linux-qt6.tar.zst
@@ -33,57 +32,57 @@ cd anki-2XXX-linux-qt6
 sudo ./install.sh
 ```
 
-On some Linux systems, you may need to use `tar xaf --use-compress-program=unzstd`.
+У деяких системах Linux вам може знадобитися скористатися `tar xaf --use-compress-program=unzstd`.
+4. Тепер можете запустити Anki, ввівши 'anki' і натиснувши Enter. Якщо ви зіткнетеся з будь-якою проблемою, перегляньте посилання зліва.
 
-4. You can then start Anki by typing 'anki' and hitting enter. If you encounter
-   any issues, please see the links on the left.
+## Qt5 проти Qt6
 
-## Qt5 vs. Qt6
+Останні версії Anki випускаються в окремих варіантах Qt5 і Qt6. Версія Qt6 рекомендовано для більшості користувачів.
 
-Recent Anki versions come in separate Qt5 and Qt6 variants. The Qt6 version
-is recommended for most users.
+Переваги версії Qt6:
 
-Advantages of the Qt6 version:
+— Сумісність із останніми версіями glibc (виправлення [порожніх екранів на останніх дистрибутивах](./blank-window.md)).
 
-- Compatibility with recent glibc versions (fixes [blank screens on recent distros](./blank-window.md)).
-- Better HiDPI support.
-- Better Wayland support.
-- Various bugfixes, including things like better support for less common languages.
-- Security updates. Support for the Qt5 library was discontinued in Nov 2020,
-  meaning that any security flaws discovered since then will remain unfixed.
+— Краща підтримка HiDPI.
 
-Disadvantages of the Qt6 version include:
+— Покращена підтримка Wayland.
 
-- Some add-ons currently only work with the Qt5 version.
+- Різні виправлення помилок, зокрема покращена підтримка менш поширених мов.
 
-## Upgrading
+- Оновлення безпеки. Підтримку бібліотеки Qt5 було припинено в листопаді 2020 р.
+  це означає, що будь-які недоліки безпеки, виявлені з того часу, залишаться невиправленими.
 
-If you were running Anki from a .deb/.rpm/etc in the past, please make
-sure to remove the system version before installing the package
-provided here.
+До недоліків версії Qt6 можна віднести:
 
-If you're upgrading from a previous package, simply repeat the
-installation steps to upgrade to the latest version. Your user data
-will be preserved.
+- Деякі додатки наразі працюють лише з версією Qt5.
 
-If you wish to downgrade to a previous version, please make sure you
-[downgrade first](http://changes.ankiweb.net).
+## Оновлення
 
-## Add-on Compatibility
+Якщо ви раніше запускали Anki з .deb/.rpm/etc, обов'язково цю видаліть версію перед встановленням пакета,
+що надається тут.
 
-Some add-ons may not always work with the latest Anki release. If you upgrade to
-the latest Anki version and find an add-on you cannot live without stops working,
-you can download older Anki versions from the [releases page](https://github.com/ankitects/anki/releases).
+Якщо ви оновлюєте попередній пакет, просто повторіть
+кроки встановлення для оновлення до останньої версії. Ваші дані користувача
+буде збережено.
 
-## Problems
+Якщо ви хочете повернутися до попередньої версії, переконайтеся, що
+[спочатку перейшли до попередньої версії](http://changes.ankiweb.net).
 
-If you encounter any issues when installing or starting Anki, please see the
-following pages:
+## Сумісність додатків
 
-- [Missing Libraries](missing-libraries.md)
-- [Display Issues](display-issues.md)
-- [Blank Main Window](blank-window.md)
-- [Linux Distro Packages](distro-packages.md)
-- [Incorrect GTK Theme](gtk-theme.md)
+Деякі додатки можуть не завжди працювати з останньою версією Anki. Якщо ви оновились
+до найновішої версіі Anki та зустріли додаток, яка не сумісний з нею,
+можете завантажити старіші версії Anki [звідси](https://github.com/ankitects/anki/releases).
+
+## Проблеми
+
+Якщо у вас виникли проблеми під час встановлення чи запуску Anki, дивіться
+наступні сторінки:
+
+- [Відсутні бібліотеки](missing-libraries.md)
+- [Проблеми відображення](display-issues.md)
+- [Порожнє головне вікно](blank-window.md)
+- [Пакунки дистрибутивів Linux](distro-packages.md)
+- [Неправильна тема GTK](gtk-theme.md)
 - [Wayland](wayland.md)
-- [Input Methods](input-methods.md)
+- [Методи введення](input-methods.md)

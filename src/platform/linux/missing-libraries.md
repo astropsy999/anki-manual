@@ -1,14 +1,12 @@
-# Missing Libraries
+# Відсутні бібліотеки
 
-If Anki fails to start, please run it from a terminal with `anki`. If it says a
-library is missing, please install it and try again.
+Якщо Anki не запускається, запустіть її з терміналу за допомогою `anki`. Якщо написано, що якась бібліотека відсутня, установіть її та повторіть спробу.
 
-If it complains about no platform being available, please start Anki with the
-following command line, which should reveal a missing library:
+Якщо він скаржиться на відсутність платформи, запустіть Anki за допомогою
+наступного командного рядку, це має виявити відсутню бібліотеку:
 
 ```shell
 QT_DEBUG_PLUGINS=1 anki
 ```
 
-After installing the library with apt-get or similar, repeat the process. You
-may need to do this a few times before all required libraries are installed.
+Після встановлення бібліотеки за допомогою apt-get або подібного, повторіть процес. Вам  може знадобитися зробити це кілька разів, перш ніж усі необхідні бібліотеки будуть встановлені.
