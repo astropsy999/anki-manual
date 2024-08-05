@@ -178,22 +178,22 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="display-issues-on-macos"><a class="header" href="#display-issues-on-macos">Display Issues on macOS</a></h1>
+                        <h1 id="Проблеми-з-відображенням-у-macos"><a class="header" href="#Проблеми-з-відображенням-у-macos">Проблеми з відображенням у macOS</a></h1>
 <!-- toc -->
-<h2 id="qt6-video-driver"><a class="header" href="#qt6-video-driver">Qt6 Video Driver</a></h2>
-<p>If you're experiencing display issues or crashes in Anki 23.10+, you can try
-changing the video driver in the preferences screen, then restarting Anki.</p>
-<p>Older Anki versions did not provide an option in the preferences, but allowed
-you to adjust the driver by opening Terminal.app, then pasting the following and hit enter:</p>
-<pre><code>echo software &gt; ~/Library/Application\ Support/Anki2/gldriver6
+<h2 id="Відеодрайвер-qt6"><a class="header" href="#Відеодрайвер-qt6">Відеодрайвер Qt6</a></h2>
+<p>Якщо у вас виникають проблеми з відображенням або збої в Anki 23.10+, ви можете спробувати
+змініть відеодрайвер на екрані налаштувань, а потім перезапустити Anki.</p>
+<p>Старіші версії Anki не надавали параметрів у налаштуваннях, але дозволяли
+вам налаштувати драйвер за потребою, відкривши Terminal.app, потім вставивши наступне та натиснувши Enter:</p>
+<pre><code class="language-bat">echo software &gt; ~/Library/Application\ Support/Anki2/gldriver6
 </code></pre>
-<p>It will not print anything. You can then start Anki again.</p>
-<p>If you wish to switch back to the default, change <code>software</code> to <code>auto</code>, or
-remove that file.</p>
-<h2 id="egpus"><a class="header" href="#egpus">eGPUs</a></h2>
-<p>If you experience blank screens when using an external graphics card on a Mac, you can ctrl+click on the Anki app, click "Get Info", and enable the "prefer eGPU" option.</p>
-<h2 id="monitors-with-different-resolutions"><a class="header" href="#monitors-with-different-resolutions">Monitors with different resolutions</a></h2>
-<p>Please see <a href="https://forums.ankiweb.net/t/mac-known-issues-wording-suggestion/7331">this forum post</a>.</p>
+<p>Нічого не друкуватиме. Потім можете перезапустити Anki.</p>
+<p>Якщо бажаєте повернутися до стандартних налаштувань, змініть <code>software</code> на <code>auto</code> або
+видаліть цей файл.</p>
+<h2 id="egpu"><a class="header" href="#egpu">eGPU</a></h2>
+<p>Якщо стикаєтесь із порожніми екранами під час використання зовнішньої відеокарти на Mac, можете клацнути ctrl+ на ярлику Anki, потім натиснути «Отримати інформацію» та ввімкнути опцію «надавати перевагу eGPU».</p>
+<h2 id="Монітори-з-різною-роздільною-здатністю"><a class="header" href="#Монітори-з-різною-роздільною-здатністю">Монітори з різною роздільною здатністю</a></h2>
+<p>Перегляньте <a href="https://forums.ankiweb.net/t/mac-known-issues-wording-suggestion/7331">цю публікацію на форумі</a>.</p>
 
                     </main>
 
