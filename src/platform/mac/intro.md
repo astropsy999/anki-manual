@@ -1,10 +1,11 @@
 # macOS
 
-## Installing & Upgrading Anki on macOS
+## Встановлення та оновлення Anki на macOS
 
-For instructions on how to install or upgrade Anki on macOS, please see:
-- [Install & Upgrade](installing.md)
+Інструкції щодо встановлення чи оновлення Anki на macOS дивіться
 
-## Problems
+- [Встановити та оновити](installing.md)
 
-If you encounter any issues when installing or starting Anki, please see the subsections in the table of contents.
+## Проблеми
+
+Якщо ви зіткнулися з будь-якими проблемами під час встановлення або запуску Anki, перегляньте відповідні підрозділи у змісті.

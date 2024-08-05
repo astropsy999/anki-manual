@@ -1,60 +1,63 @@
-# Installing & Upgrading Anki on macOS
+# Встановлення та оновлення Anki на macOS
 
 <!-- toc -->
 
-## Requirements
+## Вимоги
 
-Recent Anki releases require a Mac running macOS 10.13.4 or later.
+Для останніх випусків Anki потрібен Mac з macOS версії 10.13.4 або новішої.
 
-The last Anki release that supported macOS 10.10 to 10.13.3 was [Anki 2.1.35-alternate](https://github.com/ankitects/anki/releases/tag/2.1.35). If you're on an old machine, you can obtain the old version from the [releases page](https://github.com/ankitects/anki/releases).
+Останнім випуском Anki, який підтримував macOS від 10.10 до 10.13.3, був [Anki 2.1.35-alternate](https://github.com/ankitects/anki/releases/tag/2.1.35). Якщо ви використовуєте стару машину, можете отримати стару версію зі [сторінки версій](https://github.com/ankitects/anki/releases).
 
-## Installing
+## Встановлення
 
-1. Download Anki from <https://apps.ankiweb.net>. See the next section
-   for how to choose between -qt5 and -qt6.
-2. Save the file to your desktop or downloads folder.
-3. Open it, and drag Anki to your Applications folder or desktop.
-4. Double-click on Anki in the location you placed it.
+1. Завантажте Anki з <https://apps.ankiweb.net>. Дивіться наступний розділ
+   як вибрати між -qt5 і -qt6.
+2. Збережіть файл на робочому столі або в папці завантажень.
+3. Відкрийте його та перетягніть Anki у папку «Програми» або на робочий стіл.
+4. Двічі клацніть Anki в тому місці, де ви його розмістили.
 
-## Qt5 vs. Qt6
+## Qt5 чи Qt6
 
-Recent Anki versions come in separate Qt5 and Qt6 variants. The Qt6 version
-is recommended for most users.
+Останні версії Anki випускаються в окремих варіантах Qt5 і Qt6. Версія Qt6
+рекомендовано для більшості користувачів.
 
-Advantages of the Qt6 version:
+Переваги версії Qt6:
 
-- Native support for recent Apple Silicon Macs (faster, better battery life).
-- Various bugfixes, including things like better support for less common languages.
-- Security updates. Support for the Qt5 library was discontinued in Nov 2020,
-  meaning that any security flaws discovered since then will remain unfixed.
+— Вбудовано підтримку останніх комп'ютерів Apple Silicon Mac (швидший і кращий час автономної роботи).
 
-Disadvantages of the Qt6 version:
+- Різні виправлення помилок, зокрема покращена підтримка менш поширених мов.
 
-- Tabbed windows (e.g in full screen) are no longer possible.
-- Some Mac users have reported that the Intel Qt5 version was faster and
-  more reliable for them.
-- Some add-ons currently only work with the Qt5 version.
+- Оновлення безпеки. Підтримку бібліотеки Qt5 було припинено в листопаді 2020 р.
+  це означає, що будь-які недоліки безпеки, виявлені з того часу, залишаться невиправленими.
 
-## Upgrading
+Недоліки версії Qt6:
 
-To upgrade, close Anki if it is open, and then follow the steps above. Drag
-the Anki icon into the same location you previously stored it, and when prompted,
-overwrite the old version. Your card data will be preserved.
+- Вікна з вкладками (наприклад, на весь екран) більше неможливі.
+
+- Деякі користувачі Mac повідомили, що версія Intel Qt5 була швидшою та
+  надійнішою для них.
+
+- Деякі додатки наразі працюють лише з версією Qt5.
+
+## Оновлення
+
+Щоб оновити, закрийте Anki, якщо вона відкрита, а потім виконайте наведені вище дії. Перетягнути піктограму Anki в те саме місце, де ви її зберегли раніше, і коли з’явиться запит, перезаписати стару версію. Дані ваших карток будуть збережені.
 
 ## Homebrew
 
-[Homebrew](https://brew.sh/) users can install Anki using
-`brew install --cask anki` in their preferred Terminal application.
+Користувачі [Homebrew](https://brew.sh/) можуть інсталювати Anki за допомогою
+`brew install --cask anki` за допомогою бажаної версії терміналу.
 
-Upgrading can be done using `brew upgrade`, and for uninstalling: `brew uninstall --cask anki`
+Оновлення можна виконати за допомогою `brew upgrade`, а для видалення: `brew uninstall --cask anki`
 
-## Add-on Compatibility
+## Сумісність додатків
 
-Some add-ons may not always work with the latest Anki release. If you upgrade to
-the latest Anki version and find an add-on you cannot live without stops working,
-you can download older Anki versions from the [releases page](https://github.com/ankitects/anki/releases).
+Деякі додатки можуть не завжди працювати з останнім випуском Anki. Якщо ви оновитеся до
+найновішої версії Anki та знайдете надбудову, яка не не працює,
+можете завантажити старіші версії Anki зі [сторінки випусків](https://github.com/ankitects/anki/releases).
 
-## Problems
+## Проблеми
 
-If you encounter any issues when installing or starting Anki, please see:
-- [Display Issues](display-issues.md)
+Якщо під час інсталяції або запуску Anki у вас виникли проблеми, перегляньте:
+
+- [Проблеми відображення](display-issues.md)
