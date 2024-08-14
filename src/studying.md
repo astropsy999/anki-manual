@@ -1,364 +1,203 @@
-# Studying
+# Навчання
 
 <!-- toc -->
 
-When you have found a deck you like or entered some notes in, it’s time
-to start studying.
+Коли ви завантажили бажану колоду, або додали до колоди нотатки, час починати навчання.
 
-## Decks
+## Колоди
 
-Study in Anki is limited to the currently selected deck as well as any
-subdecks it contains.
+Вивчення в Anki обмежується поточною вибраною колодою, а також усіма дочірніми колодами, які вона містить.
 
-On the decks screen, your decks and subdecks will be displayed in a list. [New, Learn and Due (To Review)](getting-started.md#types-of-cards)
-cards for that day will be also displayed here.
+На екрані колод ваші колоди та дочірні колоди відображатимуться у списку. Тут також відображатимуться картки [Нові, Вивчити та Термін (для перегляду)](getting-started.md#types-of-cards) за цей день.
 
-![Decks screen](media/decks_screen.png)
+![Екран колод](media/decks_screen.png)
 
-When you click on a deck, it will become the 'current deck', and Anki
-will change to the study screen. You can return to the deck list to
-change the currently selected deck at any time by clicking on “Decks” at
-the top of the main window. (You can also use the Study
-Deck action in the menu to select a new deck from the keyboard, or you
-can press the <kbd>s</kbd> key to study the currently selected deck.)
+Коли ви клацаєте на колоду, вона стає «поточною колодою» та Anki зміниться на екран дослідження. Ви можете будь-коли повернутися до списку колод, щоб змінити поточну вибрану колоду, натиснувши «Колоди» у верхній частині головного вікна. (Ви також можете скористатися функцією «Вивчити колоду» в меню, щоб вибрати нову колоду з клавіатури, або ви можете натиснути клавішу <kbd>s</kbd>, щоб вивчити поточну вибрану колоду.)
 
-You can click the gears button to the right of a deck to rename or
-delete a deck, change its [options](deck-options.md), or [export](exporting.md) it.
+Також можливо натиснути кнопку із шестірнею праворуч від колоди, щоб перейменувати або видалити колоду, змінити її [параметри] (deck-options.md) або [експортувати](exporting.md) її.
 
-## Study Overview
+## Перегляд колоди
 
-After clicking on a deck to study, you’ll see a screen that shows you
-how many cards are due today. This is called the 'deck overview' screen:
+Натиснувши колоду для вивчення, ви побачите екран, на якому буде показано, скільки карток потрібно переглянути сьогодні. Це називається «Перегляд колоди»:
 
-![Study overview](media/study_overview.png)
+![Перегляд колоди](media/study_overview.png)
 
-The cards are split into [three types](getting-started.md#types-of-cards): New, Learning, and To Review.
-If you have [Bury siblings](#siblings-and-burying) activated in your deck options, you
-may see how many cards will be buried in grey:
+Картки поділяються на [три типи](getting-started.md#типи-карток): Нові, Вивчаються та Перегляд.
+Якщо у параметрах вашої колоди активовано [Відкладення](#siblings-and-burying), ви можете побачити, скільки карток відображатимуться сірим кольором:
 
-![Study overview (Buried Cards)](media/study_overview_buried_cards.png)
+![Перегляд колоди (Відкладені картки)](media/study_overview_buried_cards.png)
 
-To start a study session, click the **Study Now** button. Anki will
-proceed to show you cards until the cards to be shown for the day have
-run out.
+Щоб розпочати навчальний сеанс, натисніть кнопку **Вчитись зараз**. Anki показуватиме картки, які назначені на поточний день, доки вони не закінчаться.
 
-While studying, you can return to the overview by pressing the <kbd>s</kbd> key
-on your keyboard.
+Під час навчання ви можете повернутися до огляду, натиснувши клавішу <kbd>s</kbd> на клавіатурі.
 
-## Questions
+## Питання
 
-When a card is shown, only the question is shown at first. After
-thinking about the answer, either click the **Show Answer** button, or
-press the spacebar. The answer will then be shown. It’s okay if it takes
-you a little while to recall the answer, but as a general rule if you
-can’t answer within about 10 seconds, it’s probably better to give up
-and show the answer than keep struggling to remember.
+Під час показу карток спочатку буде показане питання. Після міркування над відповіддю, потрібно натиснути кнопку **Показати відповідь** або пробіл. Буде показано відповідь. Це нормально, якщо вам знадобиться трохи часу на згадку відповіді, але як загальне правило, якщо не зможете відповісти протягом приблизно 10 секунд, мабуть, краще відмовитися
+і натиснути "показати відповідь", ніж продовжувати спроби пригадати.
 
-When the answer is shown, you should compare the answer you thought of
-with the answer which is shown and tell Anki how well you remembered. If
-you don’t trust yourself to compare your answer accurately, you can ask
-Anki to [prompt you to type in the answer](templates/fields.md#checking-your-answer) rather than
-just showing it to you.
+Коли дійсну відповідь буде показано, вам слід порівняти із нею власну та повідомити Anki наскільки просто чи складно було згадати відповідь. Якщо у вас є проблеми із самоконтролем, ви можете увімкнути режим [введення відповіді](templates/fields.md#checking-your-answer) замість звичайного відображення.
 
-## Learning/Relearning Cards
+## Вивчення/Повторення карток
 
-When learning new cards, or when relearning cards that you have
-forgotten, Anki will show you the cards one or more times to help you
-memorize them. Each time is called a 'learning step'. By default there
-are two steps: 1 minute and 10 minutes. You can change the number of
-steps and the delays between them in the [deck options](deck-options.md#new-cards).
+Під час вивчення нових або повторення старих карток, Anki показуватиме картки один або декілька разів, намагаючись полегшити запам'ятовування. Кожний такий показ зветься 'крок вивчення'. За замовчуванням існує два кроки: 1 хвилина та 10 хвилин. Ви можете змінити кількість
+кроків та інтервали затримки між ними у [налаштуваннях колоди](deck-options.md#new-cards).
 
-There are four rating buttons when learning:
+Під час навчання можливі 4 типи кнопок:
 
-- **Again** moves the card back to the first step.
+- **Знову** повертає картку на перший крок.
 
-- **Hard** repeats the current step.
-  - If the card is on the first (and the only) step, the delay is 50% larger than the step. But, this delay is at most one day larger than the step.
-  - If the card is on the first step and you have configured more than one step, the delay will be the average of Again and Good, i.e., the average of the first two steps.
-  - If the card is on any subsequent step, Hard repeats the previous delay.
+- **Важко** повторює поточний крок.
+  - Якщо картка знаходиться на першому (чи єдиному) кроці, затримка збільшується на 50%. Але не більше ніж н день.
+  - Якщо картка знаходиться на першому кроці, і ви налаштували більше одного кроку, затримка буде середнім значенням між `Знову` та `Добре`, тобто середнє значення перших двох кроків.
+  - Якщо карта знаходиться на будь-якому наступному кроці, `Важко` повторює попередню затримку.
 
-- **Good** moves the card to the [next step](deck-options.md#learning-steps). If the card was on the final
-  step, the card is converted into a review card (it 'graduates'). By
-  default, once the card has reached the end of the learning steps, the
-  card will be shown again the next day, then at increasingly long delays
-  (see the next section).
+- **Добре** переміщує картку до [наступного кроку](deck-options.md#learning-steps). Якщо картка була на останньому кроці, вона перетворюється на картку перегляду («закінчує»). За замовчуванням, коли картка досягне кінця етапів навчання, вона буде показана знову наступного дня, а потім із все більшими затримками (див. наступний розділ).
 
-- **Easy** immediately converts the card into a review card, even if there
-  were steps remaining. [By default](deck-options.md#easy-interval), the card will be shown again 4 days
-  later, and then at increasingly long delays. In the v1 scheduler, the "Easy" button will not be
-  shown if you are in relearning mode as it would give the same interval
-  as “Good.” With the [v2 scheduler+](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html),
-  when cards are in relearning, the "Easy" button boosts the interval by 1 day.
+- **Легко** негайно перетворює картку на картку перегляду, навіть якщо залишилися кроки. [За замовчуванням] (deck-options.md#easy-interval), картка знову відображатиметься через 4 дні, а потім із дедалі більшими затримками. У планувальнику версії 1 кнопка «Легко» не відображатиметься, якщо ви перебуваєте в режимі повторного навчання, оскільки вона дасть той самий інтервал, що й «Добре». За допомогою [планувальника версії 2](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html), коли картки перевчаються, кнопка «Легко» збільшує інтервал на 1 день.
 
-When cards are seen for the first time, they start at step one. This
-means answering **Good** on a card for the first time will show it one
-more time in 10 minutes, and the initial 1 minute step will be skipped.
-If you push **Again**, though, the card will come back in 1 minute.
+Коли картки відображаються вперше, перегляд починається з першого кроку. Це означає, що якщо вперше відповісти **Добре** картка відобразиться ще раз через 10 хвилин, а початковий крок у 1 хвилину буде пропущено. Але якщо натиснути **Знову**, картка повернеться через 1 хвилину.
 
-You can use the <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd> and <kbd>4</kbd> keys on your keyboard to select a particular
-button, where <kbd>1</kbd> is **Again**. Pressing <kbd>Space</kbd> or <kbd>Enter</kbd> will select
-**Good**.
+Можете скористатися клавішами <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd> та <kbd>4</kbd> які співпадають відповідно - <kbd>1</kbd> це **Знову**. Натиснувши <kbd>Пробіл</kbd> або <kbd>Enter</kbd> обере
+**Добре**.
 
-If there are no other cards to show you, Anki will show learning cards
-again even if their delay has not elapsed completely. If you’d prefer to
-wait the full learning delay, you can change this behaviour in
-[Preferences>Scheduling>Learn Ahead Limit](preferences.md).
+Якщо більше не залишиться карток для показу, Anki буде знову показувати картки навіть, якщо час виділений на затримку не спливе. Але якщо бажаєте змінити таку поведінку, це можна зробити у меню [Налаштування>Планування>Попередній ліміт навчання](preferences.md).
 
-## Review Cards
+## Перегляд карток
 
-When a card has been previously learnt and is ready to be reviewed
-again, there are four buttons to rate your answer:
+Коли картку було попередньо вивчено та готово до повторного перегляду, є чотири кнопки, щоб оцінити вашу відповідь:
 
-- **Again** marks your answer as incorrect and asks Anki to show the card
-  more frequently in the future. The card is said to have 'lapsed'. Please
-  see the [lapses](deck-options.md#lapses) section for more information about how lapsed
-  reviews are handled.
+- **Знову** позначає вашу відповідь як неправильну та просить Anki частіше показувати картку в майбутньому. Кажуть, що картка втратила чинність. Перегляньте розділ [пропуски](deck-options.md#lapses), щоб дізнатися як обробляються прострочені перегляди.
 
-- **Hard** by default, shows the card at a [slightly longer delay](deck-options.md#hard-interval)
-  than last time, and tells Anki to show the card more frequently in the future.
+- **Важко** за замовчуванням показує картку з [трохи довшою затримкою](deck-options.md#hard-interval), ніж минулого разу, і    наказує Anki показувати картку частіше в майбутньому.
 
-- **Good** tells Anki that the last delay was about right, and the card
-  easiness doesn’t need to be adjusted down or up. At the [default starting easiness](deck-options.md#starting-ease), the card will be shown again approximately 2 1/2 times longer
-  than the previous time, so if you had waited 10 days to see the card
-  previously, the next delay would be about 25 days.
+- **Добре** повідомляє Anki, що остання затримка була приблизно такою як треба, і легкість картки не потрібно регулювати. У [складність за замовчуванням](deck-options.md#starting-ease) картка відображатиметься знову приблизно через довший у 2,5 рази час, тому, тобто якщо ви чекали 10 днів, щоб побачити картку знову, наступна затримка становитиме приблизно 25 днів.
 
-- **Easy** tells Anki you found the delay too short. The card will be
-  scheduled [further into the future than 'Good'](deck-options.md#easy-bonus), and Anki will schedule
-  the card less frequently in the future. Because 'Easy' rapidly increases
-  the delay, it’s best used for only the easiest of cards. Usually you
-  should find yourself answering 'Good' instead.
+- **Легко** говорить Anki, що ти вважаєш таку затримку занадто короткою. Картка буде запланована [пізніше ніж у випадку «Добре»](deck-options.md#easy-bonus), Anki відображатиме картку рідше в майбутньому. Оскільки «Легко» швидко збільшує затримку, його найкраще використовувати лише для найпростіших карток. Зазвичай натомість краще відповідати «Добре».
 
-As with learning cards, you can use <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd> and <kbd>4</kbd> on the keyboard to select an
-answer. Pressing the <kbd>spacebar</kbd> or <kbd>Enter</kbd> will select **Good**.
+Подібно до режиму навчання, можете скористатися клавішами <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd> та <kbd>4</kbd>. Натискання <kbd>пробілу</kbd> або <kbd>Enter</kbd> спрацює як **Добре**.
 
-See [Deck Options](deck-options.md) and the [FAQ](https://faqs.ankiweb.net/what-spaced-repetition-algorithm.html)
-to learn more about how the algorithm works.
+Перегляньте [Параметри колоди](deck-options.md) і [FAQ](https://faqs.ankiweb.net/what-spaced-repetition-algorithm.html), щоб дізнатися більше про те, як працює алгоритм.
 
-## Due Counts
+## Кількість завдань на сьогодні
 
-When only the question is shown, Anki shows three numbers like 6 + 9 + 59
-at the bottom of the screen. These represent the new cards (blue), cards in
-learning (orange), and cards to review (green). If you’d prefer not to see the numbers,
-you can turn them off in Anki’s [preferences.](preferences.md)
+Коли питання починають показуватись, Anki відображатиме три цифр, як-от 6 + 9 + 59
+у нижній частині екрану. Ці цифри показують кількість Нових карток(синій), карток для Навчання(помаранчевий) та карток для Перегляду(зелений). Якщо ви волієте не бачити цифр, можете вимкнути їх у [налаштуваннях.](preferences.md)
 
 ![Due Counts](media/due_counts.png)
 
-In the v1 scheduler, the numbers count _reviews_ needed to finish all the
-cards in that queue, not the number of _cards_. If you have multiple
-steps configured for lapsed cards, the number will increase by more than
-one when you fail a card, since that card needs to be shown several times.
+У планувальнику версії 1 цифри підраховують _перегляди_, необхідні для завершення всіх карток у черзі, а не кількість _карток_. Якщо у вас налаштовано кілька кроків для прострочених карток, лічильник збільшуватиметься більш ніж на один, у разі якщо ви зіпсуєте картку, оскільки цю картку потрібно буде показати кілька разів.
 
-From the [v2 scheduler](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html), the numbers count _cards_, so the number will always
-increase by one regardless of the steps remaining.
+У [планувальнику версії 2](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html) числа підраховують _картки_, тому кількість завжди збільшуватиметься на одиницю незалежно від кількості кроків, що залишилися.
 
-When the answer is shown, Anki shows an estimate of the next time a card
-will be shown above each button. If you’d prefer not to see the
-estimates, you can disable them in Anki’s [preferences](preferences.md).
+Коли відображається відповідь, Anki показує над кнопкою приблизний час наступного показу картки. Це можна вимкнути у [налаштуваннях](preferences.md).
 
-## Fuzz Factor
+## Фактор невизначеності
 
-When you select an ease button on a review card, Anki also applies a small amount of random “fuzz”
-to prevent cards that were introduced at the same time and given the same ratings
-from sticking together and always coming up for review on the same day. This fuzz
-will appear on the answer buttons when the [v3 scheduler](https://faqs.ankiweb.net/the-2021-scheduler.html) is enabled, so if
-you are using a previous version and you’re noticing a slight discrepancy between
-what you select and the intervals your cards actually get, this is probably the
-cause.
+Коли ви обираєте відповідні кнопки складності під час перегляду карток, Anki застосовую деяку кількість "невизначеності"
+щоб запобігти ситуації, коли всі картки отримують однакові оцінки що призведе до їх повторного показу через однаковий час.
+Подібна "невизначеність" застосовується під час відповідей, коли увімкнуто [планувальник версії 3](https://faqs.ankiweb.net/the-2021-scheduler.html), це може бути причиною невеличких розбіжностей між тим що ви обираєте і дійсним часом повторного показу карток.
 
-Learning cards are also given up to 5 minutes of extra delay so that they
-don’t always appear in the same order, but answer buttons won't reflect that. It
-is not possible to turn this feature off.
+Навчальні картки також можуть отримати додаткову затримку приблизно у 5 хвилин, що не буде враховано коли обираєте ту чи іншу кнопку відповіді. Цю затримку неможливо вимкнути.
 
-## Editing and More
+## Редагування та інше
 
-You can click the **Edit** button in the bottom left to edit the current
-note. When you finish editing, you’ll be returned to study. The editing
-screen works very similarly to the [add notes](editing.md) screen.
+Для редагування поточної нотатки можливо натиснути кнопку **Редагувати** у лівому нижньому кутку кожної картки. Коли редагування буде завершено, ви повернетеся назад до навчання. Екран редагування працює дуже схоже на [додавання нотаток](editing.md).
 
-At the bottom right of the review screen is a button labeled **More**.
-This button provides some other operations you can do on the current
-card or note:
+У правому нижньому кутку знаходиться кнопка **Більше**. Вона надає можливість виконувати деякі інші операції із поточною нотаткою:
 
-- [**Flag Card**](editing.md#using-flags): Adds a colored marker to the card, or toggles it off. Flags will appear during
-  study, and you can search for flagged cards in the Browse screen. This is useful
-  when you want to take some action on the card at a later date, such as looking
-  up a word when you get home. If you're using Anki 2.1.45+, you can also rename flags
-  from the [browser](browsing.md).
+- [**Позначити картку**](editing.md#using-flags): Додає або вимикає кольоровий маркер. Ці позначки відображатимуться під час перегляду карток, а також ви зможете шукати позначені картки. Це корисно, коли у вас є бажання виконати певну дію із позначеною карткою пізніше, як-от переглянути слово під час повернення додому. Якщо використовуєте версію Anki 2.1.45+, ці позначки також можна [іменувати](browsing.md).
 
-- **Bury Card / Note**: Hides a card or all of the note’s cards from review until the next day.
-  (If you want to unbury cards before then, you can click the “unbury”
-  button on the [deck overview](studying.md#study-overview) screen.) This is useful if
-  you cannot answer the card at the moment or you want to come back to it
-  another time. Burying can also [happen automatically](studying.md#siblings-and-burying) for
-  cards of the same note.
+- **Приховати картку / Нотатку**: Приховує картку або всі картки певної нотатки до наступного дня.
+  (Якщо бажаєте повернути приховані картки раніше, це можна зробити натиснувши “повернути приховані”
+  на екрані[перегляду колоди](studying.md#study-overview).) Це корисно, якщо ви не можете відповісти на картку в цей момент або хочете повернутися до неї пізніше. Приховування може також [відбуватися автоматично](studying.md#siblings-and-burying) для подібних нотаток.
 
-  With the old scheduler, if cards were in learning when they were buried,
-  they were moved back to the new card queue or review queue prior to being
-  buried.
+  Якщо використовуєте стару версію планувальника, коли картки приховані під час режиму навчання,
+  вони потрапляють у нову чергу навчання або чергу перегляду що трапляється у даний час.
 
-  With the [2.1 scheduler](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html),
-  however, burying cards does not reset a card's learning steps.
+  Однак для [планувальника версії 2.1](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html), поточні черги не порушуються.
 
-- **Forget card**: Move current card to [the end of the new queue](browsing.md#cards).
+- **Забути картку**: Перемістіть поточну картку у [кінець черги](browsing.md#cards).
 
-  From Anki 2.1.50+, Anki will remember the original order of a new card when it is first studied
-  with the v3 scheduler. The "Restore original position" option allows you to reset the card back
-  to its original position when you forget it.
+  Починаючи з версії 2.1.50+, Anki пам'ятає оригінальний порядок нових карток, та час іх першого перегляду. Параметр "Відновити оригінальне положення" дозволяє скинути картку назад
+  до первісного положення, яке було до початку навчання.
 
-  The "Reset repetition and lapse count" option, if enabled, will set the review and failure counters
-  for the card back to zero. It does not remove the review history that is shown at the bottom of the
-  card info screen.
+  Якщо вибрано опцію "Скинути кількість повторень і помилок", лічильники повторень та помилок буде скинуто до 0. Але це не видаляє історію повторень, яка відображається внизу екрану інформації про картку.
 
-- **Set Due Date**: Put cards in the review queue, and [make them due on a certain date.](browsing.md#cards)
+- **Встановити термін**: Покласти картки в чергу перегляду, та [встановити певну дату.](browsing.md#cards)
 
-- **Suspend Card / Note**: Hides a card or all of the note’s cards from review until they are
-  manually unsuspended (by clicking the suspend button in the browser).
-  This is useful if you want to avoid reviewing the note for some time,
-  but don’t want to delete it.
-  With the old scheduler, if cards were in learning when they are
-  suspended, they are moved back to the new card queue or review queue
-  prior to being suspended.
+- **Призупинити картку / Нотатку**: Приховує картку або всі картки певної нотатки доки призупинення не буде зняте вручну (шляхом натискання кнопки зняття призупинення). Це корисно, якщо ви хочете уникнути перегляду нотатки деякий час, але не хочете її видаляти. Зі старим планувальником, якщо картки були у стадії навчання під час призупинення, вони переміщуються назад до черги нових карток або черги перегляду перед тим як бути призупиненими.
 
-  With the [2.1 scheduler](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html),
-  however, suspending cards does not reset a card's learning steps.
+Однак із [планувальником 2.1](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html),
+призупинення не скидає кроки навчання.
 
-- **Options**: Edit the [options](deck-options.md) for the current deck.
+- **Параметри**: Редагувати [параметри](deck-options.md) для поточної колоди.
 
-- **Card Info**: Displays [statistical information](stats.md#card-info) about the card.
+- **Інфо картки**: Відображає [статистичні дані](stats.md#card-info) про картку.
 
-- **Previous Card Info**: Displays [statistical information](stats.md#card-info) about the previous card.
+- **Інфо попередньої картки**: Відображає [статистичні дані](stats.md#card-info) попередньої картки.
 
-- [**Mark Note**](editing.md#the-marked-tag): Adds a “marked” tag to the current note, so it can be easily found in the
-  browser. This is similar to flagging individual cards, but works with a tag
-  instead, so if the note has multiple cards, all cards will appear in a search
-  for the marked tag. Most users will want to use flags instead.
+- [**Помітити нотатку**](editing.md#the-marked-tag): Додає тег-“помітку” до поточної нотатки, завдяки цьому її може бути знайдено. Це подібно до позначення окремих карток, але працює завдяки тегу, і якщо нотатка цього типу буде мати декілька карток, їх усі буде відмічено тегом і вони будуть доступні в пошуку. Більшість користувачів надає перевагу звичайним поміткам.
 
-- **Create Copy**: Opens a [duplicate](browsing.md#finding-duplicates) of the current
-  note in the editor, which can be slightly modified to easily obtain variations of your cards.
-  By default, the duplicate card will be created in the same deck as the original.
+- **Копіювати**: Відкриває [дублікат](browsing.md#finding-duplicates) поточної картки у редакторі, які можна трохи змінити, щоб легко отримати варіації ваших карток. За замовчуванням, дублікація картки буде створена в тій самій колоді.
 
-- **Delete Note**: Deletes the note and all of its cards.
+- **Видалити нотатку**: видаляє нотатку та всі її картки.
 
-- **Replay Audio**: If the card has audio on the front or back, play it again.
+- **Відтворити аудіо**: якщо карта має аудіо на передній або задній стороні, його буде відтворено.
 
-- **Pause Audio**: Pauses the audio if it is playing.
+- **Призупинити аудіо**: призупинятиме аудіо, якщо воно відтворюється.
 
-- **Audio -5s / +5s**: Jump backwards / forward 5 seconds in the currently playing audio.
+- **Аудіо -5 с / +5 с**: Перейти назад / вперед на 5 секунд у поточному аудіо.
 
-- **Record Own Voice**: Record from your microphone for the purposes of checking your
-  pronunciation. This recording is temporary and will go away when you
-  move to the next card. If you want to add audio to a card permanently,
-  you can do that in the edit window.
+- **Запис власного голосу**: записуйте з мікрофона для перевірки своєї вимови. Цей запис є тимчасовим і зникне, коли ви перейдете до наступної картки. Якщо ви хочете назавжди додати аудіо на картку, можливо зробити це у вікні редагування.
 
-- **Replay Own Voice**: Replay the previous recording of your voice (presumably after showing
-  the answer).
+- **Відтворити власний голос**: повторити попередній запис вашого голосу (імовірно, після показу
+ відповіді).
 
-## Display Order
+## Порядок відображення
 
-Studying will show cards from the selected deck and any decks it
-contains. Thus, if you select your “French” deck, the subdecks
-“French::Vocab” and “French::My Textbook::Lesson 1” will be shown as
-well.
+Під час вивчення будуть показані картки з вибраної колоди та всіх колод, які вона містить. Таким чином, якщо ви виберете колоду «French, дочірні колоди «French::Vocab» і «French::My Textbook::Lesson 1» також будуть показані.
 
-The way Anki fetches cards from the decks depends on the algorithm used:
+Як саме Anki гортає картки з колод, залежить від алгоритму, що використовується:
 
-- With the v1 scheduler, when a deck has subdecks, the cards will appear from [each deck in turn](studying.md#display-order).
+- За допомогою планувальника v1, коли колода має дочірні колоди, картки з’являтимуться з [кожної колоди по черзі](studying.md#display-order).
 
-- With the [v2 scheduler](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html),
-  when a deck has subdecks, reviews are taken from all children decks
-  at once. The review limit of the child decks is ignored - only the limit of the
-  deck you clicked on applies.
+- За допомогою [планувальника v2](https://faqs.ankiweb.net/the-anki-2.1scheduler.html), коли колода має дочірні, перегляди беруться з усіх дочірніх колод одночасно. Обмеження перегляду дочірніх колод ігнорується – застосовується лише обмеження колоди, яку ви натиснули.
 
-- With the [v3 scheduler](https://faqs.ankiweb.net/the-2021-scheduler.html)
-  each child deck's limit is also enforced, and you do not need to see the cards
-  in deck order either. See the [deck options](deck-options.md#review-sort-order) section of the manual for more information.
+- За допомогою [планувальника v3](https://faqs.ankiweb.net/the-2021-scheduler.html) ліміт кожної дочірньої колоди також застосовується, і вам не потрібно бачити карти в порядку колоди. Для отримання додаткової інформації див. розділ посібника [параметри колоди](deck-options.md#review-sort-order) .
 
-By default, for new cards, Anki fetches cards from the decks in
-alphabetical order. So in the above example, you would get cards first
-from “French”, then “My Textbook”, and finally “Vocab”. You can use this
-to control the order cards appear in, placing high priority cards in
-decks that appear higher in the list. When computers sort text
-alphabetically, the “-” character comes before alphabetical characters,
-and “\~” comes after them. So you could call the deck “-Vocab” to make
-them appear first, and you could call the other deck “\~My Textbook” to
-force it to appear after everything else.
+За замовчуванням для нових карток Anki отримує картки з колод в алфавітному порядку. Отже, у наведеному вище прикладі ви отримаєте картки спочатку з «French», потім «French::My Textbook» і, нарешті, «French::Vocab». Ви можете використовувати це, щоб контролювати порядок відображення карток, розміщуючи ті, що з високим пріоритетом у колодах, які відображаються вище в списку. Коли комп'ютер сортує текст за алфавітом, символ «-» стоїть перед символами алфавіту, а «\~» — після них. Отже, ви можете назвати колоду «-Vocab», щоб вони з’явилися першими, а іншу колоду — «\~French::My Textbook», щоб змусити її з’являтися після всіх решти.
 
-New cards and reviews are fetched separately, and Anki won’t wait until
-both queues are empty before moving on to the next deck, so it’s
-possible you’ll be exposed to new cards from one deck while seeing
-reviews from another deck, or vice versa. If you don’t want this, click
-directly on the deck you want to study instead of one of the parent
-decks.
+Нові картки та огляди витягуються окремо, і Anki не чекатиме, поки обидві черги спустошаться, перш ніж перейти до наступної колоди, тож можливо, що ви побачите нові картки з однієї колоди, переглядаючи іншу чи навпаки. Якщо не хочете, клацніть безпосередньо колоду, яку хочете вивчити, замість однієї з батьківських.
 
-Since cards in learning are somewhat time-critical, they are fetched
-from all decks at once and shown in the order they are due.
+Оскільки картки під час навчання дещо критичні за часом, вони витягуються з усіх колод одночасно та показуються в тому порядку, в якому вони повинні бути.
 
-To control the order reviews from a given deck appear in, or change new
-cards from ordered to random order, please see the [deck options](deck-options.md). For more fine-grained ordering of new cards, you
-can change the order in the [browser](browsing.md).
+Щоб контролювати порядок перегляду певної колоди або змінити порядок показу нових карток із упорядкованого на випадковий, перегляньте [параметри колоди](deck-options.md). Для більш точного впорядкування нових карток можете змінити порядок у [браузері](browsing.md).
 
-## Siblings and Burying
+## Родичі та приховування
 
-Recall from [the basics](getting-started.md) that Anki can create more than one
-card for each thing you input, such as a front→back card and a
-back→front card, or two different cloze deletions from the same text.
-These related cards are called 'siblings'.
+Згадайте з [основ](getting-started.md), що Anki може створити більше однієї картки для кожної речі, яку ви вводите, як-от передня→задня картка та задня→передня, або два різні видалення в одному тексті. Ці пов'язані картки називаються «родичами».
 
-When you answer a card that has siblings, Anki can prevent the card’s
-siblings from being shown in the same session by automatically 'burying'
-them. Buried cards are hidden from review until the clock rolls over to
-a new day or you manually unbury them using the “Unbury” button that’s
-visible at the bottom of the [deck overview](studying.md#study-overview) screen. Anki
-will bury siblings even if the siblings are not in the same deck (for
-instance, if you use the [deck override](templates/intro.md) feature).
+Відповідаючи на питання картки, яка має родичів, Anki може запобігти показу цих карток-родичів, які мають схожий сеанс, автоматично «ховаючи» їх. Заховані картки приховані від перегляду, до наступного дня або доки ви вручну не видалите їх за допомогою кнопки «Відновити приховані» внизу екрана [перегляд колоди](studying.md#study-overview). Anki приховає родичів, навіть якщо вони не знаходяться в одній колоді (наприклад, якщо ви використовуєте функцію [перевизначення колоди](templates/intro.md)).
 
-You can enable burying from the [deck options](deck-options.md) screen -
-there are separate settings for new cards and reviews.
+Ви можете ввімкнути приховування на екрані [параметри колоди](deck-options.md) — там є окремі налаштування для нових і переглянутих карток.
 
-Anki will only bury siblings that are new or review cards. It will not
-hide cards in learning, as time is of the essence for those cards. On
-the other hand, when you study a learning card, any new/review siblings
-will be buried.
+Anki буде приховувати родичів лише нових або переглянутих карток. Картки не приховуються в режимі навчання, оскільки для таких карток час має важливе значення. З іншого боку, коли ви переглядаєте навчальну картку, будь-які нові/переглянуті родичі можуть бути приховані.
 
-Note: A card cannot be buried and suspended at the same time. Suspending a
-buried card will unbury it. Burying a suspended card does not work on Anki
-2.1.49+, whereas on earlier versions, it will unsuspend the card.
+Примітка. Картка не може бути прихована та призупинена одночасно. Призупинення прихованої картки призведе до її відновлення. Приховування призупиненої картки не працює на Anki 2.1.49+, тоді як у попередніх версіях призупинення картки відновлюється.
 
-## Keyboard Shortcuts
+## Комбінації клавіш
 
-Most of the common operations in Anki have keyboard shortcuts. Most of
-them are discoverable in the interface: menu items list their shortcuts
-next to them, and hovering the mouse cursor over a button will generally
-show its shortcut in a tooltip.
+Більшість поширених операцій в Anki мають комбінації клавіш. Їх можна знайти в інтерфейсі: пункти меню вказують свої ярлики поруч із ними, а наведення курсору миші на кнопку зазвичай показує ярлик у спливаючій підказці.
 
-When studying, either <kbd>Space</kbd> or <kbd>Enter</kbd> will show the answer. When the
-answer is shown, you can use <kbd>Space</kbd> or <kbd>Enter</kbd> to select the Good button.
-You can use the <kbd>1</kbd>-<kbd>4</kbd> keys to select a specific ease button. Many people
-find it convenient to answer most cards with <kbd>Space</kbd> and keep one finger
-on <kbd>1</kbd> for when they forget.
+Під час вивчення відповідь буде показано за допомогою клавіші <kbd>Пробіл</kbd> або <kbd>Enter</kbd>. Щоб відкрити відповідь, ви можете скористатися <kbd>Пробілом</kbd> або <kbd>Enter</kbd>, це дозволяє вибрати кнопку Добре. Можете скористатися клавішами <kbd>1</kbd>-<kbd>4</kbd>, щоб вибрати певну кнопку полегшення. Багато людей вважають зручним відповідати на більшість карток <kbd>пробілом</kbd> і тримати один палець на <kbd>1</kbd>, коли вони забудуть.
 
-The "Study Deck" item in the Tools menu allows you to quickly switch to
-a deck with the keyboard. You can trigger it with the '/' key. When
-opened, it will display all of your decks and show a filter area at the
-top. As you type characters, Anki will display only decks matching the
-characters you type. You can add a space to separate multiple search
-terms, and Anki will show only decks that match all the terms. So “ja 1”
-or “on1 ja” would both match a deck called “Japanese::Lesson1”.
+Пункт «Навчальна колода» в меню «Інструменти» дозволяє швидко перемикатися на колоду за допомогою клавіатури. Ви можете запустити це за допомогою клавіші '/'. Далі відображатимуться всі ваші колоди та зона фільтра вгорі. Коли ви вводите символи, Anki відображатиме лише колоди, які відповідають символам, що ви вводите. Ви можете додати пробіл, щоб розділити кілька пошукових термінів, і Anki покаже лише колоди, які відповідають усім термінам. Отже, «ja 1» або «on1 ja» відповідатимуть колоді під назвою «Japanese::Lesson1».
 
-## Falling Behind
+## Відставання
 
-If you fall behind in your reviews, Anki will prioritize cards that have
-been waiting the longest. It does this by taking the cards that have
-been waiting the longest and showing them to you in a random order up
-until your daily review limit. This ordering ensures that no cards will
-be left waiting indefinitely, but it means that if you introduce new
-cards, their reviews won’t appear until you’ve gotten through your
-backlog.
+Якщо ви відстаєте у переглядах, Anki віддасть пріоритет карткам, які чекали найдовше. Anki показує їх вам у довільному порядку у кількості вашого денного ліміту перегляду. Таке впорядкування гарантує, що жодна картка не залишиться в очікуванні нескінченно довго, але це також означає, що якщо ви додасте нові картки, вони не з’являться, доки ви не пропрацюєте свій заділ.
 
-If you wish to change the order of the overdue reviews, you can do so by
-creating a [filtered deck](filtered-decks.md).
+Якщо бажаєте змінити порядок прострочених переглядів, ви можете зробити це, створивши [фільтровану колоду](filtered-decks.md).
 
-When you answer cards that have been waiting for a while, Anki factors
-in that delay when determining the next time a card should be shown.
-Please see the section on Anki’s spaced-repetition
-[algorithm](https://faqs.ankiweb.net/due-times-after-a-break.html) for more information.
+Коли відповідаєте на картки, які чекали деякий час, Anki враховує цю затримку, визначаючи, коли наступного разу слід показати картку. Додаткову інформацію дивіться в розділі про [алгоритм інтервалів](https://faqs.ankiweb.net/due-times-after-a-break.html).
