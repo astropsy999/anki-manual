@@ -768,8 +768,8 @@ A: O
 <p><strong>Вивчається:</strong> Картки, які ви нещодавно побачили вперше і які ви вивчаєте.</p>
 </li>
 <li>
-<p><strong>Перегляд:</strong> Картки, які були вивчені раніше та які тепер потрібно переглянути, щоб краще їх запам‘ятати.
-Існує два типи оглядових карток:</p>
+<p><strong>Перегляд:</strong> Картки, які були вивчені раніше та які тепер потрібно переглянути, щоб краще їх запам'ятати.</p>
+<p>Існує два типи оглядових карток:</p>
 <ul>
 <li><strong>Молода:</strong> Молода картка - це та, яка має інтервал менше 21 дня, але не перебуває в навчанні.</li>
 <li><strong>Зріла:</strong> Зріла картка – яка має інтервал 21 день або більше.</li>
@@ -784,8 +784,8 @@ A: O
 <p>Колоди можуть містити інші колоди, що дозволяє організовувати їх у дерева. Anki використовує “::” щоб показувати різні рівні. Колода під назвою «Chinese::Hanzi» відноситься до колоди «Hanzi», яка є частиною колоди «Chinese». Якщо обрати «Hanzi», то відображатимуться лише картки Hanzi; якщо оберете «Chinese», то буде показано всі «Chinese» картки, включаючи картки Hanzi.</p>
 <p>Щоб розмістити колоди в дереві, ви можете розділити їх символом «::» між кожним рівнем або перетягнути зі списку колод одну в іншу. Колоди, які були вкладені в іншу колоду (тобто мають принаймні один «::» у своїх назвах), часто називають «підколодами», а колоди верхнього рівня іноді називають «суперколодами» або «батьківськими колодами».</p>
 <p>Anki починає показ з колоди із назвою “стандартна”; будь-які картки, які якимось чином відокремилися від інших колод, потраплять сюди. Anki приховає стандартну колоду, якщо вона не містить карток і ви вже додали інші колоди. Крім того, ви можете перейменувати цю колоду та використовувати її для інших карток.</p>
-<p>Колоди відображаються в списку колод в алфавітному порядку. Це може призвести до несподіваного порядку, якщо ваші колоди містять числа – наприклад, «Моя колода 10» буде передувати «Моя колода 9», оскільки 1 стоїть перед 9. Якщо бажаєте дійсно пронумерувати колоди, можете додати «0» перед однозначними числами, напр. "Колода 01",
-«Колода 02» .. «Колода 10».</p>
+<p>Колоди відображаються в списку колод в алфавітному порядку. Це може призвести до несподіваного порядку, якщо ваші колоди містять числа – наприклад, «Моя колода 10» буде передувати «Моя колода 9», оскільки 1 стоїть перед 9. Якщо бажаєте дійсно пронумерувати колоди, можете додати «0» перед однозначними числами, наприклад "Колода 01",
+«Колода 02», «Колода 10».</p>
 <p>Колоди найкраще використовувати для зберігання значних категорій карток, а не для конкретних тем, наприклад таких як «дієслова їжа» або «урок 1». Щоб дізнатися більше про це, перегляньте розділ <a href="editing.html#using-decks-appropriately">належне використання колод</a>.</p>
 <p>Щоб дізнатися про те, як колоди впливають на порядок відображення карток, перегляньте розділ <a href="studying.html#display-order">порядок відображення</a>.</p>
 <h3 id="Нотатки-та-поля"><a class="header" href="#Нотатки-та-поля">Нотатки та поля</a></h3>
@@ -949,341 +949,182 @@ A: {{French}}&lt;br&gt;
 <p>Для звітів про безпеку та ділових запитів ви можете опублікувати приватний тікет
 <a href="https://anki.tenderapp.com/discussions/private">тут</a>. Якщо у вас є питання
 про Anki, AnkiWeb або AnkiDroid, використовуйте натомість <a href="https://forums.ankiweb.net">форум користувачів</a>.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="studying"><a class="header" href="#studying">Studying</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Навчання"><a class="header" href="#Навчання">Навчання</a></h1>
 <!-- toc -->
-<p>When you have found a deck you like or entered some notes in, it’s time
-to start studying.</p>
-<h2 id="decks"><a class="header" href="#decks">Decks</a></h2>
-<p>Study in Anki is limited to the currently selected deck as well as any
-subdecks it contains.</p>
-<p>On the decks screen, your decks and subdecks will be displayed in a list. <a href="getting-started.html#types-of-cards">New, Learn and Due (To Review)</a>
-cards for that day will be also displayed here.</p>
-<p><img src="media/decks_screen.png" alt="Decks screen" /></p>
-<p>When you click on a deck, it will become the 'current deck', and Anki
-will change to the study screen. You can return to the deck list to
-change the currently selected deck at any time by clicking on “Decks” at
-the top of the main window. (You can also use the Study
-Deck action in the menu to select a new deck from the keyboard, or you
-can press the <kbd>s</kbd> key to study the currently selected deck.)</p>
-<p>You can click the gears button to the right of a deck to rename or
-delete a deck, change its <a href="deck-options.html">options</a>, or <a href="exporting.html">export</a> it.</p>
-<h2 id="study-overview"><a class="header" href="#study-overview">Study Overview</a></h2>
-<p>After clicking on a deck to study, you’ll see a screen that shows you
-how many cards are due today. This is called the 'deck overview' screen:</p>
-<p><img src="media/study_overview.png" alt="Study overview" /></p>
-<p>The cards are split into <a href="getting-started.html#types-of-cards">three types</a>: New, Learning, and To Review.
-If you have <a href="studying.html#siblings-and-burying">Bury siblings</a> activated in your deck options, you
-may see how many cards will be buried in grey:</p>
-<p><img src="media/study_overview_buried_cards.png" alt="Study overview (Buried Cards)" /></p>
-<p>To start a study session, click the <strong>Study Now</strong> button. Anki will
-proceed to show you cards until the cards to be shown for the day have
-run out.</p>
-<p>While studying, you can return to the overview by pressing the <kbd>s</kbd> key
-on your keyboard.</p>
-<h2 id="questions"><a class="header" href="#questions">Questions</a></h2>
-<p>When a card is shown, only the question is shown at first. After
-thinking about the answer, either click the <strong>Show Answer</strong> button, or
-press the spacebar. The answer will then be shown. It’s okay if it takes
-you a little while to recall the answer, but as a general rule if you
-can’t answer within about 10 seconds, it’s probably better to give up
-and show the answer than keep struggling to remember.</p>
-<p>When the answer is shown, you should compare the answer you thought of
-with the answer which is shown and tell Anki how well you remembered. If
-you don’t trust yourself to compare your answer accurately, you can ask
-Anki to <a href="templates/fields.html#checking-your-answer">prompt you to type in the answer</a> rather than
-just showing it to you.</p>
-<h2 id="learningrelearning-cards"><a class="header" href="#learningrelearning-cards">Learning/Relearning Cards</a></h2>
-<p>When learning new cards, or when relearning cards that you have
-forgotten, Anki will show you the cards one or more times to help you
-memorize them. Each time is called a 'learning step'. By default there
-are two steps: 1 minute and 10 minutes. You can change the number of
-steps and the delays between them in the <a href="deck-options.html#new-cards">deck options</a>.</p>
-<p>There are four rating buttons when learning:</p>
+<p>Коли ви завантажили бажану колоду, або додали до колоди нотатки, час починати навчання.</p>
+<h2 id="Колоди-1"><a class="header" href="#Колоди-1">Колоди</a></h2>
+<p>Вивчення в Anki обмежується поточною вибраною колодою, а також усіма дочірніми колодами, які вона містить.</p>
+<p>На екрані колод ваші колоди та дочірні колоди відображатимуться у списку. Тут також відображатимуться картки <a href="getting-started.html#types-of-cards">Нові, Вивчити та Термін (для перегляду)</a> за цей день.</p>
+<p><img src="media/decks_screen.png" alt="Екран колод" /></p>
+<p>Коли ви клацаєте на колоду, вона стає «поточною колодою» та Anki зміниться на екран дослідження. Ви можете будь-коли повернутися до списку колод, щоб змінити поточну вибрану колоду, натиснувши «Колоди» у верхній частині головного вікна. (Ви також можете скористатися функцією «Вивчити колоду» в меню, щоб вибрати нову колоду з клавіатури, або ви можете натиснути клавішу <kbd>s</kbd>, щоб вивчити поточну вибрану колоду.)</p>
+<p>Також можливо натиснути кнопку із шестірнею праворуч від колоди, щоб перейменувати або видалити колоду, змінити її [параметри] (deck-options.md) або <a href="exporting.html">експортувати</a> її.</p>
+<h2 id="Перегляд-колоди"><a class="header" href="#Перегляд-колоди">Перегляд колоди</a></h2>
+<p>Натиснувши колоду для вивчення, ви побачите екран, на якому буде показано, скільки карток потрібно переглянути сьогодні. Це називається «Перегляд колоди»:</p>
+<p><img src="media/study_overview.png" alt="Перегляд колоди" /></p>
+<p>Картки поділяються на <a href="getting-started.html#%D1%82%D0%B8%D0%BF%D0%B8-%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D0%BA">три типи</a>: Нові, Вивчаються та Перегляд.
+Якщо у параметрах вашої колоди активовано <a href="studying.html#siblings-and-burying">Відкладення</a>, ви можете побачити, скільки карток відображатимуться сірим кольором:</p>
+<p><img src="media/study_overview_buried_cards.png" alt="Перегляд колоди (Відкладені картки)" /></p>
+<p>Щоб розпочати навчальний сеанс, натисніть кнопку <strong>Вчитись зараз</strong>. Anki показуватиме картки, які назначені на поточний день, доки вони не закінчаться.</p>
+<p>Під час навчання ви можете повернутися до огляду, натиснувши клавішу <kbd>s</kbd> на клавіатурі.</p>
+<h2 id="Питання"><a class="header" href="#Питання">Питання</a></h2>
+<p>Під час показу карток спочатку буде показане питання. Після міркування над відповіддю, потрібно натиснути кнопку <strong>Показати відповідь</strong> або пробіл. Буде показано відповідь. Це нормально, якщо вам знадобиться трохи часу на згадку відповіді, але як загальне правило, якщо не зможете відповісти протягом приблизно 10 секунд, мабуть, краще відмовитися
+і натиснути "показати відповідь", ніж продовжувати спроби пригадати.</p>
+<p>Коли дійсну відповідь буде показано, вам слід порівняти із нею власну та повідомити Anki наскільки просто чи складно було згадати відповідь. Якщо у вас є проблеми із самоконтролем, ви можете увімкнути режим <a href="templates/fields.html#checking-your-answer">введення відповіді</a> замість звичайного відображення.</p>
+<h2 id="ВивченняПовторення-карток"><a class="header" href="#ВивченняПовторення-карток">Вивчення/Повторення карток</a></h2>
+<p>Під час вивчення нових або повторення старих карток, Anki показуватиме картки один або декілька разів, намагаючись полегшити запам'ятовування. Кожний такий показ зветься 'крок вивчення'. За замовчуванням існує два кроки: 1 хвилина та 10 хвилин. Ви можете змінити кількість
+кроків та інтервали затримки між ними у <a href="deck-options.html#new-cards">налаштуваннях колоди</a>.</p>
+<p>Під час навчання можливі 4 типи кнопок:</p>
 <ul>
 <li>
-<p><strong>Again</strong> moves the card back to the first step.</p>
+<p><strong>Знову</strong> повертає картку на перший крок.</p>
 </li>
 <li>
-<p><strong>Hard</strong> repeats the current step.</p>
+<p><strong>Важко</strong> повторює поточний крок.</p>
 <ul>
-<li>If the card is on the first (and the only) step, the delay is 50% larger than the step. But, this delay is at most one day larger than the step.</li>
-<li>If the card is on the first step and you have configured more than one step, the delay will be the average of Again and Good, i.e., the average of the first two steps.</li>
-<li>If the card is on any subsequent step, Hard repeats the previous delay.</li>
+<li>Якщо картка знаходиться на першому (чи єдиному) кроці, затримка збільшується на 50%. Але не більше ніж н день.</li>
+<li>Якщо картка знаходиться на першому кроці, і ви налаштували більше одного кроку, затримка буде середнім значенням між <code>Знову</code> та <code>Добре</code>, тобто середнє значення перших двох кроків.</li>
+<li>Якщо карта знаходиться на будь-якому наступному кроці, <code>Важко</code> повторює попередню затримку.</li>
 </ul>
 </li>
 <li>
-<p><strong>Good</strong> moves the card to the <a href="deck-options.html#learning-steps">next step</a>. If the card was on the final
-step, the card is converted into a review card (it 'graduates'). By
-default, once the card has reached the end of the learning steps, the
-card will be shown again the next day, then at increasingly long delays
-(see the next section).</p>
+<p><strong>Добре</strong> переміщує картку до <a href="deck-options.html#learning-steps">наступного кроку</a>. Якщо картка була на останньому кроці, вона перетворюється на картку перегляду («закінчує»). За замовчуванням, коли картка досягне кінця етапів навчання, вона буде показана знову наступного дня, а потім із все більшими затримками (див. наступний розділ).</p>
 </li>
 <li>
-<p><strong>Easy</strong> immediately converts the card into a review card, even if there
-were steps remaining. <a href="deck-options.html#easy-interval">By default</a>, the card will be shown again 4 days
-later, and then at increasingly long delays. In the v1 scheduler, the "Easy" button will not be
-shown if you are in relearning mode as it would give the same interval
-as “Good.” With the <a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">v2 scheduler+</a>,
-when cards are in relearning, the "Easy" button boosts the interval by 1 day.</p>
+<p><strong>Легко</strong> негайно перетворює картку на картку перегляду, навіть якщо залишилися кроки. [За замовчуванням] (deck-options.md#easy-interval), картка знову відображатиметься через 4 дні, а потім із дедалі більшими затримками. У планувальнику версії 1 кнопка «Легко» не відображатиметься, якщо ви перебуваєте в режимі повторного навчання, оскільки вона дасть той самий інтервал, що й «Добре». За допомогою <a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">планувальника версії 2</a>, коли картки перевчаються, кнопка «Легко» збільшує інтервал на 1 день.</p>
 </li>
 </ul>
-<p>When cards are seen for the first time, they start at step one. This
-means answering <strong>Good</strong> on a card for the first time will show it one
-more time in 10 minutes, and the initial 1 minute step will be skipped.
-If you push <strong>Again</strong>, though, the card will come back in 1 minute.</p>
-<p>You can use the <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd> and <kbd>4</kbd> keys on your keyboard to select a particular
-button, where <kbd>1</kbd> is <strong>Again</strong>. Pressing <kbd>Space</kbd> or <kbd>Enter</kbd> will select
-<strong>Good</strong>.</p>
-<p>If there are no other cards to show you, Anki will show learning cards
-again even if their delay has not elapsed completely. If you’d prefer to
-wait the full learning delay, you can change this behaviour in
-<a href="preferences.html">Preferences&gt;Scheduling&gt;Learn Ahead Limit</a>.</p>
-<h2 id="review-cards"><a class="header" href="#review-cards">Review Cards</a></h2>
-<p>When a card has been previously learnt and is ready to be reviewed
-again, there are four buttons to rate your answer:</p>
+<p>Коли картки відображаються вперше, перегляд починається з першого кроку. Це означає, що якщо вперше відповісти <strong>Добре</strong> картка відобразиться ще раз через 10 хвилин, а початковий крок у 1 хвилину буде пропущено. Але якщо натиснути <strong>Знову</strong>, картка повернеться через 1 хвилину.</p>
+<p>Можете скористатися клавішами <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd> та <kbd>4</kbd> які співпадають відповідно - <kbd>1</kbd> це <strong>Знову</strong>. Натиснувши <kbd>Пробіл</kbd> або <kbd>Enter</kbd> обере
+<strong>Добре</strong>.</p>
+<p>Якщо більше не залишиться карток для показу, Anki буде знову показувати картки навіть, якщо час виділений на затримку не спливе. Але якщо бажаєте змінити таку поведінку, це можна зробити у меню <a href="preferences.html">Налаштування&gt;Планування&gt;Попередній ліміт навчання</a>.</p>
+<h2 id="Перегляд-карток"><a class="header" href="#Перегляд-карток">Перегляд карток</a></h2>
+<p>Коли картку було попередньо вивчено та готово до повторного перегляду, є чотири кнопки, щоб оцінити вашу відповідь:</p>
 <ul>
 <li>
-<p><strong>Again</strong> marks your answer as incorrect and asks Anki to show the card
-more frequently in the future. The card is said to have 'lapsed'. Please
-see the <a href="deck-options.html#lapses">lapses</a> section for more information about how lapsed
-reviews are handled.</p>
+<p><strong>Знову</strong> позначає вашу відповідь як неправильну та просить Anki частіше показувати картку в майбутньому. Кажуть, що картка втратила чинність. Перегляньте розділ <a href="deck-options.html#lapses">пропуски</a>, щоб дізнатися як обробляються прострочені перегляди.</p>
 </li>
 <li>
-<p><strong>Hard</strong> by default, shows the card at a <a href="deck-options.html#hard-interval">slightly longer delay</a>
-than last time, and tells Anki to show the card more frequently in the future.</p>
+<p><strong>Важко</strong> за замовчуванням показує картку з <a href="deck-options.html#hard-interval">трохи довшою затримкою</a>, ніж минулого разу, і    наказує Anki показувати картку частіше в майбутньому.</p>
 </li>
 <li>
-<p><strong>Good</strong> tells Anki that the last delay was about right, and the card
-easiness doesn’t need to be adjusted down or up. At the <a href="deck-options.html#starting-ease">default starting easiness</a>, the card will be shown again approximately 2 1/2 times longer
-than the previous time, so if you had waited 10 days to see the card
-previously, the next delay would be about 25 days.</p>
+<p><strong>Добре</strong> повідомляє Anki, що остання затримка була приблизно такою як треба, і легкість картки не потрібно регулювати. У <a href="deck-options.html#starting-ease">складність за замовчуванням</a> картка відображатиметься знову приблизно через довший у 2,5 рази час, тому, тобто якщо ви чекали 10 днів, щоб побачити картку знову, наступна затримка становитиме приблизно 25 днів.</p>
 </li>
 <li>
-<p><strong>Easy</strong> tells Anki you found the delay too short. The card will be
-scheduled <a href="deck-options.html#easy-bonus">further into the future than 'Good'</a>, and Anki will schedule
-the card less frequently in the future. Because 'Easy' rapidly increases
-the delay, it’s best used for only the easiest of cards. Usually you
-should find yourself answering 'Good' instead.</p>
+<p><strong>Легко</strong> говорить Anki, що ти вважаєш таку затримку занадто короткою. Картка буде запланована <a href="deck-options.html#easy-bonus">пізніше ніж у випадку «Добре»</a>, Anki відображатиме картку рідше в майбутньому. Оскільки «Легко» швидко збільшує затримку, його найкраще використовувати лише для найпростіших карток. Зазвичай натомість краще відповідати «Добре».</p>
 </li>
 </ul>
-<p>As with learning cards, you can use <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd> and <kbd>4</kbd> on the keyboard to select an
-answer. Pressing the <kbd>spacebar</kbd> or <kbd>Enter</kbd> will select <strong>Good</strong>.</p>
-<p>See <a href="deck-options.html">Deck Options</a> and the <a href="https://faqs.ankiweb.net/what-spaced-repetition-algorithm.html">FAQ</a>
-to learn more about how the algorithm works.</p>
-<h2 id="due-counts"><a class="header" href="#due-counts">Due Counts</a></h2>
-<p>When only the question is shown, Anki shows three numbers like 6 + 9 + 59
-at the bottom of the screen. These represent the new cards (blue), cards in
-learning (orange), and cards to review (green). If you’d prefer not to see the numbers,
-you can turn them off in Anki’s <a href="preferences.html">preferences.</a></p>
+<p>Подібно до режиму навчання, можете скористатися клавішами <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd> та <kbd>4</kbd>. Натискання <kbd>пробілу</kbd> або <kbd>Enter</kbd> спрацює як <strong>Добре</strong>.</p>
+<p>Перегляньте <a href="deck-options.html">Параметри колоди</a> і <a href="https://faqs.ankiweb.net/what-spaced-repetition-algorithm.html">FAQ</a>, щоб дізнатися більше про те, як працює алгоритм.</p>
+<h2 id="Кількість-завдань-на-сьогодні"><a class="header" href="#Кількість-завдань-на-сьогодні">Кількість завдань на сьогодні</a></h2>
+<p>Коли питання починають показуватись, Anki відображатиме три цифр, як-от 6 + 9 + 59
+у нижній частині екрану. Ці цифри показують кількість Нових карток(синій), карток для Навчання(помаранчевий) та карток для Перегляду(зелений). Якщо ви волієте не бачити цифр, можете вимкнути їх у <a href="preferences.html">налаштуваннях.</a></p>
 <p><img src="media/due_counts.png" alt="Due Counts" /></p>
-<p>In the v1 scheduler, the numbers count <em>reviews</em> needed to finish all the
-cards in that queue, not the number of <em>cards</em>. If you have multiple
-steps configured for lapsed cards, the number will increase by more than
-one when you fail a card, since that card needs to be shown several times.</p>
-<p>From the <a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">v2 scheduler</a>, the numbers count <em>cards</em>, so the number will always
-increase by one regardless of the steps remaining.</p>
-<p>When the answer is shown, Anki shows an estimate of the next time a card
-will be shown above each button. If you’d prefer not to see the
-estimates, you can disable them in Anki’s <a href="preferences.html">preferences</a>.</p>
-<h2 id="fuzz-factor"><a class="header" href="#fuzz-factor">Fuzz Factor</a></h2>
-<p>When you select an ease button on a review card, Anki also applies a small amount of random “fuzz”
-to prevent cards that were introduced at the same time and given the same ratings
-from sticking together and always coming up for review on the same day. This fuzz
-will appear on the answer buttons when the <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">v3 scheduler</a> is enabled, so if
-you are using a previous version and you’re noticing a slight discrepancy between
-what you select and the intervals your cards actually get, this is probably the
-cause.</p>
-<p>Learning cards are also given up to 5 minutes of extra delay so that they
-don’t always appear in the same order, but answer buttons won't reflect that. It
-is not possible to turn this feature off.</p>
-<h2 id="editing-and-more"><a class="header" href="#editing-and-more">Editing and More</a></h2>
-<p>You can click the <strong>Edit</strong> button in the bottom left to edit the current
-note. When you finish editing, you’ll be returned to study. The editing
-screen works very similarly to the <a href="editing.html">add notes</a> screen.</p>
-<p>At the bottom right of the review screen is a button labeled <strong>More</strong>.
-This button provides some other operations you can do on the current
-card or note:</p>
+<p>У планувальнику версії 1 цифри підраховують <em>перегляди</em>, необхідні для завершення всіх карток у черзі, а не кількість <em>карток</em>. Якщо у вас налаштовано кілька кроків для прострочених карток, лічильник збільшуватиметься більш ніж на один, у разі якщо ви зіпсуєте картку, оскільки цю картку потрібно буде показати кілька разів.</p>
+<p>У <a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">планувальнику версії 2</a> числа підраховують <em>картки</em>, тому кількість завжди збільшуватиметься на одиницю незалежно від кількості кроків, що залишилися.</p>
+<p>Коли відображається відповідь, Anki показує над кнопкою приблизний час наступного показу картки. Це можна вимкнути у <a href="preferences.html">налаштуваннях</a>.</p>
+<h2 id="Фактор-невизначеності"><a class="header" href="#Фактор-невизначеності">Фактор невизначеності</a></h2>
+<p>Коли ви обираєте відповідні кнопки складності під час перегляду карток, Anki застосовую деяку кількість "невизначеності"
+щоб запобігти ситуації, коли всі картки отримують однакові оцінки що призведе до їх повторного показу через однаковий час.
+Подібна "невизначеність" застосовується під час відповідей, коли увімкнуто <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">планувальник версії 3</a>, це може бути причиною невеличких розбіжностей між тим що ви обираєте і дійсним часом повторного показу карток.</p>
+<p>Навчальні картки також можуть отримати додаткову затримку приблизно у 5 хвилин, що не буде враховано коли обираєте ту чи іншу кнопку відповіді. Цю затримку неможливо вимкнути.</p>
+<h2 id="Редагування-та-інше"><a class="header" href="#Редагування-та-інше">Редагування та інше</a></h2>
+<p>Для редагування поточної нотатки можливо натиснути кнопку <strong>Редагувати</strong> у лівому нижньому кутку кожної картки. Коли редагування буде завершено, ви повернетеся назад до навчання. Екран редагування працює дуже схоже на <a href="editing.html">додавання нотаток</a>.</p>
+<p>У правому нижньому кутку знаходиться кнопка <strong>Більше</strong>. Вона надає можливість виконувати деякі інші операції із поточною нотаткою:</p>
 <ul>
 <li>
-<p><a href="editing.html#using-flags"><strong>Flag Card</strong></a>: Adds a colored marker to the card, or toggles it off. Flags will appear during
-study, and you can search for flagged cards in the Browse screen. This is useful
-when you want to take some action on the card at a later date, such as looking
-up a word when you get home. If you're using Anki 2.1.45+, you can also rename flags
-from the <a href="browsing.html">browser</a>.</p>
+<p><a href="editing.html#using-flags"><strong>Позначити картку</strong></a>: Додає або вимикає кольоровий маркер. Ці позначки відображатимуться під час перегляду карток, а також ви зможете шукати позначені картки. Це корисно, коли у вас є бажання виконати певну дію із позначеною карткою пізніше, як-от переглянути слово під час повернення додому. Якщо використовуєте версію Anki 2.1.45+, ці позначки також можна <a href="browsing.html">іменувати</a>.</p>
 </li>
 <li>
-<p><strong>Bury Card / Note</strong>: Hides a card or all of the note’s cards from review until the next day.
-(If you want to unbury cards before then, you can click the “unbury”
-button on the <a href="studying.html#study-overview">deck overview</a> screen.) This is useful if
-you cannot answer the card at the moment or you want to come back to it
-another time. Burying can also <a href="studying.html#siblings-and-burying">happen automatically</a> for
-cards of the same note.</p>
-<p>With the old scheduler, if cards were in learning when they were buried,
-they were moved back to the new card queue or review queue prior to being
-buried.</p>
-<p>With the <a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">2.1 scheduler</a>,
-however, burying cards does not reset a card's learning steps.</p>
+<p><strong>Приховати картку / Нотатку</strong>: Приховує картку або всі картки певної нотатки до наступного дня.
+(Якщо бажаєте повернути приховані картки раніше, це можна зробити натиснувши “повернути приховані”
+на екрані<a href="studying.html#study-overview">перегляду колоди</a>.) Це корисно, якщо ви не можете відповісти на картку в цей момент або хочете повернутися до неї пізніше. Приховування може також <a href="studying.html#siblings-and-burying">відбуватися автоматично</a> для подібних нотаток.</p>
+<p>Якщо використовуєте стару версію планувальника, коли картки приховані під час режиму навчання,
+вони потрапляють у нову чергу навчання або чергу перегляду що трапляється у даний час.</p>
+<p>Однак для <a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">планувальника версії 2.1</a>, поточні черги не порушуються.</p>
 </li>
 <li>
-<p><strong>Forget card</strong>: Move current card to <a href="browsing.html#cards">the end of the new queue</a>.</p>
-<p>From Anki 2.1.50+, Anki will remember the original order of a new card when it is first studied
-with the v3 scheduler. The "Restore original position" option allows you to reset the card back
-to its original position when you forget it.</p>
-<p>The "Reset repetition and lapse count" option, if enabled, will set the review and failure counters
-for the card back to zero. It does not remove the review history that is shown at the bottom of the
-card info screen.</p>
+<p><strong>Забути картку</strong>: Перемістіть поточну картку у <a href="browsing.html#cards">кінець черги</a>.</p>
+<p>Починаючи з версії 2.1.50+, Anki пам'ятає оригінальний порядок нових карток, та час іх першого перегляду. Параметр "Відновити оригінальне положення" дозволяє скинути картку назад
+до первісного положення, яке було до початку навчання.</p>
+<p>Якщо вибрано опцію "Скинути кількість повторень і помилок", лічильники повторень та помилок буде скинуто до 0. Але це не видаляє історію повторень, яка відображається внизу екрану інформації про картку.</p>
 </li>
 <li>
-<p><strong>Set Due Date</strong>: Put cards in the review queue, and <a href="browsing.html#cards">make them due on a certain date.</a></p>
+<p><strong>Встановити термін</strong>: Покласти картки в чергу перегляду, та <a href="browsing.html#cards">встановити певну дату.</a></p>
 </li>
 <li>
-<p><strong>Suspend Card / Note</strong>: Hides a card or all of the note’s cards from review until they are
-manually unsuspended (by clicking the suspend button in the browser).
-This is useful if you want to avoid reviewing the note for some time,
-but don’t want to delete it.
-With the old scheduler, if cards were in learning when they are
-suspended, they are moved back to the new card queue or review queue
-prior to being suspended.</p>
-<p>With the <a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">2.1 scheduler</a>,
-however, suspending cards does not reset a card's learning steps.</p>
-</li>
-<li>
-<p><strong>Options</strong>: Edit the <a href="deck-options.html">options</a> for the current deck.</p>
-</li>
-<li>
-<p><strong>Card Info</strong>: Displays <a href="stats.html#card-info">statistical information</a> about the card.</p>
-</li>
-<li>
-<p><strong>Previous Card Info</strong>: Displays <a href="stats.html#card-info">statistical information</a> about the previous card.</p>
-</li>
-<li>
-<p><a href="editing.html#the-marked-tag"><strong>Mark Note</strong></a>: Adds a “marked” tag to the current note, so it can be easily found in the
-browser. This is similar to flagging individual cards, but works with a tag
-instead, so if the note has multiple cards, all cards will appear in a search
-for the marked tag. Most users will want to use flags instead.</p>
-</li>
-<li>
-<p><strong>Create Copy</strong>: Opens a <a href="browsing.html#finding-duplicates">duplicate</a> of the current
-note in the editor, which can be slightly modified to easily obtain variations of your cards.
-By default, the duplicate card will be created in the same deck as the original.</p>
-</li>
-<li>
-<p><strong>Delete Note</strong>: Deletes the note and all of its cards.</p>
-</li>
-<li>
-<p><strong>Replay Audio</strong>: If the card has audio on the front or back, play it again.</p>
-</li>
-<li>
-<p><strong>Pause Audio</strong>: Pauses the audio if it is playing.</p>
-</li>
-<li>
-<p><strong>Audio -5s / +5s</strong>: Jump backwards / forward 5 seconds in the currently playing audio.</p>
-</li>
-<li>
-<p><strong>Record Own Voice</strong>: Record from your microphone for the purposes of checking your
-pronunciation. This recording is temporary and will go away when you
-move to the next card. If you want to add audio to a card permanently,
-you can do that in the edit window.</p>
-</li>
-<li>
-<p><strong>Replay Own Voice</strong>: Replay the previous recording of your voice (presumably after showing
-the answer).</p>
+<p><strong>Призупинити картку / Нотатку</strong>: Приховує картку або всі картки певної нотатки доки призупинення не буде зняте вручну (шляхом натискання кнопки зняття призупинення). Це корисно, якщо ви хочете уникнути перегляду нотатки деякий час, але не хочете її видаляти. Зі старим планувальником, якщо картки були у стадії навчання під час призупинення, вони переміщуються назад до черги нових карток або черги перегляду перед тим як бути призупиненими.</p>
 </li>
 </ul>
-<h2 id="display-order"><a class="header" href="#display-order">Display Order</a></h2>
-<p>Studying will show cards from the selected deck and any decks it
-contains. Thus, if you select your “French” deck, the subdecks
-“French::Vocab” and “French::My Textbook::Lesson 1” will be shown as
-well.</p>
-<p>The way Anki fetches cards from the decks depends on the algorithm used:</p>
+<p>Однак із <a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">планувальником 2.1</a>,
+призупинення не скидає кроки навчання.</p>
 <ul>
 <li>
-<p>With the v1 scheduler, when a deck has subdecks, the cards will appear from <a href="studying.html#display-order">each deck in turn</a>.</p>
+<p><strong>Параметри</strong>: Редагувати <a href="deck-options.html">параметри</a> для поточної колоди.</p>
 </li>
 <li>
-<p>With the <a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">v2 scheduler</a>,
-when a deck has subdecks, reviews are taken from all children decks
-at once. The review limit of the child decks is ignored - only the limit of the
-deck you clicked on applies.</p>
+<p><strong>Інфо картки</strong>: Відображає <a href="stats.html#card-info">статистичні дані</a> про картку.</p>
 </li>
 <li>
-<p>With the <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">v3 scheduler</a>
-each child deck's limit is also enforced, and you do not need to see the cards
-in deck order either. See the <a href="deck-options.html#review-sort-order">deck options</a> section of the manual for more information.</p>
+<p><strong>Інфо попередньої картки</strong>: Відображає <a href="stats.html#card-info">статистичні дані</a> попередньої картки.</p>
+</li>
+<li>
+<p><a href="editing.html#the-marked-tag"><strong>Помітити нотатку</strong></a>: Додає тег-“помітку” до поточної нотатки, завдяки цьому її може бути знайдено. Це подібно до позначення окремих карток, але працює завдяки тегу, і якщо нотатка цього типу буде мати декілька карток, їх усі буде відмічено тегом і вони будуть доступні в пошуку. Більшість користувачів надає перевагу звичайним поміткам.</p>
+</li>
+<li>
+<p><strong>Копіювати</strong>: Відкриває <a href="browsing.html#finding-duplicates">дублікат</a> поточної картки у редакторі, які можна трохи змінити, щоб легко отримати варіації ваших карток. За замовчуванням, дублікація картки буде створена в тій самій колоді.</p>
+</li>
+<li>
+<p><strong>Видалити нотатку</strong>: видаляє нотатку та всі її картки.</p>
+</li>
+<li>
+<p><strong>Відтворити аудіо</strong>: якщо карта має аудіо на передній або задній стороні, його буде відтворено.</p>
+</li>
+<li>
+<p><strong>Призупинити аудіо</strong>: призупинятиме аудіо, якщо воно відтворюється.</p>
+</li>
+<li>
+<p><strong>Аудіо -5 с / +5 с</strong>: Перейти назад / вперед на 5 секунд у поточному аудіо.</p>
+</li>
+<li>
+<p><strong>Запис власного голосу</strong>: записуйте з мікрофона для перевірки своєї вимови. Цей запис є тимчасовим і зникне, коли ви перейдете до наступної картки. Якщо ви хочете назавжди додати аудіо на картку, можливо зробити це у вікні редагування.</p>
+</li>
+<li>
+<p><strong>Відтворити власний голос</strong>: повторити попередній запис вашого голосу (імовірно, після показу
+відповіді).</p>
 </li>
 </ul>
-<p>By default, for new cards, Anki fetches cards from the decks in
-alphabetical order. So in the above example, you would get cards first
-from “French”, then “My Textbook”, and finally “Vocab”. You can use this
-to control the order cards appear in, placing high priority cards in
-decks that appear higher in the list. When computers sort text
-alphabetically, the “-” character comes before alphabetical characters,
-and “~” comes after them. So you could call the deck “-Vocab” to make
-them appear first, and you could call the other deck “~My Textbook” to
-force it to appear after everything else.</p>
-<p>New cards and reviews are fetched separately, and Anki won’t wait until
-both queues are empty before moving on to the next deck, so it’s
-possible you’ll be exposed to new cards from one deck while seeing
-reviews from another deck, or vice versa. If you don’t want this, click
-directly on the deck you want to study instead of one of the parent
-decks.</p>
-<p>Since cards in learning are somewhat time-critical, they are fetched
-from all decks at once and shown in the order they are due.</p>
-<p>To control the order reviews from a given deck appear in, or change new
-cards from ordered to random order, please see the <a href="deck-options.html">deck options</a>. For more fine-grained ordering of new cards, you
-can change the order in the <a href="browsing.html">browser</a>.</p>
-<h2 id="siblings-and-burying"><a class="header" href="#siblings-and-burying">Siblings and Burying</a></h2>
-<p>Recall from <a href="getting-started.html">the basics</a> that Anki can create more than one
-card for each thing you input, such as a front→back card and a
-back→front card, or two different cloze deletions from the same text.
-These related cards are called 'siblings'.</p>
-<p>When you answer a card that has siblings, Anki can prevent the card’s
-siblings from being shown in the same session by automatically 'burying'
-them. Buried cards are hidden from review until the clock rolls over to
-a new day or you manually unbury them using the “Unbury” button that’s
-visible at the bottom of the <a href="studying.html#study-overview">deck overview</a> screen. Anki
-will bury siblings even if the siblings are not in the same deck (for
-instance, if you use the <a href="templates/intro.html">deck override</a> feature).</p>
-<p>You can enable burying from the <a href="deck-options.html">deck options</a> screen -
-there are separate settings for new cards and reviews.</p>
-<p>Anki will only bury siblings that are new or review cards. It will not
-hide cards in learning, as time is of the essence for those cards. On
-the other hand, when you study a learning card, any new/review siblings
-will be buried.</p>
-<p>Note: A card cannot be buried and suspended at the same time. Suspending a
-buried card will unbury it. Burying a suspended card does not work on Anki
-2.1.49+, whereas on earlier versions, it will unsuspend the card.</p>
-<h2 id="keyboard-shortcuts"><a class="header" href="#keyboard-shortcuts">Keyboard Shortcuts</a></h2>
-<p>Most of the common operations in Anki have keyboard shortcuts. Most of
-them are discoverable in the interface: menu items list their shortcuts
-next to them, and hovering the mouse cursor over a button will generally
-show its shortcut in a tooltip.</p>
-<p>When studying, either <kbd>Space</kbd> or <kbd>Enter</kbd> will show the answer. When the
-answer is shown, you can use <kbd>Space</kbd> or <kbd>Enter</kbd> to select the Good button.
-You can use the <kbd>1</kbd>-<kbd>4</kbd> keys to select a specific ease button. Many people
-find it convenient to answer most cards with <kbd>Space</kbd> and keep one finger
-on <kbd>1</kbd> for when they forget.</p>
-<p>The "Study Deck" item in the Tools menu allows you to quickly switch to
-a deck with the keyboard. You can trigger it with the '/' key. When
-opened, it will display all of your decks and show a filter area at the
-top. As you type characters, Anki will display only decks matching the
-characters you type. You can add a space to separate multiple search
-terms, and Anki will show only decks that match all the terms. So “ja 1”
-or “on1 ja” would both match a deck called “Japanese::Lesson1”.</p>
-<h2 id="falling-behind"><a class="header" href="#falling-behind">Falling Behind</a></h2>
-<p>If you fall behind in your reviews, Anki will prioritize cards that have
-been waiting the longest. It does this by taking the cards that have
-been waiting the longest and showing them to you in a random order up
-until your daily review limit. This ordering ensures that no cards will
-be left waiting indefinitely, but it means that if you introduce new
-cards, their reviews won’t appear until you’ve gotten through your
-backlog.</p>
-<p>If you wish to change the order of the overdue reviews, you can do so by
-creating a <a href="filtered-decks.html">filtered deck</a>.</p>
-<p>When you answer cards that have been waiting for a while, Anki factors
-in that delay when determining the next time a card should be shown.
-Please see the section on Anki’s spaced-repetition
-<a href="https://faqs.ankiweb.net/due-times-after-a-break.html">algorithm</a> for more information.</p>
+<h2 id="Порядок-відображення"><a class="header" href="#Порядок-відображення">Порядок відображення</a></h2>
+<p>Під час вивчення будуть показані картки з вибраної колоди та всіх колод, які вона містить. Таким чином, якщо ви виберете колоду «French, дочірні колоди «French::Vocab» і «French::My Textbook::Lesson 1» також будуть показані.</p>
+<p>Як саме Anki гортає картки з колод, залежить від алгоритму, що використовується:</p>
+<ul>
+<li>
+<p>За допомогою планувальника v1, коли колода має дочірні колоди, картки з’являтимуться з <a href="studying.html#display-order">кожної колоди по черзі</a>.</p>
+</li>
+<li>
+<p>За допомогою <a href="https://faqs.ankiweb.net/the-anki-2.1scheduler.html">планувальника v2</a>, коли колода має дочірні, перегляди беруться з усіх дочірніх колод одночасно. Обмеження перегляду дочірніх колод ігнорується – застосовується лише обмеження колоди, яку ви натиснули.</p>
+</li>
+<li>
+<p>За допомогою <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">планувальника v3</a> ліміт кожної дочірньої колоди також застосовується, і вам не потрібно бачити карти в порядку колоди. Для отримання додаткової інформації див. розділ посібника <a href="deck-options.html#review-sort-order">параметри колоди</a> .</p>
+</li>
+</ul>
+<p>За замовчуванням для нових карток Anki отримує картки з колод в алфавітному порядку. Отже, у наведеному вище прикладі ви отримаєте картки спочатку з «French», потім «French::My Textbook» і, нарешті, «French::Vocab». Ви можете використовувати це, щоб контролювати порядок відображення карток, розміщуючи ті, що з високим пріоритетом у колодах, які відображаються вище в списку. Коли комп'ютер сортує текст за алфавітом, символ «-» стоїть перед символами алфавіту, а «~» — після них. Отже, ви можете назвати колоду «-Vocab», щоб вони з’явилися першими, а іншу колоду — «~French::My Textbook», щоб змусити її з’являтися після всіх решти.</p>
+<p>Нові картки та огляди витягуються окремо, і Anki не чекатиме, поки обидві черги спустошаться, перш ніж перейти до наступної колоди, тож можливо, що ви побачите нові картки з однієї колоди, переглядаючи іншу чи навпаки. Якщо не хочете, клацніть безпосередньо колоду, яку хочете вивчити, замість однієї з батьківських.</p>
+<p>Оскільки картки під час навчання дещо критичні за часом, вони витягуються з усіх колод одночасно та показуються в тому порядку, в якому вони повинні бути.</p>
+<p>Щоб контролювати порядок перегляду певної колоди або змінити порядок показу нових карток із упорядкованого на випадковий, перегляньте <a href="deck-options.html">параметри колоди</a>. Для більш точного впорядкування нових карток можете змінити порядок у <a href="browsing.html">браузері</a>.</p>
+<h2 id="Родичі-та-приховування"><a class="header" href="#Родичі-та-приховування">Родичі та приховування</a></h2>
+<p>Згадайте з <a href="getting-started.html">основ</a>, що Anki може створити більше однієї картки для кожної речі, яку ви вводите, як-от передня→задня картка та задня→передня, або два різні видалення в одному тексті. Ці пов'язані картки називаються «родичами».</p>
+<p>Відповідаючи на питання картки, яка має родичів, Anki може запобігти показу цих карток-родичів, які мають схожий сеанс, автоматично «ховаючи» їх. Заховані картки приховані від перегляду, до наступного дня або доки ви вручну не видалите їх за допомогою кнопки «Відновити приховані» внизу екрана <a href="studying.html#study-overview">перегляд колоди</a>. Anki приховає родичів, навіть якщо вони не знаходяться в одній колоді (наприклад, якщо ви використовуєте функцію <a href="templates/intro.html">перевизначення колоди</a>).</p>
+<p>Ви можете ввімкнути приховування на екрані <a href="deck-options.html">параметри колоди</a> — там є окремі налаштування для нових і переглянутих карток.</p>
+<p>Anki буде приховувати родичів лише нових або переглянутих карток. Картки не приховуються в режимі навчання, оскільки для таких карток час має важливе значення. З іншого боку, коли ви переглядаєте навчальну картку, будь-які нові/переглянуті родичі можуть бути приховані.</p>
+<p>Примітка. Картка не може бути прихована та призупинена одночасно. Призупинення прихованої картки призведе до її відновлення. Приховування призупиненої картки не працює на Anki 2.1.49+, тоді як у попередніх версіях призупинення картки відновлюється.</p>
+<h2 id="Комбінації-клавіш"><a class="header" href="#Комбінації-клавіш">Комбінації клавіш</a></h2>
+<p>Більшість поширених операцій в Anki мають комбінації клавіш. Їх можна знайти в інтерфейсі: пункти меню вказують свої ярлики поруч із ними, а наведення курсору миші на кнопку зазвичай показує ярлик у спливаючій підказці.</p>
+<p>Під час вивчення відповідь буде показано за допомогою клавіші <kbd>Пробіл</kbd> або <kbd>Enter</kbd>. Щоб відкрити відповідь, ви можете скористатися <kbd>Пробілом</kbd> або <kbd>Enter</kbd>, це дозволяє вибрати кнопку Добре. Можете скористатися клавішами <kbd>1</kbd>-<kbd>4</kbd>, щоб вибрати певну кнопку полегшення. Багато людей вважають зручним відповідати на більшість карток <kbd>пробілом</kbd> і тримати один палець на <kbd>1</kbd>, коли вони забудуть.</p>
+<p>Пункт «Навчальна колода» в меню «Інструменти» дозволяє швидко перемикатися на колоду за допомогою клавіатури. Ви можете запустити це за допомогою клавіші '/'. Далі відображатимуться всі ваші колоди та зона фільтра вгорі. Коли ви вводите символи, Anki відображатиме лише колоди, які відповідають символам, що ви вводите. Ви можете додати пробіл, щоб розділити кілька пошукових термінів, і Anki покаже лише колоди, які відповідають усім термінам. Отже, «ja 1» або «on1 ja» відповідатимуть колоді під назвою «Japanese::Lesson1».</p>
+<h2 id="Відставання"><a class="header" href="#Відставання">Відставання</a></h2>
+<p>Якщо ви відстаєте у переглядах, Anki віддасть пріоритет карткам, які чекали найдовше. Anki показує їх вам у довільному порядку у кількості вашого денного ліміту перегляду. Таке впорядкування гарантує, що жодна картка не залишиться в очікуванні нескінченно довго, але це також означає, що якщо ви додасте нові картки, вони не з’являться, доки ви не пропрацюєте свій заділ.</p>
+<p>Якщо бажаєте змінити порядок прострочених переглядів, ви можете зробити це, створивши <a href="filtered-decks.html">фільтровану колоду</a>.</p>
+<p>Коли відповідаєте на картки, які чекали деякий час, Anki враховує цю затримку, визначаючи, коли наступного разу слід показати картку. Додаткову інформацію дивіться в розділі про <a href="https://faqs.ankiweb.net/due-times-after-a-break.html">алгоритм інтервалів</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="addingediting"><a class="header" href="#addingediting">Adding/Editing</a></h1>
 <!-- toc -->
 <h2 id="adding-cards-and-notes"><a class="header" href="#adding-cards-and-notes">Adding Cards and Notes</a></h2>
@@ -2943,7 +2784,7 @@ the next day.</p>
 <h3 id="leeches"><a class="header" href="#leeches">Leeches</a></h3>
 <p>Control the way Anki handles leeches. Please see the <a href="leeches.html">leeches</a>
 section for more information.</p>
-<h2 id="display-order-1"><a class="header" href="#display-order-1">Display Order</a></h2>
+<h2 id="display-order"><a class="header" href="#display-order">Display Order</a></h2>
 <p>The options in this section are taken from the deck you select to study, not
 the deck of the currently displayed card.</p>
 <p>This section is only available when you have <a href="https://faqs.ankiweb.net/the-2021-scheduler.html">the v3 scheduler</a> enabled.</p>
