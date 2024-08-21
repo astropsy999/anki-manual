@@ -155,34 +155,23 @@ Anki не враховує спеціальні поля чи текст, що �
 
 У старіших версіях Anki Anki відмовляється додавати або імпортувати нотатку, якщо картки не генеруються.
 
-## Cloze Templates
+## Шаблони Приховування
 
-Please see the [cloze deletion](../editing.md#cloze-deletion) section for background info.
+Будь ласка, ознайомтеся з розділом [cloze deletion](../editing.md#приховування-cloze-deletion) для отримання загальної інформації.
 
-The cloze note type functions differently from regular note types.
-Instead of a customizable number of card types, it has a single type
-which is shared by all cloze deletions on a note.
+Тип нотаток cloze(приховування) працює інакше, ніж звичайні типи нотаток. Замість налаштованої кількості типів карток, він має один тип, який використовується для всіх видалень cloze в нотатці.
 
-As mentioned in the card generation section above, generation of regular
-cards depends on one or more fields on the question being non-empty.
-Cloze deletion note types are generated differently:
+Як згадувалося у розділі про генерацію карток, генерація звичайних карток залежить від того, чи є одне або кілька полів у питанні не пустими. Нотатки типу cloze генеруються інакше:
 
-- Anki looks on the front template for one or more cloze replacements,
-  like {{cloze:FieldName}}.
+- Anki перевіряє фронтальний шаблон на наявність одного або кількох замін cloze, таких як {{cloze:FieldName}}.
 
-- It then looks in the FieldName field for all cloze references, like
-  {{c1::text}}.
+- Потім він перевіряє поле FieldName на наявність всіх посилань cloze, таких як {{c1::text}}.
 
-- For each separate number, a card will be generated.
+- Для кожного окремого номера буде згенеровано картку.
 
-Because card generation functions differently for cloze deletion cards,
-{{cloze:…​}} tags can not be used with a regular note type - they
-will only function properly when used with a cloze note type.
+Оскільки генерація карток функціонує інакше для карток з видаленням cloze, теги {{cloze:…​}} не можуть бути використані з звичайним типом нотаток — вони правильно функціонують тільки з типом нотаток cloze.
 
-Conditional generation provides a special field so you can check which
-card you are rendering. If you wanted to display the "hint1" field on
-the first cloze, and "hint2" field on the second cloze for example, you
-could use the following template:
+Умовна генерація надає спеціальне поле, щоб ви могли перевірити, яку картку ви відображаєте. Якщо ви хочете відобразити поле "hint1" на першій картці cloze, а поле "hint2" на другій картці cloze, ви можете використати наступний шаблон:
 
     {{cloze:Text}}
 
