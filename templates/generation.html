@@ -298,34 +298,23 @@
 <h2 id="Додавання-порожніх-нотаток"><a class="header" href="#Додавання-порожніх-нотаток">Додавання порожніх нотаток</a></h2>
 <p>Коли ви додаєте нову нотатку в Anki 2.1.28+ і AnkiMobile 2.0.64+, якщо разом шаблони карток і поля нотаток не створюють карток, буде створено порожню картку за допомогою першого шаблону. Це дозволяє додавати матеріал, навіть якщо він є неповним, і змініть його або шаблон пізніше, щоб зробити його дійсним. Якщо ви цього не зробите бажаєте залишити порожню нотатку, ви можете видалити її за допомогою функції «Порожні картки».</p>
 <p>У старіших версіях Anki Anki відмовляється додавати або імпортувати нотатку, якщо картки не генеруються.</p>
-<h2 id="cloze-templates"><a class="header" href="#cloze-templates">Cloze Templates</a></h2>
-<p>Please see the <a href="../editing.html#cloze-deletion">cloze deletion</a> section for background info.</p>
-<p>The cloze note type functions differently from regular note types.
-Instead of a customizable number of card types, it has a single type
-which is shared by all cloze deletions on a note.</p>
-<p>As mentioned in the card generation section above, generation of regular
-cards depends on one or more fields on the question being non-empty.
-Cloze deletion note types are generated differently:</p>
+<h2 id="Шаблони-Приховування"><a class="header" href="#Шаблони-Приховування">Шаблони Приховування</a></h2>
+<p>Будь ласка, ознайомтеся з розділом <a href="../editing.html#%D0%BF%D1%80%D0%B8%D1%85%D0%BE%D0%B2%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-cloze-deletion">cloze deletion</a> для отримання загальної інформації.</p>
+<p>Тип нотаток cloze(приховування) працює інакше, ніж звичайні типи нотаток. Замість налаштованої кількості типів карток, він має один тип, який використовується для всіх видалень cloze в нотатці.</p>
+<p>Як згадувалося у розділі про генерацію карток, генерація звичайних карток залежить від того, чи є одне або кілька полів у питанні не пустими. Нотатки типу cloze генеруються інакше:</p>
 <ul>
 <li>
-<p>Anki looks on the front template for one or more cloze replacements,
-like {{cloze:FieldName}}.</p>
+<p>Anki перевіряє фронтальний шаблон на наявність одного або кількох замін cloze, таких як {{cloze:FieldName}}.</p>
 </li>
 <li>
-<p>It then looks in the FieldName field for all cloze references, like
-{{c1::text}}.</p>
+<p>Потім він перевіряє поле FieldName на наявність всіх посилань cloze, таких як {{c1::text}}.</p>
 </li>
 <li>
-<p>For each separate number, a card will be generated.</p>
+<p>Для кожного окремого номера буде згенеровано картку.</p>
 </li>
 </ul>
-<p>Because card generation functions differently for cloze deletion cards,
-{{cloze:…​}} tags can not be used with a regular note type - they
-will only function properly when used with a cloze note type.</p>
-<p>Conditional generation provides a special field so you can check which
-card you are rendering. If you wanted to display the "hint1" field on
-the first cloze, and "hint2" field on the second cloze for example, you
-could use the following template:</p>
+<p>Оскільки генерація карток функціонує інакше для карток з видаленням cloze, теги {{cloze:…​}} не можуть бути використані з звичайним типом нотаток — вони правильно функціонують тільки з типом нотаток cloze.</p>
+<p>Умовна генерація надає спеціальне поле, щоб ви могли перевірити, яку картку ви відображаєте. Якщо ви хочете відобразити поле "hint1" на першій картці cloze, а поле "hint2" на другій картці cloze, ви можете використати наступний шаблон:</p>
 <pre><code>{{cloze:Text}}
 
 {{#c1}}
