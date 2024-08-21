@@ -1,27 +1,27 @@
-# Field Replacements
+# Заміни полів
 
 <!-- toc -->
 
-## Basic Replacements
+## Основні заміни
 
-The most basic template looks something like this:
+Найбільш базовий шаблон виглядає приблизно так:
 
     {{Front}}
 
-When you place text within curly brackets, Anki looks for a field by
-that name, and replaces the text with the actual content of the field.
+Коли вставляєте текст у фігурні дужки, Anki шукає поле з такою назвою
+і замінює текст на фактичний вміст цього поля.
 
-Field names are case sensitive. If you have a field named `Front`,
-writing `{{front}}` will not work properly.
+Назви полів чутливі до регістру. Якщо у вас є поле з назвою `Front`,
+то написання `{{front}}` не буде працювати належним чином.
 
-Your templates are not limited to a list of fields. You can also include
-arbitrary text on your templates. For example, if you’re studying
-capital cities, and you’ve created a note type with a “Country” field,
-you might create a front template like this:
+Шаблони не обмежуються лише списком полів. Ви також можете
+включати довільний текст у свої шаблони. Наприклад, якщо ви вивчаєте
+столиці країн і створили тип нотатки з полем "Країна", ви можете створити
+шаблон для передньої сторони картки, що виглядає так:
 
-    What's the capital city of {{Country}}?
+    Яка столиця {{Country}}?
 
-The default back template will look something like this:
+Стандартний шаблон для зворотної сторони буде виглядати приблизно так:
 
     {{FrontSide}}
 
@@ -29,307 +29,230 @@ The default back template will look something like this:
 
     {{Back}}
 
-This means “show me the text that’s on the front side, then a divider
-line, and then the Back field”.
+Це означає "покажи мені текст, який є на передній стороні картки, потім
+роздільну лінію і потім поле Зворот".
 
-The 'id=answer' part tells Anki where the divider is between the
-question and the answer. This allows Anki to automatically scroll to the
-spot where the answer starts when you press 'show answer' on a long card
-(especially useful on mobile devices with small screens). If you don’t
-want a horizontal line at the beginning of the answer, you can use
-another HTML element such as a paragraph or div instead.
+Частина 'id=answer' вказує Anki, де знаходиться роздільник між питанням
+і відповіддю. Це дозволяє Anki автоматично прокручувати до місця, де
+починається відповідь, коли ви натискаєте "показати відповідь" на довгій
+картці (особливо корисно на мобільних пристроях з невеликими екранами).
+Якщо ви не хочете горизонтальної лінії на початку відповіді, можете
+використовувати інший HTML-елемент, наприклад, параграф або div.
 
-## Newlines
+## Нові рядки
 
-Card templates are like web pages, which means a special command is required
-to create a new line. For example, if you wrote the following in the template:
+Шаблони карток схожі на веб-сторінки, що означає, що для створення нового рядка потрібна спеціальна команда. Наприклад, якщо ви написали наступне в шаблоні:
 
     one
     two
 
-In the preview, you’d actually see:
+У попередньому перегляді ви побачите:
 
     one two
 
-To add a new line, you need to add a &lt;br&gt; code to the end of a
-line, like so:
+Щоб додати новий рядок, вам потрібно додати код &lt;br&gt; в кінці рядка, ось так:
 
     one<br>
     two
 
-The br code stands for "(line) br(eak)".
+Код `br` означає "(перехід) на новий рядок".
 
-The same applies for fields. If you want to display two fields, one on
-each line, you would use
+Те ж саме стосується і полів. Якщо ви хочете відобразити два поля, одне на кожному рядку, ви повинні використовувати:
 
     {{Field 1}}<br>
     {{Field 2}}
 
-## Text to Speech for individual fields
+## Текст у мову для окремих полів
 
-This feature requires Anki 2.1.20, AnkiMobile 2.0.56 or AnkiDroid 2.17.
+Ця функція потребує версії Anki 2.1.20, AnkiMobile 2.0.56 або AnkiDroid 2.17.
 
-To have Anki read the Front field in a US English voice, you can place
-the following in your card template:
+Щоб Anki читав поле Front голосом на мові американська англійська, розмістіть наступне у шаблоні картки:
 
     {{tts en_US:Front}}
 
-On Windows, macOS, and iOS, Anki will use the OS’s built in voices. On
-Linux, no voices are built in, but voices can be provided by add-ons,
-such as [this one](https://ankiweb.net/shared/info/391644525).
+На Windows, macOS і iOS Anki використовуватиме вбудовані голоси ОС. На Linux голоси не вбудовані, але їх можна додати за допомогою додатків, таких як [цей](https://ankiweb.net/shared/info/391644525).
 
-To see a list of all available languages/voices, place the following on
-your card template:
+Щоб переглянути список доступних мов/голосів, розмістіть наступне у шаблоні картки:
 
     {{tts-voices:}}
 
-If there are multiple voices that support your chosen language, you can
-specify desired voices in a list, and Anki will choose the first
-available voice. For example:
+Якщо є кілька голосів, що підтримують обрану вами мову, ви можете вказати бажані голоси у списку, і Anki вибере перший доступний голос. Наприклад:
 
     {{tts ja_JP voices=Apple_Otoya,Microsoft_Haruka:Field}}
 
-This would use Otoya when on an Apple device, and Haruka when on a
-Windows PC.
+Це використовуватиме Otoya на пристроях Apple і Haruka на комп'ютерах під управлінням Windows.
 
-Specifying a different speed is possible in some TTS implementations:
+У деяких реалізаціях TTS можливо вказати іншу швидкість:
 
     {{tts fr_FR speed=0.8:SomeField}}
 
-Both speed and voices are optional, but the language must be included.
+Швидкість та голоси є необов'язковими, але мову слід вказати.
 
-On a Mac, you can customize the available voices:
+На Mac ви можете налаштувати доступні голоси:
 
-- Open the System Preferences screen.
+- Відкрийте налаштування системи.
+- Перейдіть до розділу "Універсальний доступ".
+- Виберіть "Мова".
+- Клацніть на спадному списку системних голосів і виберіть "Налаштувати".
 
-- Click on Accessibility.
+Деякі голоси звучать краще за інші, тому експериментуйте, щоб знайти найбільш відповідний для вас. Зверніть увагу, що голос Siri можна використовувати тільки в додатках Apple. Після встановлення нових голосів вам потрібно буде перезапустити Anki, щоб нові голоси стали доступними.
 
-- Click on Speech.
+На Windows деякі голоси, такі як Cortana, не можна вибрати, оскільки Microsoft не надає ці голоси для інших додатків.
 
-- Click on the system voice dropdown, and choose Customize.
-
-Some voices sound better than others, so experiment to choose the one
-you prefer. Please note that the Siri voice can only be used by Apple
-apps. Once you’ve installed new voices, you’ll need to restart Anki for
-the new voices to become available.
-
-On Windows, some voices like Cortana can not be selected, as Microsoft
-does not make those voices available to other applications.
-
-On a cloze note type, you can make Anki read only the elided sections
-using the `cloze-only` filter, like so:
+На типі нотатки cloze (приховування) ви можете змусити Anki читати тільки закриті секції, використовуючи фільтр `cloze-only`, ось так:
 
     {{tts en_US:cloze-only:Text}}
 
-The cloze-only filter is supported in Anki 2.1.29+, AnkiMobile 2.0.65+, and AnkiDroid 2.17+.
+Фільтр cloze-only підтримується в Anki 2.1.29+, AnkiMobile 2.0.65+ та AnkiDroid 2.17+.
 
-## Text to Speech for multiple fields and static text
+## Текст у мову для кількох полів і статичного тексту
 
-This feature requires Anki 2.1.50+, AnkiMobile 2.0.84+, or AnkiDroid 2.17+.
+Ця функція потребує Anki 2.1.50+, AnkiMobile 2.0.84+ або AnkiDroid 2.17+.
 
-If you want TTS to read multiple fields or static text included in the template, you can use the following:
+Якщо ви хочете, щоб TTS читав кілька полів або статичний текст, включений у шаблон, ви можете використати наступне:
 
 ```
-[anki:tts lang=en_US] This text should be read. Here is {{Field1}} and {{Field2}}[/anki:tts]
+[anki:tts lang=en_US] Цей текст слід прочитати. Ось {{Field1}} та {{Field2}}[/anki:tts]
 
-This is other text on the template. It is outside of the tags so it should not be read.
+Це інший текст в шаблоні. Він поза тегами, тому його не слід читати.
 ```
 
-## Special Fields
+## Спеціальні поля
 
-There are some special fields you can include in your templates:
+Ви можете включити в свої шаблони наступні спеціальні поля:
 
-    The note's tags: {{Tags}}
+- Теги нотатки: `{{Tags}}`
+- Тип нотатки: `{{Type}}`
+- Колода картки: `{{Deck}}`
+- Дочірня колода картки: `{{Subdeck}}`
+- Позначка картки: `{{CardFlag}}`
+- Тип картки ("Forward" тощо): `{{Card}}`
+- Зміст шаблону для передньої сторінки
+  (дійсно тільки в шаблоні задньої сторінки): `{{FrontSide}}`
 
-    The type of note: {{Type}}
+`FrontSide` не відтворює автоматично будь-яке аудіо, яке було на передній стороні картки. Якщо ви хочете, щоб те саме аудіо відтворювалося автоматично як на передній, так і на задній сторонах картки, вам потрібно вручну включити аудіо поля і на задній стороні.
 
-    The card's deck: {{Deck}}
+Як і інші поля, спеціальні імена полів чутливі до регістру - наприклад, потрібно використовувати `{{Tags}}`, а не `{{tags}}`.
 
-    The card's subdeck: {{Subdeck}}
+## Поля підказки
 
-    The card's flag: {{CardFlag}}
+Можна додати поле на передню або задню сторону картки, але зробити його прихованим до моменту, поки ви не вирішите його показати. Ми називаємо це 'полем підказки'. Перед додаванням підказки, будь ласка, врахуйте, що чим легше ви робите відповідь на питання в Anki, тим менш ймовірно, що ви запам’ятаєте це питання, коли з ним зіштовхнетеся в реальному житті. Будь ласка, ознайомтеся з принципом 'мінімальної інформації' на <https://super-memory.com/articles/20rules.htm> перед продовженням.
 
-    The type of card ("Forward", etc): {{Card}}
+По-перше, вам потрібно додати поле для зберігання підказки, якщо ви ще не зробили цього. Будь ласка, ознайомтеся з розділом [поля](../editing.md#customizing-fields), якщо не знаєте, як це зробити.
 
-    The content of the front template
-    (only valid in back template): {{FrontSide}}
-
-FrontSide will not automatically play any audio that was on the front side
-of the card. If you wish to have the same audio play automatically on both
-the front and back of the card, you’ll need to manually include the audio
-fields on the back as well.
-
-As with other fields, special field names are case sensitive - you must use
-`{{Tags}}` rather than `{{tags}}` for example.
-
-## Hint Fields
-
-It’s possible to add a field to the front or back of a card, but make it
-hidden until you explicitly show it. We call this a 'hint field'. Before
-adding a hint, please bear in mind that the easier you make it to answer
-a question in Anki, the less likely you are to remember that question
-when you encounter it in real life. Please have a read about the
-'minimum information principle' on
-<https://super-memory.com/articles/20rules.htm> before proceeding.
-
-First, you’ll need to add a field to store the hint in if you have not
-already. Please see the [fields](../editing.md#customizing-fields) section if you’re not sure how
-to do this.
-
-Assuming you’ve created a field called MyField, you can tell Anki to
-include it on the card but hide it by default by adding the following to
-your template:
+Припустимо, ви створили поле під назвою MyField, ви можете вказати Anki включити його на картку, але приховати за замовчуванням, додавши наступне у ваш шаблон:
 
     {{hint:MyField}}
 
-This will show a link labeled “show hint”; when you click it, the
-content of the field will be displayed on the card. (If MyField is
-empty, nothing will be shown.)
+Це покаже посилання з написом "show hint" (показати підказку); коли ви натиснете його, вміст поля буде відображено на картці. (Якщо MyField порожнє, нічого не буде показано.)
 
-If you show the hint on the question and then reveal the answer, the
-hint will be hidden again. If you want to have the hint always revealed
-when the answer is shown, you will need to remove `{{FrontSide}}` from
-your back template and manually add the fields you wish to appear.
+Якщо ви покажете підказку на питанні і потім розкриєте відповідь, підказка знову буде прихована. Якщо ви хочете, щоб підказка завжди відображалася, коли показується відповідь, вам потрібно буде видалити `{{FrontSide}}` з вашого шаблону задньої сторінки та вручну додати поля, які ви хочете, щоб з’являлися.
 
-It is not currently possible to use a hint field for audio — the audio
-will play regardless of whether you’ve clicked on the hint link.
+Наразі не можна використовувати поле підказки для аудіо — аудіо буде відтворюватися незалежно від того, чи натиснули ви на посилання підказки.
 
-If you want to customize the appearance or behaviour, you’ll need to
-implement the hint field yourself. We can not provide any support for
-doing so, but the following code should get you started:
+Якщо ви хочете налаштувати вигляд або поведінку, вам потрібно буде реалізувати поле підказки самостійно. Ми не можемо надати підтримку для цього, але наступний код має допомогти вам розпочати:
 
     {{#Back}}
-    ﻿<a class=hint href="#"
+    <a class=hint href="#"
     onclick="this.style.display='none';document.getElementById('hint4753594160').style.display='inline-block';return false;">
     Show Back</a><div id="hint4753594160" class=hint style="display: none">{{Back}}</div>
     {{/Back}}
 
-## Dictionary Links
+## Посилання на словники
 
-You can also use field replacement to create dictionary links. Imagine
-you’re studying a language and your favourite online dictionary allows
-you to search for text using a web URL like:
+Ви також можете використовувати заміну полів для створення посилань на словники. Уявіть, що ви вивчаєте мову і ваш улюблений онлайн-словник дозволяє шукати текст за допомогою веб-URL, як-от:
 
     http://example.com/search?q=myword
 
-You could add an automatic link by doing the following in your template:
+Ви можете додати автоматичне посилання, зробивши наступне у вашому шаблоні:
 
     {{Expression}}
 
-    <a href="http://example.com/search?q={{Expression}}">check in dictionary</a>
+    <a href="http://example.com/search?q={{Expression}}">перевірити в словнику</a>
 
-The template above would allow you to search for each note’s expression
-by clicking on the link while reviewing. There is a caveat however, so
-please see the next section.
+Шаблон вище дозволить вам шукати вираз кожної нотатки, натискаючи на посилання під час перегляду. Однак є одне застереження, тому будь ласка, ознайомтеся з наступним розділом.
 
-## HTML Stripping
+## Очищення HTML
 
-Like templates, fields are stored in HTML. In the dictionary link
-example above, if the expression contained the word "myword" without any
-formatting, then the HTML would be the same: "myword". But when you
-include formatting in your fields, extra HTML is included. If "myword"
-was bolded for example, the actual HTML would be
-"&lt;b&gt;myword&lt;/b&gt;".
+Як і шаблони, поля зберігаються в HTML. У наведеному вище прикладі з посиланням на словник, якщо вираз містив слово "myword" без форматування, то HTML буде таким же: "myword". Але коли ви включаєте форматування у поля, додається додатковий HTML. Якщо "myword" було виділене жирним шрифтом, наприклад, фактичний HTML буде
+`&lt;b&gt;myword&lt;/b&gt;`.
 
-This can present a problem for things like dictionary links. In the
-above example, the dictionary link would end up being:
+Це може створити проблему для таких речей, як посилання на словники. У наведеному вище прикладі посилання на словник вийде таким:
 
-    <a href="http://example.com/search?q=<b>myword</b>">check in dictionary</a>
+    <a href="http://example.com/search?q=<b>myword</b>">перевірити в словнику</a>
 
-The extra characters in the link would likely confuse the dictionary
-site, and you’re likely not to get any matches.
+Додаткові символи в посиланні можуть заплутати сайт словника, і ви, ймовірно, не отримаєте жодних збігів.
 
-To solve this, Anki provides the ability to strip formatting from fields
-when they are replaced. If you prefix a field name with text:, Anki will
-not include any formatting. So a dictionary link that worked even with
-formatted text would be:
+Щоб вирішити це, Anki надає можливість очищення форматування з полів при їх заміні. Якщо ви додасте префікс до імені поля у вигляді `text:`, Anki не включатиме жодного форматування. Отже, посилання на словник, яке працюватиме навіть із форматованим текстом, буде таким:
 
-    <a href="http://example.com/search?q={{text:Expression}}">check in dictionary</a>
+    <a href="http://example.com/search?q={{text:Expression}}">перевірити в словнику</a>
 
-## Right To Left Text
+## Текст справа наліво
 
-If you’re using a language that reads from right to left, you’ll need
-to adjust the template like so:
+Якщо ви використовуєте мову, яка читається справа наліво, вам потрібно буде відрегулювати шаблон наступним чином:
 
     <div dir=rtl>{{FieldThatHasRTLTextInIt}}</div>
 
-## Ruby Characters
+## Ruby символи
 
-Some languages commonly use annotations above the text to display the
-pronunciation of characters. These annotations are known as
-[ruby characters](https://en.wikipedia.org/wiki/Ruby_character).
-In Japanese, these are known as [furigana](https://en.wikipedia.org/wiki/Furigana).
+Деякі мови часто використовують анотації над текстом для відображення вимови символів. Ці анотації відомі як [ruby символи](https://en.wikipedia.org/wiki/Ruby_character). В японській мові вони відомі як [furigana](https://en.wikipedia.org/wiki/Furigana).
 
-In Anki, you can display ruby characters by using the following syntax:
+У Anki ви можете відображати ruby символи, використовуючи наступний синтаксис:
 
     Text[Ruby]
 
-Suppose the text above is written in MyField. By default, if you simply use
-`{{Myfield}}`, the field will be displayed as is. To properly position the
-ruby characters above the text, use the `furigana` filter in the templates
-like so:
+Припустимо, текст вище написано в MyField. За замовчуванням, якщо ви просто використовуєте
+`{{MyField}}`, поле буде відображатися як є. Щоб правильно позиціонувати ruby символи над текстом, використовуйте фільтр `furigana` у шаблонах таким чином:
 
     {{furigana:MyField}}
 
-Here are some examples:
+Ось кілька прикладів:
 
 <!-- prettier-ignore -->
-| Raw Text            | Rendered Text                                                                             |
-| ------------------- | ----------------------------------------------------------------------------------------- |
-| `Text[Ruby]`        | <ruby><rb>Text</rb><rt>Ruby</rt></ruby>                                                   |
-| `日本語[にほんご]`  | <ruby><rb>日本語</rb><rt>にほんご</rt></ruby>                                             |
-| `世[よ]の 中[なか]` | <ruby><rb>世</rb><rt>よ</rt></ruby>の<ruby><rb>中</rb><rt>なか</rt></ruby>                |
-| `世[よ]の中[なか]`  | <ruby><rb>世</rb><rt>よ</rt></ruby><ruby><rb>の中</rb><rt>なか</rt></ruby> _(incorrect!)_ |
+| Сирий текст         | Відображений текст                                                                          |
+| ------------------- | ------------------------------------------------------------------------------------------ |
+| `Text[Ruby]`        | <ruby><rb>Text</rb><rt>Ruby</rt></ruby>                                                    |
+| `日本語[にほんご]`  | <ruby><rb>日本語</rb><rt>にほんご</rt></ruby>                                              |
+| `世[よ]の 中[なか]` | <ruby><rb>世</rb><rt>よ</rt></ruby>の<ruby><rb>中</rb><rt>なか</rt></ruby>               |
+| `世[よ]の中[なか]`  | <ruby><rb>世</rb><rt>よ</rt></ruby><ruby><rb>の中</rb><rt>なか</rt></ruby> _(неправильно!)_ |
 
-Notice how the third example has a space before the 中 character. This is
-necessary to specify that the ruby text applies only to that character.
-If there was no space, the ruby text will be misplaced above the の character,
-as shown in the fourth example.
+Зверніть увагу, що в третьому прикладі є пробіл перед символом 中. Це необхідно для того, щоб вказати, що ruby текст застосовується лише до цього символу.
+Якщо пробілу не буде, ruby текст буде неправильно розміщений над символом の, як показано в четвертому прикладі.
 
-### Additional Ruby Character Filters
+### Додаткові фільтри для Ruby символів
 
-In addition to the `furigana` filter, you can also only show certain parts
-of the ruby text, with the `kana` and `kanji` filters. The `kana` filter will
-only show the ruby text, while the `kanji` filter removes the ruby text
-entirely.
+Окрім фільтра `furigana`, ви також можете показувати тільки певні частини ruby тексту за допомогою фільтрів `kana` та `kanji`. Фільтр `kana` буде показувати тільки ruby текст, тоді як фільтр `kanji` зовсім прибирає ruby текст.
 
 <!-- prettier-ignore -->
-| Raw Text           | Field Filter           | Rendered Text                                 |
-| ------------------ | ---------------------- | --------------------------------------------- |
+| Сирий текст       | Фільтр поля          | Відображений текст                             |
+| ----------------- | --------------------- | ---------------------------------------------- |
 | `日本語[にほんご]` | `{{furigana:MyField}}` | <ruby><rb>日本語</rb><rt>にほんご</rt></ruby> |
 | `日本語[にほんご]` | `{{kana:MyField}}`     | にほんご                                      |
 | `日本語[にほんご]` | `{{kanji:MyField}}`    | 日本語                                        |
 
-These names are, again, borrowed from Japanese.
-The term [kana](https://en.wikipedia.org/wiki/Kana) represents the phonetic
-system used to describe how words are pronounced, whereas the term
-[kanji](https://en.wikipedia.org/wiki/Kanji) represents its Chinese characters.
+Ці назви, знову ж таки, запозичені з японської мови.
+Термін [kana](https://uk.wikipedia.org/wiki/Кана) позначає фонетичну систему, що використовується для опису того, як вимовляються слова, тоді як термін [kanji](https://uk.wikipedia.org/wiki/Кандзі) позначає китайські символи.
 
-## Media & LaTeX
+## Медіа та LaTeX
 
-Anki does not scan templates for media references, because it is slow to
-do so. This has implications for including media on the template.
+Anki не сканує шаблони на наявність посилань на медіа, оскільки це є повільним процесом. Це має наслідки для включення медіа у шаблон.
 
-### Static Sounds/Images
+### Статичні звуки/зображення
 
-If you wish to include images or sounds on your cards that are the same
-for every card (eg, a company logo at the top of each card):
+Якщо ви хочете включити зображення або звуки на ваших картках, які є однаковими для кожної картки (наприклад, логотип компанії на верху кожної картки):
 
-1. Rename the file so it starts with an underscore, e.g "\_logo.jpg".
-   The underscore tells Anki that the file is used by the template and
-   it should be exported when sharing the deck.
+1. Перейменуйте файл так, щоб його ім’я починалося з підкреслення, наприклад, "\_logo.jpg".
+   Підкреслення вказує Anki, що файл використовується шаблоном і його слід експортувати при обміні колодою.
 
-2. Add a reference to the media on your front or back template, like:
+2. Додайте посилання на медіа у вашому фронтальному або задньому шаблоні, як ось:
 
 <!-- -->
 
     <img src="_logo.jpg">
 
-### Field References
+### Посилання на поля
 
-Media references to fields are not supported. They may or may not display
-during review, and will not work when checking for unused media,
-importing/exporting, and so on. Examples that won’t work:
+Посилання на медіа в полях не підтримуються. Вони можуть або не можуть відображатися під час перегляду карток і не працюватимуть при перевірці на невикористане медіа, імпорті/експорті тощо. Ось приклади, які не працюватимуть:
 
     <img src="{{Expression}}.jpg">
 
@@ -337,19 +260,15 @@ importing/exporting, and so on. Examples that won’t work:
 
     [latex]{{Field 1}}[/latex]
 
-Instead, you should include the media references in the field. Please
-see the [importing section](../importing/text-files.md#importing-media) for more information.
+Натомість, ви повинні включити посилання на медіа безпосередньо в поле. Будь ласка, перегляньте [розділ імпорту](../importing/text-files.md#importing-media) для отримання додаткової інформації.
 
-## Checking Your Answer
+## Перевірка Вашої Відповіді
 
-You can watch [a video about this feature](http://www.youtube.com/watch?v=5tYObQ3ocrw&yt:cc=on) on
-YouTube.
+Ви можете переглянути [відео про цю функцію](http://www.youtube.com/watch?v=5tYObQ3ocrw&yt:cc=on) на YouTube.
 
-The easiest way to check your answer is to click "Basic" at the top
-left of the card adding screen, and select "Basic (type in the answer)".
+Найпростіший спосіб перевірити вашу відповідь — це натиснути "Basic" у верхньому лівому куті екрану додавання карток і вибрати "Basic (type in the answer)".
 
-If you have downloaded a shared deck and would like to type in the answer
-with it, you can modify its card template. If it has a template like:
+Якщо ви завантажили спільну колоду і хочете ввести відповідь, ви можете змінити її шаблон картки. Якщо у вас є шаблон на зразок:
 
     {{Native Word}}
 
@@ -359,66 +278,43 @@ with it, you can modify its card template. If it has a template like:
 
     {{Foreign Word}}
 
-To type in the foreign word and check if you are correct, you need to
-edit your front template so that it looks like this:
+Щоб ввести іноземне слово і перевірити, чи правильно ви відповіли, вам потрібно відредагувати ваш фронтальний шаблон так, щоб він виглядав ось так:
 
     {{Native Word}}
     {{type:Foreign Word}}
 
-Note that we have added `type:` in front of the field we want to
-compare. Since FrontSide is on the back of the card, the type answer box
-will appear on the back as well.
+Зверніть увагу, що ми додали `type:` перед полем, яке ми хочемо порівняти. Оскільки FrontSide знаходиться на зворотному боці картки, поле для введення відповіді також з’явиться на зворотному боці.
 
-When reviewing, Anki will display a text box where you can type in the
-answer, and upon hitting <kbd>Enter</kbd> or showing the answer, Anki will show you
-which parts you got right and which parts you got wrong. The text box’s
-font size will be the size you configured for that field (via the
-“Fields” button when editing).
+Під час перегляду Anki відобразить текстове поле, в яке ви можете ввести відповідь, а натискання <kbd>Enter</kbd> або показ відповіді дозволить вам побачити, які частини ви виконали правильно, а які — ні. Розмір шрифту текстового поля буде таким, як ви налаштували для цього поля (через кнопку "Поля" при редагуванні).
 
-This feature does not change how the cards are answered, so it’s still
-up to you to decide how well you remembered or not.
+Ця функція не змінює спосіб відповіді на картки, тому все ще залежить від вас, наскільки добре ви пам'ятаєте чи не пам'ятаєте.
 
-Only one typing comparison can be used on a card. If you add the above
-text multiple times, it will not work. It also only supports a single
-line, so it is not useful for comparing against a field that is
-comprised of multiple lines.
+Можна використовувати тільки одне порівняння для введення на картці. Якщо ви додасте вищезазначений текст кілька разів, це не буде працювати. Воно також підтримує тільки один рядок, тому не підходить для порівняння з полем, яке складається з кількох рядків.
 
-Anki uses a monospaced font for the answer comparison so that the
-“provided” and “correct” sections line up. If you wish to override the
-font for the answer comparison, you can put the following at the bottom
-of your styling section:
+Anki використовує моноширинний шрифт для порівняння відповіді, щоб "надані" та "правильні" частини вирівнювалися. Якщо ви хочете перевизначити шрифт для порівняння відповіді, ви можете додати наступне внизу вашого стилізаційного розділу:
 
     code#typeans { font-family: "myfontname"; }
 
-Which will affect the following HTML for the answer comparison:
+Це вплине на наступний HTML для порівняння відповіді:
 
     <code id=typeans>...</code>
 
-Advanced users can override the default type-answer colors with the css
-classes 'typeGood', 'typeBad' and 'typeMissed'. AnkiMobile supports
-'typeGood' and 'typeBad', but not 'typeMissed'.
+Просунуті користувачі можуть перевизначити стандартні кольори для поля введення відповіді за допомогою класів css 'typeGood', 'typeBad' та 'typeMissed'. AnkiMobile підтримує 'typeGood' та 'typeBad', але не 'typeMissed'.
 
-If you wish to override the size of the typing box and don’t want to
-change the font in the Fields dialog, you can override the default
-inline style using `!important`, like so:
+Якщо ви хочете перевизначити розмір текстового поля для введення та не хочете змінювати шрифт у діалозі Поля, ви можете перевизначити стандартний інлайн-стиль, використовуючи `!important`, ось так:
 
     #typeans { font-size: 50px !important; }
 
-It is also possible to type in the answer for cloze deletion cards. To
-do this, add `{{type:cloze:Text}}` to both the front and back
-template, so the back looks something like this:
+Також можливо вводити відповідь для карток з видаленням приховувань. Для цього додайте `{{type:cloze:Text}}` як на фронтальному, так і на задньому шаблоні, щоб задній виглядав ось так:
 
     {{cloze:Text}}
     {{type:cloze:Text}}
     {{Extra}}
 
-Note that since the cloze type does not use FrontSide, this must be
-added to both sides on a cloze note type.
+Зверніть увагу, що оскільки тип приховування не використовує FrontSide, це потрібно додати з обох боків на тип приховувані-картки.
 
-If there are multiple sections elided, you can separate the answers in
-the text box with a comma.
+Якщо є кілька елідованих секцій, ви можете розділити відповіді в текстовому полі комою.
 
-Type answer boxes will not appear in the ["preview" dialog](intro.md) in the browser. When you review or look at
-the preview in the card types window, they will display.
+Поля для введення відповіді не відображаються в ["прев'ю" діалозі](intro.md) у браузері. Коли ви переглядаєте або дивитеся прев'ю у вікні типів карток, вони відобразяться.
 
-Type answer boxes will not be displayed when you review your cards on [ankiweb.net](../syncing.md).
+Поля для введення відповіді не будуть відображатися, коли ви переглядаєте картки на [ankiweb.net](../syncing.md).
