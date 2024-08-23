@@ -33,7 +33,7 @@
   - [Генерація карток](templates/generation.md)
   - [Стилізація та HTML](templates/styling.md)
   - [Перевірки та помилки](templates/errors.md)
-- [Параметри](preferences.md)
+- [Налаштування](preferences.md)
 - [Параметри колоди](deck-options.md)
 - [Синхронізація з Ankiweb](syncing.md)
 - [Профілі](profiles.md)

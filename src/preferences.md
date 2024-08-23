@@ -1,166 +1,126 @@
-# Preferences
+# Налаштування
 
 <!-- toc -->
 
-The preferences are available from the Tools menu on Windows/Linux, or
-the Anki menu on a Mac.
+Налаштування доступні з меню Інструменти на Windows/Linux або з меню Anki на Mac.
 
-## Appearance
+## Зовнішній вигляд
 
-### General
+### Загальні
 
-**Language**\
-Change your display language. You can help to improve translations [here](https://translating.ankiweb.net/)
+**Мова**\
+Змініть мову інтерфейсу. Ви можете допомогти покращити переклади [тут](https://translating.ankiweb.net/).
 
-### User Interface
+**Відеодрайвер**\
+Бібліотеки Anki потребують відеодрайвер для відображення контенту на екрані. Через різноманітні апаратні та програмні конфігурації найкращий драйвер для вашої машини може відрізнятися. ANGLE і OpenGL працюватимуть краще за програмне рішення, але вони можуть не функціонувати належним чином на деяких системах. На Mac зазвичай варто використовувати варіант OpenGL.
 
-**Theme**\
-Dark (night) mode will make Anki's interface dark, and will cause cards to be shown as white text on a
-black background. Some card templates may need to be modified to work
-properly with this option enabled - please see [night mode styling](templates/styling.md#night-mode) for more information.
+Примітка: Якщо ви використовуєте версію 2.1.50+ (Qt6), будь ласка, ознайомтеся з [цією сторінкою](./platform/windows/display-issues.md#qt6).
 
-From 2.1.50+ there is an option to switch to day or night mode automatically.
+### Інтерфейс користувача
 
-**User interface size**\
-If you find that the interface elements are too small for you, you can
-try to increase this setting.
+**Тема**\
+Темний (нічний) режим зробить інтерфейс Anki темним, а картки будуть відображатися з білим текстом на чорному фоні. Деякі шаблони карток можуть потребувати коригування для правильного відображення з увімкненою цією опцією – докладніше дивіться у розділі [стилізація для нічного режиму](templates/styling.md#нічний-режим).
 
-**Reset Windows Sizes**\
-This will reset all windows sizes and locations to the default settings.
+Починаючи з версії 2.1.50+, є опція автоматичного перемикання між денним і нічним режимами.
 
-**Video driver**\
-Anki's libraries need a video driver to draw content on the screen.
-Due to different hardware and software configurations, the driver that
-works best on your machine may vary. ANGLE and OpenGL will perform better
-than the software option, but they may not function correctly on some
-systems. On Macs, you will almost always want to use the OpenGL option.
+**Розмір інтерфейсу**\
+Якщо елементи інтерфейсу здаються вам надто маленькими, ви можете спробувати збільшити цей параметр.
 
-Note: If you're using 2.1.50+ (Qt6), please, check [this page](./platform/windows/display-issues.md#qt6).
+**Відновити розмір вікон**\
+Це скине всі розміри та розташування вікон до стандартних налаштувань.
 
-### Distractions
+### Відволікання
 
-These options allow you to remove some unnecessary elements from the screen during reviews. You can:
+Ці опції дозволяють прибрати деякі зайві елементи з екрану під час перегляду карток. Ви можете:
 
-- Hide the top and bottom bar during reviews.
-- Enable the "minimalist" mode, making the interface more compact/less fancy.
-- Reduce motion, to disable some transitions/animations.
-- Switching between native styling and the Anki theme (only on Mac/Linux).
+- Приховати верхню та нижню панель під час перегляду карток.
+- Увімкнути "мінімалістичний" режим, що робить інтерфейс більш компактним і менш декоративним.
+- Зменшити рухи, щоб вимкнути деякі переходи/анімації.
+- Перемикатися між нативним стилем та темою Anki (тільки на Mac/Linux).
 
-## Review
+## Повторювання переглядів
 
-### Scheduler
+### Планувальник
 
-**Next day starts at**\
-Controls when Anki should start showing the next day’s cards. The default
-setting of 4AM ensures that if you’re studying around midnight, you won’t have
-two days' worth of cards shown to you in one session. If you stay up very late
-or wake up very early, you may want to adjust this to a time you’re usually
-sleeping. Note that the start of the next day is relative to your current timezone.
-Also note that any cards that cross a day boundary [will appear at the start of
-the day they are scheduled for](./deck-options.md#day-boundaries), just like review cards do.
+**Початок доби о**\
+Контролює, коли Anki повинна почати показувати картки наступного дня. Значення за замовчуванням, 4 години ранку, забезпечує те, що якщо ви навчаєтеся близько опівночі, вам не покажуть картки за два дні в одній сесії. Якщо ви закінчуєте дуже пізно або прокидаєтеся дуже рано, можливо, вам слід відрегулювати цей час на час, коли ви зазвичай спите. Зверніть увагу, що початок доби відносний до вашого поточного часового поясу. Також зауважте, що будь-які картки, які перетинають межу дня, [з’являться на початку дня, для якого вони заплановані](./deck-options.md#day-boundaries), так само, як і картки для перегляду.
 
-**Learn ahead limit**\
-Tells Anki how to behave when there is nothing left to study in the current deck
-but cards in learning. The default setting of 20 minutes tells Anki that cards
-should be shown early if they have a delay of less than 20 minutes and there’s
-nothing else to do. If you set this to 0, Anki will always wait the full delay,
-showing the congratulations screen until the remaining cards are ready to be
-reviewed.
+**Обмежити навчання наперед**\
+Вказує Anki, як поводитися, коли в поточній колоді не залишилося нічого для навчання, окрім карток в режимі навчання. Значення за замовчуванням, 20 хвилин, говорить Anki, що картки повинні бути показані раніше, якщо у них є затримка менше ніж 20 хвилин і нічого іншого не потрібно робити. Якщо ви встановите це значення на 0, Anki завжди чекатиме повний час затримки, показуючи екран привітань, поки картки, що залишилися, не будуть готові до перегляду.
 
-**Timebox time limit**\
-Timeboxing is a technique to help you focus by dividing a longer activity (such
-as a 30 minute study session) into smaller blocks. If you set the timebox time
-limit to a non-zero number of minutes, Anki will periodically show you how many
-cards you’ve managed to study during the prescribed time limit.
+**Період лічильника переглядів**\
+Таймбоксинг — це техніка, що допомагає зосередитися, розподіляючи довгу діяльність (як-от 30-хвилинна сесія навчання) на менші блоки. Якщо ви встановите ліміт часу на ненульове число хвилин, Anki періодично показуватиме вам, скільки карток ви встигли вивчити протягом вказаного часу.
 
-### Review
+### Повторювання
 
-**Show play buttons on cards with audio**\
-Whether a clickable (re)play button will be shown in the review screen
-for cards with audio.
+**Показати кнопку "Програти" на картках зі звуком**\
+Чи повинна на екрані перегляду з'являтися кнопка (перезапуску) відтворення для карток з аудіо.
 
-**Interrupt current audio when answering**\
-Whether a currently playing audio file should be stopped when answering
-a card.
+**Зупиняти відтворення звуку після відповіді**\
+Чи повинно зупинятися аудіо, яке в даний момент відтворюється, коли ви відповіли.
 
-**Show remaining card count**\
-Disable this option to hide the card count at the bottom of the screen.
+**Показувати лічильник залишку**\
+Вимкніть цю опцію, щоб приховати кількість карток внизу екрана.
 
-**Show next review time above answer buttons**\
-Useful to know how far in the future your cards are being pushed.
+**Показувати час наступного повторення над кнопками відповіді**\
+Корисно щоб знати, як далеко в майбутньому повториватимуться картки.
 
-**Spacebar (or enter) also answers card**\
-Defines whether a press on the space bar (or the enter key) also answers cards.
+**Пробіл (або Enter) також відповідає на картку**\
+Визначає, чи натискання пробілу (або клавіші Enter) також відповідає на картки.
 
-## Editing
+## Редагування
 
-### Editing
+### Редагування
 
-**Paste clipboard images as PNG**\
-By default Anki pastes images on the clipboard as JPG files, to save disk space.
-You can use the option to paste as PNG images instead. PNG images support
-transparent backgrounds and are lossless, but they usually result in much larger
-file sizes.
+**Вставляти зображення з буфера обміну у форматі PNG**\
+За замовчуванням Anki вставляє зображення з буфера обміну у форматі JPG, щоб зекономити місце на диску. Ви можете використовувати цю опцію для вставки зображень у форматі PNG. Зображення PNG підтримують прозорі фони та можуть мати кращу якість, але зазвичай мають значно більший розмір файлів.
 
-**Paste without Shift strips formatting**\
-By default, formatting like bold and colors are kept when pasting,
-unless the <kbd>Shift</kbd> key is held down. This option reverses the behaviour.
+**Вставляти без клавіші Shift, без форматування**\
+За замовчуванням при вставленні зберігається форматування, таке як жирний текст і кольори, якщо натискати клавішу <kbd>Shift</kbd>. Ця опція змінює поведінку на протилежну.
 
-**Default deck**\
-Controls how note types and decks interact. The default of "When adding, default
-to current deck" means that Anki saves the last-used note type for each deck and
-selects it again then next time you choose the deck (and, in addition, will
-start with the current deck selected when choosing Add from anywhere). The other
-option, "Change deck depending on note type," saves the last-used deck for each
-note type (and opens the add window to the last-used note type when you choose
-Add). This may be more convenient if you always use a single note type for each
-deck.
+**Типова колода за замовчуванням**\
+Контролює, як типи нотаток і колоди взаємодіють. Значення за замовчуванням "Додавання у поточну колоду за замовчуванням" означає, що Anki зберігає останній використаний тип нотатки для кожної колоди і вибирає його наступного разу, коли ви обираєте колоду (і, додатково, почне з поточної колоди, коли ви вибираєте Додати з будь-якого місця). Інша опція, "Змінити колоду в залежності від типу нотатки", зберігає останню використану колоду для кожного типу нотатки (і відкриває вікно додавання до останнього використаного типу нотатки, коли ви вибираєте Додати). Це може бути зручніше, якщо ви завжди використовуєте один тип нотатки для кожної колоди.
 
-The last used deck/notetype is updated when you add a card. If you change the deck
-and close the add window without adding a card, it won't be saved.
+Остання використана колода/тип нотатки оновлюються, коли ви додаєте картку. Якщо ви зміните колоду і закриєте вікно додавання без додавання картки, зміни не будуть збережені.
 
-### Browsing
+### Навігація
 
-**Default search text**\
-Allows you to customize the starting search text in the browser (eg, to start
-with "deck:current").
+**Типовий текст пошуку**\
+Дозволяє налаштувати текст для початкового пошуку в браузері (наприклад, почати з "deck:current").
 
-**Ignore accents in search (slower)**\
-When enabled, simple text searches automatically [ignore accents](./searching.md#ignoring-accentscombining-characters).
+**Ігнорувати акценти при пошуку (повільніше)**\
+Коли увімкнено, прості текстові пошуки автоматично [ігнорують акценти](./searching.md#ignoring-accentscombining-characters).
 
-### Import/Export
+### Імпорт/Експорт
 
-**Legacy import/export handling**\
-If enabled, legacy (pre 2.1.55) import / export code will be used. It is recommended to deactivate this option.
+**Обробка імпорту/експорту у старому форматі**\
+Якщо увімкнено, буде використовуватися старий код імпорту/експорту (до версії 2.1.55). Рекомендується деактивувати цю опцію.
 
-## Syncing
+## Синхронізація
 
-This tab contains options related to syncing with AnkiWeb.
+Ця вкладка містить опції, пов'язані з синхронізацією з AnkiWeb.
 
-### Synchronisation
+### Синхронізація
 
-**Synchronize audio and images too**\
-When enabled, media will also be synced with AnkiWeb.
+**Синхронізувати також медіа файли**\
+При ввімкненні аудіо та відео також будуть синхронізовані з AnkiWeb.
 
-**Automatically sync on profile open/close**\
-Disable this if you don't want an automatic sync with AnkiWeb when opening / closing a [profile](./profiles.md).
+**Автоматична синхронізація при відкритті/закритті профілю**\
+Вимкніть цю опцію, якщо не хочете автоматичної синхронізації з AnkiWeb при відкритті/закритті [профілю](./profiles.md).
 
-**Periodically sync media**
+**Періодично синхронізувати медіа**
 
-**On next sync, force changes on one direction**\
-When this option is enabled, the next sync will
-ask you whether you wish to upload or download. This is useful if
-you have made some changes accidentally, and wish to overwrite them
-with an older version that is on AnkiWeb.
+**Примусова одностороння синхронізація при наступному запуску**\
+Коли ця опція увімкнена, наступна синхронізація запитає вас, чи хочете ви додати чи взяти зміни. Це корисно, якщо ви випадково внесли деякі зміни і хочете перезаписати їх старішою версією, що зберігається на AnkiWeb.
 
-### AnkiWeb Account
+### Обліковий запис AnkiWeb
 
-When logged in, clicking on Log Out will log you out.
+При увімкненні, натискання на "Вийти" виведе вас з облікового запису.
 
-### Self-hosted Sync Server
+### Самостійний сервер синхронізації
 
-For info on the custom sync server option, see [this section](./sync-server.md).
+Для інформації про опцію власного сервера синхронізації, дивіться [цю секцію](./sync-server.md).
 
-## Backups
+## Резервні копії
 
-Please see [this](backups.md#automatic-backups) section of the manual.
+Будь ласка, дивіться [цю](backups.md#automatic-backups) секцію посібника.
