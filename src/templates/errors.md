@@ -1,72 +1,48 @@
-# Checks and Errors
+# Перевірки та Помилки
 
 <!-- toc -->
 
-When you save changes to a notetype or export a deck, Anki 2.1.45+ checks
-for some common errors. These errors will cause issues later on when anyone studies
-the affected cards, so Anki won't let you proceed before you have fixed them.
+Коли ви зберігаєте зміни до типу нотатки або експортуєте колоду, Anki 2.1.45+ перевіряє наявність деяких поширених помилок. Ці помилки можуть викликати проблеми під час вивчення карток у майбутньому, тому Anki не дозволить вам продовжити, поки ви їх не виправите.
 
-## Basics
+## Основи
 
-Please see [Key Concepts](../getting-started.md#key-concepts) before reading further.
+Будь ласка, ознайомтеся з [Основними поняттями](../getting-started.md#key-concepts) перед тим, як продовжити читати.
 
-Most of the errors below will require you to modify your notetype/card template. To do so:
+Більшість помилок, описаних нижче, вимагатимуть зміни типу нотатки або шаблону картки. Щоб зробити це:
 
-- Open the Browse screen, and look at the items on the left.
-- Locate the notetype mentioned in error message. You can use the search bar at the top left
-  if necessary.
-- Click on the notetype, to show its cards/notes on the right.
-- Click the Cards... button at the top of the editing area to open the [templates screen](./intro.md#the-templates-screen).
+- Відкрийте екран Огляду (Browse) і зверніть увагу на елементи зліва.
+- Знайдіть тип нотатки, згаданий у повідомленні про помилку. Якщо потрібно, можете скористатися рядком пошуку у верхньому лівому куті.
+- Натисніть на тип нотатки, щоб показати її картки/нотатки праворуч.
+- Натисніть кнопку "Карточки..." у верхній частині області редагування, щоб відкрити [екран шаблонів](./intro.md#the-templates-screen).
 
-## Specific Issues
+## Конкретні проблеми
 
-### Template Syntax Error
+### Помилка синтаксису шаблону
 
-This kind of error indicates an incorrect usage of the [field replacement](./fields.md)
-syntax. Visit the [templates screen](./intro.md#the-templates-screen) for the
-reported note and card type, and look at the preview area for more information.
-Some [more information](https://faqs.ankiweb.net/card-template-has-a-problem.html) about
-template problems is available.
+Цей тип помилки вказує на неправильне використання синтаксису [заміни полів](./fields.md). Відвідайте [екран шаблонів](./intro.md#the-templates-screen) для зазначеного типу нотатки та картки, і перегляньте область попереднього перегляду для отримання додаткової інформації. Додаткову [інформацію про проблеми з шаблонами](https://faqs.ankiweb.net/card-template-has-a-problem.html) можна знайти за посиланням.
 
-### Identical Front Sides
+### Ідентичні лицьові сторони
 
-You have Anki configured to create two identical questions for each input. This can
-happen if you add a new card type without making any adjustments to it. Identical
-cards double your workload, and make Anki's scheduling less effective.
+Anki налаштовано на створення двох однакових питань для кожного введення. Це може статися, якщо ви додали новий тип картки без внесення змін до нього. Ідентичні картки подвоюють навантаження і роблять планування в Anki менш ефективним.
 
-To fix this, open the [templates screen](./intro.md#the-templates-screen), and
-select one of the duplicates at the top. Then use the button on the top right to
-remove the selected card type. This will delete all the duplicate cards/notes that
-were using the card type as well.
+Щоб виправити це, відкрийте [екран шаблонів](./intro.md#the-templates-screen) і виберіть один з дублікатів у верхній частині. Потім скористайтеся кнопкою у верхньому правому куті для видалення вибраного типу картки. Це також видалить усі дублікати карток/нотаток, які використовували цей тип картки.
 
-### No Field Replacement on Front Side
+### Відсутня заміна полів на лицьовій стороні
 
-If you don't use a [field replacement](./fields.md) in the front template of a
-card type, every card created from it will look the same on the question side,
-regardless of its note. It would then be impossible to answer the card, as you
-wouldn't know what answer is expected.
+Якщо ви не використовуєте [заміни полів](./fields.md) у шаблоні лицьової сторони типу картки, кожна картка, створена з нього, виглядатиме однаково на стороні питання, незалежно від її нотатки. У такому випадку буде неможливо відповісти на картку, оскільки ви не знатимете, яка відповідь очікується.
 
-To resolve the issue, open the [templates screen](./intro.md#the-templates-screen),
-and click the Add Field button to add one or more fields to the front.
+Щоб вирішити проблему, відкрийте [екран шаблонів](./intro.md#the-templates-screen) і натисніть кнопку "Додати поле", щоб додати одне або кілька полів на лицьову сторону.
 
-### Cloze Filter Outside Cloze Notetype
+### Cloze фільтр поза типом нотатки Cloze(приховування)
 
-The [cloze](../editing.md#cloze-deletion) filter (as in `{{cloze:Some Field}}`)
-may only be used on the cloze notetype, and on those created by cloning it.
+Фільтр [cloze](../editing.md#cloze-deletion) (наприклад, `{{cloze:Some Field}}`) може використовуватися тільки для типу нотатки Cloze або тих, що створені шляхом його клонування.
 
-If you get this error, you can remove the cloze filter from the template.
+Якщо отримали цю помилку, ви можете видалити фільтр cloze із шаблону.
 
-If you have notes with cloze deletions that are using that notetype, you can select
-them in the Browse screen, and use the Change Notetype action to assign them to
-a standard Cloze notetype instead.
+Якщо є нотатки з видаленням cloze, що використовують цей тип нотатки, можете вибрати їх на екрані перегляду (Browse) і скористатися дією "Змінити тип нотатки" (Change Notetype), щоб призначити їх стандартному типу нотатки Cloze.
 
-Older Anki versions did not complain when you attempted to use cloze deletions on
-a normal notetype, but this was never a use case that was intended to be supported.
-If you want to combine cloze deletions with regular cards, you may find an add-on
-like the Closet add-on provides some alternatives.
+Раніші версії Anki не повідомляли про помилку при спробі використовувати видалення cloze на звичайному типі нотатки, але це ніколи не було передбачено як підтримуваний сценарій. Якщо ви хочете поєднати видалення cloze зі звичайними картками, можливо, знадобиться доповнення, як-от Closet, яке надає деякі альтернативи.
 
-### No Cloze Filter on Cloze Notetype
+### Відсутній фільтр Cloze у типі нотатки Cloze (приховування)
 
-A Cloze notetype's front and back templates should have a [cloze](../editing.md#cloze-deletion)
-filter. If one is missing, you will need to add it back so that Anki can create cloze cards
-correctly.
+Шаблони передньої та задньої сторін типу нотатки Cloze повинні містити фільтр [cloze](../editing.md#cloze-deletion). Якщо фільтр відсутній, вам потрібно додати його, щоб Anki могла правильно створювати картки cloze.
