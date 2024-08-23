@@ -2026,58 +2026,34 @@ Anki іноді не зможе правильно відобразити сим
 Javascript.</p>
 <p>Кожен клієнт Anki може реалізувати відображення карток по-різному, тому вам потрібно буде перевірити поведінку на різних платформах. Кілька клієнтів реалізовано шляхом збереження тривалої веб-сторінки та динамічного оновлення її частин у міру перегляду карток, тому вашому Javascript потрібно буде оновлювати розділи документа за допомогою таких речей, як document.getElementById(), а не document.write().</p>
 <p>Такі функції, як window.alert, можуть бути недоступні. Anki записуватиме помилки javascript у термінал, тому вам потрібно буде <a href="https://addon-docs.ankiweb.net/console-output.html#console-output">переглянути консоль</a>, щоб побачити їх. Щоб усунути проблеми з JavaScript, ви можете скористатися Chrome <a href="https://addon-docs.ankiweb.net/debugging.html#webviews">інспектором</a>.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="checks-and-errors"><a class="header" href="#checks-and-errors">Checks and Errors</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Перевірки-та-Помилки"><a class="header" href="#Перевірки-та-Помилки">Перевірки та Помилки</a></h1>
 <!-- toc -->
-<p>When you save changes to a notetype or export a deck, Anki 2.1.45+ checks
-for some common errors. These errors will cause issues later on when anyone studies
-the affected cards, so Anki won't let you proceed before you have fixed them.</p>
-<h2 id="basics"><a class="header" href="#basics">Basics</a></h2>
-<p>Please see <a href="templates/../getting-started.html#key-concepts">Key Concepts</a> before reading further.</p>
-<p>Most of the errors below will require you to modify your notetype/card template. To do so:</p>
+<p>Коли ви зберігаєте зміни до типу нотатки або експортуєте колоду, Anki 2.1.45+ перевіряє наявність деяких поширених помилок. Ці помилки можуть викликати проблеми під час вивчення карток у майбутньому, тому Anki не дозволить вам продовжити, поки ви їх не виправите.</p>
+<h2 id="Основи"><a class="header" href="#Основи">Основи</a></h2>
+<p>Будь ласка, ознайомтеся з <a href="templates/../getting-started.html#key-concepts">Основними поняттями</a> перед тим, як продовжити читати.</p>
+<p>Більшість помилок, описаних нижче, вимагатимуть зміни типу нотатки або шаблону картки. Щоб зробити це:</p>
 <ul>
-<li>Open the Browse screen, and look at the items on the left.</li>
-<li>Locate the notetype mentioned in error message. You can use the search bar at the top left
-if necessary.</li>
-<li>Click on the notetype, to show its cards/notes on the right.</li>
-<li>Click the Cards... button at the top of the editing area to open the <a href="templates/./intro.html#the-templates-screen">templates screen</a>.</li>
+<li>Відкрийте екран Огляду (Browse) і зверніть увагу на елементи зліва.</li>
+<li>Знайдіть тип нотатки, згаданий у повідомленні про помилку. Якщо потрібно, можете скористатися рядком пошуку у верхньому лівому куті.</li>
+<li>Натисніть на тип нотатки, щоб показати її картки/нотатки праворуч.</li>
+<li>Натисніть кнопку "Карточки..." у верхній частині області редагування, щоб відкрити <a href="templates/./intro.html#the-templates-screen">екран шаблонів</a>.</li>
 </ul>
-<h2 id="specific-issues"><a class="header" href="#specific-issues">Specific Issues</a></h2>
-<h3 id="template-syntax-error"><a class="header" href="#template-syntax-error">Template Syntax Error</a></h3>
-<p>This kind of error indicates an incorrect usage of the <a href="templates/./fields.html">field replacement</a>
-syntax. Visit the <a href="templates/./intro.html#the-templates-screen">templates screen</a> for the
-reported note and card type, and look at the preview area for more information.
-Some <a href="https://faqs.ankiweb.net/card-template-has-a-problem.html">more information</a> about
-template problems is available.</p>
-<h3 id="identical-front-sides"><a class="header" href="#identical-front-sides">Identical Front Sides</a></h3>
-<p>You have Anki configured to create two identical questions for each input. This can
-happen if you add a new card type without making any adjustments to it. Identical
-cards double your workload, and make Anki's scheduling less effective.</p>
-<p>To fix this, open the <a href="templates/./intro.html#the-templates-screen">templates screen</a>, and
-select one of the duplicates at the top. Then use the button on the top right to
-remove the selected card type. This will delete all the duplicate cards/notes that
-were using the card type as well.</p>
-<h3 id="no-field-replacement-on-front-side"><a class="header" href="#no-field-replacement-on-front-side">No Field Replacement on Front Side</a></h3>
-<p>If you don't use a <a href="templates/./fields.html">field replacement</a> in the front template of a
-card type, every card created from it will look the same on the question side,
-regardless of its note. It would then be impossible to answer the card, as you
-wouldn't know what answer is expected.</p>
-<p>To resolve the issue, open the <a href="templates/./intro.html#the-templates-screen">templates screen</a>,
-and click the Add Field button to add one or more fields to the front.</p>
-<h3 id="cloze-filter-outside-cloze-notetype"><a class="header" href="#cloze-filter-outside-cloze-notetype">Cloze Filter Outside Cloze Notetype</a></h3>
-<p>The <a href="templates/../editing.html#cloze-deletion">cloze</a> filter (as in <code>{{cloze:Some Field}}</code>)
-may only be used on the cloze notetype, and on those created by cloning it.</p>
-<p>If you get this error, you can remove the cloze filter from the template.</p>
-<p>If you have notes with cloze deletions that are using that notetype, you can select
-them in the Browse screen, and use the Change Notetype action to assign them to
-a standard Cloze notetype instead.</p>
-<p>Older Anki versions did not complain when you attempted to use cloze deletions on
-a normal notetype, but this was never a use case that was intended to be supported.
-If you want to combine cloze deletions with regular cards, you may find an add-on
-like the Closet add-on provides some alternatives.</p>
-<h3 id="no-cloze-filter-on-cloze-notetype"><a class="header" href="#no-cloze-filter-on-cloze-notetype">No Cloze Filter on Cloze Notetype</a></h3>
-<p>A Cloze notetype's front and back templates should have a <a href="templates/../editing.html#cloze-deletion">cloze</a>
-filter. If one is missing, you will need to add it back so that Anki can create cloze cards
-correctly.</p>
+<h2 id="Конкретні-проблеми"><a class="header" href="#Конкретні-проблеми">Конкретні проблеми</a></h2>
+<h3 id="Помилка-синтаксису-шаблону"><a class="header" href="#Помилка-синтаксису-шаблону">Помилка синтаксису шаблону</a></h3>
+<p>Цей тип помилки вказує на неправильне використання синтаксису <a href="templates/./fields.html">заміни полів</a>. Відвідайте <a href="templates/./intro.html#the-templates-screen">екран шаблонів</a> для зазначеного типу нотатки та картки, і перегляньте область попереднього перегляду для отримання додаткової інформації. Додаткову <a href="https://faqs.ankiweb.net/card-template-has-a-problem.html">інформацію про проблеми з шаблонами</a> можна знайти за посиланням.</p>
+<h3 id="Ідентичні-лицьові-сторони"><a class="header" href="#Ідентичні-лицьові-сторони">Ідентичні лицьові сторони</a></h3>
+<p>Anki налаштовано на створення двох однакових питань для кожного введення. Це може статися, якщо ви додали новий тип картки без внесення змін до нього. Ідентичні картки подвоюють навантаження і роблять планування в Anki менш ефективним.</p>
+<p>Щоб виправити це, відкрийте <a href="templates/./intro.html#the-templates-screen">екран шаблонів</a> і виберіть один з дублікатів у верхній частині. Потім скористайтеся кнопкою у верхньому правому куті для видалення вибраного типу картки. Це також видалить усі дублікати карток/нотаток, які використовували цей тип картки.</p>
+<h3 id="Відсутня-заміна-полів-на-лицьовій-стороні"><a class="header" href="#Відсутня-заміна-полів-на-лицьовій-стороні">Відсутня заміна полів на лицьовій стороні</a></h3>
+<p>Якщо ви не використовуєте <a href="templates/./fields.html">заміни полів</a> у шаблоні лицьової сторони типу картки, кожна картка, створена з нього, виглядатиме однаково на стороні питання, незалежно від її нотатки. У такому випадку буде неможливо відповісти на картку, оскільки ви не знатимете, яка відповідь очікується.</p>
+<p>Щоб вирішити проблему, відкрийте <a href="templates/./intro.html#the-templates-screen">екран шаблонів</a> і натисніть кнопку "Додати поле", щоб додати одне або кілька полів на лицьову сторону.</p>
+<h3 id="cloze-фільтр-поза-типом-нотатки-clozeприховування"><a class="header" href="#cloze-фільтр-поза-типом-нотатки-clozeприховування">Cloze фільтр поза типом нотатки Cloze(приховування)</a></h3>
+<p>Фільтр <a href="templates/../editing.html#cloze-deletion">cloze</a> (наприклад, <code>{{cloze:Some Field}}</code>) може використовуватися тільки для типу нотатки Cloze або тих, що створені шляхом його клонування.</p>
+<p>Якщо отримали цю помилку, ви можете видалити фільтр cloze із шаблону.</p>
+<p>Якщо є нотатки з видаленням cloze, що використовують цей тип нотатки, можете вибрати їх на екрані перегляду (Browse) і скористатися дією "Змінити тип нотатки" (Change Notetype), щоб призначити їх стандартному типу нотатки Cloze.</p>
+<p>Раніші версії Anki не повідомляли про помилку при спробі використовувати видалення cloze на звичайному типі нотатки, але це ніколи не було передбачено як підтримуваний сценарій. Якщо ви хочете поєднати видалення cloze зі звичайними картками, можливо, знадобиться доповнення, як-от Closet, яке надає деякі альтернативи.</p>
+<h3 id="Відсутній-фільтр-cloze-у-типі-нотатки-cloze-приховування"><a class="header" href="#Відсутній-фільтр-cloze-у-типі-нотатки-cloze-приховування">Відсутній фільтр Cloze у типі нотатки Cloze (приховування)</a></h3>
+<p>Шаблони передньої та задньої сторін типу нотатки Cloze повинні містити фільтр <a href="templates/../editing.html#cloze-deletion">cloze</a>. Якщо фільтр відсутній, вам потрібно додати його, щоб Anki могла правильно створювати картки cloze.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="preferences"><a class="header" href="#preferences">Preferences</a></h1>
 <!-- toc -->
 <p>The preferences are available from the Tools menu on Windows/Linux, or
