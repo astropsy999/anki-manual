@@ -1,372 +1,253 @@
-# Deck Options
+# Налаштування колоди
 
 <!-- toc -->
 
-Deck options primarily control the way Anki schedules cards. It is recommended
-that you spend a few weeks with the defaults to get a feel for how Anki works
-before you start adjusting options. Please make sure you understand the options
-before changing them, as mistakes could reduce Anki's effectiveness.
+Налаштування колоди в основному контролюють, як Anki планує картки. Рекомендується
+використовувати стандартні налаштування протягом кількох тижнів, щоб ознайомитися з роботою Anki, перш ніж почати змінювати параметри. Будь ласка, переконайтеся, що ви розумієте ці налаштування, перш ніж змінювати їх, оскільки помилки можуть знизити ефективність Anki.
 
-Deck options are accessed by:
+Доступ до налаштувань колоди можна отримати, виконавши такі дії:
 
-- Clicking the gear icon on the `Decks` screen.
-- Selecting a deck on the `Decks` screen, and then clicking `Options`
-  at the bottom of the screen.
-- Clicking on `More` > `Options` while in review mode.
-- Pressing `o` while in review mode.
+- Натиснувши на значок шестерні на екрані `Колоди`.
+- Вибравши колоду на екрані `Колоди`, а потім натиснувши `Параметри` внизу екрана.
+- Натиснувши на `Більше` > `Налаштування` під час режиму перегляду.
+- Натиснувши клавішу `о` під час режиму перегляду.
 
-This page describes the options shown in Anki 2.1.45+, when you have the v2 or
-v3 scheduler enabled. On older versions, some options will not be available, or
-will appear in a different section. Please keep in mind that the v1 scheduler
-is no longer supported in Anki 2.1.50+. If you have not yet updated to v2 or v3,
-you will be prompted to update when you attempt to review cards in 2.1.50+.
+Ця сторінка описує параметри, які показуються в Anki 2.1.45+ при включеному планувальнику v2 або v3. У старіших версіях деякі параметри можуть бути недоступні або знаходитись в іншому розділі. Будь ласка, зверніть увагу, що планувальник v1 більше не підтримується в Anki 2.1.50+. Якщо ви ще не оновилися до v2 або v3, вам буде запропоновано оновитися при спробі перегляду карток у версії 2.1.50+.
 
-For more info on deck options, please check:
+Для отримання додаткової інформації про налаштування колоди, будь ласка, зверніться до:
 
-- [Deck Options Explained](https://forums.ankiweb.net/t/deck-options-explained/213)
-- [Deck Options in a Mental Map](https://forums.ankiweb.net/t/deck-options-in-a-mental-map/15757)
-
-## Presets
-
-Anki allows you to share options between different decks, to make
-it easy to update options in many decks at once. To do this, options are
-grouped into _presets_. By default, all newly created decks use
-the same preset.
-
-If you’d like to alter the settings on one deck but not other decks, click the
-arrow icon in the top right of the Deck Options window. The options are:
-
-- **Save**: Saves all modifications you've made since opening the deck options screen.
-- **Add**: Add a new preset, with the default options.
-- **Clone**: Clone your current present, which is useful if you
-  just want to modify certain options, keeping the rest as they are.
-- **Rename** Changes the name of the current preset.
-- **Delete** Deletes the current preset. This will require that the next sync is
-  a one-way sync.
-- **Save to all subdecks**. Like _Save_, but also assigns the selected preset to all
-  subdecks of the currently selected deck.
-- **Optimize all presets**. When FSRS is enabled, this allows you to optimize the parameters of all presets at once.
-
-Deck Options are not retroactive. For example, if you change an option that
-controls the delay after failing a card, cards that you failed before 
-changing the option will have the old delay, not the new one.
-
-## Subdecks
-
-If your deck has subdecks, each deck can optionally be assigned a different preset.
-When Anki shows a card, it will check which subdeck the card is in, and use the options
-for that deck. There are some exceptions:
-
-- The new cards/day and reviews/day [limits](#daily-limits) behave differently
-  depending on the scheduler version you have selected.
-- The [display order](#display-order) options in the v3 scheduler are taken from the
-  deck you select to study, not the deck of the current card.
+- [Пояснення Налаштувань Колоди](https://forums.ankiweb.net/t/deck-options-explained/213)
+- [Налаштування Колоди на Ментальній Мапі](https://forums.ankiweb.net/t/deck-options-in-a-mental-map/15757)
 
-For example, let's say you have this collection:
-
-    - Deck A (Preset 1)
-      - Deck A::Subdeck B (Preset 2)
-        - Card B1
-        - Card B2
+## Пресети
 
-Presets 1 and 2 are identical, with two exceptions:
+Anki дозволяє ділитися налаштуваннями між різними колодами, що полегшує
+оновлення параметрів у багатьох колодах одночасно. Для цього налаштування
+групуються в _пресети_. Усталено усі новостворені колоди використовують
+один і той самий пресет.
 
-- Preset 1:
-- New Cards - Learning steps: 1m 10m
-- Display Order - New/review priority: Mix with reviews
-- Preset 2:
-- New Cards - Learning steps: 20m 2h
-- Display Order - New/review priority: Show after reviews
+Якщо ви хочете змінити налаштування лише однієї колоди, натисніть на
+значок стрілки у верхньому правому куті вікна налаштувань колоди. Доступні такі опції:
 
-If you choose to study Deck A:
+- **Зберегти**: Зберігає всі зміни, внесені з моменту відкриття екрану налаштувань колоди.
+- **Додати**: Додає новий пресет із типовими налаштуваннями.
+- **Клонувати**: Клонує поточний пресет, що корисно, якщо ви
+  хочете змінити певні параметри, зберігаючи решту без змін.
+- **Перейменувати**: Змінює назву поточного пресету.
+- **Видалити**: Видаляє поточний пресет. Це вимагатиме односторонності наступної синхронізації.
+- **Зберегти для всіх дочірніх колод**: Як _Зберегти_, але також призначає вибраний пресет для всіх
+  дочірніх колод обраної.
+- **Оптимізувати всі пресети**: Коли FSRS увімкнено, це дозволяє оптимізувати параметри всіх пресетів одночасно.
 
-- Learning steps for all new cards will be 1m 10m (preset 1 applies)
-- All new cards will be mixed with reviews (preset 1 applies)
+Налаштування колоди не мають зворотної дії. Наприклад, якщо ви зміните параметр, що контролює затримку після помилки у картці, картки, на яких ви помилилися до зміни параметра, залишатимуться з попередньою затримкою, а не новою.
 
-If you choose to study Subdeck B:
+## Дочірні колоди
 
-- Learning steps for all new cards will be 20m 2h (preset 2 applies)
-- All new cards will be shown after reviews (preset 2 applies)
-
-## Daily Limits
-
-### New Cards/Day
-
-Controls how many new cards are introduced each day you open the program. If you
-study fewer than the limit, or miss a day, the next day the counts will be back
-to your limit - they do not accumulate.
-
-When decks are nested (e.g Parent, Parent::Child, Parent::Child::Grandchild),
-the way the limits are applied depends on the scheduler version.
+Якщо у вашій колоді є дочірні, кожній з них можна призначити окремий пресет. Коли Anki показує картку, вона перевіряє, в якій дочірній колоді знаходиться картка, і використовує налаштування для цієї колоди. Однак є деякі винятки:
 
-- v1 applies parent limits to children, regardless of which deck you click on
-- v2 behaves similarly to v1 for new cards. For reviews, only the limits of
-  the deck you click on are honored.
-- v3 honors the limits of the deck you click on, and any decks inside it.
-  Limits from parents above the deck you clicked on are ignored.
-
-For more information, please see the [v3 scheduler](https://faqs.ankiweb.net/the-2021-scheduler.html#daily-limits) page.
-
-Studying new cards will temporarily increase the number of reviews you need to
-do a day, as freshly learnt material needs to be repeated a number of times
-before the delay between repetitions can increase appreciably. If you are
-consistently learning 20 new cards a day, you can expect your daily reviews to
-be roughly about 200 cards/day. You can decrease the reviews required by
-introducing fewer new cards each day, or by turning off new card display until
-your review burden decreases. More than one Anki user has excitedly studied
-hundreds of new cards over their first few days of using the program, and then
-become overwhelmed by the reviews required.
-
-### Maximum Reviews/Day
+- Ліміти нових карток/день і повторень/день [поводяться](#daily-limits) по-різному залежно від обраної версії планувальника.
+- Опції [порядку відображення](#display-order) у планувальнику v3 беруться з колоди, вибраної для вивчення, а не з колоди поточної картки.
 
-Allows you to set an upper limit on the number of reviews to show each day.
-When this limit is reached, Anki will not show any more review cards for the
-day, even if there are some waiting. If you study consistently, this setting can
-help to smooth out occasional peaks in due card counts, and can save you from a
-heart attack when returning to Anki after a week off. When reviews have been
-hidden due to this option, a message will appear in the congratulations screen,
-suggesting you consider increasing the limit if you have time.
+Наприклад, припустимо, що у вас є така структура:
 
-In [the v3 scheduler](https://faqs.ankiweb.net/the-2021-scheduler.html#daily-limits) and
-v1 schedulers, the counts are affected by parents/selected decks in the same way
-as new cards.
+    - Колода A (Пресет 1)
+      - Колода A::Дочірня колода B (Пресет 2)
+        - Картка B1
+        - Картка B2
 
-In the v2 scheduler, the limit is taken solely from the deck you select - any
-limits on its parents or child decks are ignored.
-
-The v3 scheduler includes learning cards with a 1+ day delay in the review count,
-so those learning cards will be subject to the daily limit.
-
-### New Cards Ignore Review Limit
-
-If using [the v3 scheduler](https://faqs.ankiweb.net/the-2021-scheduler.html#daily-limits),
-please keep in mind that the new count is capped by the review count by default. If your
-review limit is set to 200, and you have 190 reviews waiting, a maximum of 10
-new cards will be introduced. If your review limit has been reached, no new
-cards will be shown. If you have a backlog of reviews and still want to
-introduce new cards, you can do so by suspending the reviews, or increasing your
-review limit. That said, it is recommended you hold off on new cards until you
-catch up instead, as introducing more new cards when you're behind will only
-make the backlog worse.
-
-From Anki 2.1.61 this feature is optional, and can be deactivated globally from the
-deck options screen.
-
-### Per-Deck Daily Limits
-
-From version 2.1.55 it is possible to use the same preset for different decks / subdecks, with customized
-limits for each one of them. This eliminates the need to create cloned presets just for that
-purpose, and makes it easier to set custom limits on sub-decks when you have many nested decks.
-
-The options are:
-
-- Preset: The limit is shared with all decks using this preset.
-- This deck: The limit is specific to this deck.
-- Today only: Make a temporary change to this deck's limit.
-
-## New Cards
-
-The settings in this section only affect new cards and cards in initial
-[learning](studying.md#learningrelearning-cards) mode. Once a card
-has graduated (i.e. there are no more learning steps for this card), it becomes a
-[review card](studying.md#review-cards), and the
-settings in this section are no longer applicable.
-
-### Learning Steps
-
-Controls the number of learning repetitions, and the delay
-between them. One or more delays, separated by spaces must be entered.
-Each time you press `Good` during review, the card moves to the next step.
+Пресети 1 та 2 ідентичні, за винятком двох пунктів:
 
-For example, let's say that your learning steps are **1m 10m 1d**.
+- Пресет 1:
+  - Нові картки - Етапи навчання: 1хв 10хв
+  - Порядок відображення - Пріоритет нових/повторень: Змішати з повтореннями
+- Пресет 2:
+  - Нові картки - Етапи навчання: 20хв 2год
+  - Порядок відображення - Пріоритет нових/повторень: Показати після повторень
 
-- When you press `Again`, the card goes back to the first step, and will be shown
-  again approximately 1 minute later.
-- When you press `Good` on a new card, or a card answered `Again`, it will move
-  to the next step, and be shown again in approximately 10 minutes.
-- When you press `Good` on a card after the 10 minute step, it will be delayed
-  until the next day.
-- When you press `Good` on the card the next day, it will leave learning (i.e. it will graduate), and
-  become a review card. It will be shown again after the delay configured by the
-  _graduating interval_.
+Якщо ви вибираєте для вивчення Колоду A:
 
-If there’s nothing else to study, Anki will show cards up to 20 minutes
-early by default. The amount of time to look ahead is configurable in
-the [preferences](preferences.md).
+- Етапи навчання для всіх нових карток будуть 1хв 10хв (застосовується пресет 1)
+- Усі нові картки будуть змішані з повтореннями (застосовується пресет 1)
 
-Please see the [learning](studying.md#learningrelearning-cards) section for more info on how
-steps work.
+Якщо ви вибираєте для вивчення Дочірню колоду B:
 
-#### Day Boundaries
+- Етапи навчання для всіх нових карток будуть 20хв 2год (застосовується пресет 2)
+- Усі нові картки будуть показані після повторень (застосовується пресет 2)
 
-Anki treats small steps and steps that [cross a day boundary](./preferences.md#review) differently.
-With small steps, the cards are shown as soon as the delay has passed,
-in preference to other waiting cards like reviews. This is done so that
-you can answer the card as closely to your requested delay as possible.
-In contrast, if the interval crosses a day boundary, it is automatically
-converted to days.
+## Щоденні ліміти
 
-### Graduating Interval
+### Нові Картки/День
 
-The delay in days between answering "Good" on a learning card with no steps left,
-and seeing the card again as a review card. This means that it is the first interval
-after the learning card becomes a review card. Please see the example
-in the previous section.
+Цей параметр контролює, скільки нових карток додається кожного дня, коли ви користуєтесь програмою. Якщо вивчаєте менше, ніж ліміт, або пропускаєте день, наступного дня кількість нових карток повернеться до встановленого ліміту — вони не накопичуються.
 
-### Easy Interval
+Коли колоди вкладені (наприклад, Батьківська, Батьківська::Дочірня, Батьківська::Дочірня::Онука), спосіб застосування лімітів залежить від версії планувальника.
 
-The delay between answering `Easy` on a learning
-card, and seeing it in review mode for the first time.
+- v1 застосовує ліміти батьківської колоди до дочірніх, незалежно від того, на яку колоду ви натиснули.
+- v2 діє подібно до v1 для нових карток. Для повторень враховуються лише ліміти колоди, на яку ви натиснули.
+- v3 враховує ліміти колоди, на яку ви натиснули, і будь-яких колод всередині неї. Ліміти батьківських колод вище тієї, яку ви вибрали, ігноруються.
 
-The `Easy` button immediately turns a learning card into a review card,
-and assigns it the delay you have configured. It should always be at least
-as long as the _graduating interval_, and typically a few days longer.
+Для отримання додаткової інформації перегляньте сторінку [планувальника v3](https://faqs.ankiweb.net/the-2021-scheduler.html#daily-limits).
 
-### Insertion Order
+Вивчення нових карток тимчасово збільшує кількість щоденних повторень, оскільки вивчений матеріал потрібно повторювати кілька разів, перш ніж інтервали між повтореннями значно збільшаться. Якщо ви постійно вивчаєте 20 нових карток на день, очікуйте, що кількість щоденних повторень буде приблизно 200 карток/день. Ви можете зменшити кількість необхідних повторень, вводячи менше нових карток щодня або вимикаючи показ нових карток, поки не зменшиться навантаження на повторення. Деякі користувачі Anki з ентузіазмом вивчають сотні нових карток у перші дні, а потім відчувають перевантаження через велику кількість необхідних повторень.
 
-Controls whether Anki should add new cards into the deck randomly, or in order.
-When you change this option, Anki will re-sort the decks using the current
-Option Group. Cards with a lower due number will be shown first when studying, by
-default. Changing this option will automatically update the existing position of
-new cards.
+### Максимальна кількість повторень на день
 
-One caveat with random order mode: if you review many of your new cards, and then
-add more new cards, the newly added material is statistically more likely to
-appear than the new cards that were already in the deck. For example, if you have 100 cards
-in random order, then review the first 50, newly added cards are still given
-position 1-100, but as you have already reviewed the first 50, the newly added
-cards are more likely to appear earlier. To correct this, you can change the
-order to Ordered mode and back again to force a re-sort.
+Цей параметр дозволяє встановити верхнє обмеження кількості щоденних повторень. Коли це обмеження досягнуто, Anki не буде показувати більше карток цього дня, навіть якщо деякі з них залишаються в черзі. Якщо вивчаєте картки послідовно, це налаштування може допомогти згладити випадкові піки в кількості карток і вберегти від стресу після тижневої перерви. Коли картки приховані через це налаштування, на екрані з повідомленням про завершення з’явиться пропозиція збільшити обмеження, якщо у вас є на це час.
 
-When you select random order, Anki will randomize your notes, keeping
-the cards of a given note close together. The cards of a given note are
-shown in the order in which their card types appear, so that siblings are
-introduced consistently — otherwise you could end up in a state where
-some notes had all their cards introduced and other notes had only one
-or two. Please see the "bury related" and "display order" sections below
-for more info.
+У [планувальнику v3](https://faqs.ankiweb.net/the-2021-scheduler.html#daily-limits) і планувальнику v1 кількість повторень залежить від батьківських або обраних колод так само, як і для нових карток.
 
-## Lapses
+У планувальнику v2 обмеження враховується лише для тієї колоди, яку ви вибрали — будь-які обмеження батьківських або дочірніх колод ігноруються.
 
-When you forget a review card, it is said to have 'lapsed', and the card must be
-relearnt. The default behaviour for lapsed reviews is to reset the interval to
-1 (i.e. make it due tomorrow), and put it in the learning queue for a refresher
-in 10 minutes. This behaviour can be customized with the options listed below.
+Планувальник v3 включає в кількість повторень картки для навчання з затримкою 1+ день, тому ці картки також підпадають під щоденне обмеження.
 
-### Relearning Steps
+### Нові картки ігнорують ліміт
 
-The same as 'learning steps', but for forgotten reviews. When you fail a card
-(press `Again`), the card enters the relearning phase, and before it becomes a
-review card again, you will have to pass all the relearning steps — or, press
-`Easy` on the card.
+Зверніть увагу, що якщо ви використовуєте [планувальник v3](https://faqs.ankiweb.net/the-2021-scheduler.html#daily-limits),типово кількість показу нових карток обмежується кількістю повторень. Якщо ліміт встановлено на 200, і у вас є 190 карток для повторення, максимальна кількість нових карток, які будуть додані, становитиме 10. Якщо ліміт повторень досягнуто, нові картки не будуть показані. Якщо накопичилися повторення, але ви все одно хочете додати нові картки, можете зробити це, призупинивши повторення або збільшивши ліміт повторень. Однак рекомендується утриматися від додавання нових карток, поки не наздоженете, оскільки додавання нових карток під час відставання, лише погіршить ситуацію.
 
-If you leave the steps blank, the card will skip relearning, and will be assigned
-a new review delay.
+Починаючи з Anki 2.1.61, ця функція є опціональною і може бути вимкнена глобально в налаштуваннях колоди.
 
-### Minimum Interval
+### Щоденні обмеження для колоди
 
-Specifies a minimum number of days a card should wait after it finishes relearning.
-The default is one day, meaning once relearning is finished, it will be shown again
-the next day.
+Починаючи з версії 2.1.55, стало можливим використовувати єдиний пресет для різних колод разом із дочірніми, із налаштуванням обмежень для кожної з них окремо. Це усуває необхідність створювати клоновані пресети та полегшує налаштування індивідуальних обмежень для дочірніх колод коли є велике вкладення.
 
-### Leeches
+Опції:
 
-Control the way Anki handles leeches. Please see the [leeches](leeches.md)
-section for more information.
+- Пресет: Обмеження спільне для всіх колод, які використовують цей пресет.
+- Ця колода: Обмеження специфічне для цієї колоди.
+- Тільки сьогодні: Тимчасова зміна обмеження для цієї колоди на поточний день.
 
-## Display Order
+## Нові Картки
 
-The options in this section are taken from the deck you select to study, not
-the deck of the currently displayed card.
+Налаштування в цьому розділі впливають лише на нові картки та ті, що знаходяться на початковому [етапі вивчення](studying.md#learningrelearning-cards). Коли картка проходить етап навчання (тобто для неї більше немає кроків у режимі вивчення), вона стає [карткою для повторення](studying.md#review-cards), і налаштування в цьому розділі більше не застосовуються.
 
-This section is only available when you have [the v3 scheduler](https://faqs.ankiweb.net/the-2021-scheduler.html) enabled.
+### Етапи Вивчення
 
-Some further information about display order is available in the [studying section](studying.md#display-order).
+Цей параметр контролює кількість повторень під час вивчення та затримку між ними. Потрібно ввести одне або більше значень затримки, розділених пробілами. Кожного разу, коли ви натискаєте `Добре` під час повторення, картка переходить до наступного етапу.
 
-### New Card Gather Order
+Наприклад, припустимо, що ваші інтервали вивчення встановлені на **1хв 10хв 1д**.
 
-Controls how Anki gathers cards from each subdeck. The options are:
+- Коли натискаєте `Знову`, картка повертається до першого етапу та буде показана приблизно через 1 хвилину.
+- Коли натискаєте `Добре` на новій картці або картці, на яку відповідали `Знову`, вона переходить до наступного етапу та буде показана приблизно через 10 хвилин.
+- Коли натискаєте `Добре` на картці після 10-хвилинного інтервалу, вона буде відкладена до наступного дня.
+- Коли натискаєте `Добре` на картці наступного дня, вона закінчує етап вивчення (тобто вона завершує навчання) і стає карткою для повторення. Вона буде показана знову після затримки, налаштованої параметром _інтервалу завершення навчання_.
 
-- Deck: gathers cards from each deck in order, starting from the top. Cards from
-  each deck are gathered in ascending position. If the daily limit of the selected
-  deck is reached, gathering may stop before all decks have been checked. This
-  order is fastest in large collections, and allows you to prioritize subdecks that
-  are closer to the top.
+Якщо більше немає чого вивчати, Anki типово покаже картки до 20 хвилин раніше. Час для цього можна налаштувати в [параметрах](preferences.md).
 
-  Decks / subdecks are always ordered alphabetically, so you can give them a numeric prefix like
-  001 to control the order they are shown. You can also use `_` and `~` as a
-  prefix to place items at the top or bottom.
+Докладніше про роботу етапів та інтервалів див. у розділі [вивчення](studying.md#learningrelearning-cards).
 
-  Although position order depends initially on the 'Insertion Order' setting
-  above, you can manually
-  [reposition](https://docs.ankiweb.net/browsing.html#cards) cards in different
-  ways.
+#### Добові межі
 
-- Deck, then random notes: gather cards from each deck in order, starting from the top.
-  Cards from each deck are gathered randomly.
+Anki по-різному обробляє короткі інтервали та ті, що [перетинають добову межу](./preferences.md#review). Для коротких інтервалів картки показуються відразу після закінчення затримки, з пріоритетом над іншими, що очікують на повторення. Це робиться для того, щоб ви могли відповісти на картку якомога ближче до обраної вами затримки. Навпаки, якщо інтервал перетинає добову межу, він автоматично перетворюється на дні.
 
-- Ascending position: gather cards by ascending position (due #), which is typically the oldest-added first.
+### Інтервал завершення навчання
 
-- Descending position: gather cards by descending position (due #), which is typically the latest-added first.
+Це затримка в днях між натисканням "Добре" на картці для вивчення, у якої закінчилися етапи, та наступним показом цієї картки вже як картки для повторення. Це означає, що цей інтервал є першим після того, як картка для вивчення стає карткою для повторення. Приклад можна знайти в попередньому розділі.
 
-- Random notes: gather cards of randomly selected notes. When sibling burying is disabled, this allows all cards of a note to be seen in a session (eg. both a front->back and back->front card)
+### Інтервал Легкості
 
-- Random cards: gather cards completely randomly.
+Це затримка між натисканням `Легко` на картці для вивчення та її першим показом у режимі повторення.
 
-### New Card Sort Order
+Кнопка `Легко` відразу перетворює картку для вивчення на картку для повторення і призначає їй налаштовану затримку. Цей інтервал завжди має бути щонайменше таким же, як _інтервал завершення навчання_, і зазвичай трохи довшим.
 
-Controls how new cards are sorted **after they have been gathered**. The options are:
+### Порядок додавання
 
-- Card type: Displays cards in order of card type number. If you have sibling burying disabled, this will ensure all front→back cards are seen before any back→front cards. This is useful to have all cards of the same note shown in the same session, but not too close to one another.
+Цей параметр контролює, чи слід Anki додавати нові картки до колоди випадковим чином або у визначеному порядку. Коли змінюєте цю опцію, Anki пересортовує колоди, використовуючи налаштування поточної групи. Типово картки з меншим числом показуються першими під час навчання. Зміна цієї опції автоматично оновлює існуюче розташування нових карток.
 
-- Order gathered: Shows cards exactly as they were gathered. If sibling burying is disabled, this will typically result in all cards of a note being seen one after the other.
+Ось один нюанс режиму випадкового порядку: якщо ви переглянете багато нових карток, а потім додасте ще, новий матеріал статистично має більше шансів з’явитися раніше, ніж нові картки, які вже були в колоді. Наприклад, якщо у вас є 100 карток режимі випадкового порядку, а ви переглянули перші 50, нові картки все ще матимуть позиції з 1 по 100, але, оскільки ви вже переглянули перші 50, нові картки з більшою ймовірністю з'являться раніше. Щоб виправити це, можете змінити порядок на упорядкований режим і назад, щоб примусово пересортувати картки.
 
-- Card type, then random: Like Card type, but shuffles the cards of each card type number. If you use Ascending position to gather the oldest cards, you could use this setting to see those cards in a random order, but still ensure cards of the same note do not end up too close to one another.
+Коли ви обираєте випадковий порядок, Anki випадковізує ваші картки, зберігаючи картки одного типу близько одна до одної. Картки одного типу показуються в порядку, в якому з'являються їх типи, щоб дочірні картки вводилися послідовно. В іншому випадку, ви можете опинитися в ситуації, коли деякі типи карток будуть введені повністю, а інші — лише частково. Докладніше дивіться в розділах "приховані пов’язані картки" та "порядок відображення".
 
-- Random note, then card type: Picks notes at random, then shows all of their siblings in order.
+## Пропущені повторення
 
-- Random: Fully shuffles the gathered cards.
+Коли забуваєте картку під час повторення, говорять, що картка "пропущена", і її потрібно знову вивчити. Типово поведінка для пропущених повторень полягає в тому, щоб скинути інтервал до 1 (тобто встановити термін на завтра) і помістити картку в чергу для повторення через 10 хвилин. Цю поведінку можна налаштувати за допомогою опцій, наведених нижче.
 
-### New/Review Priority
+### Етапи повторного вивчення
 
-Whether new cards should be mixed in with reviews, or shown before or after them.
+Це те ж саме, що й 'етапи вивчення', але для пропущених повторень. Коли забуваєте картку (натискаєте `Знову`), вона переходить в фазу повторного вивчення, і перед тим як вона знову стане карткою для повторення, потрібно пройти всі інтервали повторного вивчення — або натиснути `Легко` на картці.
 
-### Interday Learning/Review Priority
+Якщо ви залишите етапи порожніми, картка пропустить повторне вивчення і отримає нову затримку повторення.
 
-Whether learning cards with a 1+ day delay should be mixed in with reviews, or
-shown before or after them. Because learning cards tend to be harder than
-reviews, some users prefer to see them at the end (getting the easy stuff done
-first), or at the start (allowing more time to review forgotten ones).
+### Мінімальний інтервал
 
-### Review Sort Order
+Визначає мінімальну кількість днів, які мають пройти після завершення повторного вивчення картки. Типово це один день, тобто після завершення повторного вивчення картка буде показана наступного дня.
 
-Controls how review cards are sorted while reviewing. The options are:
+### Приставучі картки (Leeches)
 
-- Due date, then random: The default option prioritizes cards that have been waiting
-  longer, and it's the recommended option when you are up to date, or when you only have a small
-  backlog. If you have taken an extended break or have fallen behind in your reviews,
-  you may want to consider changing the sort order temporarily.
-- Due date, then deck. This also prioritizes cards that have been waiting
-  longer, and then will show reviews for each subdeck in turn.
-- Deck, then due date: This option will ensure reviews are shown for each
-  subdeck in turn. This is generally not recommended, as having material appear
-  consistently in the same order makes it easier to guess the answer based on context,
-  and may lead to weaker memories.
-- Ascending intervals: This will ensure cards with shorter intervals are shown first.
-- Descending intervals: This will ensure cards with larger intervals are shown first.
-- Ascending ease: This will show most difficult cards first.
-- Descending ease: This will allow you to work through the easier material first.
-- Relative overdueness: Display cards that you're most likely to have forgotten first. This is useful if
-  you have a large backlog that may take some time to get through, and you want to
-  reduce the chances of forgetting more cards.
+Налаштування обробки «приставучих карток» в Anki. Для отримання додаткової інформації дивіться розділ [приставучі картки](leeches.md).
 
-  When using the SM-2 scheduler, overdueness is determined by comparing how
-  overdue cards are, and how long their interval is. For example, a card with a
-  current interval of 5 days that is overdue by 2 days, will display before a card
-  with a current interval of 10 days that is overdue by 3 days.
+## Порядок відображення
 
-  When using FSRS, overdueness is calculated based on on each card's retrievability,
-  and the desired retention in the deck preset.
+Опції в цьому розділі беруться з колоди, яку ви обираєте для навчання, а не з тої, до якої належить поточна картка.
+
+Цей розділ доступний лише при ввімкненні [планувальника версії 3](https://faqs.ankiweb.net/the-2021-scheduler.html).
+
+Додаткову інформацію про порядок відображення можна знайти в розділі [навчання](studying.md#display-order).
+
+### Порядок збору нових карток
+
+Керує тим, як Anki збирає картки з кожної дочірньої колоди. Доступні такі опції:
+
+- Колода: збирає картки з кожної колоди по порядку, починаючи з верхньої. Картки з кожної колоди збираються в порядку зростання позиції. Якщо досягається денний ліміт вибраної колоди, збір може припинитися до того, як всі колоди будуть перевірені. Цей порядок найшвидший для великих колекцій і дозволяє надати пріоритет дочірній колоді, що знаходяться ближче до верху.
+
+  Колоди/дочірні завжди впорядковуються за алфавітом, тому ви можете додати їм числовий префікс, як-от 001, щоб контролювати порядок їх відображення. Ви також можете використовувати `_` і `~` як префікси для розміщення елементів на початку або наприкінці списку.
+
+  Хоча початковий порядок залежить від налаштування «Порядок Вставки», ви можете вручну [змінювати положення карток](https://docs.ankiweb.net/browsing.html#cards) різними способами.
+
+- Колода, потім випадкові нотатки: збирає картки з кожної колоди по порядку, починаючи з верхньої. Картки з кожної колоди збираються випадковим чином.
+
+- Висхідна позиція: збирає картки за висхідною позицією (номер запланованого показу), зазвичай найдавніше додані картки першими.
+
+- Спадна позиція: збирає картки за спадною позицією (номер запланованого показу), зазвичай найновіше додані картки першими.
+
+- Випадкові нотатки: збирає картки випадково обраних нотаток. Коли вимкнено приховування карток з однієї нотатки, це дозволяє побачити всі картки з однієї нотатки за один сеанс (наприклад, картки «спереду-назад» і «ззаду-наперед»).
+
+- Випадкові картки: збирає картки повністю випадковим чином.
+
+### Порядок сортування нових карток
+
+Керує тим, як нові картки сортуються **після їх збирання**. Доступні такі опції:
+
+- Тип картки: Показує картки в порядку за номером типу картки. Якщо у вас вимкнено приховування карток з нотатки одного типу, це забезпечить показ усіх карток типу «спереду-назад» до будь-яких карток типу «ззаду-назад». Це корисно для показу всіх карток з нотатки одного типу за один сеанс, але не надто близько одна до одної.
+
+- Порядок збирання: Показує картки точно так, як вони були зібрані. Якщо приховування карток нотатки одного типу вимкнено, це зазвичай призведе до того, що всі картки одного типу будуть показані одна за одною.
+
+- Тип картки, потім випадковий порядок: Як тип картки, але перемішує картки кожного номера типу картки. Якщо ви використовуєте висхідну позицію для збору найдавніших карток, ви можете скористатися цим налаштуванням, щоб побачити ці картки у випадковому порядку, але при цьому забезпечити, щоб картки нотатки одного типу не опинилися занадто близько одна до одної.
+
+- Випадкові нотатки, потім тип картки: Випадковим чином вибирає нотатки, потім показує всі їхні картки у порядку.
+
+- Випадковий порядок: Повністю перемішує зібрані картки.
+
+### Пріоритет Нових Карток/Огляду
+
+Керує тим, чи нові картки змішуються з оглядовими, чи показуються перед ними або після них.
+
+### Пріоритет Карток з інтервалом між днями
+
+Керує тим, чи картки з інтервалом в 1+ день змішуються з оглядовими картками, чи показуються перед ними або після них. Оскільки такі картки зазвичай важчі, ніж оглядові, деякі користувачі віддають перевагу показу їх наприкінці (щоб спочатку пройти легші завдання) або на початку (щоб було більше часу для повторення забутих карток).
+
+### Порядок сортування оглядових карток
+
+Керує тим, як сортуються оглядові картки під час огляду. Доступні такі опції:
+
+- Дата показу, потім випадковий порядок: Типова опція, яка надає пріоритет карткам, які чекали найдовше, і є рекомендованою, коли ви встигли виконати всі огляди або маєте невелике відставання. Якщо ви взяли тривалу перерву або відстали в оглядах, варто тимчасово змінити порядок сортування.
+
+- Дата показу, потім колода: Також надає пріоритет карткам, які чекали найдовше, а потім покаже оглядові картки для кожної дочірньої колоди по черзі.
+
+- Колода, потім дата показу: Ця опція забезпечить показ оглядових карток для кожної дочірньої колоди по черзі. Зазвичай це не рекомендується, оскільки постійний показ матеріалу в однаковому порядку полегшує здогадування за контекстом, що може призвести до слабших результатів запам'ятовувань.
+
+- Висхідні інтервали: Ця опція забезпечить показ карток із коротшими інтервалами першими.
+
+- Спадні інтервали: Ця опція забезпечить показ карток із довшими інтервалами першими.
+
+- Висхідна легкість: Ця опція покаже найскладніші картки першими.
+
+- Спадна легкість: Ця опція дозволить спочатку працювати з легшими матеріалами.
+
+- Відносна простроченість: Показує картки, які ви, найімовірніше, забули першими. Це корисно, якщо у вас велике відставання, на подолання якого знадобиться певний час, і ви хочете зменшити ймовірність забування більшої кількості карток.
+
+  При використанні планувальника SM-2, простроченість визначається порівнянням того, наскільки картка прострочена, і як довго тривав інтервал. Наприклад, картка з поточним інтервалом 5 днів, яка прострочена на 2 дні, буде показана перед карткою з інтервалом 10 днів, яка прострочена на 3 дні.
+
+  При використанні FSRS простроченість розраховується на основі коефіцієнта запам'ятовування кожної картки та бажаної затримки в налаштуваннях колоди.
 
 ## Timer
 
@@ -562,15 +443,15 @@ desired retention field.
 
 #### Learning and Re-learning Steps
 
-(Re)learning steps of 1+ days are not recommended when using FSRS. The main 
-reason they were popular with the old SM-2 scheduler is because repeatedly 
-failing a card after it has graduated from the learning phase could reduce 
-its ease a lot, leading to what some people called "ease hell". This is not 
-a problem that FSRS suffers from.  By keeping your learning steps under a 
-day, you will allow FSRS to schedule cards at times it has calculated are 
-optimum for your material and memory.  Another reason not to use longer 
-learning steps is because FSRS may end up scheduling the first review for a 
-shorter time than your last learning step, leading to the `Hard` button 
+(Re)learning steps of 1+ days are not recommended when using FSRS. The main
+reason they were popular with the old SM-2 scheduler is because repeatedly
+failing a card after it has graduated from the learning phase could reduce
+its ease a lot, leading to what some people called "ease hell". This is not
+a problem that FSRS suffers from.  By keeping your learning steps under a
+day, you will allow FSRS to schedule cards at times it has calculated are
+optimum for your material and memory.  Another reason not to use longer
+learning steps is because FSRS may end up scheduling the first review for a
+shorter time than your last learning step, leading to the `Hard` button
 showing a longer time than `Good`.
 
 We also recommend you keep the number of learning steps to a minimum. Evidence
