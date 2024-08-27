@@ -239,9 +239,9 @@ Anki по-різному обробляє короткі інтервали та
 
 - Спадні інтервали: Ця опція забезпечить показ карток із довшими інтервалами першими.
 
-- Висхідна легкість: Ця опція покаже найскладніші картки першими.
+- Висхідна складність: Ця опція покаже найскладніші картки першими.
 
-- Спадна легкість: Ця опція дозволить спочатку працювати з легшими матеріалами.
+- Спадна складність: Ця опція дозволить спочатку працювати з легшими матеріалами.
 
 - Відносна простроченість: Показує картки, які ви, найімовірніше, забули першими. Це корисно, якщо у вас велике відставання, на подолання якого знадобиться певний час, і ви хочете зменшити ймовірність забування більшої кількості карток.
 
@@ -249,322 +249,170 @@ Anki по-різному обробляє короткі інтервали та
 
   При використанні FSRS простроченість розраховується на основі коефіцієнта запам'ятовування кожної картки та бажаної затримки в налаштуваннях колоди.
 
-## Timer
+## Таймер
 
-Anki monitors how long it takes you to answer each card, so that it
-can show you how long was spent studying each day. The time taken does
-not influence scheduling.
+Anki відстежує, скільки часу потрібно на відповідь в кожній картці, щоб показати, скільки часу витрачається на навчання кожного дня. Час, витрачений на відповідь, не впливає на планування.
 
-The options are:
+Параметри:
 
-- Maximum answer seconds: The default limit is 60 seconds. If you take
-  longer than that, Anki assumes you have walked away from your computer
-  or have been distracted, and limits the recorded time to 60 seconds, so
-  that you don’t end up with inaccurate statistics. If you consistently
-  take longer than 60 seconds to answer a card (from when question is shown
-  until you press an answer button), you may want to either consider raising
-  this limit, or, ideally, making your cards simpler.
-- Show answer timer: In the review screen, show a timer that counts the number
-  of seconds you're taking to review each card.
-- Stop timer on answer: whether the timer should keep running when you show
-  the answer.
+- Максимальний час для відповіді: за замовчуванням встановлено ліміт у 60 секунд. Якщо знадобиться значно більше часу, Anki припускає, що ви відійшли від комп'ютера або відволіклися, і обмежує записаний час до 60 секунд, щоб не отримати некоректну статистику. Якщо ви постійно витрачаєте більше 60 секунд на відповідь на картку (з моменту відображення питання до натискання кнопки відповіді), вам може знадобитися або підвищити цей ліміт, або ще більше спростити картки.
+- Показати таймер відповіді: на екрані перегляду показувати таймер, який підраховує кількість секунд, що витрачаються на перегляд кожної картки.
+- Зупинити таймер при відповіді: чи повинен таймер продовжувати працювати, коли показується відповідь.
 
-## Auto Advance
+## Автоперехід
 
-Requires Anki 23.12 or later. Auto Advance allows you to automatically reveal
-the answer and/or move to the next card. To use it, you must first set a non-zero
-time in "seconds to show question" and/or "seconds to show answer". Then, in the
-review screen, use the Auto Advance action from the `More` button to start advancing.
+Потрібна Anki версії 23.12 або новіша. Функція Автопереходу дозволяє автоматично відкривати відповідь та/або переходити до наступної картки. Для використання цієї функції спочатку необхідно встановити ненульовий час у "кількість секунд для показу питання" та/або "Кількість секунд на показ відповіді". Потім на екрані перегляду скористайтеся дією Автопереходу з меню `Більше`, щоб увімкнути.
 
-## Burying
+## Приховування карток
 
-When Anki gathers cards, it first gathers intraday learning cards, then interday learning cards, then reviews, and finally new cards. This affects how burying works:
+Коли Anki визначає черговість карток для показу, спочатку збираються картки внутрішньоденного навчання, потім — міжденні, далі — картки для перегляду, і врешті — нові картки. Це впливає на те, як працює функція приховування:
 
-- If you have all burying options enabled, the sibling that comes earliest in that list will be shown. For example, a review card will be shown in preference to a new card.
-- Siblings later in the list can not bury earlier card types. For example, if you disable burying of new cards, and study a new card, it will not bury any interday learning or review cards, and you may see both a review sibling and new sibling in the same session.
+- Якщо увімкнено всі параметри приховування, спочатку буде показано першу картку з вищезазначеного списку. Наприклад, картка для перегляду матиме пріоритет над новою.
+- Картки з нижчих позицій у переліку не будуть приховані, якщо на них раніше не діяло приховування інших типів карток. Наприклад, якщо ви вимкнули приховування нових карток і почали вивчати нову картку, вона не приховуватиме міжденні, чи картки для перегляду. Таким чином, у вас може відобразитися і нова картка, і картка для перегляду в одній сесії.
 
-The options are:
+Параметри приховування:
 
-- Bury new siblings: whether other new cards of the same note (e.g., reverse cards, adjacent cloze deletions) will be delayed until the next day.
-- Bury review siblings: whether other review cards of the same note will be delayed until the next day.
-- Bury interday learning siblings: whether other learning cards of the same note with intervals >= 1 day will be delayed until the next day.
+- Приховувати нових родичів: чи будуть інші нові картки тієї ж нотатки (наприклад, зворотні картки, суміжні видалення) відкладені до наступного дня.
+- Приховувати родичів карток перегляду: чи будуть інші картки перегляду тієї ж нотатки відкладені до наступного дня.
+- Приховувати родичів з міжденного навчання: чи будуть інші картки тієї ж нотатки з інтервалами >= 1 дня відкладені до наступного дня.
 
-For more info about burying cards, please see [this section](./studying.md#siblings-and-burying) of the manual.
+Детальніше про приховування читайте в [тут](./studying.md#siblings-and-burying).
 
-## Audio
+## Аудіо
 
-By default, Anki automatically plays audio on the front and back of
-cards. If you check _Don't play audio automatically_, Anki will not play
-audio until you press the replay audio key, `r` or `F5`.
+Типово, Anki автоматично відтворює аудіо на передній та задній сторонах карток. Якщо поставите галочку _Не відтворювати аудіо автоматично_, Anki не буде цього робити, доки ви знову не натиснете клавішу для відтворення, `r` або `F5`.
 
-_Always include question side when replaying audio_ controls whether audio from
-the question side should be played when replaying the audio while an answer is
-shown. Please note that it does not control what happens when you show the
-answer; for that please see [this section](templates/fields.md#special-fields).
+_Завжди включати сторону з питанням при повторному відтворенні аудіо_ контролює, чи повинно бути показане питання при повторному відтворенні аудіо під час відображення відповіді. Зверніть увагу, що це не керування тим, що відбувається при показі відповіді; дивіться [спеціальні поля](templates/fields.md#спеціальні-поля).
 
-## Advanced
+## Розширені
 
 ### FSRS
 
-The [Free Spaced Repetition Scheduler (FSRS)](https://github.com/open-spaced-repetition/fsrs4anki) is an alternative to Anki's legacy
-SuperMemo 2 (SM2) scheduler. By more accurately determining when you are likely
-to forget, it can help you remember more material in the same amount of time.
-This setting is shared by all deck presets.
+[Free Spaced Repetition Scheduler (FSRS)](https://github.com/open-spaced-repetition/fsrs4anki) є альтернативою застарілому планувальнику Anki SuperMemo 2 (SM2). За допомогою точнішого визначення ймовірності забування він може допомогти вам запам'ятати більше матеріалу за той самий час. Цей параметр спільний для всіх попередніх налаштувань колоди.
 
-When you enable the setting, some new options will
-become available, and SM-2 specific settings, such as "Graduating interval",
-"Easy bonus", etc, will be hidden.
+При ввімкненні цього параметра стануть доступними нові опції, а специфічні налаштування для SM-2, як-от "Інтервал для випускників", "Бонус за складність" тощо, будуть приховані.
 
-**Before Enabling**
+**Перед увімкненням**
 
-- Please ensure all of your Anki clients support FSRS. Anki 23.10, AnkiMobile 23.10,
-  and AnkiWeb all support it. AnkiDroid supports it in 2.17alpha3+. If
-  one of your clients doesn't support it, things will not work correctly.
-- If you previously used the 'custom scheduling' version of FSRS, please make
-  sure you clear out the custom scheduling section before enabling FSRS.
+- Переконайтеся, що всі ваші версії Anki підтримують FSRS. Саме Anki 23.10, AnkiMobile 23.10 і AnkiWeb підтримують. AnkiDroid підтримує у версії 2.17alpha3+. Якщо якнайменш один із ваших клієнтів не підтримує, все працюватиме некоректно.
+- Якщо ви раніше використовували версію FSRS з "індивідуальним розкладом", переконайтеся, що очистили розділ із індивідуальним розкладом перед увімкненням FSRS.
 
-#### FSRS Options
+#### Опції FSRS
 
-**Desired Retention**
+**Бажане утримання**
 
-Desired retention controls how likely you are to remember cards when they are reviewed.
-The default value of 0.9 will schedule cards so you have a 90% chance of remembering
-them when they come up for review again.
+Показує ймовірність запам'ятовування карток під час перегляду. Типове значення 0,9 означає що картки плануються таки чином, щоб у вас був 90% шанс їх запам'ятати під час повторного перегляду.
 
-Here is a graph that shows how adjusting this value will affect your workload:
+Графік показує, як регулювання цього значення вплине на ваше навантаження:
 
-<img src="media/FSRS_retention.png" width="600">
+![FSRS_retention](media/FSRS_retention.png)
 
-There are two things to notice:
+Зверніть тут увагу на дві речі:
 
-- As desired retention approaches 1.0, the frequency that you need to review cards
-  increases drastically. For example, imagine you have a card that you have a 90%
-  chance of remembering after 100 days. If your desired retention was 0.95, you'd
-  need to review it after 47 days instead (approximately twice as frequently).
-  At 0.97, the delay would be only 27 days (approximately 3.7x as frequently).
-  At 0.99, you'd be reviewing every 9 days (more than 10x what you'd be doing with
-  the defaults).
+- Як тільки бажане утримання наближається до 1,0, частота перегляду карток різко зростає. Наприклад, уявіть, що у вас є картка, шанс запам'ятовування якої через 100 днів - 90%. Якщо бажане утримання 0,95, повторний перегляд буде через 47 днів (приблизно вдвічі частіше ніж при 90%). При 0,97 затримка буде лише 27 днів (приблизно в 3,7 рази частіше). При 0,99 потрібно буде переглядати кожні 9 днів (більше ніж у 10 разів частіше, ніж типово).
 
-- As desired retention decreases, you'll forget a greater percentage of your
-  cards, and those cards will need to be reviewed again. Eventually, you'll
-  get to a point where the forgotten cards contribute more to your workload
-  than you gain from the longer delays, which is why you see the workload
-  on the left of the graph increasing. Also, bear in mind that forgetting
-  material frequently is demotivating.
+- Зниження бажаного утримання призведе до забування більшого відсотку карток та потреби повторного перегляду. Зрештою, досягнете рівня, коли забуті картки створять більше навантаження, ніж ви отримуєте від триваліших затримок, що пояснює зростання рівня навантаження на графіку. Пам'ятайте, що часте забуття матеріалу демотивує.
 
-For these reasons, we suggest you be conservative when adjusting this
-number, and recommend you keep it between 0.85 and 0.95.
+З цих причин ми радимо бути консервативними при налаштуванні цього параметру і тримати його між 0,85 і 0,95.
 
-**SM-2 retention**
+**Утримання SM-2**
+Якщо ваше фактичне утримання до переходу на FSRS значно відрізнялося від 0,9, налаштування цього значення допоможе Anki краще оцінити вашу пам’ять, коли вона стикається з картками без журналів перегляду. Зазвичай журнали перегляду не пропадають, якщо ви їх явно не видалили для звільнення місця, тому більшості користувачів не потрібно коригувати це налаштування.
 
-If your actual retention before switching to FSRS was significantly different
-from 0.9, adjusting this value will allow Anki to better estimate your memory
-state when it encounters cards that are missing review logs. Since review
-logs typically won't be missing unless you explicitly deleted them to free
-up space, most users will not need to adjust this.
+**Параметри FSRS**
+Параметри FSRS впливають на планування карток і зазвичай не потребують ручного редагування. Після накопичення 1000 і більше переглядів ви зможете оптимізувати ці параметри на основі вашої історії переглядів.
 
-**FSRS parameters**
+**Перепланувати картки при зміні**
+Цей параметр контролює, чи будуть змінені дати карток, коли ви вмикаєте FSRS або змінюєте параметри. Усталено картки не переплановуються: майбутні перегляди будуть застосовувати нове планування, але негайних змін у навантаженні не буде. Якщо перепланування увімкнено, дати виконання карток будуть змінені, що часто призводить до великої кількості термінових карток, тому **не рекомендується активувати цей параметр** при першому переході з SM2.
 
-FSRS parameters affect how cards are scheduled. They are not intended to be
-manually modified. Once you've accumulated 1000+ reviews, you can have Anki
-optimize the parameters for you, based on your review history.
+Якщо хочете візуалізувати, як FSRS змінить ваш розклад без зміни навантаження, є два способи зробити це:
 
-**Reschedule cards on change**
+- Увімкніть FSRS без перепланування та порівняйте графіки інтервалу та стабільності. Графік інтервалу покаже поточні інтервали карток; графік стабільності покаже інтервали, які FSRS надав би карткам, якщо бажане утримання становить 0,9.
+- Створіть резервну копію, увімкніть FSRS з переплануванням, перевірте графік майбутніх термінів, а потім скасуйте або відновіть резервну копію.
 
-This option controls whether the due dates of cards will be changed when you
-enable FSRS, or change the parameters. The default is not to reschedule
-cards: future reviews will use the new scheduling, but there will be no
-immediate change to your workload. If rescheduling is enabled, the due dates
-of cards will be changed, often resulting in a large number of cards becoming
-due, so **activating this option is not recommended** when first switching from SM2.
+**Оптимізація параметрів FSRS**
+Оптимізатор FSRS використовує машинне навчання, щоб навчити ваші патерни пам'яті та знайти параметри, які найкраще відповідають вашій історії переглядів. Для цього оптимізатору потрібно кілька переглядів, щоб налаштувати параметри.
 
-If you wish to visualize how FSRS would change your schedule without altering
-your workload, there are two ways you can do so:
+Якщо у вас менше 1 000 переглядів, можете використовувати типові параметри, які вже введені в поле "Параметри FSRS". Навіть типовими параметрами FSRS має добре працювати для більшості користувачів.
 
-- Enable FSRS without rescheduling, and compare the interval and stability
-  graphs. The interval graph will show the current intervals of cards; the stability
-  graph will show the intervals FSRS would give cards if the desired retention is 0.9.
-- Create a backup, enable FSRS with rescheduling, check the future due graph, and then
-  undo or restore from the backup.
+Як тільки ви виконали 1000+ переглядів в Anki, можете застосувати кнопку `Оптимізувати`, щоб провести аналіз історії переглядів і автоматично згенерувати параметри, які є оптимальними для вашої особистої пам'яті та вмісту, який вивчаєте. Параметри є специфічними для пресетів, тому якщо у вас є колоди, які значно відрізняються за складністю, рекомендується призначити їм окремі пресети, оскільки параметри для легких та важких колод будуть різними. Часто оптимізувати параметри немає необхідності - достатньо робити це раз на кілька місяців.
 
-**Optimize FSRS parameters**
+Усталено параметри будуть розраховуватися на основі історії переглядів усіх колод, які використовують поточний пресет. За бажанням ви можете налаштувати пошук перед розрахунком параметрів, якщо хочете змінити те, які картки застосовувати для оптимізації параметрів.
 
-The FSRS optimizer uses machine learning to learn your memory patterns
-and find parameters that best fit your review history. To do this, the optimizer
-requires several reviews to fine-tune the parameters.
+Можете оптимізувати параметри для всіх пресетів одночасно, натиснувши на стрілку вниз у верхньому правому куті, а потім обравши "Оптимізувати всі пресети".
 
-If you have less than 1,000 reviews, you can use the default parameters that
-are already entered into the "FSRS parameters" field. Even with the default
-parameters, FSRS should work well for most users.
+**Параметри оцінки FSRS**
+Можете скористатися кнопкою `Оцінити` в розділі "Оптимізація параметрів FSRS", щоб побачити показники, які демонструють, наскільки добре параметри у полі "Параметри моделі" відповідають вашій історії переглядів. Менші числа вказують на кращу відповідність.
 
-Once you've done 1000+ reviews in Anki, you can use the `Optimize` button to
-analyze your review history, and automatically generate parameters that are
-optimal for your memory and the content you're studying. Parameters are
-preset-specific, so if you have decks that vary wildly in difficulty, it
-is recommended to assign them separate presets, as the parameters for easy
-decks and hard decks will be different. There is no need to optimize your
-parameters frequently - once every few months is sufficient.
+Log-loss не має інтуїтивного тлумачення. RMSE (біни) можна інтерпретувати як середню різницю між передбаченою ймовірністю згадування картки (R) і виміряною (з історії переглядів) ймовірністю. Наприклад, RMSE=5% означає, що в середньому FSRS помиляється на 5% при прогнозуванні R.
 
-By default, parameters will be calculated from the review history of all
-decks using the current preset. You can optionally adjust the search
-before calculating the parameters, if you'd like to alter which cards
-are used for optimizing the parameters.
+Зверніть увагу, що log-loss і RMSE (біни) не є ідеально корельованими, тому дві колоди можуть мати схожі значення RMSE, але дуже різні значення log-loss і навпаки.
 
-You can optimize the parameters for all of your presets at once, by clicking on the
-down arrow in the top right, then choosing "Optimize all presets".
+**Обчислення оптимального утримання**
+Цей експериментальний інструмент припускає, що ви починаєте з 0 карток і намагається розрахувати кількість матеріалу, який ви зможете запам'ятати у встановлений проміжок часу. Очікуване утримання значно залежатиме від ваших налаштувань, і якщо воно значно відрізняється від 0,9, це може вказувати на те, що час, який ви виділяєте щодня, або занадто малий, або занадто великий для кількості карток, які ви намагаєтеся вивчити. Це число може бути корисним як орієнтир, але його не рекомендується використовувати для копіювання у поле бажаного утримання.
 
-**Evaluate FSRS parameters**
+#### Інтервали навчання та повторювання
 
-You can use the `Evaluate` button in the "Optimize FSRS parameters"
-section to see metrics that show how well the parameters in the
-"Model parameters" field fit your review history. Smaller numbers
-indicate a better fit to your review history.
+При використанні FSRS не рекомендується робити інтервали (повторного) навчання тривалістю понад 1 день. Основна причина їхньої популярності у старому планувальнику SM-2 полягала в тому, що повторне невдале проходження картки після її випуску з фази навчання могло значно зменшити її складність, що деякі люди називали "пеклом легкості". Це не є проблемою для FSRS. Зберігаючи інтервали навчання меншими ніж день, ви дозволите FSRS планувати картки у часи, які він розрахував як оптимальні для вашого матеріалу та пам'яті. Ще одна причина не використовувати довші інтервали полягає у можливості FSRS у кінцевому підсумку планувати перший перегляд на коротший час, ніж останній інтервал навчання, що призводить до того, що кнопка `Важко` може показувати довший час, ніж `Добре`.
 
-Log-loss doesn't have an intuitive interpretation. RMSE (bins) can be
-interpreted as the average difference between the predicted probability
-of recalling a card (R) and the measured (from the review history)
-probability. For example, RMSE=5% means that, on average, FSRS
-is off by 5% when predicting R.
+Ми також рекомендуємо зберігати кількість інтервалі навчання мінімальною. Є докази, що повторення картки кілька разів за один день після запам'ятовування не має значного впливу на пам'ять, тому час краще витратити на інші картки або зробити сесію навчання коротшою.
 
-Note that log-loss and RMSE (bins) are not perfectly correlated,
-so two decks may have similar RMSE values but very different log-loss values,
-and vice-versa.
+#### Сумісність з доповненнями
 
-**Compute optimal retention**
+Деякі доповнення можуть викликати конфлікти з FSRS. Як загальне правило, якщо доповнення впливає на інтервали карток, його не слід використовувати з FSRS. Список часто використовуваних доповнень та їх сумісність з FSRS можна знайти в розділі [Сумісність доповнень](https://github.com/open-spaced-repetition/fsrs4anki#add-on-compatibility).
 
-This experimental tool assumes you're starting with 0 cards, and will
-attempt to calculate the amount of material you'll be able to retain
-in the given time frame. The estimated retention will greatly depend
-on your inputs, and if it significantly differs from 0.9, it's a sign
-that the time you've allocated each day is either too low or too high
-for the amount of cards you're trying to learn. This number can be
-useful as a reference, but it is not recommended to copy it into the
-desired retention field.
+#### Додатково
 
-#### Learning and Re-learning Steps
-
-(Re)learning steps of 1+ days are not recommended when using FSRS. The main
-reason they were popular with the old SM-2 scheduler is because repeatedly
-failing a card after it has graduated from the learning phase could reduce
-its ease a lot, leading to what some people called "ease hell". This is not
-a problem that FSRS suffers from.  By keeping your learning steps under a
-day, you will allow FSRS to schedule cards at times it has calculated are
-optimum for your material and memory.  Another reason not to use longer
-learning steps is because FSRS may end up scheduling the first review for a
-shorter time than your last learning step, leading to the `Hard` button
-showing a longer time than `Good`.
-
-We also recommend you keep the number of learning steps to a minimum. Evidence
-shows that repeating a card multiple times in a single day after you've
-remembered it does not significantly help with memory, so your time is
-better spent on other cards or a shorter study session
-
-#### Add-On Compatibility
-
-Some add-ons can cause conflicts with FSRS. As a general rule of thumb,
-if an add-on affects a card's intervals, it shouldn't be used with FSRS.
-A list of commonly used add-ons and their FSRS compatibility can be found in [Add-on Compatibility](https://github.com/open-spaced-repetition/fsrs4anki#add-on-compatibility).
-
-#### More
-
-For more info on FSRS, please check:
+Для отримання додаткової інформації про FSRS, будь ласка, відвідайте:
 
 - [FSRS4Anki Wiki](https://github.com/open-spaced-repetition/fsrs4anki/wiki)
-- [FSRS4Anki on Github](https://github.com/open-spaced-repetition/fsrs4anki)
+- [FSRS4Anki на Github](https://github.com/open-spaced-repetition/fsrs4anki)
 
-### Maximum Interval
+### Максимальний інтервал
 
-Allows you to place an upper limit on the time Anki
-will wait to reshow a card. The default is 100 years; you can decrease
-this to a smaller number if you’re willing to trade extra study time for
-higher retention.
+Дозволяє встановити верхню межу часу, який Anki чекатиме, щоб знову показати картку. За замовчуванням встановлено 100 років; ви можете зменшити це число, якщо готові обміняти додатковий час на навчання на вищу ефективність збереження інформації.
 
-### Starting Ease
+### Початкова складність
 
-Controls the easiness that cards start out with. It is
-set when a card graduates from learning for the first time. It defaults
-to 2.50, meaning that once you have finished learning a card, answering
-`Good` on subsequent reviews will increase the delay by approximately
-2.5x (e.g. if the last delay was 10 days, the next delay would be around 25
-days). Based upon how you rate the card in subsequent reviews, the
-easiness may increase or decrease from its starting value.
+Контролює складність, з якою картки починають своє існування. Це значення встановлюється, коли картка закінчує етап навчання вперше. За замовчуванням воно становить 2.50, що означає, що після завершення навчання картки відповідь `Добре` на подальших переглядах збільшить інтервал приблизно в 2.5 рази (наприклад, якщо останній інтервал був 10 днів, наступний буде близько 25 днів). Залежно від того, як ви оцінюєте картку на подальших переглядах, складність може збільшитися або зменшитися від початкового значення.
 
-### Easy Bonus
+### Бонус складності
 
-An extra multiplier applied to the interval when a review card is answered
-`Easy`. With the default value of 1.30, `Easy` will give an interval that is
-1.3 times the `Good` interval (e.g. if the Good interval was 10 days, the Easy
-interval would be around 13 days).
+Додатковий множник, що застосовується до інтервалу, коли картка оцінюється як `Легко`. Усталене значення становить 1.30, що означає, що `Легко` надасть інтервал, який в 1.3 рази більший за інтервал `Добре` (наприклад, якщо інтервал Добре становить 10 днів, інтервал Легко буде близько 13 днів).
 
-### Interval Modifier
+### Модифікатор Інтервалу
 
-An extra multiplier that is applied to all reviews. At its default of 1.00 it
-does nothing. If you set it to 0.80, though, for example, intervals will be generated at
-80% of their normal size (so a 10 day interval would become 8 days). You can
-thus use the multiplier to make Anki present cards more or less frequently than
-it would otherwise, trading study time for retention or vice versa.
+Додатковий множник, що застосовується до всіх переглядів. Усталено він дорівнює 1.00 і не впливає на інтервали. Якщо ви встановите його, наприклад, на 0.80, інтервали будуть зменшені до 80% від їх звичайного розміру (тобто інтервал у 10 днів стане 8 днів). Ви можете застосувати цей множник, щоб змусити Anki показувати картки частіше або рідше, ніж зазвичай, обираючи між часом навчання і запам'ятовуванням інформації.
 
-For moderately difficult material, the average user should find they
-remember approximately 90% of mature cards that come up for review. You
-can find out your own performance by opening the graphs/statistics for a
-deck and looking at the Answer Buttons graph - mature retention is the
-correct% on the right side of the graph. If you haven’t been studying
-long, you may not have any mature cards yet. As performance with new
-cards and younger cards can vary considerably, it’s a good idea to wait
-until you have a reasonable amount of mature reviews before you start
-drawing conclusions about your retention rate.
+Для помірно складного матеріалу середній користувач повинен пам'ятати приблизно 90% стиглих карток, що потрапляють на перегляд. Ви можете дізнатися про свою власну продуктивність, відкривши графіки/статистику для колоди і подивившись графік кнопок відповідей — стиглість запам'ятовування є відсотком справа на графіку. Якщо ви довго не навчалися, можливо, у вас досі не буде стиглих карток. Оскільки продуктивність нових і молодих карток може суттєво змінюватися, краще почекати, поки ви не матимете достатню кількість стиглих переглядів, перш ніж робити висновки про ваш рівень пам'яті.
 
-On the SuperMemo website, they suggest that you can find an appropriate
-multiplier for a desired retention rate. Their formula boils down to:
+На сайті SuperMemo пропонують знайти відповідний множник для бажаного рівня запам'ятовування. Їх формула зводиться до:
 
-    log(desired retention%) / log(current retention%)
+    log(бажане запам'ятовування%) / log(поточне запам'ятовування%)
 
-Imagine we have a current retention rate of 85% and we want to increase
-it to 90%. We’d calculate the modifier as:
+Припустимо, у нас є поточний рівень запам'ятовування 85%, і ми хочемо збільшити його до 90%. Ми розраховуємо модифікатор як:
 
     log(90%) / log(85%) = 0.65
 
-You can use Google to [calculate it](https://www.google.com/search?q=log(90%25)+%2F+log(85%25)) for you.
+Ви можете використовувати Google для [розрахунку](https://www.google.com/search?q=log(90%25)+%2F+log(85%25)) цього значення.
 
-If you plug the resulting 65% into the interval modifier, you should
-find over time that your retention moves closer to your desired
-retention.
+Вставивши отримане значення 65% у модифікатор інтервалу, ви повинні помітити з часом, що ваше запам'ятовування наближається до бажаного рівня.
 
-One important thing to note however is that the trade-off between time
-spent studying and retention is not linear: we can see here that to
-increase our retention by 5 percentage points, we would have to study 35%
-more frequently. If the material you are learning is very important then
-it may be worth the extra effort – that is, of course, something you will need to
-decide for yourself. If you are simply worried that you are forgetting too
-much, then you may find investing more time at the initial learning stage
-and/or using mnemonics will give you more gain for less effort.
+Однак важливо зазначити, що компроміс між часом навчання і запам'ятовуванням не є лінійним: для підвищення запам'ятовування на 5 процентних пунктів потрібно вивчати матеріал на 35% частіше. Якщо матеріал, що ви вивчаєте, дуже важливий, можливо, варто докласти додаткових зусиль — це, звісно, вам доведеться вирішити самостійно. Якщо ви просто хвилюєтеся, що забуваєте занадто багато, можливо, більше користі отримаєте від інвестування додаткового часу на початкове навчання та/або використання мнемонічних практик.
 
-One final thing to note is that Anki forces a new interval to be at
-least 1 day longer than it was previously, so that you do not get stuck
-reviewing with the same interval forever. If your goal is to repeat a
-card once a day for multiple days, you can do that by setting more
-learning mode steps, instead of by adjusting this modifier.
+Останнє, що варто зазначити, — це те, що Anki примусово встановлює новий інтервал на щонайменше 1 день довший, ніж попередній, щоб ви не застрягли з одним і тим же інтервалом назавжди. Якщо ваша мета — повторювати картку щодня протягом кількох днів, ви можете це зробити, встановивши більше кроків у режимі навчання, а не змінюючи цей модифікатор.
 
-### Hard Interval
+### Інтервал для Важко(Hard)
 
-The multiplier used when you use the `Hard` button. The percentage is relative
-to the previous interval: e.g. with a default of 1.20, a card with a 10-day interval
-will be given 12 days.
+Множник, що застосовується при натисканні кнопки `Важко`. Відсоток відносний до попереднього інтервалу: наприклад, при типовим значенні 1.20, картка з інтервалом у 10 днів отримає новий інтервал у 12 днів.
 
-### New Interval
+### Інтервал Знову(Again)
 
-The multiplier used when you use the `Again` button on a review card. The
-default 0.00 means that a review card's delay is reset to zero when you forget it
-(which then becomes 1 day after the [minimum interval](#minimum-interval) is
-applied).
+Множник, що застосовується при натисканні кнопки `Знову` на картці під час перегляду. Усталене значення 0.00 означає, що інтервал перегляду картки скидається до нуля, коли ви її забуваєте (згодом застосовується 1 день після [мінімального інтервалу](#minimum-interval)).
 
-If changed from the default, it is possible for forgotten cards to preserve part
-of their previous delay. For example, if a card had a 100 day interval, and you set
-the _New Interval_ to 0.20, the new interval would be 20 days.
+Якщо змінити типове значення, є можливість, що забуті картки збережуть частину попереднього інтервалу. Наприклад, якщо картка мала інтервал у 100 днів, і ви встановите _Інтервал Знову_ на 0.20, новий інтервал буде 20 днів.
 
-While preserving part of the interval may seem to make sense, SuperMemo has observed
-that preserving part of the delay can actually [be counter-productive](https://supermemo.guru/wiki/Post-lapse_stability). For this reason, we recommend you leave it on the default setting.
+Хоча збереження частини інтервалу може здаватися доцільним, SuperMemo спостерігав, що збереження частини затримки може бути [непродуктивним](https://supermemo.guru/wiki/Post-lapse_stability). З цієї причини ми рекомендуємо залишати значення за замовчуванням.
 
-## Custom Scheduling
+## Налаштування усталено
 
-Please see [this page](https://faqs.ankiweb.net/the-2021-scheduler.html#add-ons-and-custom-scheduling).
+Будь ласка, ознайомтеся з [цією сторінкою](https://faqs.ankiweb.net/the-2021-scheduler.html#add-ons-and-custom-scheduling).
