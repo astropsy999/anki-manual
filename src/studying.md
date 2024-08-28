@@ -77,7 +77,7 @@
 
 Подібно до режиму навчання, можете скористатися клавішами <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd> та <kbd>4</kbd>. Натискання <kbd>пробілу</kbd> або <kbd>Enter</kbd> спрацює як **Добре**.
 
-Перегляньте [Параметри колоди](deck-options.md) і [FAQ](https://faqs.ankiweb.net/what-spaced-repetition-algorithm.html), щоб дізнатися більше про те, як працює алгоритм.
+Перегляньте [Налаштування колоди](deck-options.md) і [FAQ](https://faqs.ankiweb.net/what-spaced-repetition-algorithm.html), щоб дізнатися більше про те, як працює алгоритм.
 
 ## Кількість завдань на сьогодні
 

@@ -80,7 +80,7 @@ sudo ./install.sh
 наступні сторінки:
 
 - [Відсутні бібліотеки](missing-libraries.md)
-- [Проблеми відображення](display-issues.md)
+- [Проблеми з відображенням](display-issues.md)
 - [Порожнє головне вікно](blank-window.md)
 - [Пакунки дистрибутивів Linux](distro-packages.md)
 - [Неправильна тема GTK](gtk-theme.md)
