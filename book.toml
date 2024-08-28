@@ -18,9 +18,9 @@ cname = "docs.ankiweb.net"
 additional-css = ["css/misc.css", "css/kbd.css"]
 
 [output.linkcheck]
-optional = true
+optional = false
 warning-policy = "warn"
-follow-web-links = true
+follow-web-links = false
 exclude = [
   'microsoft.com',
   'twitter.com',
