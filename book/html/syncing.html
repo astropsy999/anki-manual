@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html lang="ua" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Синхронізація з Ankiweb - Посібник Anki</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="css/misc.css">
+        <link rel="stylesheet" href="css/kbd.css">
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="intro.html">Вступ</a></li><li class="chapter-item "><a href="background.html"><strong aria-hidden="true">1.</strong> Загальні відомості</a></li><li class="chapter-item "><a href="platform/intro.html"><strong aria-hidden="true">2.</strong> Примітки до платформи</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/intro.html"><strong aria-hidden="true">2.1.</strong> Windows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/installing.html"><strong aria-hidden="true">2.1.1.</strong> Встановлення та оновлення</a></li><li class="chapter-item "><a href="platform/windows/installation-issues.html"><strong aria-hidden="true">2.1.2.</strong> Проблеми при встановленні</a></li><li class="chapter-item "><a href="platform/windows/startup-issues.html"><strong aria-hidden="true">2.1.3.</strong> Проблеми із запуском</a></li><li class="chapter-item "><a href="platform/windows/display-issues.html"><strong aria-hidden="true">2.1.4.</strong> Проблеми з відображенням</a></li><li class="chapter-item "><a href="platform/windows/copy-and-paste.html"><strong aria-hidden="true">2.1.5.</strong> Проблеми копіювання та вставлення</a></li><li class="chapter-item "><a href="platform/windows/text-size.html"><strong aria-hidden="true">2.1.6.</strong> Розмір тексту</a></li><li class="chapter-item "><a href="platform/windows/permission-problems.html"><strong aria-hidden="true">2.1.7.</strong> Проблеми з дозволом</a></li></ol></li><li class="chapter-item "><a href="platform/mac/intro.html"><strong aria-hidden="true">2.2.</strong> macOS</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/mac/installing.html"><strong aria-hidden="true">2.2.1.</strong> Встановлення та оновлення</a></li><li class="chapter-item "><a href="platform/mac/display-issues.html"><strong aria-hidden="true">2.2.2.</strong> Проблеми з відображенням</a></li></ol></li><li class="chapter-item "><a href="platform/linux/intro.html"><strong aria-hidden="true">2.3.</strong> Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/linux/installing.html"><strong aria-hidden="true">2.3.1.</strong> Встановлення та оновлення</a></li><li class="chapter-item "><a href="platform/linux/missing-libraries.html"><strong aria-hidden="true">2.3.2.</strong> Відсутні бібліотеки</a></li><li class="chapter-item "><a href="platform/linux/display-issues.html"><strong aria-hidden="true">2.3.3.</strong> Проблеми з відображенням</a></li><li class="chapter-item "><a href="platform/linux/blank-window.html"><strong aria-hidden="true">2.3.4.</strong> Порожнє головне вікно</a></li><li class="chapter-item "><a href="platform/linux/distro-packages.html"><strong aria-hidden="true">2.3.5.</strong> Пакунки дистрибутів Linux</a></li><li class="chapter-item "><a href="platform/linux/gtk-theme.html"><strong aria-hidden="true">2.3.6.</strong> Неправильна тема GTK</a></li><li class="chapter-item "><a href="platform/linux/wayland.html"><strong aria-hidden="true">2.3.7.</strong> Wayland</a></li><li class="chapter-item "><a href="platform/linux/input-methods.html"><strong aria-hidden="true">2.3.8.</strong> Методи введення</a></li></ol></li></ol></li><li class="chapter-item "><a href="getting-started.html"><strong aria-hidden="true">3.</strong> Почнемо</a></li><li class="chapter-item "><a href="getting-help.html"><strong aria-hidden="true">4.</strong> Допомога</a></li><li class="chapter-item "><a href="studying.html"><strong aria-hidden="true">5.</strong> Навчання</a></li><li class="chapter-item "><a href="editing.html"><strong aria-hidden="true">6.</strong> Додавання/редагування</a></li><li class="chapter-item "><a href="templates/intro.html"><strong aria-hidden="true">7.</strong> Шаблони карток</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="templates/fields.html"><strong aria-hidden="true">7.1.</strong> Заміна полів</a></li><li class="chapter-item "><a href="templates/generation.html"><strong aria-hidden="true">7.2.</strong> Генерація карток</a></li><li class="chapter-item "><a href="templates/styling.html"><strong aria-hidden="true">7.3.</strong> Стилізація та HTML</a></li><li class="chapter-item "><a href="templates/errors.html"><strong aria-hidden="true">7.4.</strong> Перевірки та помилки</a></li></ol></li><li class="chapter-item "><a href="preferences.html"><strong aria-hidden="true">8.</strong> Налаштування</a></li><li class="chapter-item "><a href="deck-options.html"><strong aria-hidden="true">9.</strong> Налаштування колоди</a></li><li class="chapter-item expanded "><a href="syncing.html" class="active"><strong aria-hidden="true">10.</strong> Синхронізація з Ankiweb</a></li><li class="chapter-item "><a href="profiles.html"><strong aria-hidden="true">11.</strong> Профілі</a></li><li class="chapter-item "><a href="browsing.html"><strong aria-hidden="true">12.</strong> Перегляд</a></li><li class="chapter-item "><a href="filtered-decks.html"><strong aria-hidden="true">13.</strong> Відфільтровані колоди</a></li><li class="chapter-item "><a href="searching.html"><strong aria-hidden="true">14.</strong> Пошук</a></li><li class="chapter-item "><a href="importing/intro.html"><strong aria-hidden="true">15.</strong> Імпорт</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="importing/text-files.html"><strong aria-hidden="true">15.1.</strong> Текстові файли</a></li><li class="chapter-item "><a href="importing/packaged-decks.html"><strong aria-hidden="true">15.2.</strong> Упаковані колоди</a></li></ol></li><li class="chapter-item "><a href="exporting.html"><strong aria-hidden="true">16.</strong> Експорт</a></li><li class="chapter-item "><a href="backups.html"><strong aria-hidden="true">17.</strong> Резервні копії</a></li><li class="chapter-item "><a href="files.html"><strong aria-hidden="true">18.</strong> Управління файлами</a></li><li class="chapter-item "><a href="stats.html"><strong aria-hidden="true">19.</strong> Статистика</a></li><li class="chapter-item "><a href="media.html"><strong aria-hidden="true">20.</strong> Медіа</a></li><li class="chapter-item "><a href="math.html"><strong aria-hidden="true">21.</strong> Математика та символи</a></li><li class="chapter-item "><a href="leeches.html"><strong aria-hidden="true">22.</strong> Приставучі картки</a></li><li class="chapter-item "><a href="addons.html"><strong aria-hidden="true">23.</strong> Додатки</a></li><li class="chapter-item "><a href="troubleshooting.html"><strong aria-hidden="true">24.</strong> Вирішення проблем</a></li><li class="chapter-item "><a href="sync-server.html"><strong aria-hidden="true">25.</strong> Синхронизація із сервером</a></li><li class="chapter-item "><a href="misc.html"><strong aria-hidden="true">26.</strong> Різне</a></li><li class="chapter-item affix "><a href="contrib.html">Співробітництво</a></li><li class="chapter-item affix "><a href="faqs.html">Поширені запитання</a></li><li class="chapter-item affix "><a href="resources.html">Ресурси</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Посібник Anki</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/astropsy999/anki-manual" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="Синхронізація-з-ankiweb"><a class="header" href="#Синхронізація-з-ankiweb">Синхронізація з Ankiweb</a></h1>
+<ul>
+<li><a href="#%D0%92%D1%81%D1%82%D1%83%D0%BF%D0%BD%D1%96-%D0%B2%D1%96%D0%B4%D0%B5%D0%BE">Вступні відео</a></li>
+<li><a href="#%D0%9D%D0%B0%D0%BB%D0%B0%D1%88%D1%82%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F">Налаштування</a></li>
+<li><a href="#%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D0%B0-%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D1%96%D0%B7%D0%B0%D1%86%D1%96%D1%8F">Автоматична синхронізація</a></li>
+<li><a href="#%D0%9A%D0%BE%D0%BB%D1%96%D1%80-%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B8-%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D1%96%D0%B7%D0%B0%D1%86%D1%96%D1%97">Колір кнопки синхронізації</a></li>
+<li><a href="#%D0%9C%D0%B5%D0%B4%D1%96%D0%B0%D1%84%D0%B0%D0%B9%D0%BB%D0%B8">Медіафайли</a></li>
+<li><a href="#%D0%9A%D0%BE%D0%BD%D1%84%D0%BB%D1%96%D0%BA%D1%82%D0%B8">Конфлікти</a></li>
+<li><a href="#%D0%97%D0%BB%D0%B8%D1%82%D1%82%D1%8F-%D0%BA%D0%BE%D0%BD%D1%84%D0%BB%D1%96%D0%BA%D1%82%D1%96%D0%B2">Злиття конфліктів</a></li>
+<li><a href="#%D0%91%D1%80%D0%B0%D0%BD%D0%B4%D0%BC%D0%B0%D1%83%D0%B5%D1%80%D0%B8">Брандмауери</a></li>
+<li><a href="#%D0%9F%D1%80%D0%BE%D0%BA%D1%81%D1%96-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D0%B8">Проксі-сервери</a></li>
+</ul>
+<p><strong>AnkiWeb</strong> — це сервіс, який дозволяє синхронізувати колекцію між кількома пристроями та завжди навчатися онлайн. Будь ласка, зареєструйте <a href="https://ankiweb.net/">безкоштовний обліковий запис</a>, перш ніж виконувати наведені нижче кроки.</p>
+<h2 id="Вступні-відео"><a class="header" href="#Вступні-відео">Вступні відео</a></h2>
+<p>Для швидкого ознайомлення із синхронізацією рекомендується переглянути <a href="https://www.youtube.com/watch?v=YkiM4DPzSVc&amp;list=PLGgmaKOIHykFoomqkBJAyGiDQ2kyiuTao&amp;yt:cc=on">вступні відео про синхронізацію</a>.</p>
+<h2 id="Налаштування"><a class="header" href="#Налаштування">Налаштування</a></h2>
+<p>Щоб почати синхронізувати колекцію між пристроями, натисніть кнопку синхронізації
+(у верхньому правому куті на <a href="studying.html#decks">головному екрані</a>) або 'y' на клавіатурі.
+З'явиться запит на введення AnkiWeb ID та пароля, які було створено під час реєстрації.</p>
+<p>При першій синхронізації колекції Anki запитає, чи бажаєте завантажити або вивантажити дані.
+Якщо на комп'ютері є картки, а обліковий запис AnkiWeb порожній, виберіть "вивантажити", щоб відправити дані на AnkiWeb.
+Якщо картки вже є в обліковому записі AnkiWeb з іншого пристрою, а на комп'ютері їх немає, виберіть "завантажити", щоб замінити локальну колекцію картками з AnkiWeb.
+Якщо на обох пристроях різні картки, потрібні додаткові дії, щоб уникнути втрати даних (<a href="#merging-conflicts">детальніше про вирішення конфліктів</a>).</p>
+<p>Після завершення початкової односпрямованої синхронізації Anki зможе об'єднувати зміни з різних джерел, з деякими винятками.</p>
+<p>Якщо кілька людей використовують Anki на одному комп'ютері і створили профіль для кожного користувача, кожен з них повинен створити окремий обліковий запис AnkiWeb для синхронізації. Синхронізація кількох профілів з одним обліковим записом AnkiWeb призведе до втрати даних</p>
+<h2 id="Автоматична-синхронізація"><a class="header" href="#Автоматична-синхронізація">Автоматична синхронізація</a></h2>
+<p>Після ввімкнення синхронізації Anki автоматично синхронізуватиме колекцію кожного разу, коли її буде закрито або відкрито. Якщо бажаєте синхронізувати вручну, автоматичну синхронізацію можна вимкнути в <a href="preferences.html#syncing">налаштуваннях</a> Anki.</p>
+<h2 id="Колір-кнопки-синхронізації"><a class="header" href="#Колір-кнопки-синхронізації">Колір кнопки синхронізації</a></h2>
+<p>Кнопка синхронізації змінюватиме колір на синій, коли потрібна звичайна синхронізація, і на червоний, коли потрібна повна.</p>
+<h2 id="Медіафайли"><a class="header" href="#Медіафайли">Медіафайли</a></h2>
+<p>Пов'язане відео: <a href="https://www.youtube.com/watch?v=phP9GGG-PxY">https://www.youtube.com/watch?v=phP9GGG-PxY</a></p>
+<p>Anki синхронізує всі звуки та зображення, що використовуються у нотатках. Програма відстежує, коли медіафайли додаються або видаляються з <a href="files.html#file-locations">папки медіафайлів</a>, але не помітить, якщо ви змінили наявні файли без додавання чи видалення. Щоб зміни були помічені, потрібно додати або видалити файл.</p>
+<p>Односторонні синхронізації (коли з'являється запит на завантаження або вивантаження даних) не впливають на синхронізацію медіафайлів — зміни медіафайлів завжди об'єднуються.</p>
+<p>Щоб уникнути випадкової втрати даних, видалення медіафайлів синхронізуються з іншими пристроями лише після повної синхронізації. Якщо файли видалено до завершення синхронізації і вони вже наявні на AnkiWeb, вони будуть завантажені під час наступної синхронізації.</p>
+<p>Якщо випадково видалено медіафайли і їх потрібно відновити, відкрийте налаштування та виконайте вихід з облікового запису. Під час наступної синхронізації Anki відновить видалені файли, якщо вони ще доступні на AnkiWeb.</p>
+<p>Якщо Anki використовується з <a href="files.html#running-from-a-flash-drive">USB-накопичувача</a>, рекомендується файлова система NTFS, оскільки Anki може не виявляти зміни медіафайлів у файловій системі FAT32.</p>
+<h2 id="Конфлікти"><a class="header" href="#Конфлікти">Конфлікти</a></h2>
+<p>Пов'язане відео: <a href="https://www.youtube.com/watch?v=UEAcpfMQnjo">https://www.youtube.com/watch?v=UEAcpfMQnjo</a></p>
+<p>За нормальних умов Anki може об'єднувати результати повторення та редагування нотаток, тому якщо ви виконали повторення або редагування на двох різних пристроях перед синхронізацією, Anki збереже зміни з обох пристроїв. Якщо одна й та сама картка була повторена на двох різних пристроях, обидва повторення будуть позначені в історії переглядів, а картка залишиться в стані, який був при останньому перегляді.</p>
+<p>Однак існують певні зміни, які Anki не може об'єднати. Переважно це стосується формату нотаток: наприклад, додавання нового поля або видалення шаблону картки. Коли виконуєте операцію, яка не може бути об'єднана, Anki попередить і запропонує відмінити операцію. Якщо вирішите продовжити, вам буде запропоновано вибрати, чи зберігати локальну копію, чи копію на AnkiWeb під час наступної синхронізації колекції.</p>
+<p>Якщо під час синхронізації будуть виявлені певні проблеми, Anki також змусить виконати односторонню синхронізацію. Якщо це трапляється постійно, будь ласка, опублікуйте повідомлення на нашому сайті підтримки.</p>
+<p>Коли потрібна одностороння синхронізація, ви повинні вибрати, чи хочете зберегти колекцію з вашого локального пристрою, чи колекцію з AnkiWeb. Якщо зміни були внесені на обох пристроях, зберегти можна лише зміни одного з них.</p>
+<p>Якщо виберете "Вивантажити", вміст локального пристрою буде відправлено на AnkiWeb. Потім потрібно синхронізувати інші пристрої та вибрати "Завантажити", щоб отримати копію цього вмісту.</p>
+<p>Якщо ви виберете "Завантажити", це замінить будь-які локальні зміни даними з AnkiWeb.</p>
+<p>Після синхронізації усіх пристроїв в подальшому синхронізації повернуться до нормальної поведінки об'єднання змін з обох кінців.</p>
+<p>Якщо хочете примусово виконати повне вивантаження або завантаження (наприклад, якщо випадково видалили колоду на одному з пристроїв і хочете відновити її, а не синхронізувати її видалення), можете поставити прапорець "Під час наступної синхронізації примусити зміни в одному напрямку" в меню Інструменти &gt; Налаштування &gt; Мережа, а потім синхронізувати як зазвичай. (Вам буде надано можливість вибрати, який бік ви хочете використовувати.)</p>
+<p>Примусова одностороння синхронізація впливає лише на синхронізацію карток - медіафайли синхронізуються як зазвичай. Якщо у вас є файли, які ви хочете видалити з AnkiWeb, будь ласка, спочатку переконайтеся, що ваш клієнт повністю синхронізований. Після того, як синхронізація буде актуальною, будь-які файли, які ви видалите (наприклад, через функцію Перевірка медіа), будуть видалені з AnkiWeb під час наступної синхронізації.</p>
+<h2 id="Злиття-конфліктів"><a class="header" href="#Злиття-конфліктів">Злиття конфліктів</a></h2>
+<p>Під час першого налаштування синхронізації зміни можна синхронізувати лише в одному напрямку. Якщо ви додали різний контент на різні пристрої або профілі до ввімкнення синхронізації, контент з одного пристрою буде втрачено, якщо ви перезапишете його даними з іншого. Проте ви можете вручну об'єднати дані в одну колекцію.</p>
+<p><strong>Крок 1: Зробіть резервну копію даних</strong>
+Спершу створіть резервну копію на кожному пристрої/профілі, щоб уникнути втрати даних. На комп'ютері скористайтеся <code>Файл &gt; Експортувати</code> для експорту "всіх колод" із включенням інформації про розклад і медіафайли, збережіть файл у безпечному місці. В AnkiMobile на екрані списку колод натисніть кнопку Додати/Експортувати, щоб експортувати всі колоди з медіа.</p>
+<p><strong>Крок 2: Синхронізуйте перший пристрій</strong>
+Якщо одним із ваших пристроїв мобільний, синхронізуйте його першим. Якщо виникне конфлікт, оберіть "завантажити", щоб перезаписати всі дані на AnkiWeb даними з мобільного пристрою. Якщо обидва пристрої/профілі знаходяться на комп’ютері, спочатку синхронізуйте той, на якому найбільше колод.</p>
+<p><strong>Крок 3: Підготуйте другий пристрій</strong>
+На іншому пристрої/профілі, якщо ввімкнено автоматичну синхронізацію, може з'явитися повідомлення з проханням завантажити або вивантажити дані. Натисніть кнопку скасування – ми ще не хочемо синхронізувати. Перебуваючи в списку колод, натисніть значок шестерні біля першої колоди та оберіть "експортувати". Експортуйте контент з інформацією про розклад і медіафайли, збережіть <code>.apkg</code> файл. Повторіть цю операцію для кожної основної колоди.</p>
+<p><strong>Крок 4: Синхронізуйте другий пристрій</strong>
+Після експорту всіх основних колод натисніть кнопку синхронізації у верхньому правому куті та оберіть "завантажити", щоб перезаписати локальний контент даними, синхронізованими з іншого пристрою.</p>
+<p><strong>Крок 5: Об'єднайте колоди</strong>
+Нарешті, скористайтесь <code>Файл &gt; Імпорт</code>, щоб імпортувати <code>.apkg</code> файли, які ви експортували раніше. Це об'єднає експортований контент з існуючим, поєднавши все в одну колекцію.</p>
+<h2 id="Брандмауери"><a class="header" href="#Брандмауери">Брандмауери</a></h2>
+<p>Для синхронізації Anki необхідно мати можливість встановлювати вихідні HTTPS-з'єднання. Програма повинна підключатися до таких доменів, як ankiweb.net, sync.ankiweb.net, sync2.ankiweb.net тощо. Ці домени можуть змінюватися з часом, як і IP-адреси, на які вони вказують, тому рекомендується дозволити доступ до *.ankiweb.net за допомогою символу підстановки (wildcard), щоб зменшити ймовірність необхідності оновлення правил брандмауера в майбутньому.</p>
+<p>Якщо на вашому пристрої ввімкнено брандмауер, вам потрібно додати виключення для Anki. Якщо ви знаходитесь у робочій або шкільній мережі, зверніться до адміністратора мережі за допомогою — це питання, яке ми не зможемо вирішити самостійно.</p>
+<h2 id="Проксі-сервери"><a class="header" href="#Проксі-сервери">Проксі-сервери</a></h2>
+<p>Якщо для доступу до інтернету вам потрібен проксі-сервер, Anki автоматично підхопить налаштування системного проксі, якщо ви використовуєте Windows або macOS, і буде використовувати змінну середовища HTTP_PROXY на інших платформах.</p>
+<p>Anki зможе підхопити системні налаштування, якщо проксі налаштовано вручну та не вимагає пароля. Якщо у вашій системі використовується автоматичне налаштування проксі або проксі з авторизацією (логіном і паролем), вам потрібно буде вручну вказати Anki конфігурацію проксі.</p>
+<p>Щоб вказати налаштування проксі для Anki, задайте змінну середовища HTTPS_PROXY, що вказує на сервер проксі. Це має виглядати так:</p>
+<pre><code>http://user:pass@proxy.company.com:8080
+</code></pre>
+<p>Якщо у вашому логіні або паролі є символ <code>@</code> (наприклад, <code>user@workdomain.com</code>), замініть його на <code>%40</code>, ось так:</p>
+<pre><code>http://user%40workdomain.com:pass@proxy.company.com:8080
+</code></pre>
+<p>Anki 2.0 використовує змінну HTTP_PROXY замість HTTPS_PROXY.</p>
+<p>Щоб налаштувати змінні середовища у Windows, дивіться <a href="https://www.google.com/search?q=windows+set+environmental+variable">цю інструкцію</a>.</p>
+<p>Для налаштування на Mac, зверніться до <a href="http://stackoverflow.com/questions/135688/setting-environment-variables-in-os-x">цього посібника</a>.</p>
+<p>Жорстко обмежені мережі, що перехоплюють захищені з'єднання та підміняють сертифікати, можуть викликати помилки SSL у Anki. У таких середовищах можна спробувати обійти ці помилки за допомогою <a href="https://ankiweb.net/shared/info/878367706">цього додатку</a>.</p>
+<p>Альтернативним рішенням є встановлення локального проксі-сервера та його налаштування на ваш звичайний проксі. Тоді ви зможете вказати Anki використовувати локальний проксі, який буде перенаправляти запити на проксі-сервер, який ви зазвичай використовуєте.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="deck-options.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="profiles.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="deck-options.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="profiles.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
