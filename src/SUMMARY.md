@@ -45,7 +45,7 @@
   - [Упаковані колоди](importing/packaged-decks.md)
 - [Експорт](exporting.md)
 - [Резервні копії](backups.md)
-- [Управління файлами](files.md)
+- [Керування файлами](files.md)
 - [Статистика](stats.md)
 - [Медіа](media.md)
 - [Математика та символи](math.md)
