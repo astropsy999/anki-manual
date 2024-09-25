@@ -1,58 +1,26 @@
-# Media
+# Медіа
 
-Anki stores the sounds and images used in your notes in a folder next to
-the collection. For more on the folder location, please see the [file locations](files.md#file-locations) section. When you add media within Anki, either by
-using the paperclip icon in the [editor](editing.md) or by pasting it into
-a field, Anki will copy it from its original location into the media
-folder. This makes it easy to back up your collection’s media or move it
-to another computer.
+Anki зберігає звуки та зображення, які використовуються у ваших нотатках, у папці поруч із колекцією. Для отримання додаткової інформації про розташування папки, будь ласка, перегляньте розділ [розташування файлів](files.md#розташування-файлів). Коли ви додаєте медіа в Anki, використовуючи значок скріпки в [редакторі](editing.md) або вставляючи його в поле, Anki копіює його з початкового розташування в медіа-папку. Це полегшує резервне копіювання медіа вашої колекції або перенесення її на інший комп'ютер.
 
-If your media filenames contain spaces or other special characters such
-as percentage signs, the way the filenames appear in the HTML editor will
-differ from the way the filenames appear on disk. For example, a file called
-`hello 100%.jpg` will appear as `hello%20100%25.jpg` in the HTML editor.
-Internally, Anki still uses the original filenames, so if you would like to
-[search](searching.md) for the file or modify the filename with [Find&Replace](browsing.md#find-and-replace), you will
-need to use the name as it appears on disk, not as it appears in the
-HTML editor. Exporting to a text file is another way to see the underlying
-representation.
+Якщо імена ваших медіафайлів містять пробіли або інші спеціальні символи, як-от відсотки, спосіб відображення імен файлів у HTML-редакторі відрізнятиметься від того, як вони виглядають на диску. Наприклад, файл під назвою `hello 100%.jpg` буде відображатися як `hello%20100%25.jpg` у HTML-редакторі. Внутрішньо Anki все ще використовує оригінальні імена файлів, тому якщо ви хочете [шукати](searching.md) файл або змінити його ім'я за допомогою [Пошук і Заміна](browsing.md#знайти-та-замінити), вам потрібно використовувати ім'я, як воно виглядає на диску, а не як воно відображається в HTML-редакторі. Експорт у текстовий файл — це ще один спосіб побачити внутрішнє представлення.
 
-## Checking Media
+## Перевірка медіа
 
-You can use the Tools&gt;Check Media menu option to scan your notes and
-media folder. It will generate a report of files in the media folder
-that are not used by any notes, and media referenced in notes but
-missing from your media folder. It also allows you:
+Ви можете скористатися меню Інструменти&gt;Перевірити медіа-файли, щоб сканувати ваші нотатки та медіа-папку. Це згенерує звіт про файли в медіа-папці, які не використовуються жодною нотаткою, і медіа, на які є посилання в нотатках, але яких немає у вашій медіа-папці. Також це дозволяє:
 
-- To delete unused media files.
-- To tag notes that refer to missing media files.
-- To empty your trash folder.
-- To restore the deleted files back to your media folder.
+- Видаляти невикористані медіафайли.
+- Додавати мітки до нотаток, які посилаються на відсутні медіафайли.
+- Очищати вашу папку зі сміттям.
+- Відновлювати видалені файли назад у вашу медіа-папку.
 
-This tool does not scan question or answer
-templates, which is why you can’t place media references to fields in
-the template. If you need a static image or sound on every card, name it
-with a leading \_ (e.g., `_dog.jpg`) to tell Anki to ignore it when
-checking for media. If you delete media using the unused media check,
-Anki will move it into your operating system’s trash folder, so you can
-recover if you accidentally delete media that shouldn’t have been
-deleted.
+Цей інструмент не сканує шаблони питань або відповідей, тому ви не можете розміщувати посилання на медіа у полях шаблону. Якщо вам потрібне статичне зображення або звук на кожній картці, назвіть його з початковим \_ (наприклад, `_dog.jpg`), щоб Anki ігнорував його під час перевірки медіа. Якщо ви видалите медіа за допомогою перевірки невикористаних медіа, Anki перемістить його в папку сміття вашої операційної системи, щоб ви могли відновити його, якщо випадково видалите медіа, яке не слід було видаляти.
 
-## Manually Adding Media
+## Додавання медіа вручну
 
-When you add media via Anki's interface, Anki takes care of ensuring the
-filenames are encoded in a way that should work across different devices,
-removing characters that won't work on certain operating systems,
-and truncating very long filenames.
+Коли ви додаєте медіа через інтерфейс Anki, Anki забезпечує кодування імен файлів таким чином, щоб вони працювали на різних пристроях, видаляючи символи, які не працюватимуть на певних операційних системах, і скорочуючи дуже довгі імена файлів.
 
-If you manually add files to your [media folder](files.md#file-locations),
-you should use Tools&gt;Check Media afterwards, to ensure the filenames are
-encoded correctly. If you skip this step, any filenames that are not compatible
-will be skipped when syncing.
+Якщо ви вручну додаєте файли до вашої [медіа-папки](files.md#розташування-файлів), вам слід скористатися Інструменти&gt;Перевірити медіа-файли після цього, щоб переконатися, що імена файлів закодовані правильно. Якщо пропустити цей крок, будь-які файли з несумісними іменами будуть пропущені під час синхронізації.
 
-## Supported Formats
+## Підтримувані формати
 
-Anki uses a program called mpv (and mplayer as a fallback) in order to support
-sounds and videos. A wide variety of file formats are supported, but not all of
-these formats will work on AnkiWeb and the mobile clients. MP3 audio and
-MP4 video seems to be the most universally supported.
+Anki використовує програму під назвою mpv (і mplayer як запасний варіант) для підтримки звуків і відео. Підтримується широкий спектр форматів файлів, але не всі ці формати працюватимуть на AnkiWeb і мобільних клієнтах. Найбільш універсально підтримуваними є MP3 для аудіо та MP4 для відео.

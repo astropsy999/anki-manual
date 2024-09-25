@@ -1,26 +1,24 @@
-# Exporting
+# Експорт
 
 <!-- toc -->
 
-Exporting allows you to save part of your collection as a text file or
-packaged Anki deck. To export, click the File menu and choose 'Export'.
+Експорт дозволяє зберегти частину вашої колекції як текстовий файл або
+упаковану колоду Anki. Щоб експортувати, натисніть меню Файл і виберіть 'Експортувати'.
 
-## Text Files
+## Текстові файли
 
-If you choose "Notes in Plain Text", Anki will write the contents of the
-notes into a text file. Each field is separated by a tab. If you edit
-the resulting file and don't modify the first field, you can later
-import that file back into Anki and Anki will update your notes based on
-your edits, provided you import back into the same note type.
+Якщо ви виберете "Нотатки у неформатованому тексті", Anki запише вміст
+нотаток у текстовий файл. Кожне поле розділяється табуляцією. Якщо ви відредагуєте
+отриманий файл і не зміните перше поле, ви зможете пізніше
+імпортувати цей файл назад в Anki, і Anki оновить ваші нотатки на основі
+ваших змін, за умови, що ви імпортуєте назад у той самий тип нотатки.
 
-If you find yourself needing to edit the first field as well, you'll
-need to change the format of your note type so that the first field is
-an ID number rather than actual text. (You can install
-the [Add note id](https://ankiweb.net/shared/info/1672832404)
-add-on to make this easier.)
+Якщо потрібно також редагувати перше поле, вам доведеться змінити формат типу нотатки так, щоб перше поле було номером ID, а не фактичним текстом. (Ви можете встановити
+додаток [Add note id](https://ankiweb.net/shared/info/1672832404),
+щоб полегшити це завдання.)
 
-In order for formatting to be preserved when you import text back in,
-the text is exported with all the HTML formatting embedded in it.
+Щоб зберегти форматування під час імпорту тексту назад,
+текст експортується з усім вбудованим HTML-форматуванням.
 
 ## Упаковані колоди
 
@@ -63,4 +61,4 @@ Anki скопіює всю вашу колекцію у файл із розши
 зміни у вашій колекції збережуться.
 
 Якщо ви вирішите не включати інформацію про розклад, Anki вважатиме, що ви ділитеся колодою з іншими людьми,
-і видалить позначені та вилучені теги, щоб вони мали її чисту копію.
+і видалить позначені та вилучені мітки, щоб вони мали її чисту копію.

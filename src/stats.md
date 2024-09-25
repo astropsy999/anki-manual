@@ -1,241 +1,174 @@
-# Card Info, Graphs and Statistics
+# Інформація про картку, графіки та статистика
 
 <!-- toc -->
 
 ## Інформація про картку
 
-You can display information about a card by using the Cards&gt;Info menu item,
-by right-clicking on the card and then selecting **Info**, or by pressing
-<kbd>I</kbd> on the review screen.
+Інформацію про картку можна відобразити, використовуючи пункт меню Картки&gt;Інфо,
+клацнувши правою кнопкою миші на картці та вибравши **Інфо**, або натиснувши
+<kbd>I</kbd> на екрані перегляду.
 
-![Card Info](media/card_info.png)
+![Інформація про картку](media/card_info.png)
 
-A few notes:
+Кілька приміток:
 
-**Position**\
-It shows the order the card will appear
-in relative to other new cards. The position can be changed in the
-browser. Once a card has been studied, the position is not used, unless
-the card is manually reset to new again.
+**Позиція**\
+Показує порядок, у якому картка з'явиться
+відносно інших нових карток. Позицію можна змінити в
+браузері. Після того, як картка була вивчена, позиція більше не використовується, якщо
+картка не буде вручну скинута до стану нової.
 
 **Interval**\
-The delay from one review to the next. Times are abbreviated; "0s, 1m,
-3h, 4d, 5mo, 6y" refers to seconds, minutes, hours, days, months and
-years respectively.
+Затримка між поточним і наступним переглядом. Час позначається скорочено: "0s, 1m,
+3h, 4d, 5mo, 6y" означає секунди, хвилини, години, дні, місяці та
+роки відповідно.
 
 **Ease**\
-The approximate amount the interval will grow when you answer a review
-card with the "Good" button.
+Приблизний коефіцієнт збільшення інтервалу, коли ви відповідаєте на картку
+перегляду кнопкою "Good".
 
-The bottom section shows the review history for the card. Rating denotes
-the button (1 = Again, 4 = Easy). When cards are manually rescheduled using
-the "reset" or "set due date" actions, the type will be listed as Manual
-and the rating as 0.
+Нижня частина показує історію переглядів картки. Оцінка позначає
+кнопку (1 = Again, 4 = Easy). Коли картки вручну переплановуються за допомогою
+дій "reset" або "set due date", тип буде позначений як Manual,
+а оцінка — як 0.
 
-## Statistics
+## Статистика
 
-The statistics window is accessed by clicking on **Stats** button at the
-top of the main window, or by pressing <kbd>T</kbd>.
+Вікно статистики відкривається натисканням кнопки **Статистика** у верхній частині
+головного вікна або натисканням <kbd>T</kbd>.
 
-![Statistics screen](media/Statistics.png)
+![Екран статистики](media/Statistics.png)
 
-## Selecting Decks / Collection
+## Вибір колод / Колекція
 
-### Deck.
+### Колода
 
-By default, the statistics window will show statistics from the currently selected deck and any
-subdecks it may contain, but you can select any deck from your collection by typing its name in the
-text box at the top of the screen or (from Anki 2.1.61), by using the deck selector at the bottom.
+Типово, вікно статистики показує статистику для поточної вибраної колоди та будь-яких
+підколод, які вона може містити, але ви можете вибрати будь-яку колоду зі своєї колекції, ввівши її назву в
+текстове поле у верхній частині екрана або (з Anki 2.1.61), використовуючи селектор колод внизу.
 
-### Collection
+### Колекція
 
-If you select this checkbox, statistics will be shown for your entire collection. You can also display graphs
-for arbitrary searches by adding filters in the search box at the top (2.1.28+).
+Якщо вибрати цей прапорець, статистика буде показана для всієї вашої колекції. Ви також можете відобразити графіки
+для довільних пошуків, додавши фільтри в поле пошуку у верхній частині (2.1.28+).
 
-### History
+### Історія
 
-By default, Anki 2.1.28+ will show you statistics for the last 12 months.
-You can change this to all history scope or deck life scope at the top. (The
-"today" section at the top remains of course unaffected by this selection.)
+Типово, Anki 2.1.28+ показує статистику за останні 12 місяців.
+Це можна змінити на весь період історії або на період життя колоди у верхній частині. (Розділ
+"сьогодні" у верхній частині, звісно, не змінюється цією опцією.)
 
-Older versions of Anki will by default show you statistics for
-the previous month. You can change this to a year scope or deck life scope
-at the bottom. (Again, the “today” section at the top is unaffected
-by this selection.)
+Старіші версії Anki типово показують статистику за
+попередній місяць. Це можна змінити на річний період або період життя колоди
+внизу. (Знову ж таки, розділ "сьогодні" у верхній частині не змінюється
+цією опцією.)
 
-### More
+### Додатково
 
-- Clicking on "Save PDF" at the bottom will save a PDF document of the statistics to a file
-  on your desktop to make it easy to share your statistics with others.
+- Натискання "Зберегти в форматі PDF" внизу збереже PDF-документ зі статистикою у файл
+  на вашому робочому столі, щоб було легко поділитися статистикою з іншими.
 
-- When you delete notes, their review history is maintained in Anki. It
-  will not be included when looking at statistics for a specific deck (as
-  Anki has no way of knowing which deck the deleted cards belonged to),
-  but will be included when you look at statistics for the whole
-  collection.
+- Коли ви видаляєте нотатки, їхня історія переглядів зберігається в Anki. Вона
+  не буде включена при перегляді статистики для конкретної колоди (оскільки
+  Anki не може знати, до якої колоди належали видалені картки),
+  але буде включена при перегляді статистики для всієї
+  колекції.
 
-- Anki 2.1.28+ introduced redesigned graphs. The old graphs are still
-  accessible with a <kbd>Shift</kbd>-click on the Stats button.
+- Anki 2.1.28+ запровадила оновлені графіки. Старі графіки все ще
+  доступні за допомогою <kbd>Shift</kbd>-кліку на кнопці Статистика.
 
-## Today
+## Сьогодні
 
-At the top of the statistics window is a brief list of textual
-statistics about the reviews that you have completed today. A “review”
-in this context is 'one answering of a card', so a card might count as
-multiple reviews if it needed to be seen multiple times, and a learning
-card answered also counts as a “review.” A couple of the stats whose
-meaning may not be immediately obvious:
+У верхній частині вікна статистики знаходиться короткий список текстової
+статистики про перегляди, які ви завершили сьогодні. "Перегляд"
+у цьому контексті означає 'одну відповідь на картку', тому картка може рахуватися
+як кілька переглядів, якщо її потрібно було переглянути кілька разів, а також картка для навчання
+вважається "переглядом". Кілька статистичних даних, значення яких може бути не одразу зрозумілим:
 
-**Again Count**\
-This is the number of reviews that you have failed (i.e., pressed Again
-on). The correct percentage listed afterwards is the number of cards you
-did 'not' fail divided by the total number of cards you studied.
+**Підрахунок Знову**\
+Це кількість переглядів, які ви не пройшли (тобто натиснули Знову).
+Відсоток правильних відповідей, зазначений після цього, — це кількість карток, які ви
+'не' провалили, поділена на загальну кількість вивчених карток.
 
-**Learn, Review, Relearn, Filtered**\
-The number of reviews that were learning cards, review cards, relearning
-cards, or studied in a filtered deck when not due.
+**Вивчено, Переглянуто, Перенавчання, Відфільтровано**\
+Кількість переглядів, які були картками для навчання, картками для перегляду, картками для повторного навчання або вивчені в відфільтрованій колоді, коли вони не були заплановані.
 
-The stats for the current day are not a good overall indicator of your
-learning progress; everyone has bad days and good days, and seeing that
-you got a lower percentage correct on a particular day should not be
-cause for concern. The remainder of the stats, which take longer periods
-of time into account, will give more useful information if you wish to
-try to change your study habits or scheduling settings based on your
-performance.
+Статистика за поточний день не є хорошим загальним показником вашого
+прогресу у навчанні; у всіх бувають погані та хороші дні, і якщо ви побачите,
+що отримали нижчий відсоток правильних відповідей у певний день, це не повинно
+викликати занепокоєння. Решта статистики, яка враховує довші періоди
+часу, надасть кориснішу інформацію, якщо ви хочете змінити свої
+звички навчання або налаштування планування на основі вашої продуктивності.
 
-The “today” statistics are unaffected by the time period selected at the
-bottom of the window.
+Статистика "сьогодні" не змінюється залежно від періоду часу, вибраного внизу
+вікна.
 
-## The Graphs
+## Графіки
 
-**Future Due**\
-This graph shows an estimated number of reviews that will be due on a
-given day in the future if you learn no new cards and fail no cards. The
-bars and the left axis show the number of cards due on each day if you
-study all cards each day, while the line and the right axis show the
-number of cards due on that day if you don’t study at all until then.
-Note that the forecast graph does not count reviews that are currently
-overdue, so if you have a large backlog, the overdue cards will not be
-displayed.
+**Прогноз**\
+Цей графік показує приблизну кількість переглядів, які будуть заплановані на
+певний день у майбутньому, якщо ви не вивчатимете нові картки та не провалите жодної картки.
+Стовпчики та ліва вісь показують кількість карток, запланованих на кожен день, якщо ви
+вивчатимете всі картки щодня, тоді як лінія та права вісь показують кількість карток, запланованих на цей день, якщо ви взагалі не будете вчитися до цього часу.
+Зверніть увагу, що графік прогнозу не враховує перегляди, які наразі прострочені, тому якщо у вас є велика кількість прострочених карток, вони не будуть відображені.
 
-**Calendar**
-This graph shows past card review activity. Hovering the mouse over a specific item
-allows you to view the number of revisions made that day. Click on a day of the
-week to make that the starting day.
+**Календар**
+Цей графік показує активність перегляду карток у минулому. Наведення миші на конкретний елемент дозволяє переглянути кількість переглядів, зроблених того дня. Натисніть на день тижня, щоб зробити його початковим днем.
 
-**Reviews**\
-This graph counts the number of card reviews you have done. The bars may
-correspond to days, weeks, or months, depending on the time period
-you’ve selected at the bottom of the screen. The differently colored
-blocks show how many of the cards you answered on each day were
-[mature](getting-started.md#types-of-cards), young, relearning, or learning cards.
-There is also a separate group for cards answered in a filtered/cram
-deck while they were not due. The line and the right axis shows the
-cumulative total for each type of review as time progresses across the
-graph (so at 0 days, it would display the number for the entire time
-period displayed on the graph).
+**Повторення**\
+Цей графік підраховує кількість переглядів карток, які ви зробили. Стовпці можуть відповідати дням, тижням або місяцям, залежно від періоду часу, вибраного внизу екрана. Блоки різних кольорів показують, скільки карток, на які ви відповідали кожного дня, були [зрілими](getting-started.md#types-of-cards), молодими, повторно вивченими або новими. Також є окрема група для карток, на які відповідали у відфільтрованій/інтенсивній колоді, коли вони не були заплановані. Лінія та права вісь показують загальну кількість для кожного типу перегляду в міру просування часу на графіку (тобто на 0 днів буде показано кількість для всього періоду часу, відображеного на графіку).
 
-**Card Counts**\
-This pie chart shows what percentage of your deck or collection consists
-of mature, unseen, young/learn, and suspended cards. If you wish to
-calculate a more precise percentage, the key shows the exact number of
-cards in each section, and the total number of cards is displayed to the
-side.
+**Кількість карток**\
+Ця кругова діаграма показує, який відсоток вашої колоди або колекції складається із зрілих, невидимих, молодих/навчальних та призупинених карток. Якщо потрібно розрахувати точніший відсоток, ключ показує точну кількість карток у кожному розділі, а загальна кількість карток відображається збоку.
 
-**Review Time**\
-This graph works exactly like Review Count, except that it deals with
-the amount of time you spent on each card rather than the number of
-cards answered.
+**Час перегляду**\
+Цей графік працює так само, як і кількість переглядів, за винятком того, що він відображає кількість часу, витраченого на кожну картку, а не кількість відповідей.
 
-**Review Intervals**\
-This graph displays the number of cards that have a given interval (the
-delay between two reviews). The line and the right axis tell you what
-percentage of your cards have an interval of less than or equal to the
-time below that point. The time scope has a different effect on this
-graph than other graphs: rather than changing which cards or period of
-studying is included, it limits how far out the intervals are displayed
-to (so 14-month intervals are not displayed at all on a 1-year graph).
+**Інтервали**\
+Цей графік показує кількість карток з певним інтервалом (затримка між двома переглядами). Лінія та права вісь показують, який відсоток ваших карток має інтервал менший або рівний часу під цією точкою. Часовий діапазон має інший вплив на цей графік, ніж на інші: замість зміни карток або періоду навчання, він обмежує, наскільки далеко відображаються інтервали (тобто інтервали в 14 місяців взагалі не відображаються на графіку за 1 рік).
 
-**Card Ease**
-This graph shows the number of cards that have a specific ease factor.
-Average ease of the selected deck / collection is also displayed here.
+**Легкість картки**
+Цей графік показує кількість карток із певним коефіцієнтом легкості. Середня легкість вибраної колоди/колекції також відображається тут.
 
-**Hourly Breakdown**\
-This graph shows what percentage of total reviews you have passed (i.e.,
-not pressed Again on) during given hours. The larger, darker bars and
-left axis show the success rate; the thinner, lighter bars and right
-axis show the number of reviews you’ve made at that hour (so you know
-how significant the results are).
+**Погодинна розбивка**\
+Цей графік показує, який відсоток загальних переглядів ви пройшли (тобто не натискали "Знову") протягом певних годин. Великі, темніші стовпці та ліва вісь показують рівень успіху; тонші, світліші стовпці та права вісь показують кількість переглядів, зроблених у цей час (щоб ви знали, наскільки значущі результати).
 
-**Answer Buttons**\
-This graph shows how many times you’ve chosen the Again, Hard, Good, or
-Easy button while studying learning/new, young, and
-[mature](getting-started.md#types-of-cards) cards. Anki also displays the percentage
-of correct reviews for each type of card.
+**Кнопки відповідей**\
+Цей графік показує, скільки разів ви вибирали кнопки "Знову", "Важко", "Добре" або "Легко" під час навчання нових/навчальних, молодих та [зрілих](getting-started.md#types-of-cards) карток. Anki також показує відсоток правильних відповідей для кожного типу карток.
 
-## Manual Analysis
+## Ручний аналіз
 
-If you’re interested in getting information from your statistics other
-than what Anki provides, it is possible to access the data directly.
-Because of the complexity involved, this is not something we can provide
-any support for.
+Якщо вас цікавить отримання інформації зі статистики, відмінної від тієї, яку надає Anki, можна отримати доступ до даних безпосередньо. Через складність цього процесу ми не можемо надати підтримку.
 
-One option is to [write an add-on](addons.md) that adds another graph or
-more details to the statistics window. There are several add-ons of this
-sort on AnkiWeb already, which you can look at to get an idea of how it
-works.
+Один із варіантів — [написати додаток](addons.md), який додасть інший графік або більше деталей до вікна статистики. На AnkiWeb вже є кілька таких додатків, які можна переглянути, щоб зрозуміти, як це працює.
 
-A more powerful and more complex option is to extract the review log
-information directly from Anki’s database and analyze it in an external
-program. Anki uses a database format called SQLite. There are many tools
-available for working with SQLite databases; one of the easiest to start
-with is called [SQLite Browser](http://sqlitebrowser.org/), which will
-allow you to look around the database as well as export a CSV version of
-tables for import into another program.
+Більш потужний і складний варіант — це безпосередньо витягти інформацію з журналу переглядів із бази даних Anki та проаналізувати її в зовнішній програмі. Anki використовує формат бази даних під назвою SQLite. Існує багато інструментів для роботи з базами даних SQLite; один із найпростіших для початку називається [SQLite Browser](http://sqlitebrowser.org/), який дозволить вам переглядати базу даних, а також експортувати версію таблиць у форматі CSV для імпорту в іншу програму.
 
-The most important table for statistics is the 'revlog' table, which
-stores an entry for each review that you conduct. The columns are as
-follows:
+Найважливіша таблиця для статистики — це таблиця 'revlog', яка зберігає запис для кожного перегляду, який ви проводите. Стовпці такі:
 
 **id**\
-The time at which the review was conducted, as the number of
-milliseconds that had passed since midnight UTC on January 1, 1970.
-(This is sometimes known as 'Unix epoch time', especially when in
-straight seconds instead of milliseconds.)
+Час, коли було проведено перегляд, у вигляді кількості мілісекунд, що минули з півночі за UTC 1 січня 1970 року. (Це іноді називають "часом епохи Unix", особливо коли він у секундах замість мілісекунд.)
 
 **cid**\
-The ID of the card that was reviewed. You can look up this value in the
-id field of the 'cards' table to get more information about the card,
-although note that the card could have changed between when the revlog
-entry was recorded and when you are looking it up. It is also the
-millisecond timestamp of the card’s creation time.
+ID картки, яка була переглянута. Ви можете знайти це значення в полі id таблиці 'cards', щоб отримати більше інформації про картку, хоча зауважте, що картка могла змінитися між моментом запису запису в revlog і моментом, коли ви її переглядаєте. Це також мітка часу в мілісекундах часу створення картки.
 
 **usn**\
-This column is used to keep track of the sync state of reviews and
-provides no useful information for analysis.
+Ця колонка використовується для відстеження стану синхронізації переглядів і не надає корисної інформації для аналізу.
 
 **ease**\
-Which button you pressed at the end of the review (1 for Again, 4 for
-Easy).
+Яку кнопку ви натиснули в кінці перегляду (1 для "Знову", 4 для "Легко").
 
 **ivl**\
-The new interval that the card was pushed to after the review. Positive
-values are in days; negative values are in seconds (for learning cards).
+Новий інтервал, на який картка була встановлена після перегляду. Позитивні значення в днях; негативні значення в секундах (для навчальних карток).
 
 **lastIvl**\
-The interval the card had before the review. Cards introduced for the
-first time have a last interval equal to the Again delay.
+Інтервал, який мала картка до перегляду. Картки, введені вперше, мають останній інтервал, рівний затримці "Знову".
 
 **factor**\
-The new ease factor of the card in permille (parts per thousand). If the
-ease factor is 2500, the card’s interval will be multiplied by 2.5 the
-next time you press Good.
+Новий коефіцієнт легкості картки в проміле (частини на тисячу). Якщо коефіцієнт легкості становить 2500, інтервал картки буде помножений на 2,5 наступного разу, коли ви натиснете "Добре".
 
 **time**\
-The amount of time (in milliseconds) you spent on the question and
-answer sides of the card before selecting an ease button.
+Кількість часу (в мілісекундах), яку ви витратили на сторони питання та відповіді картки перед вибором кнопки легкості.
 
 **type**\
-This is 0 for learning cards, 1 for review cards, 2 for relearning cards,
-and 3 for early "cram" cards (cards being studied in a filtered deck when they
-are not due).
+Це 0 для навчальних карток, 1 для карток перегляду, 2 для повторно вивчених карток і 3 для ранніх "інтенсивних" карток (картки, що вивчаються у відфільтрованій колоді, коли вони не заплановані).
