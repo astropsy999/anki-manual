@@ -4297,151 +4297,100 @@ ID картки, яка була переглянута. Ви можете зн�
 <p>Якщо ви вручну додаєте файли до вашої <a href="files.html#%D1%80%D0%BE%D0%B7%D1%82%D0%B0%D1%88%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D1%84%D0%B0%D0%B9%D0%BB%D1%96%D0%B2">медіа-папки</a>, вам слід скористатися Інструменти&gt;Перевірити медіа-файли після цього, щоб переконатися, що імена файлів закодовані правильно. Якщо пропустити цей крок, будь-які файли з несумісними іменами будуть пропущені під час синхронізації.</p>
 <h2 id="Підтримувані-формати"><a class="header" href="#Підтримувані-формати">Підтримувані формати</a></h2>
 <p>Anki використовує програму під назвою mpv (і mplayer як запасний варіант) для підтримки звуків і відео. Підтримується широкий спектр форматів файлів, але не всі ці формати працюватимуть на AnkiWeb і мобільних клієнтах. Найбільш універсально підтримуваними є MP3 для аудіо та MP4 для відео.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="math-and-symbols"><a class="header" href="#math-and-symbols">Math and Symbols</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Математика-та-символи"><a class="header" href="#Математика-та-символи">Математика та символи</a></h1>
 <ul>
 <li><a href="math.html#mathjax">MathJax</a></li>
 <li><a href="math.html#latex">LaTeX</a>
 <ul>
-<li><a href="math.html#assumed-knowledge">Assumed Knowledge</a></li>
-<li><a href="math.html#webmobile">Web/Mobile</a></li>
-<li><a href="math.html#example">Example</a></li>
-<li><a href="math.html#packages">Packages</a></li>
-<li><a href="math.html#template-conflicts">Template Conflicts</a></li>
-<li><a href="math.html#cloze-conflicts">Cloze Conflicts</a></li>
-<li><a href="math.html#unsafe-commands">Unsafe Commands</a></li>
+<li><a href="math.html#%D0%9D%D0%B5%D0%BE%D0%B1%D1%85%D1%96%D0%B4%D0%BD%D1%96-%D0%B7%D0%BD%D0%B0%D0%BD%D0%BD%D1%8F">Необхідні знання</a></li>
+<li><a href="math.html#%D0%92%D0%B5%D0%B1%D0%9C%D0%BE%D0%B1%D1%96%D0%BB%D1%8C%D0%BD%D1%96-%D0%BA%D0%BB%D1%96%D1%94%D0%BD%D1%82%D0%B8">Веб/Мобільні клієнти</a></li>
+<li><a href="math.html#%D0%9F%D1%80%D0%B8%D0%BA%D0%BB%D0%B0%D0%B4">Приклад</a></li>
+<li><a href="math.html#%D0%9F%D0%B0%D0%BA%D0%B5%D1%82%D0%B8">Пакети</a></li>
+<li><a href="math.html#%D0%9A%D0%BE%D0%BD%D1%84%D0%BB%D1%96%D0%BA%D1%82%D0%B8-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%96%D0%B2">Конфлікти шаблонів</a></li>
+<li><a href="math.html#%D0%9A%D0%BE%D0%BD%D1%84%D0%BB%D1%96%D0%BA%D1%82%D0%B8-cloze">Конфлікти Cloze</a></li>
+<li><a href="math.html#%D0%9D%D0%B5%D0%B1%D0%B5%D0%B7%D0%BF%D0%B5%D1%87%D0%BD%D1%96-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B8">Небезпечні команди</a></li>
 </ul>
 </li>
 </ul>
 <h2 id="mathjax"><a class="header" href="#mathjax">MathJax</a></h2>
-<p><a href="https://www.mathjax.org">MathJax</a> is a modern, browser-based
-typesetting system, useful for mathematical and chemical equations. It
-does not require the installation of any extra software, so it is easy
-to use, and it is recommended for most users.</p>
-<p>MathJax is supported out of the box on Anki 2.1+, AnkiMobile, and
-AnkiDroid 2.9+.</p>
-<p>To try it out:</p>
+<p><a href="https://www.mathjax.org">MathJax</a> — це сучасна система верстки для браузерів, корисна для математичних та хімічних рівнянь. Вона не потребує встановлення додаткового програмного забезпечення, тому її легко використовувати, і вона рекомендована для більшості користувачів.</p>
+<p>MathJax підтримується з коробки в Anki 2.1+, AnkiMobile та AnkiDroid 2.9+.</p>
+<p>Щоб спробувати:</p>
 <ol>
 <li>
-<p>Type the following in a field:</p>
+<p>Введіть наступне у поле:</p>
 <pre><code>\sqrt{x}
 </code></pre>
 </li>
 <li>
-<p>Select the text you just typed.</p>
+<p>Виділіть текст, який ви щойно ввели.</p>
 </li>
 <li>
-<p>Click the rightmost button in the editor, and choose "MathJax
-inline" from the menu. Anki will change the text so it reads:</p>
+<p>Натисніть крайню праву кнопку в редакторі та виберіть "MathJax inline" з меню. Anki змінить текст так, щоб він виглядав так:</p>
 <pre><code>\(\sqrt{x}\)
 </code></pre>
 </li>
 <li>
-<p>If you click the Cards… button, you’ll see a preview of how the
-equation will appear when the card is reviewed.</p>
+<p>Якщо натиснути кнопку "Карти…", ви побачите попередній перегляд того, як рівняння виглядатиме під час перегляду картки.</p>
 </li>
 </ol>
-<p>Anki’s MathJax support expects content in TeX format. If you’re not
-familiar with TeX formatting, please see <a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">this cheatsheet</a>.
-Please note that point 2 does not apply in Anki - Anki uses <code>\(</code> and
-<code>\)</code> for inline equations, and <code>\[</code> and <code>\]</code> for display equations.</p>
-<p>If you want to use newlines in a MathJax expression, please use
-<kbd>Shift</kbd>+<kbd>Enter</kbd> instead of just <kbd>Enter</kbd>, as a normal newline will prevent
-MathJax from working correctly.</p>
-<p>Anki includes built in support for mhchem for rendering chemical
-equations. Please see the 'chemical equations' section and the following
-sections for more information:
+<p>Підтримка MathJax в Anki очікує контент у форматі TeX. Якщо ви не знайомі з форматуванням TeX, перегляньте <a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">цей довідник</a>. Зверніть увагу, що пункт 2 не застосовується в Anki — Anki використовує <code>\(</code> і <code>\)</code> для вбудованих рівнянь та <code>\[</code> і <code>\]</code> для відображуваних рівнянь.</p>
+<p>Якщо потрібно використовувати нові рядки у виразі MathJax, будь ласка, використовуйте <kbd>Shift</kbd>+<kbd>Enter</kbd> замість <kbd>Enter</kbd>, оскільки звичайний новий рядок завадить MathJax працювати правильно.</p>
+<p>Anki включає вбудовану підтримку mhchem для рендерингу хімічних рівнянь. Будь ласка, перегляньте розділ "хімічні рівняння" та наступні розділи для отримання додаткової інформації:
 <a href="https://mhchem.github.io/MathJax-mhchem/">https://mhchem.github.io/MathJax-mhchem/</a></p>
-<p>It is possible to <a href="https://faqs.ankiweb.net/customizing-mathjax.html">customize some settings</a>.</p>
+<p>Можливо <a href="https://faqs.ankiweb.net/customizing-mathjax.html">налаштувати деякі параметри</a>.</p>
 <h2 id="latex"><a class="header" href="#latex">LaTeX</a></h2>
-<p>LaTeX is a powerful typesetting system, useful for entering mathematical
-formulas, chemical formulas, musical notation and so on. Anki provides
-some support for LaTeX, allowing you to enter LaTeX code in your notes.
-When you review a card, Anki will call LaTeX and display the generated
-image instead.</p>
-<p>LaTeX is more work to set up, and images can only be generated with the
-computer version of Anki - though once generated, the images can be
-displayed by mobile clients. Because of the extra complexity LaTeX
-brings, it is only recommended for users that need more features than
-MathJax provides.</p>
-<h3 id="assumed-knowledge"><a class="header" href="#assumed-knowledge">Assumed Knowledge</a></h3>
-<p>Anki’s LaTeX support is not turn-key: it is assumed that you know how to
-use LaTeX already, and that you have it installed. If you have no
-experience with LaTeX, please consult one of the many guides available
-on the internet. If you are having trouble with markup, please ask on a
-LaTeX forum.</p>
-<p>To install LaTeX, on Windows use MiKTeX; on macOS use MacTeX, and on Linux
-use your distro’s package manager. Dvipng must also be installed.</p>
-<p>On Windows, go to Settings in MikTeX’s maintenance window, and make sure
-"Install missing packages on the fly" is set to "Always", not to "Ask me
-first". If you continue to have difficulties, one user reported that
-running Anki as an administrator until all the packages were fetched
-helped.</p>
-<p>On macOS, LaTeX has only been tested with MacTeX and BasicTeX. If you use
-BasicTeX, you need to install dvipng separately, with the following
-command:</p>
+<p>LaTeX — це потужна система верстки, корисна для введення математичних формул, хімічних формул, музичної нотації тощо. Anki надає певну підтримку LaTeX, дозволяючи вводити код LaTeX у ваші нотатки. Під час перегляду картки Anki викликає LaTeX і відображає згенероване зображення.</p>
+<p>LaTeX потребує більше налаштувань, і зображення можуть бути згенеровані лише у комп'ютерній версії Anki — хоча після генерації зображення можуть відображатися мобільними клієнтами. Через додаткову складність, яку приносить LaTeX, він рекомендований лише для користувачів, яким потрібні більше можливостей, ніж надає MathJax.</p>
+<h3 id="Необхідні-знання"><a class="header" href="#Необхідні-знання">Необхідні знання</a></h3>
+<p>Підтримка LaTeX в Anki не є готовим рішенням: передбачається, що ви вже вмієте користуватися LaTeX і що він у вас встановлений. Якщо у вас немає досвіду роботи з LaTeX, будь ласка, зверніться до одного з багатьох посібників, доступних в інтернеті. Якщо у вас виникають проблеми з розміткою, зверніться на форум LaTeX.</p>
+<p>Щоб встановити LaTeX, на Windows використовуйте MiKTeX; на macOS — MacTeX, а на Linux — менеджер пакетів вашої дистрибуції. Також необхідно встановити dvipng.</p>
+<p>На Windows перейдіть до налаштувань у вікні обслуговування MiKTeX і переконайтеся, що "Install missing packages on the fly" встановлено на "Always", а не на "Ask me first". Якщо проблеми продовжуються, один користувач повідомив, що запуск Anki від імені адміністратора, поки всі пакети не будуть завантажені, допоміг.</p>
+<p>На macOS LaTeX було протестовано лише з MacTeX та BasicTeX. Якщо ви використовуєте BasicTeX, вам потрібно окремо встановити dvipng за допомогою наступної команди:</p>
 <pre><code>sudo tlmgr update --self; sudo tlmgr install dvipng
 </code></pre>
-<p>The command may not be on the path, so you may need to provide the full
-path, e.g /usr/local/texlive/2014basic/bin/x86_64-darwin/tlmgr.</p>
-<p>If you are not using the above LaTeX packages, you will need to use the
-<a href="https://ankiweb.net/shared/info/937148547">edit LaTeX</a> add-on to specify
-the full path to latex and dvipng.</p>
-<h3 id="webmobile"><a class="header" href="#webmobile">Web/Mobile</a></h3>
-<p>When you review a card with LaTeX on it, Anki will generate an image for
-that LaTeX and place the image in your collection’s media folder for
-future use. The web &amp; mobile clients will display these images if they
-already exist, but can not generate the images on their own.</p>
-<p>To avoid having to review all your cards at least once before you can
-study on the other clients, Anki can generate the images in bulk for
-you. To generate all the images, please go to Tools&gt;Check Media.
-After that, syncing should upload the generated media to AnkiWeb and the
-other clients.</p>
-<h3 id="example"><a class="header" href="#example">Example</a></h3>
-<p>The most general way to input LaTeX content is to surround it with
-[latex][/latex] tags. There’s a shortcut button for this documented
-in the <a href="editing.html">editor</a> section.</p>
-<p>[latex] tags must be used inside a field - placing them in the card
-template will <a href="templates/fields.html">cause problems</a>.</p>
-<p>For example, entering the following on the front of an Anki flashcard:</p>
+<p>Команда може не бути в шляху, тому, можливо, доведеться вказати повний шлях, наприклад /usr/local/texlive/2014basic/bin/x86_64-darwin/tlmgr.</p>
+<p>Якщо ви не використовуєте вищезгадані пакети LaTeX, вам потрібно буде використовувати додаток <a href="https://ankiweb.net/shared/info/937148547">edit LaTeX</a>, щоб вказати повний шлях до latex і dvipng.</p>
+<h3 id="ВебМобільні-клієнти"><a class="header" href="#ВебМобільні-клієнти">Веб/Мобільні клієнти</a></h3>
+<p>Під час перегляду картки з LaTeX, Anki згенерує зображення для цього LaTeX і помістить його у папку медіафайлів вашої колекції для подальшого використання. Веб- та мобільні клієнти відображатимуть ці зображення, якщо вони вже існують, але не можуть генерувати зображення самостійно.</p>
+<p>Щоб уникнути необхідності переглядати всі ваші картки хоча б один раз перед тим, як ви зможете вивчати їх на інших клієнтах, Anki може згенерувати зображення оптом для вас. Щоб згенерувати всі зображення, перейдіть до Інструменти &gt; Перевірити медіа. Після цього синхронізація повинна завантажити згенеровані медіафайли на AnkiWeb та інші клієнти.</p>
+<h3 id="Приклад"><a class="header" href="#Приклад">Приклад</a></h3>
+<p>Найзагальніший спосіб введення контенту LaTeX — це обгорнути його тегами [latex][/latex]. Є кнопка швидкого доступу для цього, задокументована в розділі <a href="editing.html">редактор</a>.</p>
+<p>Теги [latex] повинні використовуватися всередині поля — розміщення їх у шаблоні картки <a href="templates/fields.html">спричинить проблеми</a>.</p>
+<p>Наприклад, введення наступного на передній стороні картки Anki:</p>
 <pre><code>Does [latex]\begin{math}\sum_{k = 1}^{\infty}\frac{1}{k}\end{math}[/latex] converge?
 </code></pre>
-<p>will produce this when the flashcard is viewed:</p>
-<p><img src="math/convergence_question.png" alt="convergence question" /></p>
-<p>The formula in the example above is called a 'text formula', because it
-is displayed right within the non-mathematical text. In contrast, the
-following example shows a 'displayed formula':</p>
-<pre><code>Does the sum below converge?
+<p>створить таке зображення під час перегляду картки:</p>
+<p><img src="math/convergence_question.png" alt="питання про збіжність" /></p>
+<p>Формула в наведеному вище прикладі називається "текстовою формулою", оскільки вона відображається прямо в нематематичному тексті. На відміну від цього, наступний приклад показує "відображувану формулу":</p>
+<pre><code>Чи збігається сума нижче?
 
 [latex]\begin{displaymath}\sum_{k = 1}^{\infty}\frac{1}{k}\end{displaymath}[/latex]
 </code></pre>
-<p><img src="math/convergence_question_2.png" alt="convergence question 2" /></p>
-<p>'Text formulas' and 'display formulas' are the most common type of LaTeX
-expressions, so Anki provides abbreviated versions of them. Expressions
-of the form:</p>
+<p><img src="math/convergence_question_2.png" alt="питання про збіжність 2" /></p>
+<p>"Текстові формули" та "відображувані формули" є найпоширенішими типами виразів LaTeX, тому Anki надає скорочені версії для них. Вирази у формі:</p>
 <pre><code>[latex]\begin{math}...\end{math}[/latex]
 </code></pre>
-<p>can be shortened to</p>
+<p>можна скоротити до</p>
 <pre><code>[$]...[/$]
 </code></pre>
-<p>and expressions of the form</p>
+<p>а вирази у формі</p>
 <pre><code>[latex]\begin{displaymath}...\end{displaymath}[/latex]
 </code></pre>
-<p>can be shortened to</p>
+<p>можна скоротити до</p>
 <pre><code>[$$]...[/$$]
 </code></pre>
-<p>For example, the two LaTeX snippets shown before are equivalent to</p>
-<pre><code>Does [$]\sum_{k = 1}^{\infty}\frac{1}{k}[/$] converge?
+<p>Наприклад, два наведені вище фрагменти LaTeX еквівалентні</p>
+<pre><code>Чи збігається [$]\sum_{k = 1}^{\infty}\frac{1}{k}[/$]?
 </code></pre>
-<p>and</p>
-<pre><code>Does the sum below converge?
+<p>та</p>
+<pre><code>Чи збігається сума нижче?
 
 [$$]\sum_{k = 1}^{\infty}\frac{1}{k}[/$$]
 </code></pre>
-<p>respectively.</p>
-<h3 id="packages"><a class="header" href="#packages">Packages</a></h3>
-<p>Anki allows you to customize the LaTeX preamble so you can import custom
-packages for chemistry, music and so on. For example, imagine you find
-an example file for chemtex on the internet:</p>
+<p>відповідно.</p>
+<h3 id="Пакети"><a class="header" href="#Пакети">Пакети</a></h3>
+<p>Anki дозволяє налаштовувати преамбулу LaTeX, щоб ви могли імпортувати кастомні пакети для хімії, музики тощо. Наприклад, уявіть, що ви знайшли приклад файлу для chemtex в інтернеті:</p>
 <pre><code>\documentclass[a4paper,12pt]{report}
 \usepackage{chemtex}
 \begin{document}
@@ -4460,15 +4409,8 @@ an example file for chemtex on the internet:</p>
 
 \end{document}
 </code></pre>
-<p>Firstly, follow the documentation of the package and MiKTeX/MacTeX in
-order to install the package. To check the package is working, you’ll
-want to put code like the above into a .latex file and test if you can
-compile it from the command line. Once you’ve confirmed that the package
-is available and working, we can integrate it with Anki.</p>
-<p>To use the package with Anki, click "Add" in the main window, then click
-the note type selection button. Click the "Manage" button, then select
-the note type you plan to use and click "Options". The LaTeX header and
-footer are shown. The header will look something like:</p>
+<p>Спочатку дотримуйтесь документації пакета та MiKTeX/MacTeX, щоб встановити пакет. Щоб перевірити, чи працює пакет, вам потрібно буде вставити код, подібний до наведеного вище, у файл .latex і перевірити, чи можете ви скомпілювати його з командного рядка. Після того, як ви переконаєтесь, що пакет доступний і працює, ми можемо інтегрувати його з Anki.</p>
+<p>Щоб використовувати пакет з Anki, натисніть "Додати" в головному вікні, потім натисніть кнопку вибору типу нотатки. Натисніть кнопку "Керувати", потім виберіть тип нотатки, який ви плануєте використовувати, і натисніть "Параметри". Заголовок і нижній колонтитул LaTeX будуть показані. Заголовок виглядатиме приблизно так:</p>
 <pre><code>\documentclass[12pt]{article}
 \special{papersize=3in,5in}
 \usepackage{amssymb,amsmath}
@@ -4476,8 +4418,7 @@ footer are shown. The header will look something like:</p>
 \setlength{\parindent}{0in}
 \begin{document}
 </code></pre>
-<p>To use chemtex, you’d add the usepackage line in the earlier example, so
-it looks like:</p>
+<p>Щоб використовувати chemtex, додайте рядок usepackage з попереднього прикладу, щоб він виглядав так:</p>
 <pre><code>\documentclass[12pt]{article}
 \special{papersize=3in,5in}
 \usepackage{amssymb,amsmath}
@@ -4486,61 +4427,35 @@ it looks like:</p>
 \setlength{\parindent}{0in}
 \begin{document}
 </code></pre>
-<p>After that, you should be able to include lines like the following in
-your Anki cards:</p>
+<p>Після цього ви зможете включати рядки, подібні до наступного, у ваші картки Anki:</p>
 <pre><code>[latex]\ethene{H}{H$_3$C}{CH$_3$}{Br}[/latex]
 </code></pre>
-<h3 id="template-conflicts"><a class="header" href="#template-conflicts">Template Conflicts</a></h3>
-<p>As of Anki 2.1.20 / AnkiMobile 2.0.56 / AnkiDroid 2.13, this workaround is no
-longer required, as <code>{{field}}</code> text inside fields no longer causes problems. If
-you need to support older versions and want to keep using this syntax, please
-make sure you place the <code>{{=&lt;% %&gt;=}}</code> string at the very top of your front and
-back template, as recent Anki versions will not recognize it anywhere but the
-start.</p>
-<p>For older versions:</p>
-<p>It’s not uncommon for {{ and }} to pop up in LaTeX code when writing
-mathematical equations. To ensure that your LaTeX equations don’t
-conflict with Anki’s field replacements, it’s possible to change the
-separator to something else.</p>
-<p>For example, if you have a template:</p>
+<h3 id="Конфлікти-шаблонів"><a class="header" href="#Конфлікти-шаблонів">Конфлікти шаблонів</a></h3>
+<p>Починаючи з Anki 2.1.20 / AnkiMobile 2.0.56 / AnkiDroid 2.13, цей обхідний шлях більше не потрібен, оскільки текст <code>{{field}}</code> всередині полів більше не спричиняє проблем. Якщо потрібно підтримувати старіші версії та продовжувати використовувати цей синтаксис, переконайтеся, що ви розмістили рядок <code>{{=&lt;% %&gt;=}}</code> на самому початку вашого шаблону передньої та задньої сторінки, оскільки новіші версії Anki не розпізнають його в іншому місці, окрім початку.</p>
+<p>Для старіших версій:</p>
+<p>Не рідкість, коли {{ і }} з'являються в коді LaTeX під час написання математичних рівнянь. Щоб переконатися, що ваші рівняння LaTeX не конфліктують із замінами полів Anki, можна змінити роздільник на щось інше.</p>
+<p>Наприклад, якщо у вас є шаблон:</p>
 <pre><code>{{latex field}}
 </code></pre>
-<p>Changing it to the following will make it unlikely that the LaTeX will
-conflict:</p>
+<p>Змінивши його на наступне, ви зменшите ймовірність конфлікту з LaTeX:</p>
 <pre><code>{{=&lt;% %&gt;=}}
 &lt;%latex field%&gt;
 </code></pre>
-<h3 id="cloze-conflicts"><a class="header" href="#cloze-conflicts">Cloze Conflicts</a></h3>
-<p>Cloze deletions are terminated with <code>}}</code>, which can conflict with a <code>}}</code>
-appearing in your LaTeX. To prevent LaTeX from being interpreted as a closing
-cloze marker, you can put a space between any double closing braces that do not
-indicate the end of the cloze, so</p>
+<h3 id="Конфлікти-cloze"><a class="header" href="#Конфлікти-cloze">Конфлікти Cloze</a></h3>
+<p>Cloze-видалення завершуються <code>}}</code>, що може конфліктувати з <code>}}</code>, яке з'являється у вашому LaTeX. Щоб запобігти інтерпретації LaTeX як закриття cloze, можна вставити пробіл між будь-якими подвійними закриваючими дужками, які не вказують на кінець cloze, тому</p>
 <pre><code>{{c1::[$]\frac{foo}{\frac{bar}{baz}}[/$] blah blah blah.}}
 </code></pre>
-<p>will not work, but</p>
+<p>не працюватиме, але</p>
 <pre><code>{{c1::[$]\frac{foo}{\frac{bar}{baz} }[/$] blah blah blah.}}
 </code></pre>
-<p>will (and LaTeX ignores spaces in math mode, so your equation will
-render the same). If you want to avoid adding the extra space into the
-rendered text (for example, when you are making Cloze cards for learning
-programming languages), another option is to use a HTML comment when
-editing the card in HTML mode:</p>
+<p>працюватиме (і LaTeX ігнорує пробіли в математичному режимі, тому ваше рівняння відобразиться так само). Якщо ви хочете уникнути додавання зайвого пробілу в відображуваний текст (наприклад, коли ви створюєте картки Cloze для вивчення мов програмування), інший варіант — використовувати HTML-коментар під час редагування картки в режимі HTML:</p>
 <pre><code>{{c1::[$]\frac{foo}{\frac{bar}{baz}&lt;!-- --&gt;}[/$] blah blah blah.}}
 </code></pre>
-<p>You may use either workaround if you need to use the <code>::</code> character
-sequence within the Cloze-deleted text. The first card generated for the
-following note text will read <code>[type] in C++ is a type-safe union</code>:</p>
+<p>Можна використовувати будь-який з цих обхідних шляхів, якщо потрібно використовувати послідовність символів <code>::</code> у тексті, видаленому Cloze. Перша картка, згенерована для наступного тексту нотатки, виглядатиме так: <code>[type] in C++ is a type-safe union</code>:</p>
 <pre><code>{{c1::std:&lt;!-- --&gt;:variant::~type~}} in C++ is a {{c2::type-safe union}}
 </code></pre>
-<h3 id="unsafe-commands"><a class="header" href="#unsafe-commands">Unsafe Commands</a></h3>
-<p>Anki prohibits certain commands like \input or \def from being used on
-cards or in templates, because allowing them could allow malicious
-shared decks to damage your system. (To be on the safe side, these
-commands are prohibited even in comments, so if you’re getting this
-error but don’t think you’ve used one, please double-check any comments
-you have in your headers, templates, and cards.) If you need to use
-these commands, please add them to a system package and import that
-package as described in the previous section.</p>
+<h3 id="Небезпечні-команди"><a class="header" href="#Небезпечні-команди">Небезпечні команди</a></h3>
+<p>Anki забороняє використання певних команд, таких як \input або \def, на картках або в шаблонах, оскільки їх використання може дозволити шкідливим спільним колодам пошкодити вашу систему. (Для безпеки ці команди заборонені навіть у коментарях, тому якщо ви отримуєте цю помилку, але не думаєте, що використовували одну з них, будь ласка, перевірте будь-які коментарі у ваших заголовках, шаблонах і картках.) Якщо вам потрібно використовувати ці команди, додайте їх до системного пакета та імпортуйте цей пакет, як описано в попередньому розділі.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="leeches"><a class="header" href="#leeches">Leeches</a></h1>
 <ul>
 <li><a href="leeches.html#editing">Editing</a></li>
