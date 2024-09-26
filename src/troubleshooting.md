@@ -1,49 +1,37 @@
-# Troubleshooting
+# Вирішення проблем
 
-If you encounter a problem with Anki, please try the following steps in order:
+Якщо виникла проблема з Anki, спробуйте виконати наступні кроки по черзі:
 
-**1. Restart Anki**
+**1. Перезапустіть Anki**
+Закрийте Anki, а потім запустіть його знову.
 
-Please close Anki, then start it again.
+Якщо ви не можете закрити Anki через повідомлення про помилку, можна завершити роботу Anki за допомогою диспетчера завдань або перезавантажити комп'ютер. Anki зберігає дані періодично, тому в більшості випадків ви не втратите більше кількох хвилин роботи.
 
-If you are unable to close Anki because of an error message, you can either terminate Anki using your task manager, or restart your computer. Anki saves periodically, so you should not lose more than a few minutes of work in most circumstances.
+Якщо проблема більше не виникає, можна пропустити наступні кроки.
 
-If the problem does not occur again, you can skip the following steps.
+**2. Перевірте доповнення**
+Закрийте Anki, а потім запустіть його знову, утримуючи клавішу Shift. Якщо проблема зникає, це означає, що її спричиняє одне із доповнень. Видаліть непотрібні доповнення та вимкніть половину інших. Якщо проблема залишається, спробуйте іншу половину. Повторюйте процес, доки не визначите, яке доповнення спричиняє проблему. Потім повідомте про проблему автору доповнення, використовуючи кнопку "Copy Debug Info" (Скопіювати інформацію для зневадження) і вставивши її у звіт.
 
-**2. Check add-ons**
+**3. Перевірте версію Anki**
+Ви можете знайти версію, яку використовуєте, в меню Help>About або Anki>About. Якщо ваша версія не є останньою, опублікованою на <https://apps.ankiweb.net>, закрийте Anki, встановіть останню версію та знову запустіть Anki, щоб перевірити, чи проблема зникла.
 
-Please close Anki, then start it again while holding down the shift key. If the problem goes away, that indicates an add-on is causing the problem. Remove any add-ons you don't need, and disable half of the others. If the problem continues, try the other half. Repeat
-the process until you've figured out which add-on is causing the problem. Then please report the issue to the add-on author, using the Copy Debug Info button, and pasting that into the report.
+Якщо ви використовуєте Linux, переконайтеся, що помилку можна відтворити за допомогою версії, доступної на вебсайті Anki, оскільки дистрибутиви часто поширюють [некоректні версії](https://anki.tenderapp.com/kb/anki-ecosystem/third-party-linux-packages-and-source-builds-are-not-supported).
 
-**3. Check your Anki version**
+**4. Перевірте базу даних**
+Після перезапуску Anki спробуйте пункт меню Інструменти>Перевірити базу даних, щоб переконатися, що ваша колекція не має проблем.
 
-You can find the version you're using in the Help>About or Anki>About menu. If the version you're using is not the latest version published on <https://apps.ankiweb.net>, please close Anki, install the latest version, and then start Anki again to see if the problem has gone away.
+**5. Перезавантажте комп'ютер**
+Іноді перезавантаження комп'ютера може допомогти.
 
-If you're using Linux, please make sure you can reproduce the error using the packaged version on the Anki website, as distros often distribute [broken versions](https://anki.tenderapp.com/kb/anki-ecosystem/third-party-linux-packages-and-source-builds-are-not-supported).
-
-**4. Check your database**
-
-After restarting Anki, please try the Tools>Check Database menu item to make sure your collection doesn't have any problems.
-
-**5. Restart your computer**
-
-Sometimes restarting your computer may help.
-
-**6. Change the Video Driver**
-
-Crashes and display issues can be caused by the video driver. Changing to a
-different video driver in the preferences screen or via the gldriver file may
-help. Make sure you try all three options.
+**6. Змініть відеодрайвер**
+Збої та проблеми з відображенням можуть бути спричинені відеодрайвером. Зміна відеодрайвера в налаштуваннях або через файл gldriver може допомогти. Переконайтеся, що спробували всі три варіанти.
 
 - [Windows](https://docs.ankiweb.net/platform/windows/display-issues.html)
 - [Mac](https://docs.ankiweb.net/platform/mac/display-issues.html)
 - [Linux](https://docs.ankiweb.net/platform/linux/display-issues.html)
 
-**7. Reset window sizes**
+**7. Скиньте розміри вікон**
+Іноді натискання кнопки "скинути розміри вікон" у налаштуваннях одразу після запуску Anki може допомогти.
 
-Sometimes pressing 'reset window sizes' button in the preferences screen
-immediately after starting Anki will help.
-
-**8. If the problem remains**
-
-If you're confirmed you are using the latest Anki version, and are still receiving errors when starting Anki while holding down the shift key, please [report the problem](./getting-help.md), including the next error you receive in your post.
+**8. Якщо проблема залишається**
+Якщо ви переконалися, що використовуєте останню версію Anki, і все ще отримуєте помилки при запуску Anki з утриманням клавіші Shift, будь ласка, [повідомте про проблему](./getting-help.md), включивши наступну помилку, яку ви отримаєте, у своє повідомлення.

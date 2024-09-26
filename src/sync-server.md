@@ -1,55 +1,48 @@
-# Self-Hosted Sync Server
+# Локальний сервер синхронізації
 
-Advanced users who cannot or do not wish to use AnkiWeb can use a self-hosted
-sync server instead.
+Досвідчені користувачі, які не можуть або не бажають використовувати AnkiWeb, можуть використовувати локальний сервер синхронізації.
 
-Things to be aware of:
+На що варто звернути увагу:
 
-- This is an advanced feature, targeted at users who are comfortable with
-  networking and the command line. If you use this, the expectation is you
-  can resolve any setup/network/firewall issues you run into yourself, and
-  use of this is entirely at your own risk.
-- Newer clients may depend on changes to the sync protocol, so syncing may
-  stop working if you update your Anki clients without also updating the server.
-- Third-party sync servers also exist. No testing is done against them, and
-  they tend to take time to catch up when the sync protocol changes, so they
-  are not recommended.
-- The messages inside Anki will use the term 'AnkiWeb' even if a custom server
-  has been configured, (e.g "Cannot connect to AnkiWeb" when your server is down).
+- Це розширена функція, орієнтована на користувачів, які впевнено працюють з мережею та командним рядком. Якщо це використовується, очікується, що ви зможете самостійно вирішити будь-які проблеми з налаштуванням/мережею/брандмауером, і використання цієї функції здійснюється повністю на ваш власний ризик.
+- Новіші клієнти можуть залежати від змін у протоколі синхронізації, тому синхронізація може припинити працювати, якщо оновити клієнти Anki без оновлення сервера.
+- Існують також сторонні сервери синхронізації. Тестування на них не проводиться, і вони зазвичай відстають, коли змінюється протокол синхронізації, тому їх не рекомендується використовувати.
+- Повідомлення в Anki будуть використовувати термін "AnkiWeb", навіть якщо налаштовано користувацький сервер (наприклад, "Не вдається підключитися до AnkiWeb", коли ваш сервер не працює).
 
-## Installing/Running
+## Встановлення/Запуск
 
-There are various ways you can install and run the server. You can use either:
-- the sync server bundled with the desktop version of Anki
-- a separate minimal sync server that doesn't include Anki's GUI dependencies. Python and Rust implementations are available.
+Існує кілька способів встановлення та запуску сервера. Можна використовувати:
 
-### From a Packaged Build
+- сервер синхронізації, що постачається разом із настільною версією Anki
+- окремий мінімальний сервер синхронізації, який не включає залежності графічного інтерфейсу Anki. Доступні реалізації на Python та Rust.
 
-This uses the sync server built into the desktop version of Anki as of version 2.1.57+.
+### З пакованої збірки
 
-On Windows in a cmd.exe session:
+Це використовує сервер синхронізації, вбудований у настільну версію Anki, починаючи з версії 2.1.57+.
+
+На Windows у сесії cmd.exe:
 
 ```
 set SYNC_USER1=user:pass
 "\Program Files\anki\anki.exe" --syncserver
 ```
 
-Or MacOS, in Terminal.app:
+Або на MacOS, у Terminal.app:
 
 ```
 SYNC_USER1=user:pass /Applications/Anki.app/Contents/MacOS/anki --syncserver
 ```
 
-Or Linux:
+Або на Linux:
 
 ```
 SYNC_USER1=user:pass anki --syncserver
 ```
 
-### With Pip
+### За допомогою Pip
 
-To avoid downloading desktop Anki's GUI dependencies, you can run a standalone Anki sync server using a Python package downloaded from PyPI instead.
-Make sure you have Python 3.9+ installed.
+Щоб уникнути завантаження залежностей графічного інтерфейсу настільної версії Anki, можна запустити окремий сервер синхронізації Anki, використовуючи пакет Python, завантажений з PyPI.
+Переконайтеся, що у вас встановлено Python 3.9+.
 
 ```
 python3 -m venv ~/syncserver
@@ -57,110 +50,76 @@ python3 -m venv ~/syncserver
 SYNC_USER1=user:pass ~/syncserver/bin/python -m anki.syncserver
 ```
 
-### With Cargo
+### За допомогою Cargo
 
-From Anki 2.1.66+, you can alternatively build a Rust implementation of the standalone sync server using the below command.
-Make sure you have Rustup installed.
+Починаючи з Anki 2.1.66+, можна також зібрати реалізацію сервера синхронізації на Rust за допомогою наступної команди.
+Переконайтеся, що у вас встановлено Rustup.
 
 ```
 cargo install --git https://github.com/ankitects/anki.git --tag 2.1.66 anki-sync-server
 ```
 
-Replace 2.1.66 with whatever the latest Anki version is.
+Замініть 2.1.66 на актуальну версію Anki.
 
-Protobuf (protoc) will need to be installed.
+Необхідно встановити Protobuf (protoc).
 
-After building, you can run it with:
+Після збірки можна запустити сервер за допомогою:
 
 ```
 SYNC_USER1=user:pass anki-sync-server
 ```
 
-### From a source checkout
+### З вихідного коду
 
-If you've cloned the Anki repo from GitHub, you can install from there:
+Якщо ви клонували репозиторій Anki з GitHub, можна встановити сервер звідти:
 
 ```
 ./ninja extract:protoc
 cargo install --path rslib/sync
 ```
 
-## Multiple Users
+## Кілька користувачів
 
-`SYNC_USER1` declares the first user and password, and must be set.
-You can optionally declare `SYNC_USER2`, `SYNC_USER3` and so on, if you
-wish to set up multiple accounts.
+`SYNC_USER1` оголошує першого користувача та пароль, і його необхідно встановити.
+За бажанням можна оголосити `SYNC_USER2`, `SYNC_USER3` і так далі, якщо потрібно налаштувати кілька облікових записів.
 
-## Hashed Passwords
+## Хешовані паролі
 
-Advanced users may wish to use hashed passwords instead of plain text
-passwords. If you wish to do this, you'll need to use a separate tool (such as
-[this one](https://git.sr.ht/~laalsaas/pbkdf2-password-hash)) to generate a
-password hash.  You can then tell the server to expect hashed passwords by
-setting the env var PASSWORDS_HASHED to 1 (or any other value).
+Досвідчені користувачі можуть використовувати хешовані паролі замість звичайних текстових паролів. Якщо ви хочете це зробити, потрібно використовувати окремий інструмент (наприклад, [цей](https://git.sr.ht/~laalsaas/pbkdf2-password-hash)) для створення хешу пароля. Потім можна вказати серверу очікувати хешовані паролі, встановивши змінну середовища PASSWORDS_HASHED на 1 (або будь-яке інше значення).
 
-When hashed passwords are used, SYNC_USER variables are expected to be in
-username:password_hash format, where password_hash is a hash of the password in
-the PHC Format.
+Коли використовуються хешовані паролі, змінні SYNC_USER повинні бути у форматі username:password_hash, де password_hash — це хеш пароля у форматі PHC.
 
-## Storage Location
+## Місце зберігання
 
-The server needs to store a copy of your collection and media in a folder.
-By default it is ~/.syncserver; you can change this by defining
-a `SYNC_BASE` environmental variable. This must not be the same
-location as your normal Anki data folder, as the server and client
-must store separate copies.
+Сервер повинен зберігати копію вашої колекції та медіафайлів у папці.
+За замовчуванням це ~/.syncserver; можна змінити це, визначивши змінну середовища `SYNC_BASE`. Це не повинно бути тим самим місцем, що й ваша звичайна папка даних Anki, оскільки сервер і клієнт повинні зберігати окремі копії.
 
-## Public Access
+## Публічний доступ
 
-The server listens on an unencrypted HTTP connection, so it's not a good
-idea to expose it directly to the internet. You'll want to either restrict
-usage to your local network, or place some form of encryption in front of
-the server, such as a VPN (Tailscale is apparently easy), or a HTTPS
-reverse proxy.
+Сервер слухає незашифроване HTTP-з'єднання, тому не варто відкривати його безпосередньо в інтернет. Краще обмежити використання локальною мережею або розмістити перед сервером якийсь вид шифрування, наприклад VPN (Tailscale, як кажуть, простий у використанні) або HTTPS зворотний проксі.
 
-You can define `SYNC_HOST` and `SYNC_PORT` to change the host and port
-that the server binds to.
+Можна визначити `SYNC_HOST` і `SYNC_PORT`, щоб змінити хост і порт, до яких прив'язується сервер.
 
-## Client Setup
+## Налаштування клієнта
 
-You'll need to determine your computer's network IP address, and then
-point each of your Anki clients to the address, e.g something like
-`http://192.168.1.200:8080/`. The URL can be configured in the preferences.
+Необхідно визначити IP-адресу вашого комп'ютера в мережі, а потім вказати кожному з клієнтів Anki цю адресу, наприклад, щось на кшталт `http://192.168.1.200:8080/`. URL можна налаштувати в параметрах.
 
-If you're using AnkiMobile and are unable to connect to a server on your local
-network, please go into the iOS settings, locate Anki near the bottom, and
-toggle "Allow Anki to access local network" off and then on again.
+Якщо використовується AnkiMobile і не вдається підключитися до сервера у вашій локальній мережі, перейдіть до налаштувань iOS, знайдіть Anki внизу списку та вимкніть, а потім знову увімкніть "Дозволити Anki доступ до локальної мережі".
 
-Older desktop clients required you to define `SYNC_ENDPOINT` and
-`SYNC_ENDPOINT_MEDIA`.  If using an older client, you'd put it as e.g.
-`http://192.168.1.200:8080/sync/` and `http://192.168.1.200:8080/msync/`
-respectively. AnkiDroid clients before 2.16 require separate configuration for
-the two endpoints.
+Старіші настільні клієнти вимагали визначення `SYNC_ENDPOINT` і `SYNC_ENDPOINT_MEDIA`. Якщо використовується старіший клієнт, потрібно вказати, наприклад, `http://192.168.1.200:8080/sync/` і `http://192.168.1.200:8080/msync/` відповідно. Клієнти AnkiDroid до версії 2.16 вимагають окремої конфігурації для двох кінцевих точок.
 
-## Reverse Proxies
+## Зворотні проксі
 
-If using a reverse proxy to provide HTTPS access (e.g. nginx), and binding to a subpath
-(e.g. `http://example.com/custom/` -> `http://localhost:8080/`), you must make sure to
-including a trailing slash when configuring Anki. If you put `http://example.com/custom`
-instead, it will not work.
+Якщо використовується зворотний проксі для забезпечення доступу через HTTPS (наприклад, nginx) і прив'язка до підшляху (наприклад, `http://example.com/custom/` -> `http://localhost:8080/`), необхідно переконатися, що при налаштуванні Anki використовується слеш наприкінці. Якщо вказати `http://example.com/custom` замість цього, це не працюватиме.
 
-On iOS, TLS 1.3 is not supported, so your reverse proxy will need to have TLS 1.2
-enabled, or you'll get an "error code -9836".
+На iOS TLS 1.3 не підтримується, тому ваш зворотний проксі повинен мати увімкнений TLS 1.2, інакше ви отримаєте "код помилки -9836".
 
-## Large Requests
+## Великі запити
 
-The standard AnkiWeb limit on uploads is applied by default. You can optionally
-set `MAX_SYNC_PAYLOAD_MEGS` to something greater than 100 if you wish to
-increase the limit. Bear in mind that if you're using a reverse proxy, you may
-need to adjust the limit there as well.
+Типове обмеження AnkiWeb на завантаження застосовується за замовчуванням. За бажанням можна встановити `MAX_SYNC_PAYLOAD_MEGS` на значення більше 100, якщо потрібно збільшити ліміт. Майте на увазі, що якщо використовується зворотний проксі, можливо, потрібно буде налаштувати ліміт і там.
 
-## Contributing Changes
+## Внесення змін
 
-Because this server is bundled with Anki, simplicity is a design goal - it is
-targeted at individual/family use, and PRs that add things like a REST API or
-external databases are unlikely to be accepted at this time. If in doubt, please
-reach out before starting work on a PR.
+Оскільки цей сервер постачається разом із Anki, простота є метою дизайну — він орієнтований на індивідуальне/сімейне використання, і PR, які додають такі речі, як REST API або зовнішні бази даних, навряд чи будуть прийняті на даний момент. Якщо є сумніви, будь ласка, зверніться перед початком роботи над PR.
 
-If you're looking for an existing API solution, the AnkiConnect add-on may
-meet your needs.
+Якщо ви шукаєте готове рішення API, додаток AnkiConnect може відповідати вашим потребам.

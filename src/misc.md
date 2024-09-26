@@ -1,16 +1,16 @@
-# Miscellanea
+# Різне
 
 <!-- toc -->
 
-## Menu Shortcuts
+## Меню швидких клавіш
 
-On Windows/Linux you can hold down the <kbd>Alt</kbd> key and press a highlighted
-letter to activate a particular menu.
+У Windows/Linux можна утримувати клавішу <kbd>Alt</kbd> і натискати виділену
+літеру, щоб активувати певне меню.
 
-Although macOS doesn’t support this feature, it does allow you instead to assign
-shortcuts to specific menu items. Please see
+Хоча macOS не підтримує цю функцію, вона дозволяє призначати
+швидкі клавіші для конкретних пунктів меню. Будь ласка, перегляньте
 <https://support.apple.com/en-au/guide/mac-help/mchlp2271/mac>
-for more information.
+для отримання додаткової інформації.
 
 ## Консоль налагодження
 

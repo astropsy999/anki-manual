@@ -1,26 +1,13 @@
-# Add-ons
+# Доповнення
 
-Anki's capabilities can be extended with add-ons. Add-ons can provide
-features like extra support for specific languages, extra control over
-scheduling, and so on.
+Можливості Anki можна розширити за допомогою додатків. Доповнення можуть надавати функції, як-от додаткова підтримка для певних мов, додатковий контроль над плануванням тощо.
 
-To browse the list of available add-ons, select `Tools` → `Add-ons`, then click on `Get Add-ons`.
-Alternatively, open [ankiweb.net/shared/addons](https://ankiweb.net/shared/addons) in a web browser.
+Щоб переглянути список доступних додатків, виберіть `Інструменти` → `Доповнення`, а потім натисніть на `Отримати доповнення`. Або ж відкрийте [ankiweb.net/shared/addons](https://ankiweb.net/shared/addons) у веббраузері.
 
-If you have downloaded an add-on that is not working properly, or if you
-accidentally made a mistake when editing an add-on, you can use the
-"Delete" option in the menu to remove it.
+Якщо ви завантажили доповнення, який не працює належним чином, або випадково зробили помилку під час редагування доповнення, ви можете скористатися опцією "Видалити" в меню, щоб його видалити.
 
-Add-ons use and modify arbitrary parts of Anki’s codebase, so in some
-cases, updating Anki can break the compatibility with older add-ons. If
-one of your add-ons stops working after updating Anki, please consider
-reporting the issue to the add-on author. If you rely on this add-on,
-you will need to keep using an older Anki version until the add-on gets
-an update.
+Доповнення використовують і змінюють довільні частини коду Anki, тому в деяких випадках оновлення Anki може порушити сумісність зі старими доповненнями. Якщо одне із ваших доповнень перестало працювати після оновлення Anki, будь ласка, розгляньте можливість повідомити про проблему автору. Якщо ви залежите від цього доповнення, вам доведеться продовжувати використовувати старішу версію Anki, доки доповнення не отримає оновлення.
 
-There is a "Contact Author" button on most add-ons pages on AnkiWeb,
-and many authors include their email address in the add-on, so if you
-need to get in touch with the author, editing the add-on and looking at
-the top of the file may help.
+На більшості сторінок доповнень на AnkiWeb є кнопка "Зв'язатися з автором", і багато авторів включають свою електронну адресу в доповнення, тому якщо вам потрібно зв'язатися з автором, редагування доповнення і перегляд верхньої частини файлу може допомогти.
 
-To learn how to write your own add-ons, please see the [add-on writing guide](https://addon-docs.ankiweb.net).
+Щоб дізнатися, як написати власні доповнення, перегляньте [настанови з написання доповнень](https://addon-docs.ankiweb.net).

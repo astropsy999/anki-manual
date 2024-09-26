@@ -1,3 +1,3 @@
-# Frequently Asked Questions
+# Поширені запитання
 
-Please see <https://faqs.ankiweb.net>
+Будь ласка перегляньте <https://faqs.ankiweb.net>

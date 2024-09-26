@@ -50,7 +50,7 @@
 - [Медіа](media.md)
 - [Математика та символи](math.md)
 - [Приставучі картки](leeches.md)
-- [Додатки](addons.md)
+- [Доповнення](addons.md)
 - [Вирішення проблем](troubleshooting.md)
 - [Синхронизація із сервером](sync-server.md)
 - [Різне](misc.md)
